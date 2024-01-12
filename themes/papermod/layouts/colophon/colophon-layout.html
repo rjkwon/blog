@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1 id="title">{{ .Title }}</h1>
+<section id="main">
+  <div class="blurb">Kwon.nyc is owned, operated, designed, written, edited, maintained, flavored, and (mostly) built by me, Rachel J. Kwon, with help from the below.</div>
+
+  <article id="content">
+    {{ .Content }}
+  </article>
+
+</section>
+
+<div class="sidebar">A note on privacy and data: <a href="https://themarkup.org/blacklight?url=kwon.nyc">I don't use cookies or collect any of your data on this site</a>. I don't sell anything or make any money on this site. I do use a cookie-free analytics platform called <a href="https://plausible.io/">Plausible</a> for basic metrics. The metrics I am most interested in are referring pages (to see who cares enough to link to this site and to maybe make new friends 😀), and visitor counts in aggregate (to get a sense of how many people are looking at specific things I've written, and, I'll be honest, to get a small but nontoxic ego boost). What I am NOT interested in is tracking what individual visitors are doing.</div>
+
+{{ end }}

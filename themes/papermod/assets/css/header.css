@@ -1,0 +1,73 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--main-width) + var(--gap) * 20);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+    padding-bottom: 8rem;
+}
+
+.nav a {
+    display: block;
+}
+
+.logo,
+#menu {
+    display: flex;
+    margin: auto var(--gap);
+    flex-wrap: inherit;
+    font-size: 17px;
+}
+
+.logo img { /* 권 logo */
+    width: 2.5em;
+    padding-right: 0.4em;
+}
+
+#theme-toggle svg {
+    height: 18px;
+}
+
+button#theme-toggle { 
+    font-size: 26px;
+}
+
+body.dark #moon {
+    display: none
+}
+
+body:not(.dark) #sun {
+    display: none
+}
+
+#menu {
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap
+}
+
+#menu li+li {
+    margin-inline-start: var(--gap)
+}
+
+#menu a {
+    font-size: 17px
+}
+
+#menu .active {
+    font-weight: bold;
+/*    border-bottom: 2px solid currentColor;*/
+    /*background-color: white;*/
+}
+
+.logo-switches {
+    display: inline-flex;
+    margin: auto 4px;
+}
+
+.logo-switches {
+    flex-wrap: inherit
+}

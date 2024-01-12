@@ -1,0 +1,77 @@
+{{- define "main" }}
+
+{{- if not .IsHome | and .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- $pages := union .RegularPages .Pages }}
+
+{{- $pages = where site.RegularPages "Type" "notes" }}
+
+{{ range first 1 $pages }}
+    <article class="snippet">
+      <header>
+          <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+          <div class="post-meta">
+          {{ .Date.Format "Monday, Jan 2, 2006" }}</div>
+      </header>
+        <div class="post-summary">{{ .Summary }}{{ if .Truncated }}...
+          <p><a href="{{ .RelPermalink }}">Keep reading</a></p>
+        {{ end }}
+        </div>
+    </article>
+{{ end }}
+  
+
+<div class="sidebar">
+
+  <div class="movies">
+    <h2>📺 Recently viewed</h2>
+
+  <script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fletterboxd.com%2Fkwon%2Frss%2F&num=5&desc=1&utf=y" charset="UTF-8" type="text/javascript"></script>
+
+<noscript>
+<a href="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fletterboxd.com%2Fkwon%2Frss%2F&num=5&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+
+    <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
+  </div>
+
+  <div class="books" id="literal-widget">
+    <h2>📖 Currently reading </h2>
+<!-- <script src="{{ .Site.Params.assetDir }}/js/literal.js" language="JavaScript" charset="UTF-8" type="application/javascript"></script> -->
+{{ $js := resources.Get "js/literal.js" | minify | fingerprint }}
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+   <div class="more"><a href="https://literal.club/kwon">More at Literal</a></div>
+  <br style="clear: all;" />
+  </div>
+ 
+  <div class="pinboard">
+    <h2>Meanwhile, on the internet...</h2>
+    <!-- <ul> -->
+  <!-- <script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=kwon&count=10&tag=post"></script> -->
+<script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Ffeeds.pinboard.in%2Frss%2Fsecret%3A8f8879b58e42e2e1539e%2Fu%3Akwon%2F&chan=y&num=7&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
+
+<noscript>
+<a href="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Ffeeds.pinboard.in%2Frss%2Fsecret%3A8f8879b58e42e2e1539e%2Fu%3Akwon%2F&chan=y&num=7&desc=1&utf=y&html=y">View RSS feed</a>
+</noscript>
+    <!-- </ul> -->
+     <div class="more"><a href="https://pinboard.in/u:kwon/">More at Pinboard</a></div>
+  </div>   
+
+
+</div>
+
+
+
+
+{{- end }}{{- /* end main */ -}}
