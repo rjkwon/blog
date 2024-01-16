@@ -1,20 +1,4 @@
-const target = document.querySelector('#literal-widget');
-
-const variables = {
-  handle: 'piet',
-  readingStatus: 'IS_READING',
-  layout: target.getAttribute('layout'),
-  limit: parseInt(target.getAttribute('limit')) || 5,
-};
-
-fetch('https://backend.literal.club/', {
-  method: 'POST',
-  mode: 'cors',
-  headers: {
-    'Content-Type': 'application/javascript',
-  },
-  body: JSON.stringify({
-    query: `
+var list,row,styleSheet;const target=document.querySelector('#literal-widget'),variables={handle:'kwon',readingStatus:'IS_READING',layout:target.getAttribute('layout'),limit:parseInt(target.getAttribute('limit'))||5};fetch('https://backend.literal.club/',{method:'POST',mode:'cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({query:`
 		query booksByReadingStateAndHandle($limit: Int!, $offset: Int!, $readingStatus: ReadingStatus!, $handle: String!) {
 			booksByReadingStateAndHandle(
 				limit: $limit
@@ -56,53 +40,25 @@ fetch('https://backend.literal.club/', {
 			slug
 			__typename
 		}
-	`,
-    variables: {
-      handle: variables.handle,
-      readingStatus: variables.readingStatus,
-      limit: variables.limit,
-      offset: 0,
-    },
-  }),
-})
-  .then((response) => {
-    return response.json();
-  })
-  .then((response) => {
-    const books = response.data.booksByReadingStateAndHandle || [];
-
-    const formatter = new Intl.ListFormat('en', { style: 'short', type: 'conjunction' });
-
-    const bookItems = books.map((book) => {
-      const authors = formatter.format(book.authors.map((a) => a.name));
-      const bookItem = document.createElement('div');
-      bookItem.classList.add('literal-book-item');
-      bookItem.innerHTML = `
-			<a href="https://literal.club/${variables.handle}/book/${book.slug}?utm_source=${variables.handle}&utm_medium=widget" target="_blank">
+	`,variables:{handle:variables.handle,readingStatus:variables.readingStatus,limit:variables.limit,offset:0}})}).then(a=>a.json()).then(a=>{const b=a.data.booksByReadingStateAndHandle||[],c=new Intl.ListFormat('en',{style:'short',type:'conjunction'}),d=b.map(a=>{const d=c.format(a.authors.map(a=>a.name)),b=document.createElement('div');return b.classList.add('literal-book-item'),b.innerHTML=`
+			<a href="https://literal.club/${variables.handle}/book/${a.slug}">
 				<div class="literal-book-item__inner">
 					<div class="literal-book-item__image">
 						<div class="literal-book-item__image_cover__outer">
-							<img src="${book.cover}" alt="${book.title}" />
+							<img src="${a.cover}" alt="${a.title}" />
 						</div>
 					</div>
 					<div class="literal-book-item__info">
 						<div class="literal-book-item__title">
-							${book.title}
+							${a.title}
 						</div>
 						<div class="literal-book-item__authors">
-							${authors}
+							${d}
 						</div>
 					</div>
 				</div>
 			</a>
-		`;
-      return bookItem;
-    });
-
-    target.append(...bookItems);
-  });
-
-var list = `
+		`,b});target.append(...d)}),list=`
     #literal-widget .literal-book-item {
         display: flex;
         text-align: left;
@@ -168,9 +124,7 @@ var list = `
     	line-height: 145%;
     	margin-top: 4px;
     }
-`;
-
-var row = `
+`,row=`
 	 #literal-widget {
 	 	display: flex;
 	 }
@@ -197,8 +151,4 @@ var row = `
     #literal-widget .literal-book-item__info {
     	display: none;
     }
-`;
-
-var styleSheet = document.createElement('style');
-styleSheet.innerHTML = variables.layout === 'row' ? row : list;
-document.head.appendChild(styleSheet);
+`,styleSheet=document.createElement('style'),styleSheet.innerHTML=variables.layout==='row'?row:list,document.head.appendChild(styleSheet)

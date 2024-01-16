@@ -45,16 +45,16 @@
     <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
   </div>
 
-  <div class="books" id="literal-widget">
+  <div class="books">
     <h2>📖 Currently reading </h2>
-<!-- <script src="{{ .Site.Params.assetDir }}/js/literal.js" language="JavaScript" charset="UTF-8" type="application/javascript"></script> -->
+    <div id="literal-widget">
 {{ $js := resources.Get "js/literal.js" | minify | fingerprint }}
 <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-
+    </div>
    <div class="more"><a href="https://literal.club/kwon">More at Literal</a></div>
   <br style="clear: all;" />
   </div>
- 
+
   <div class="pinboard">
     <h2>Meanwhile, on the internet...</h2>
     <!-- <ul> -->
