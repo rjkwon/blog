@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kwon.nyc/</loc>
+    <lastmod>2024-01-30T09:20:16-05:00</lastmod>
+  </url><url>
+    <loc>https://kwon.nyc/notes/which-self-is-this/</loc>
+    <lastmod>2024-01-30T09:20:16-05:00</lastmod>
+  </url><url>
     <loc>https://kwon.nyc/now/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kwon.nyc/</loc>
-    <lastmod>2023-12-11T22:14:03-05:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/notes/things-i-dont-have-to-do/</loc>
     <lastmod>2023-12-11T22:14:03-05:00</lastmod>
