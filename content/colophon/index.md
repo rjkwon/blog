@@ -2,7 +2,6 @@
 title: "Colophon"
 date: 2021-03-27T18:07:40-04:00
 type: colophon
-layout: colophon-layout
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Now"
 date: 2024-01-21
+type: now
 draft: false
-layout: now-layout
 ---
 
 Since my last update to this page in August 2023, I

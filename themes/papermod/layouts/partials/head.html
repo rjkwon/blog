@@ -13,12 +13,14 @@
 <meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="stylesheet" href="https://use.typekit.net/pyn4wgi.css">
 <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
-{{- if .Site.Params.analytics.google.SiteVerificationTag }}
-<meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
-{{- end}}
 <!-- Styles -->
 {{- $common := (resources.Match "css/*.css") | resources.Concat "assets/css/common.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+{{- if eq .Layout "zephyr" }}
+  {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+{{ end }}
 {{- /*  bundle all required css  */}}
 {{- /*  Add extended css after theme style */ -}}
 {{- $stylesheet := (slice $common $extended) | resources.Concat "assets/css/stylesheet.css" | minify }}

@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
-
 <head>
     {{- partial "head.html" . }}
 </head>
 
 <body class="
-{{- if eq $.Site.Params.defaultTheme `dark` -}}
-{{- print "dark" }}
+{{- with .Type -}}
+    {{- . -}}
 {{- end -}}
 
-{{- if eq $.Layout `about-layout` -}}
-{{- print " about" }}
-{{- end -}}
-
-{{- if eq $.Layout `colophon-layout` -}}
-{{- print " colophon" }}
-{{- end -}}
-
-{{- if eq $.Layout `now-layout` -}}
-{{- print " now" }}
-{{- end -}}
-
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print " list" -}}
+{{- if ne .Kind "page" }}
+     list
 {{- end -}}
 " id="top">
+
     {{- partialCached "header.html" . .Page}}
     <main class="main">
         {{- block "main" . }}
@@ -33,5 +21,4 @@
     </main>
     {{- partialCached "footer.html" . .Type .Layout .Params }}
 </body>
-
 </html>

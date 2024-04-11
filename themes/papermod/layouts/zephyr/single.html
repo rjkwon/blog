@@ -1,0 +1,18 @@
+{{- define "main" }}
+        
+<h1 id="title">{{ .Title }}</h1>
+<section id="main">
+ 
+<p>In February 2024, I quit my job, flew from New York to Chicago, and boarded a westbound train called the California Zephyr. I traveled 2,500 miles by train over two days and two nights. Here's the route we took (ish):</p>
+
+<div id="map"></div>
+
+<hr />
+
+<iframe title="YouTube video player" class="youtube-player" width="100%" type="text/html" src="https://youtube.com/embed/ZeI_lM-dX_I" frameborder="0"></iframe>
+
+{{ .Content }} 
+
+</section>
+
+{{ end }}
