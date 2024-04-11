@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
-
 <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -16,7 +15,7 @@
 <meta name="author" content="">
 <link rel="stylesheet" href="https://use.typekit.net/pyn4wgi.css">
 <link rel="canonical" href="https://kwon.nyc/notes/socks/" />
-<link href="/assets/css/stylesheet.min.afa58a05d3d991fcb999db881eae0ed4eb9e2250b9a4a6accd1fd6068280d09b.css" integrity="sha256-r6WKBdPZkfy5mduIHq4O1OueIlC5pKaszR/WBoKA0Js=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.0564877f56714366af1510af1fc6e7ba16dddeaaf7f6737f6af6b0fd73de8f5c.css" integrity="sha256-BWSHf1ZxQ2avFRCvH8bnuhbd3qr39nN/avaw/XPej1w=" rel="preload stylesheet"
     as="style">
 
 
@@ -111,7 +110,7 @@
 
 </head>
 
-<body class="" id="top">
+<body class="notes" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -164,7 +163,7 @@
         <div class="logo">
             <img src="/images/logo.svg" alt="권" /> 
             
-            <a href="https://kwon.nyc/" title="Hon. Ketanji Brown Jackson&#39;s husband&#39;s socks">Kwon.nyc</a>
+            <a href="https://kwon.nyc/">Kwon.nyc</a>
             
         </div>
         <ul id="menu" onscroll="menu_on_scroll()">
@@ -250,12 +249,11 @@
     <div class="top">
         <span><a href="https://kwon.nyc/">Kwon.nyc</a> is made by me in Brooklyn</span>
         <span>&copy; 2024 <a href="mailto:kwon%40fastmail.com">Rachel J. Kwon 권어진</a></span>
-
     </div>
     <div class="bottom-left">
         <span><a href="https://kwon.nyc/colophon">Colophon</a></span>
         <span><a href="https://kwon.nyc/notes/index.xml">RSS feed</a></span>
-        <span><a href="https://github.com/rjkwon/personal">Source</a></span>
+        <span><a href="https://github.com/rjkwon/blog">Source</a></span>
         <span><a href="mailto:kwon at fastmail.com">Email me</a></span>
     </div>
     <div class="bottom-right">
@@ -331,6 +329,85 @@
 
 </script>
 
-</body>
 
+
+<script>
+    mapboxgl.accessToken = "pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag";
+    var map = new mapboxgl.Map({
+        container: "map", 
+        style: "mapbox://styles/rjkwon/ckranb3ha1tjk18lh6ysoifml", 
+        center: [-105.0029579, 39.75536983], 
+        zoom: 4.2 
+    });
+
+    
+    map.on('load', function () {
+        
+        fetch('https://api.mapbox.com/directions/v5/mapbox/driving/-87.64032709%2C41.87883343%3B-90.36398135%2C40.94510264%3B-91.55068891%2C40.97159668%3B-95.92727316%2C41.25014755%3B-96.71406317%2C40.81629193%3B-105.0029579%2C39.75536983%3B-107.3232113%2C39.54820675%3B-108.5705199%2C39.06476587%3B-111.9084177%2C40.76203724%3B-119.8114929%2C39.52908755%3B-121.5001231%2C38.58447142%3B-122.2921041%2C37.8414264?alternatives=false&geometries=geojson&overview=full&steps=false&notifications=none&access_token=pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag')
+            .then(response => response.json())
+            .then(data => {
+                var route = data.routes[0].geometry;
+
+                map.addSource('route', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'Feature',
+                        'properties': {},
+                        'geometry': route
+                    }
+                });
+
+                map.addLayer({
+                    'id': 'route',
+                    'type': 'line',
+                    'source': 'route',
+                    'layout': {
+                        'line-join': 'round',
+                        'line-cap': 'round'
+                    },
+                    'paint': {
+                        'line-color': 'blue',
+                        'line-width': 4
+                    }
+                });
+
+                
+                var markers = [
+                    { coords: [-87.64032709, 41.87883343], label: 'Chicago Union Station' },
+                    { coords: [-90.36398135, 40.94510264], label: 'Galesburg, Illinois' },
+                    { coords: [-91.55068891, 40.97159668], label: 'Mount Pleasant, Iowa' },
+                    { coords: [-95.92727316, 41.25014755], label: 'Omaha, Nebraska' },
+                    { coords: [-96.71406317, 40.81629193], label: 'Lincoln, Nebraska' },
+                    { coords: [-105.0029579, 39.75536983], label: 'Denver, Colorado' },
+                    { coords: [-107.3232113, 39.54820675], label: 'Glenwood Springs, Colorado' },
+                    { coords: [-108.5705199, 39.06476587], label: 'Grand Junction, Colorado' },
+                    { coords: [-111.9084177, 40.76203724], label: 'Salt Lake City, Utah' },
+                    { coords: [-119.8114929, 39.52908755], label: 'Reno, Nevada' },
+                    { coords: [-121.5001231, 38.58447142], label: 'Sacramento, California' },
+                    { coords: [-122.2921041, 37.8414264], label: 'Emeryville, California' }
+                ];
+
+                
+                markers.forEach(function(marker) {
+                    new mapboxgl.Marker()
+                        .setLngLat(marker.coords)
+                        .setPopup(new mapboxgl.Popup({ offset: 25 }) 
+                        .setText(marker.label))
+                        .addTo(map);
+                });
+            });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
