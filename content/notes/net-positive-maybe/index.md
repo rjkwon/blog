@@ -7,7 +7,7 @@ tag: tech, capitalism
 
 This is a half-baked thought I've been preheating for a bit.
 
-Technology has changed the way we consume and create media has evolved, and considering all the benefits against the drawbacks, sometimes it doesn't feel like a net improvement to me. Or maybe it's just that things evolved too quickly, we got excited about all the upside and didn't think enough about second and third order effects, and now we're still figuring out a way to catch up. I haven't decided how optimistic or doomsday I feel about about all of it yet.
+Technology has changed the way we consume and create media, and considering all the benefits against the drawbacks, sometimes it doesn't feel like a net improvement to me. Or maybe it's just that things evolved too quickly, we got excited about all the upside and didn't think enough about second and third order effects, and now we're still figuring out a way to catch up. I haven't decided how optimistic or doomsday I feel about about all of it yet.
 
 **Photos**
 
@@ -36,6 +36,8 @@ Music is the topic here that I feel the saddest about because for whatever reaso
 **Am I wrong?** 
 
 I feel like I'm biased about all of this because I remember the Before times, and like most humans I’m wired to prefer the familiar and fear the unknown. I think it's okay to enjoy things and also be critical of them (in fact, I believe it's _important_ to do so to be a good citizen), and I do genuinely enjoy these things and marvel at the technology that enables them. Part of me thinks, "Hey. Don't worry about this. Worry about things that matter more. It's not your problem." But what is the internet if not a place to complain about things and then do nothing concrete to change anything? 😬 I still pay for Google Photos, iCloud storage, various digital publication subscriptions, Spotify... (I did cancel my subscription to the photo-deleting app  because was a bit depressing to pay with both my time and my money for something that in the grand scheme of things is a very low value activity.)
+
+*Edited 2024-05-19: revised bad grammar in first sentence*
 
 [^1]: I'm not sure if this homonymous joke lands well in writing as opposed to if I said it out loud, but I meant to say "dystopian".
 [^2]: I ended up finding it on [YouTube](https://www.youtube.com/watch?v=g82ggwfwV6s) — it's a song by a band called Eagle Seagull and it was a very catchy pop rock tune, although listening to it now the lyrics are actually kind of misogynistic and kind of seem like an insecure man upset about a woman not being interested in him anymore, so maybe it's a good thing that I'm not still listening to the music I enjoyed in my 20s

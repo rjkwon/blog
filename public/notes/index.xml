@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Sep 2021 08:46:45 -0400</lastBuildDate><atom:link href="https://kwon.nyc/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Spring Ride</title>
+      <link>https://kwon.nyc/notes/spring-ride/</link>
+      <pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate>
+      
+      <guid>https://kwon.nyc/notes/spring-ride/</guid>
+      <description>mapboxgl.accessToken = &#39;pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag&#39;; var map = new mapboxgl.Map({ container: &#39;map&#39;, style: &#39;mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m&#39;, center: [-73.96024, 40.80877], // Initial center coordinates zoom: 10 }); map.on(&#39;load&#39;, function () { map.addSource(&#39;route&#39;, { &#39;type&#39;: &#39;vector&#39;, &#39;url&#39;: &#39;mapbox://rjkwon.clwcyaepqbm051zljpa0h4w10-7o9ng&#39; // Replace with your tileset URL }); map.addLayer({ &#39;id&#39;: &#39;route&#39;, &#39;type&#39;: &#39;line&#39;, &#39;source&#39;: &#39;route&#39;, &#39;source-layer&#39;: &#39;route&#39;, // Replace with your source layer name if different &#39;layout&#39;: { &#39;line-join&#39;: &#39;round&#39;, &#39;line-cap&#39;: &#39;round&#39; }, &#39;paint&#39;: { &#39;line-color&#39;: &#39;#FF0000&#39;, &#39;line-width&#39;: 5 } }); });</description>
+    </item>
+    
+    <item>
       <title>Net positive, maybe</title>
       <link>https://kwon.nyc/notes/net-positive-maybe/</link>
       <pubDate>Sat, 20 Apr 2024 11:02:10 -0400</pubDate>

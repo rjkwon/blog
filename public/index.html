@@ -141,14 +141,11 @@
 
     <article class="snippet">
       <header>
-          <h1><a href="/notes/net-positive-maybe/">Net positive, maybe</a></h1>
+          <h1><a href="/notes/spring-ride/">Spring Ride</a></h1>
           <div class="post-meta">
-          Saturday, Apr 20, 2024</div>
+          Saturday, May 18, 2024</div>
       </header>
-        <div class="post-summary">This is a half-baked thought I&rsquo;ve been preheating for a bit.
-Technology has changed the way we consume and create media has evolved, and considering all the benefits against the drawbacks, sometimes it doesn&rsquo;t feel like a net improvement to me. Or maybe it&rsquo;s just that things evolved too quickly, we got excited about all the upside and didn&rsquo;t think enough about second and third order effects, and now we&rsquo;re still figuring out a way to catch up....
-          <p><a href="/notes/net-positive-maybe/">Keep reading</a></p>
-        
+        <div class="post-summary">mapboxgl.accessToken = 'pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag'; var map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m', center: [-73.96024, 40.80877], // Initial center coordinates zoom: 10 }); map.on('load', function () { map.addSource('route', { 'type': 'vector', 'url': 'mapbox://rjkwon.clwcyaepqbm051zljpa0h4w10-7o9ng' // Replace with your tileset URL }); map.addLayer({ 'id': 'route', 'type': 'line', 'source': 'route', 'source-layer': 'route', // Replace with your source layer name if different 'layout': { 'line-join': 'round', 'line-cap': 'round' }, 'paint': { 'line-color': '#FF0000', 'line-width': 5 } }); });
         </div>
     </article>
 
@@ -281,9 +278,12 @@ Technology has changed the way we consume and create media has evolved, and cons
     mapboxgl.accessToken = "pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag";
     var map = new mapboxgl.Map({
         container: "map", 
-        style: "mapbox://styles/rjkwon/ckranb3ha1tjk18lh6ysoifml", 
-        center: [-105.0029579, 39.75536983], 
-        zoom: 4.2 
+        
+        style: "mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m", 
+        
+        
+        center: [-73.95407388, 40.75780936], 
+        zoom: 10 
     });
 
     
@@ -318,20 +318,29 @@ Technology has changed the way we consume and create media has evolved, and cons
                 });
 
                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 var markers = [
-                    { coords: [-87.64032709, 41.87883343], label: 'Chicago Union Station' },
-                    { coords: [-90.36398135, 40.94510264], label: 'Galesburg, Illinois' },
-                    { coords: [-91.55068891, 40.97159668], label: 'Mount Pleasant, Iowa' },
-                    { coords: [-95.92727316, 41.25014755], label: 'Omaha, Nebraska' },
-                    { coords: [-96.71406317, 40.81629193], label: 'Lincoln, Nebraska' },
-                    { coords: [-105.0029579, 39.75536983], label: 'Denver, Colorado' },
-                    { coords: [-107.3232113, 39.54820675], label: 'Glenwood Springs, Colorado' },
-                    { coords: [-108.5705199, 39.06476587], label: 'Grand Junction, Colorado' },
-                    { coords: [-111.9084177, 40.76203724], label: 'Salt Lake City, Utah' },
-                    { coords: [-119.8114929, 39.52908755], label: 'Reno, Nevada' },
-                    { coords: [-121.5001231, 38.58447142], label: 'Sacramento, California' },
-                    { coords: [-122.2921041, 37.8414264], label: 'Emeryville, California' }
+                    { coords: [-73.98706734, 40.69650870], label: 'Start' },
+                    { coords: [-73.95259620, 40.73942705], label: 'Pulaski Bridge' },
+                    { coords: [-73.92036700, 40.77260907], label: 'RFK Bridge' },
+                    { coords: [-73.92253830, 40.79345545], label: 'Randalls Island' },
+                    { coords: [-73.92945826, 40.80883082], label: 'Bronx' },
+                    { coords: [-105.0029579, 39.75536983], label: 'Denver, Colorado' }
                 ];
+
 
                 
                 markers.forEach(function(marker) {
