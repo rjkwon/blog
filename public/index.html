@@ -11,7 +11,7 @@
 <meta name="author" content="">
 <link rel="stylesheet" href="https://use.typekit.net/pyn4wgi.css">
 <link rel="canonical" href="https://kwon.nyc/" />
-<link href="/assets/css/stylesheet.min.0564877f56714366af1510af1fc6e7ba16dddeaaf7f6737f6af6b0fd73de8f5c.css" integrity="sha256-BWSHf1ZxQ2avFRCvH8bnuhbd3qr39nN/avaw/XPej1w=" rel="preload stylesheet"
+<link href="/assets/css/stylesheet.min.873a73cc7fba314cf5d775d57d6835e54792a7a64703a6fdc54173633a9b3361.css" integrity="sha256-hzpzzH&#43;6MUz113XVfWg15UeSp6ZHA6b9xUFzYzqbM2E=" rel="preload stylesheet"
     as="style">
 
 
@@ -25,8 +25,9 @@
 <link rel="mask-icon" href="https://kwon.nyc/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.126.1">
 <link rel="alternate" type="application/rss&#43;xml" href="https://kwon.nyc/index.xml">
+<link rel="alternate" hreflang="en" href="https://kwon.nyc/" />
 
 
 <meta property="og:title" content="Kwon.nyc" />
@@ -141,11 +142,13 @@
 
     <article class="snippet">
       <header>
-          <h1><a href="/notes/spring-ride/">Spring Ride</a></h1>
+          <h1><a href="/notes/spring-ride/">Spring tune-up &#43; ride</a></h1>
           <div class="post-meta">
           Saturday, May 18, 2024</div>
       </header>
-        <div class="post-summary">mapboxgl.accessToken = 'pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag'; var map = new mapboxgl.Map({ container: 'map', style: 'mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m', center: [-73.96024, 40.80877], // Initial center coordinates zoom: 10 }); map.on('load', function () { map.addSource('route', { 'type': 'vector', 'url': 'mapbox://rjkwon.clwcyaepqbm051zljpa0h4w10-7o9ng' // Replace with your tileset URL }); map.addLayer({ 'id': 'route', 'type': 'line', 'source': 'route', 'source-layer': 'route', // Replace with your source layer name if different 'layout': { 'line-join': 'round', 'line-cap': 'round' }, 'paint': { 'line-color': '#FF0000', 'line-width': 5 } }); });
+        <div class="post-summary">Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour....
+          <p><a href="/notes/spring-ride/">Keep reading</a></p>
+        
         </div>
     </article>
 
@@ -169,7 +172,7 @@
     <h2>📖 Currently reading </h2>
     <div id="literal-widget">
 
-<script src="https://kwon.nyc/js/literal.min.7e9cdbdb5734aff63d1dfb2bed19101aa5698b9b4c38bb504eba6dcf5e4550c6.js" integrity="sha256-fpzb21c0r/Y9Hfsr7RkQGqVpi5tMOLtQTrptz15FUMY="></script>
+<script src="https://kwon.nyc/js/literal.min.0eec09ffbf7590df29bbd4189515619302fccefe89985b9d4dec62ef79ced056.js" integrity="sha256-DuwJ/791kN8pu9QYlRVhkwL8zv6JmFudTexi73nO0FY="></script>
     </div>
    <div class="more"><a href="https://literal.club/kwon">More at Literal</a></div>
   <br style="clear: all;" />
@@ -271,95 +274,6 @@
     })
 
 </script>
-
-
-
-<script>
-    mapboxgl.accessToken = "pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag";
-    var map = new mapboxgl.Map({
-        container: "map", 
-        
-        style: "mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m", 
-        
-        
-        center: [-73.95407388, 40.75780936], 
-        zoom: 10 
-    });
-
-    
-    map.on('load', function () {
-        
-        fetch('https://api.mapbox.com/directions/v5/mapbox/driving/-87.64032709%2C41.87883343%3B-90.36398135%2C40.94510264%3B-91.55068891%2C40.97159668%3B-95.92727316%2C41.25014755%3B-96.71406317%2C40.81629193%3B-105.0029579%2C39.75536983%3B-107.3232113%2C39.54820675%3B-108.5705199%2C39.06476587%3B-111.9084177%2C40.76203724%3B-119.8114929%2C39.52908755%3B-121.5001231%2C38.58447142%3B-122.2921041%2C37.8414264?alternatives=false&geometries=geojson&overview=full&steps=false&notifications=none&access_token=pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag')
-            .then(response => response.json())
-            .then(data => {
-                var route = data.routes[0].geometry;
-
-                map.addSource('route', {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'Feature',
-                        'properties': {},
-                        'geometry': route
-                    }
-                });
-
-                map.addLayer({
-                    'id': 'route',
-                    'type': 'line',
-                    'source': 'route',
-                    'layout': {
-                        'line-join': 'round',
-                        'line-cap': 'round'
-                    },
-                    'paint': {
-                        'line-color': 'blue',
-                        'line-width': 4
-                    }
-                });
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                var markers = [
-                    { coords: [-73.98706734, 40.69650870], label: 'Start' },
-                    { coords: [-73.95259620, 40.73942705], label: 'Pulaski Bridge' },
-                    { coords: [-73.92036700, 40.77260907], label: 'RFK Bridge' },
-                    { coords: [-73.92253830, 40.79345545], label: 'Randalls Island' },
-                    { coords: [-73.92945826, 40.80883082], label: 'Bronx' },
-                    { coords: [-105.0029579, 39.75536983], label: 'Denver, Colorado' }
-                ];
-
-
-                
-                markers.forEach(function(marker) {
-                    new mapboxgl.Marker()
-                        .setLngLat(marker.coords)
-                        .setPopup(new mapboxgl.Popup({ offset: 25 }) 
-                        .setText(marker.label))
-                        .addTo(map);
-                });
-            });
-    });
-</script>
-
-
-
-
-
-
-
 
 
 

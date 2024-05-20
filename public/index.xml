@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 18 May 2024 08:51:55 -0400</lastBuildDate><atom:link href="https://kwon.nyc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Spring Ride</title>
+      <title>Spring tune-up &#43; ride</title>
       <link>https://kwon.nyc/notes/spring-ride/</link>
       <pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate>
       
       <guid>https://kwon.nyc/notes/spring-ride/</guid>
-      <description>mapboxgl.accessToken = &#39;pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag&#39;; var map = new mapboxgl.Map({ container: &#39;map&#39;, style: &#39;mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m&#39;, center: [-73.96024, 40.80877], // Initial center coordinates zoom: 10 }); map.on(&#39;load&#39;, function () { map.addSource(&#39;route&#39;, { &#39;type&#39;: &#39;vector&#39;, &#39;url&#39;: &#39;mapbox://rjkwon.clwcyaepqbm051zljpa0h4w10-7o9ng&#39; // Replace with your tileset URL }); map.addLayer({ &#39;id&#39;: &#39;route&#39;, &#39;type&#39;: &#39;line&#39;, &#39;source&#39;: &#39;route&#39;, &#39;source-layer&#39;: &#39;route&#39;, // Replace with your source layer name if different &#39;layout&#39;: { &#39;line-join&#39;: &#39;round&#39;, &#39;line-cap&#39;: &#39;round&#39; }, &#39;paint&#39;: { &#39;line-color&#39;: &#39;#FF0000&#39;, &#39;line-width&#39;: 5 } }); });</description>
+      <description>Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       
       <guid>https://kwon.nyc/notes/net-positive-maybe/</guid>
       <description>This is a half-baked thought I&amp;rsquo;ve been preheating for a bit.
-Technology has changed the way we consume and create media has evolved, and considering all the benefits against the drawbacks, sometimes it doesn&amp;rsquo;t feel like a net improvement to me. Or maybe it&amp;rsquo;s just that things evolved too quickly, we got excited about all the upside and didn&amp;rsquo;t think enough about second and third order effects, and now we&amp;rsquo;re still figuring out a way to catch up.</description>
+Technology has changed the way we consume and create media, and considering all the benefits against the drawbacks, sometimes it doesn&amp;rsquo;t feel like a net improvement to me. Or maybe it&amp;rsquo;s just that things evolved too quickly, we got excited about all the upside and didn&amp;rsquo;t think enough about second and third order effects, and now we&amp;rsquo;re still figuring out a way to catch up.</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ Several weeks ago, I gave notice at work and left. Some people in my life were s
       
       <guid>https://kwon.nyc/now/</guid>
       <description>Since my last update to this page in August 2023, I
- spent a month upstate near the Hudson Valley and Catskill Mountains, so I&amp;rsquo;ve officially entered my &amp;lsquo;I&amp;rsquo;ve been in the city long enough that I try to get out every chance I can but I still would never move away&amp;rsquo; phase became an aunt again and melted into a puddle of love haven&amp;rsquo;t watched too much television as of late but I&amp;rsquo;ve enjoyed the following:  Fargo season 5: this is a Good Show (acclaimed, the one I&amp;rsquo;d probably say first if asked what I&amp;rsquo;m watching) Suits: this is an Entertaining Show (formulaic but fun, good to have on in the background but can also multitask while it&amp;rsquo;s on) The Brothers Sun: this one is Good and Entertaining (not that Fargo isn&amp;rsquo;t, but Fargo takes a certain amount of focus to fully appreciate so I had to be in the right mindset to watch it)    This page is my contribution to the /now page movement by Derek Sivers.</description>
+spent a month upstate near the Hudson Valley and Catskill Mountains, so I&amp;rsquo;ve officially entered my &amp;lsquo;I&amp;rsquo;ve been in the city long enough that I try to get out every chance I can but I still would never move away&amp;rsquo; phase became an aunt again and melted into a puddle of love haven&amp;rsquo;t watched too much television as of late but I&amp;rsquo;ve enjoyed the following: Fargo season 5: this is a Good Show (acclaimed, the one I&amp;rsquo;d probably say first if asked what I&amp;rsquo;m watching) Suits: this is an Entertaining Show (formulaic but fun, good to have on in the background but can also multitask while it&amp;rsquo;s on) The Brothers Sun: this one is Good and Entertaining (not that Fargo isn&amp;rsquo;t, but Fargo takes a certain amount of focus to fully appreciate so I had to be in the right mindset to watch it) This page is my contribution to the /now page movement by Derek Sivers.</description>
     </item>
     
     <item>
@@ -296,8 +296,8 @@ I went into a little bit of a rabbit hole reading about Noah and what he had bee
       
       <guid>https://kwon.nyc/notes/intelligent-art/</guid>
       <description>I signed up as a beta user for an AI art generator that uses keywords (text) to create images. The first image I asked it to make was one using the keywords korean queer mermaid liminal space and these are the four options it generated:
- Four queer Korean mermaids, drawn by a machine (generated by Midjourney)
-  It&amp;rsquo;s pretty amazing that a computer made these images, and that is obviously a marvel and an incredible feat of technology, although if you look closely you can see where it still needs a little bit of work (for example, in the bottom right panel the face is fairly well done, but I&amp;rsquo;m not sure what&amp;rsquo;s happening with the body or why the tail is detached, and the bottom left very much seems like the generator phoned it in).</description>
+Four queer Korean mermaids, drawn by a machine (generated by Midjourney)
+It&amp;rsquo;s pretty amazing that a computer made these images, and that is obviously a marvel and an incredible feat of technology, although if you look closely you can see where it still needs a little bit of work (for example, in the bottom right panel the face is fairly well done, but I&amp;rsquo;m not sure what&amp;rsquo;s happening with the body or why the tail is detached, and the bottom left very much seems like the generator phoned it in).</description>
     </item>
     
     <item>
@@ -345,9 +345,9 @@ I wish I were one of those people who could function on 5 or 6 hours of sleep, b
       
       <guid>https://kwon.nyc/notes/brussels-sprouts/</guid>
       <description>As an adult I still sometimes have to trick myself into eating my vegetables. I made these roasted 고추장 (gochujang) honey Brussels sprouts yesterday that really did do the trick:
- 고추장 (gochujang) honey Brussels sprouts
-  Here&amp;rsquo;s my incredibly imprecise recipe.
-고추장 (gochujang) honey Brussels sprouts  Brussels sprouts (you could probably do this with carrots also or any vegetable that is good for roasting) Honey (or any kind of sweet nectar—I used maple syrup this time) Lemon (or any kind of citrus/acid) Garlic powder Gochujang   Wash your sprouts, cut off the stems, and slice in half the long way (if the bulbous part is a head and the stem is a neck, cut it in a coronal or midline sagittal plane).</description>
+고추장 (gochujang) honey Brussels sprouts
+Here&amp;rsquo;s my incredibly imprecise recipe.
+고추장 (gochujang) honey Brussels sprouts Brussels sprouts (you could probably do this with carrots also or any vegetable that is good for roasting) Honey (or any kind of sweet nectar—I used maple syrup this time) Lemon (or any kind of citrus/acid) Garlic powder Gochujang Wash your sprouts, cut off the stems, and slice in half the long way (if the bulbous part is a head and the stem is a neck, cut it in a coronal or midline sagittal plane).</description>
     </item>
     
     <item>
@@ -367,7 +367,7 @@ Having a chance to confront and reflect on my former self in a controlled enviro
       
       <guid>https://kwon.nyc/notes/tuesday/</guid>
       <description>The cadence of life is a little different now that I live in Brooklyn and work from home. In my 12 years in New York City, I have:
- lived in Brooklyn and worked in Brooklyn lived in Brooklyn and worked in Manhattan (the worst overall) lived in Manhattan and worked in Manhattan lived in Manhattan and worked from home lived in Brooklyn and worked from home  and the one that feels most like not working at all is living in Brooklyn and working from home.</description>
+lived in Brooklyn and worked in Brooklyn lived in Brooklyn and worked in Manhattan (the worst overall) lived in Manhattan and worked in Manhattan lived in Manhattan and worked from home lived in Brooklyn and worked from home and the one that feels most like not working at all is living in Brooklyn and working from home.</description>
     </item>
     
     <item>
@@ -377,10 +377,10 @@ Having a chance to confront and reflect on my former self in a controlled enviro
       
       <guid>https://kwon.nyc/notes/socks/</guid>
       <description>I keep an eye on the news through peripheral vision mostly but I noticed something about the confirmation hearings of the honorable Ketanji Brown Jackson that required my focus:
- Hon. Ketanji Brown Jackson&amp;rsquo;s husband
-  No, not the husband. The SOCK:
- Hon. Ketanji Brown Jackson&amp;rsquo;s husband&amp;rsquo;s sock
-  I&amp;rsquo;m not quite sure what the design is (looks like some kind of illustration of a face), but what I do know is that it is a funky sock.</description>
+Hon. Ketanji Brown Jackson&amp;rsquo;s husband
+No, not the husband. The SOCK:
+Hon. Ketanji Brown Jackson&amp;rsquo;s husband&amp;rsquo;s sock
+I&amp;rsquo;m not quite sure what the design is (looks like some kind of illustration of a face), but what I do know is that it is a funky sock.</description>
     </item>
     
     <item>
@@ -468,8 +468,7 @@ Ten years ago, I decided to be a doctor. It was a decision that made perfect sen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kwon.nyc/contact/</guid>
-      <description>Send me a message at rachel.kwon at gmail.com
-Submit  --  </description>
+      <description>Send me a message at rachel.kwon at gmail.com</description>
     </item>
     
     <item>
@@ -479,7 +478,7 @@ Submit  --  </description>
       
       <guid>https://kwon.nyc/links/</guid>
       <description>Internet friends and people I like:
- Daniel Bogan / Uses This in Melbourne Leigh Peterson in Hamilton, Ontario Chris Glass in Cincinnati Marianne in Connecticut Max in Brooklyn Eric Hu in Brooklyn Racquel in Brooklyn Rands in Los Gatos, CA Jung Yun (and Maybe) in Baltimore Sam Mok in Toronto Paul Graham in England  </description>
+Daniel Bogan / Uses This in Melbourne Leigh Peterson in Hamilton, Ontario Chris Glass in Cincinnati Marianne in Connecticut Max in Brooklyn Eric Hu in Brooklyn Racquel in Brooklyn Rands in Los Gatos, CA Jung Yun (and Maybe) in Baltimore Sam Mok in Toronto Paul Graham in England </description>
     </item>
     
   </channel>
