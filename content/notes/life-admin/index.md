@@ -1,7 +1,7 @@
 ---
 title: "Life Admin"
 date: 2024-06-17T20:32:49-04:00
-draft: false
+draft: true
 tag: life
 ---
 
