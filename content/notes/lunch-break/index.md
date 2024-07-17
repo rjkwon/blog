@@ -1,5 +1,5 @@
 ---
-title: "Lunch Break"
+title: "Lunch break"
 date: 2024-07-17T08:08:42-04:00
 draft: false
 tag: worklife, food
