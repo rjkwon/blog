@@ -1,7 +1,7 @@
 baseURL = "https://kwon.nyc/"
 languageCode = "en-us"
 title = "Kwon.nyc"
-theme = "papermod"
+theme = "kwon-theme"
 publishDir = "public"
 
 [[menu.main]]
@@ -16,6 +16,12 @@ name = "Notes"
 url = "/notes/"
 weight = 20
 
+[[menu.main]]
+identifier = "stuff"
+name = "Stuff"
+url = "/stuff/"
+weight = 30
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -24,10 +30,7 @@ weight = 20
 [params]
   mainSections = ['notes']
   assetDir = "assets"
+  author = "Rachel J. Kwon"
 
 [minification]
   enable = true
-
-[build]
-  writeStats = true
-  dir = "assets"

@@ -6,7 +6,7 @@
     <description>Recent content on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jul 2024 08:08:42 -0400</lastBuildDate><atom:link href="https://kwon.nyc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://kwon.nyc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lunch break</title>
       <link>https://kwon.nyc/notes/lunch-break/</link>
@@ -52,15 +52,6 @@ Technology has changed the way we consume and create media, and considering all 
       <guid>https://kwon.nyc/notes/lately/</guid>
       <description>I&amp;rsquo;ve been a little less online lately, but not to worry, I have just been living my life :)
 Several weeks ago, I gave notice at work and left. Some people in my life were surprised, because it was a good job at a good company, I generally enjoyed it, I got to work with wonderful people, and I was paid money to do it. The younger version of me who hadn&amp;rsquo;t yet figured out a career direction would be curious (and more than a little skeptical) about why I would quit such an objectively good job.</description>
-    </item>
-    
-    <item>
-      <title>My adventure on the California Zephyr</title>
-      <link>https://kwon.nyc/zephyr/</link>
-      <pubDate>Sat, 23 Mar 2024 12:37:40 -0400</pubDate>
-      
-      <guid>https://kwon.nyc/zephyr/</guid>
-      <description>blah blah</description>
     </item>
     
     <item>
@@ -466,8 +457,8 @@ When I was younger, I didn&amp;rsquo;t think that carefully about my future, whi
       <pubDate>Sat, 27 Mar 2021 18:07:40 -0400</pubDate>
       
       <guid>https://kwon.nyc/colophon/</guid>
-      <description>I use Hugo and DeployHQ to generate and deploy the site, respectively, and Github to host the source code (changelog here). Locally, I use Sublime Text to write and edit code, as well as Markdown files which constitute the content. (More gear and tech here.)
-This cool illustration of my visage was done by my friend Leigh Peterson, who also taught me how to bathe a cat. (Those were two separate favors.</description>
+      <description>I use Hugo and DeployHQ to generate and deploy the site, respectively, and Github to host the source code. Locally, I use Sublime Text to write and edit code, as well as Markdown files which constitute the content. (More gear and tech here.)
+This cool illustration of my visage was done by my friend Leigh Peterson, who also taught me how to bathe a cat. (Those were two separate favors.)</description>
     </item>
     
     <item>
@@ -478,25 +469,6 @@ This cool illustration of my visage was done by my friend Leigh Peterson, who al
       <guid>https://kwon.nyc/notes/why-i-quit-medicine/</guid>
       <description>As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine.
 Ten years ago, I decided to be a doctor. It was a decision that made perfect sense at the time: I wanted to help people who were suffering, and I was fortunate to have the ability and resources to gain entry into medical school. I wasn&amp;rsquo;t sure which specialty would be my calling, but shortly after starting my clinical rotations I fell in love with surgery.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://kwon.nyc/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwon.nyc/contact/</guid>
-      <description>Send me a message at rachel.kwon at gmail.com</description>
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>https://kwon.nyc/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kwon.nyc/links/</guid>
-      <description>Internet friends and people I like:
-Daniel Bogan / Uses This in Melbourne Leigh Peterson in Hamilton, Ontario Chris Glass in Cincinnati Marianne in Connecticut Max in Brooklyn Eric Hu in Brooklyn Racquel in Brooklyn Rands in Los Gatos, CA Jung Yun (and Maybe) in Baltimore Sam Mok in Toronto Paul Graham in England </description>
     </item>
     
   </channel>

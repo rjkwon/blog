@@ -5,7 +5,7 @@ type: colophon
 draft: false
 ---
 
-I use [Hugo](https://gohugo.io/) and [DeployHQ](http://deployhq.com/) to generate and deploy the site, respectively, and [Github](https://github.com/) to host the source code ([changelog here](https://github.com/rjkwon/personal/blob/main/CHANGELOG.md)). Locally, I use [Sublime Text](https://www.sublimetext.com/) to write and edit code, as well as Markdown files which constitute the content. (More gear and tech [here](https://usesthis.com/interviews/rachel.j.kwon/).)
+I use [Hugo](https://gohugo.io/) and [DeployHQ](http://deployhq.com/) to generate and deploy the site, respectively, and [Github](https://github.com/) to host the source code. Locally, I use [Sublime Text](https://www.sublimetext.com/) to write and edit code, as well as Markdown files which constitute the content. (More gear and tech [here](https://usesthis.com/interviews/rachel.j.kwon/).)
 
 This cool [illustration](../about/kwon.png) of my visage was done by my friend [Leigh Peterson](https://justafrog.net/), who also taught me [how to bathe a cat](cat-bath.png). (Those were two separate favors.)
 

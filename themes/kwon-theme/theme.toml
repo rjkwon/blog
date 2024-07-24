@@ -1,0 +1,40 @@
+name = "kwon-theme"
+license = "MIT"
+licenselink = "https://github.com/rjkwon/blog/blob/main/themes/kwon-theme/LICENSE"
+description = "My custom theme, based on PaperMod and Paper"
+homepage = ""
+tags = [
+  "responsive",
+  "simple",
+  "clean",
+  "light",
+  "dark",
+  "blog",
+  "minimalist",
+  "highlight.js"
+]
+features = [
+  "responsive",
+  "blog",
+  "cover-image",
+  "table-of-contents",
+  "highlight.js",
+  "favicon",
+  "archive",
+  "minified-assets",
+  "theme-toggle",
+  "menu-location-indicator",
+  "scroll-to-top"
+]
+min_version = "0.74.0"
+
+[author]
+  name = "Rachel J. Kwon"
+  homepage = "https://kwon.nyc/"
+
+# If porting an existing theme
+[original]
+  name = "Paper"
+  author = "nanxiaobei"
+  homepage = "https://github.com/nanxiaobei"
+  repo = "https://github.com/nanxiaobei/hugo-paper/"
