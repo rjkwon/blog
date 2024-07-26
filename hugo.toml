@@ -1,0 +1,31 @@
+baseURL = "https://kwon.nyc/"
+languageCode = "en-us"
+title = "Kwon.nyc"
+theme = "kwon-theme"
+publishDir = "public"
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 10
+
+[[menu.main]]
+identifier = "notes"
+name = "Notes"
+url = "/notes/"
+weight = 20
+
+[[menu.main]]
+identifier = "stuff"
+name = "Stuff"
+url = "/stuff/"
+weight = 30
+
+[params]
+  mainSections = ['notes']
+  assetDir = "assets"
+  author = "Rachel J. Kwon"
+
+[minification]
+  enable = true

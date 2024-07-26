@@ -1,8 +1,10 @@
 ---
-title: "Brussels Sprouts"
+title: Brussels Sprouts
 date: 2022-05-20T08:09:03-04:00
 draft: false
-tag: food
+tags:
+  - food
+  - recipe
 ---
 
 As an adult I still sometimes have to trick myself into eating my vegetables. I made these roasted 고추장 (gochujang) honey Brussels sprouts yesterday that really did do the trick:

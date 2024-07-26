@@ -1,5 +1,5 @@
 ---
-title: "Bicycle Storycle (Bike Story)"
+title: Bicycle Storycle (Bike Story)
 date: 2021-10-11T09:23:09-04:00
 draft: false
 ---
@@ -16,21 +16,21 @@ Few things feel worse than finding a sawed-through U-lock in the spot where you 
 
 Anywho, as soon as I got back to New York I finally finished the new bike. It looked something like this (and by "something like" I mean "exactly like," because this is a photo of my bike):
 
-{{< figure src="../../bike/bicycle-irl.jpg" caption="My bicycle" alt="Mint green single-speed bike with hipster vibes leaning against a metal barrier, set against the Hudson River on a gloomy day" class="" >}}
+{{< figure src="bicycle-irl.jpg" caption="My bicycle" alt="Mint green single-speed bike with hipster vibes leaning against a metal barrier, set against the Hudson River on a gloomy day" class="" >}}
 
 There's something about planning a thing, building it with your own two hands, and then being able to use it afterwards (or, just as good, seeing someone else use it) that is just the best feeling. Especially if you've had some frustration along the way in trying to figure something out (how the heck does this headset work?), and then that 💡 moment when you finally get it.
 
 So for my next trick, I decided to try and draw my bicycle. This was my first attempt:
 
-{{< figure src="../../bike/bicycle-1st_attempt-analog.jpg" caption="Illustration (analog), first attempt" alt="A rudimentary sketch of a bicycle" class="" >}}
+{{< figure src="bicycle-1st_attempt-analog.jpg" caption="Illustration (analog), first attempt" alt="A rudimentary sketch of a bicycle" class="" >}}
 
 I think this is actually not _terrible_ for a freehand first attempt, but... if this illustration were a sound, it would probably be the [Titanic recorder fail](https://www.youtube.com/watch?v=bZ6yDX7BxP8) sound—you can tell what it's supposed to be, but it's just not very good. My second attempt was surprisingly much better:
 
-{{< figure src="../../bike/bicycle-2nd_attempt-analog.jpg" caption="Illustration (analog), second attempt" alt="A less rudimentary sketch of a bicycle" class="" >}}
+{{< figure src="bicycle-2nd_attempt-analog.jpg" caption="Illustration (analog), second attempt" alt="A less rudimentary sketch of a bicycle" class="" >}}
 
 My third attempt was the best of the three, but weirdly, not significantly better than the second:
 
-{{< figure src="../../bike/bicycle-3rd_attempt-analog.jpg" caption="Illustration (analog), third attempt" alt="A less rudimentary sketch of a bicycle similar to the 2nd" class="" >}}
+{{< figure src="bicycle-3rd_attempt-analog.jpg" caption="Illustration (analog), third attempt" alt="A less rudimentary sketch of a bicycle similar to the 2nd" class="" >}}
 
 I struggled with the wheels, because it's very hard to draw a perfect circle or oval. So then I thought,
 
@@ -48,19 +48,19 @@ So, just like trying to figure out how to install the headset on my bike IRL, I 
 
 My first attempt was about as rudimentary as my first analog attempt. (But on the plus side, check out how smooth those ovals are.)
 
-{{< figure src="../../bike/bicycle-1st_attempt-digital.png" caption="Illustration (digital), 1st attempt" alt="A very rudimentary digital illustration of a bike" class="" >}}
+{{< figure src="bicycle-1st_attempt-digital.png" caption="Illustration (digital), 1st attempt" alt="A very rudimentary digital illustration of a bike" class="" >}}
 
 At some point, I figured it out. I got over the hump. It was definitely well over 20 hours of messing around in Illustrator, getting into flow states, often getting frustrated and giving up, staying up late, but finally I came up with a version I am more or less happy with:
 
-{{< figure src="../../bike/bicycle.png" caption="Illustration (digital)" alt="A fairly accurate digital illustration of my bike (finally)" class="" >}}
+{{< figure src="bicycle.png" caption="Illustration (digital)" alt="A fairly accurate digital illustration of my bike (finally)" class="" >}}
 
 I also created an exploded view with the thought that I would label it with each of the parts to create a sort of spec (this part is still in progress).
 
-{{< figure src="../../bike/bicycle-exploded.png" caption="Illustration (digital), exploded view with labels [draft]" alt="A fairly accurate illustration of my bike, exploded view" class="" >}}
+{{< figure src="bicycle-exploded.png" caption="Illustration (digital), exploded view with labels [draft]" alt="A fairly accurate illustration of my bike, exploded view" class="" >}}
 
 Not bad, eh? My favorite part is the bottom bracket.
 
-{{< figure src="../../bike/bottom-bracket.png" caption="Bottom bracket" alt="Close-up of the bottom bracket" class="border-dotted" >}}
+{{< figure src="bottom-bracket.png" caption="Bottom bracket" alt="Close-up of the bottom bracket" class="border-dotted" >}}
 
 Also, this whole process took me so long that between the time I started this illustration and now, I also started using a-whole-nother design tool, Figma, and published some versions of these illustrations for downloading and remixing on my [Figma Community profile](https://figma.com/@kwon/), then embedded the file on [kwon.nyc/bike](https://kwon.nyc/bike). 
 

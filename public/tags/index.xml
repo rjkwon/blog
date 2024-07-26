@@ -5,6 +5,25 @@
     <link>https://kwon.nyc/tags/</link>
     <description>Recent content in Tags on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://kwon.nyc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 May 2022 08:09:03 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Food</title>
+      <link>https://kwon.nyc/tags/food/</link>
+      <pubDate>Fri, 20 May 2022 08:09:03 -0400</pubDate>
+      
+      <guid>https://kwon.nyc/tags/food/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recipe</title>
+      <link>https://kwon.nyc/tags/recipe/</link>
+      <pubDate>Fri, 20 May 2022 08:09:03 -0400</pubDate>
+      
+      <guid>https://kwon.nyc/tags/recipe/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

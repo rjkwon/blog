@@ -1,4 +1,9 @@
+# Ignore .obsidian folder
+/content/notes/.obsidian/
+
+# Ignore system files
 .DS_Store
+Thumbs.db
 Icon
 ._*
 localhost.crt

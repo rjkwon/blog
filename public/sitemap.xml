@@ -115,6 +115,15 @@
     <loc>https://kwon.nyc/notes/brussels-sprouts/</loc>
     <lastmod>2022-05-20T08:09:03-04:00</lastmod>
   </url><url>
+    <loc>https://kwon.nyc/tags/food/</loc>
+    <lastmod>2022-05-20T08:09:03-04:00</lastmod>
+  </url><url>
+    <loc>https://kwon.nyc/tags/recipe/</loc>
+    <lastmod>2022-05-20T08:09:03-04:00</lastmod>
+  </url><url>
+    <loc>https://kwon.nyc/tags/</loc>
+    <lastmod>2022-05-20T08:09:03-04:00</lastmod>
+  </url><url>
     <loc>https://kwon.nyc/notes/flashback/</loc>
     <lastmod>2022-05-18T06:51:54-04:00</lastmod>
   </url><url>
@@ -152,7 +161,5 @@
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/categories/</loc>
-  </url><url>
-    <loc>https://kwon.nyc/tags/</loc>
   </url>
 </urlset>
