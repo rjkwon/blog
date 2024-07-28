@@ -2,7 +2,11 @@
 title: "Language"
 date: 2022-08-15T08:30:29-04:00
 draft: false
-tag: new york, gender, language
+tags: 
+- new york city
+- language
+- society
+
 ---
 
 Several years ago, the Metropolitan Transit Authority of New York City made a major change that affected every subway and bus ride overnight, but not many people noticed.

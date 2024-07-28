@@ -1,7 +1,11 @@
 ---
-title: Bicycle Storycle (Bike Story)
+title: "Bicycle storycle (bike story)"
 date: 2021-10-11T09:23:09-04:00
 draft: false
+tags: 
+- bike
+- photos
+- hobbies
 ---
 
 **TL;DR** I made a new page: [kwon.nyc/bike](https://kwon.nyc/bike/)

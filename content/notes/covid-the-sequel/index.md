@@ -2,6 +2,10 @@
 title: "Covid: the Sequel"
 date: 2022-10-30T12:21:13-04:00
 draft: false
+tags: 
+- covid
+- pandemic
+- health
 ---
 
 Well, Covid got me again. I’m recovering from a second bout after having had it in April 2020. That feels like a different era of fear and confusion—testing was nonexistent, we were running out of toilet paper and Tylenol, and the general guidance was to isolate but go to the emergency room if you were really sick but to call ahead and wear a mask and also if you were sick but not sick sick you should call your doctor (and you better know the difference between sick sick and sick and you better have a pulse oximeter at home, what do you mean you don’t have a pulse oximeter at home?), and we were banging on pots and pans at 7 pm every night to thank healthcare workers instead of giving them basic personal protective equipment or hazard pay. 

@@ -2,7 +2,10 @@
 title: "Outdoors"
 date: 2022-11-27T22:31:46-05:00
 draft: false
-tag: random, nature
+tags: 
+- nature
+- slice of life
+- photos
 ---
 
 I spent some time in the Bay Area this past week and did a vigorous hike (among other things). I was made to believe it would be more of a "nature walk" but this one, Mission Peak, had a steep grade and full exposure to the elements, and ended up being about 3.5 hours and close to 30,000 steps. I haven't challenged myself physically like that in a long time so I was pleasantly surprised that I survived. 
@@ -18,7 +21,6 @@ I remember being at gatherings of my peers years ago and hearing them talk about
 * Do you have a car? _(Because that's the only way to have access to ACTUAL hikes)_
 
 I think we were competitive about it because we were mostly just insecure and peacocking for each other. I definitely care much less about all of that now. It was nice to be on this particular hike and think whatever thoughts came into my head, including remembering those times and realizing I don't think like that anymore. Growth, I s'pose. (I do sometimes feel the same way when I hear people talk about travel, specifically international travel for leisure, like it's a competitive sport.)
-
 
 {{< figure src="IMG_4760.jpeg" caption="People like to stand on this pole at the top (it's me. I'm people)" alt="Person standing on a pole with horizontal protrusions acting as footrests similar to a pogo stick, atop a hilly peak. The background is blue sky with a few wispy clouds." class="full" >}}
 

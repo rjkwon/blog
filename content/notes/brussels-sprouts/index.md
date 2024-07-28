@@ -1,5 +1,5 @@
 ---
-title: Brussels Sprouts
+title: "Brussels sprouts"
 date: 2022-05-20T08:09:03-04:00
 draft: false
 tags:

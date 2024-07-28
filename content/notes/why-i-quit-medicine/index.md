@@ -1,7 +1,13 @@
 ---
-title: "Goodbye and Hello"
+title: "Goodbye and hello"
 date: 2016-04-26T22:02:56-04:00
 draft: false
+tags: 
+- essay
+- medicine
+- past selves
+- personal reflection
+- surgery
 ---
 
 As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine. 

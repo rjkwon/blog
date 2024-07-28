@@ -1,8 +1,11 @@
 ---
-title: "Summer Ride"
+title: "Summer ride"
 date: 2022-06-06T08:51:55-04:00
 draft: false
-tag: bike
+tags: 
+- bike
+- photos
+- map
 ---
 
 It's the good part of summer right now, the part where it's warm and sunny and the days are long but it hasn't gotten too humid out. I went on a nice bike ride yesterday morning along a route I used to take years ago when I first moved to Brooklyn that I haven't done since. Truthfully I have not been riding my bike as much as I used to (and I used to ride it EVERYWHERE). I am constantly amazed by how quickly this city evolves. The thing that was once another thing is now a new thing. I also forget how different it is on foot versus cycling versus in a car versus a bus versus the subway.

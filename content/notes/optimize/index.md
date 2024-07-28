@@ -2,7 +2,15 @@
 title: "Optimize"
 date: 2023-06-30T23:06:33-04:00
 draft: false
-tag: capitalism, medicine, money, time
+tags: 
+- capitalism
+- medicine
+- money
+- past selves
+- work life
+- pandemic
+- technology
+- personal reflection
 ---
 
 After I quit medicine and went corporate (as corporate as tech startups can be, which I guess depends on your vantage point; for me it was and is extremely corporate coming from doctoring), I got really into it and became particularly fascinated to learn how business leaders operate and spend their time (at work and in life) in order to be the most efficient and effective they can be. I guess a lot of people who came up in corporate work (and maybe the culture at large which is often dictated by creatives who may pooh-pooh the corporate life) think MASSIVE EYEROLL when they hear what the latest tech bro thinkboi has to say about optimizing their life and their time, but I actually found it pretty refreshing that in business a spade is called a spade and that spade is a dollar and nobody pretends that we aren't trying to make money. Whereas when I was a doctor it was like someone was telling me out of one side of their mouth that I should take care of patients and money isn't important but out of the other side they were whispering (but really shouting) that the patient doesn't matter, just make money for the hospital. 

@@ -1,8 +1,12 @@
 ---
-title: "In-between Moments"
+title: "In-between moments"
 date: 2023-05-23T08:35:29-04:00
 draft: false
-tag: thoughts, pandemic, mental health
+tags: 
+- thoughts
+- pandemic
+- mental health
+- new york city
 ---
 
 In addition to my [attention span](https://kwon.nyc/notes/distracted/), another pandemic-related loss not immediately obvious to me (probably because I was too worried about all the other losses, like the human lives, and the general erosion of mental health, and the ability to pretend that the institutions holding up our society would be able to take care of our most vulnerable), which I am only now realizing, has been the in-between moments. 

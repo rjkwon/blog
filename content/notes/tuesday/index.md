@@ -2,6 +2,13 @@
 title: "Tuesday"
 date: 2022-05-11T07:40:55-04:00
 draft: false
+tags:
+- brooklyn
+- new york city
+- bike
+- lists
+- food
+- chinatown
 ---
 
 The cadence of life is a little different now that I live in Brooklyn and work from home. In my 12 years in New York City, I have:

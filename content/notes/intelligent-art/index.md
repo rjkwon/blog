@@ -1,8 +1,11 @@
 ---
-title: "Intelligent Art"
+title: "Intelligent art"
 date: 2022-07-10T10:33:34-04:00
 draft: false
-tag: just for fun, art, ai
+tags: 
+- generative ai
+- fun
+- technology
 ---
 
 I signed up as a beta user for an AI art generator that uses keywords (text) to create images. The first image I asked it to make was one using the keywords `korean queer mermaid liminal space` and these are the four options it generated:

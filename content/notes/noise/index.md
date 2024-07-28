@@ -1,8 +1,12 @@
 ---
-title: "Digital Noise"
+title: "Digital noise"
 date: 2022-09-04T09:30:41-04:00
 draft: false
-tag: internet, technology, capitalism
+tags: 
+- internet
+- technology
+- capitalism
+- mental health
 ---
 
 I'm getting worn down by all the digital noise. By digital noise I mean the constant barrage of alerts, notifications, pings, email subscriptions I didn't sign up for, email subscriptions I DID sign up for but regret doing so, all the inputs that come through my connected devices.

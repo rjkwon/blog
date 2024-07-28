@@ -2,6 +2,11 @@
 title: "Newyorkiversary"
 date: 2021-06-23T17:06:37-04:00
 draft: false
+tags: 
+- new york city
+- personal reflection
+- lists
+- past selves
 ---
 
 June 2021 marks my eleventh year in New York City. I wasn't supposed to be here this long. The Plan™ was never to stay in New York for this long. The Plan™ was to come here for five years to learn how to be a surgeon, then go back to Chicago and be a surgeon and live happily ever after. 

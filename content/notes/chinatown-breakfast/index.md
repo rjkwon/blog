@@ -1,8 +1,13 @@
 ---
-title: "Chinatown Breakfast"
+title: "Chinatown breakfast"
 date: 2023-05-16T07:50:55-04:00
 draft: false
-tag: new york, chinatown, photo
+tags: 
+- new york city
+- chinatown
+- food
+- photos
+- slice of life
 ---
 
 When we lived in Tribeca, I could walk to Chinatown for breakfast. In general I am a morning person who avoids crowds and noise where possible[^1], so I especially enjoyed being in the usually crowded and noisy neighborhood when it was on the quieter side with mostly just the residents of the neighborhood out and about, getting ready to open shops and stands and whatnot. You can get a great breakfast—you can get great food at any meal or snacktime—which is too often classified as "cheap eats" just because the prices are generally very reasonable (which feels pretty reductive, and dismissive of the skill required to consistently make a perfect soup dumpling or pumpkin bun or hand-pulled noodles or what have you). The other day we made the long and arduous journey from Brooklyn[^2] to have breakfast at Big Wong which is one of my favorite spots because it feels like a diner and I love diners. We ordered the crispy roast pork, which felt decadent, especially for breakfast, along with a salted pork and preserved egg congee, rice rolls with shrimp, and a plate of greens. (I'm getting hungry thinking about it again.) I'm pretty sure the meal fueled the rest of my day. 

@@ -2,7 +2,10 @@
 title: "Stubs"
 date: 2024-07-03T08:51:52-04:00
 draft: false
-tag: stubs
+tags: 
+- lists
+- neither here nor there
+
 ---
 
 **An interesting blog post.** 

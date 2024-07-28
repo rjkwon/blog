@@ -2,7 +2,9 @@
 title: "Coffee"
 date: 2022-06-15T08:20:35-04:00
 draft: false
-tag: food
+tags: 
+- food
+- coffee
 ---
 
 Coffee is so good. 

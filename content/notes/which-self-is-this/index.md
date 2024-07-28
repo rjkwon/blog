@@ -2,7 +2,11 @@
 title: "Which self is this?"
 date: 2024-01-30T09:20:16-05:00
 draft: false
-tag: personal, internet, multipart
+tags: 
+- personal reflection
+- internet
+- personal websites
+- past selves
 ---
 
 Last month [Katherine](https://kayserifserif.place/) [called out](https://sunny.garden/@kayserifserif/111523195687578771) the tension inherent in a "personal" website which is that it is both public and personal, and one's public (or professional) persona is often different from that of their personal life. [Robin Rendle](https://robinrendle.com/notes/i-am-a-poem-i-am-not-software/) riffed on the concept and said that it's totally fine for personal websites to be messy or imperfect or weird (i.e., not necessarily how you'd want to present a "professional" front) and declared, in a pretty great and punchy/pithy statement, "You’re a poem and not software". [Manu](https://manuelmoreale.com/the-personality-of-a-personal-website) also picked up the thread and brought up a good point which is that people are complex and are allowed to have multiple selves that they present in different ways (and one great thing about your website is that it's yours and you can choose which self or selves to present, and how).

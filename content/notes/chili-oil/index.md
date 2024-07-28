@@ -1,8 +1,11 @@
 ---
-title: "Chili Oil"
+title: "Chili oil"
 date: 2023-02-09T08:25:29-05:00
 draft: false
-tag: food, recipe
+tags: 
+- food
+- recipe
+- pandemic
 ---
 
 During the darkest parts of pandemic lockdown there was not a lot to do or look forward to so I put a lot of time and energy into making elaborate meals entirely from scratch. (It's on my neverending to-do list for this website to make some sort of photo gallery of all those meals for posterity, but for now here we are.) Now that I have settled into a new(ish) normal(ish), where thankfully there are other things with which to occupy my time than food prep, I have become a bit more of a utilitarian eater, in that I am less concerned with ✨ _thoughtful complex flavorful meals that are time-consuming to prepare_ ✨ and instead more concerned with 🤜 _getting sustenance into my gastrointestinal system_ 🤛.

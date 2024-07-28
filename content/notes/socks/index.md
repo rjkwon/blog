@@ -2,6 +2,11 @@
 title: "Hon. Ketanji Brown Jackson's husband's socks"
 date: 2022-03-24T08:58:02-04:00
 draft: false
+tags: 
+- neither here nor there
+- surgeons
+- photos
+
 ---
 
 I keep an eye on the news through peripheral vision mostly but I noticed something about the confirmation hearings of the honorable Ketanji Brown Jackson that required my focus:

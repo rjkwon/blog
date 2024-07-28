@@ -1,8 +1,11 @@
 ---
-title: "Artificially Intelligent Thoughts"
+title: "Artificially intelligent thoughts"
 date: 2023-07-17T20:07:23-04:00
 draft: false
-tag: ai
+tags: 
+- generative AI
+- technology
+
 ---
 
 I am reading and hearing a lot of discourse about AI, machine learning, and more specifically, ChatGPT. It seems like a lot of people have a lot of opinions and things to say, and, like ChatGPT itself, they seem to be often wrong but never in doubt[^1]. From what I can tell it seems like a lot of it is noise (generally when people make blanket statements about AI being bad and dangerous) but there is some real signal (generally when people use more precise verbiage, detailed use cases, and less sensationalized/more nuanced thoughts and conclusions such as potential for bias at a large scale with large language models and generative AI causing harm[^2]).

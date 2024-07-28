@@ -51,6 +51,12 @@
 </section>
 
 
+<h1>All Tags</h1>
+<ul>
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <li><a href="{{ "tags/" | relURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ len $taxonomy }})</li>
+  {{ end }}
+</ul>
 
 
 

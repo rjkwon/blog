@@ -1,8 +1,12 @@
 ---
-title: "Seven Sandwiches"
+title: "Seven sandwiches"
 date: 2023-10-28T09:52:57-04:00
 draft: false
-tag: food, new york, lists, stories
+tags: 
+- food
+- new york city
+- lists
+- slice of life
 ---
 
 I love sandwiches. Below are some of my favorites and why. 

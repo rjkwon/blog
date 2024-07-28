@@ -2,7 +2,10 @@
 title: "Net positive, maybe"
 date: 2024-04-20T11:02:10-04:00
 draft: false
-tag: tech, capitalism
+tags: 
+- technology
+- capitalism
+- nostalgia
 ---
 
 This is a half-baked thought I've been preheating for a bit.

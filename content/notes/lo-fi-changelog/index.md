@@ -2,7 +2,9 @@
 title: "Lo-fi changelog"
 date: 2023-04-27T07:38:45-04:00
 draft: false
-tag: site, github
+tags:
+- site updates
+- hugo
 ---
 
 I made a [changelog](https://github.com/rjkwon/personal/blob/main/CHANGELOG.md). 

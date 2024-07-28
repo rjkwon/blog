@@ -1,7 +1,10 @@
 ---
-title: "Early Bird"
+title: "Early bird"
 date: 2022-06-01T07:01:53-04:00
 draft: false
+tags:
+- habits
+- health
 ---
 
 I have been doing a Thing™ lately where I let the morning light wake me up instead of an alarm. Currently I am on an approximately two week streak of waking up at sunrise, and because the bedroom faces east, this means I have been waking up around 5:30 am. (Voluntarily!)

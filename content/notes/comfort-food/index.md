@@ -1,8 +1,11 @@
 ---
-title: "Comfort Food"
+title: "Comfort food"
 date: 2023-09-01T17:05:25-04:00
 draft: false
-tag: food
+tags: 
+- food
+- new york city
+- lists
 ---
 
 One of the main reasons why I would find it hard to leave New York is that I have grown accustomed to having what feels like infinite food options and over the years have cultivated my list of good food spots in the city down to a tee. 

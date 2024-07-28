@@ -1,7 +1,12 @@
 ---
-title: "Power Moves"
+title: "Power moves"
 date: 2021-07-13T11:28:34-04:00
 draft: false
+tags: 
+- past selves
+- food
+- neither here nor there
+
 ---
 Yesterday one of my colleagues in a (virtual) meeting reportedly picked up a canister of coarse sea salt, announced "I'm just snacking," and proceeded to eat the salt, which confused and maybe frightened the other meeting attendees. 
 

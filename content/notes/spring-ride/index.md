@@ -2,7 +2,11 @@
 title: "Spring tune-up + ride"
 date: 2024-05-18T08:51:55-04:00
 draft: false
-tag: bike
+tags: 
+- bike
+- photos
+- map
+- new york city
 ---
 
 Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour. 

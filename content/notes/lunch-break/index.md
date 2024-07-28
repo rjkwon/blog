@@ -2,7 +2,11 @@
 title: "Lunch break"
 date: 2024-07-17T08:08:42-04:00
 draft: false
-tag: worklife, food
+tags: 
+- work life
+- mental health
+- health
+- food
 ---
 
 I never had a regular "lunch break" until recently. Early in my career it was not by choice — in surgery training there's really no such thing as a break, only a stolen minute or two here and there to pee or wolf down whatever food you can scrounge or nap in a chair if it's the middle of the night and you're on call. We did get a $5 meal coupon for the hospital cafeteria which could get you a cup of terrible coffee and a bagel drier than a bag of silica gel in the Sahara desert. 

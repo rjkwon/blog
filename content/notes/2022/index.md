@@ -2,7 +2,15 @@
 title: "2022 in review"
 date: 2022-12-30T14:55:39-05:00
 draft: false
-tag: end-of-year
+tags: 
+- end of year
+- lists
+- personal reflection
+- habits
+- work life
+- health
+- tv
+- movies
 ---
 
 _Note: if you have published a similar 2022 in review on your site, I would love to see it! You can email me a link at kwon(at)fastmail(dot)com._

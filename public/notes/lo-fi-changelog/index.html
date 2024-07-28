@@ -6,7 +6,7 @@
 
 <title>Lo-fi changelog &bull; Kwon.nyc</title>
 
-<meta name="keywords" content="" />
+<meta name="keywords" content="site updates, hugo" />
 <meta name="description" content="I made a changelog.
 This was a fun little morning project for me. I&rsquo;ve seen others do a thing where the changelog is simply a list of all commit messages in reverse chronological order, so I decided to try it. With any &ldquo;small&rdquo; coding project, I find that I generally grossly underestimate the time it will take to accomplish a seemingly simple thing, but I learn a lot and also have fun with all the side quests.">
 <meta name="author" content="Rachel J. Kwon">
@@ -77,7 +77,7 @@ This was a fun little morning project for me. I&rsquo;ve seen others do a thing 
   "name": "Lo-fi changelog",
   "description": "I made a changelog.\nThis was a fun little morning project for me. I\u0026rsquo;ve seen others do a thing where the changelog is simply a list of all commit messages in reverse chronological order, so I decided to try it. With any \u0026ldquo;small\u0026rdquo; coding project, I find that I generally grossly underestimate the time it will take to accomplish a seemingly simple thing, but I learn a lot and also have fun with all the side quests.",
   "keywords": [
-    
+    "site updates", "hugo"
   ],
   "articleBody": "I made a changelog.\nThis was a fun little morning project for me. I’ve seen others do a thing where the changelog is simply a list of all commit messages in reverse chronological order, so I decided to try it. With any “small” coding project, I find that I generally grossly underestimate the time it will take to accomplish a seemingly simple thing, but I learn a lot and also have fun with all the side quests.\nIn this case, I did some googling and found some articles this Free Code Camp article is the main one I used, and immediately found out I have been writing bad commit messages (apparently the best practice is to use the imperative mood, e.g. “add changelog”, not the past tense, as I’ve been doing). Okay, noted!\nSince my web skills are self taught, I am trying to be more intentional about identifying and developing good habits and hygiene with coding. (I feel like there is a parallel to surgery here, where even though the end result of a procedure by two different surgeons might look the same, the one who throws their stitches meticulously and ties their knots perfectly square has “better” technique—although that might be less important for, say, a trauma laparotomy for a patient who’s exsanguinating versus an elective plastic surgical procedure. Context matters. I wonder if it’s the same with coding.)\nI also read a little bit about pretty formats for commits.\nIn the end, this is where I ended up code-wise:\n1 git log --pretty=format:\"* %as %s\" \u003e CHANGELOG.md which generated this: https://github.com/rjkwon/personal/blob/main/CHANGELOG.md\nI like this solution for now because it’s lightweight but does the job.\nI also learned how to use the highlight shortcode for displaying that code using Hugo. Now I just need to figure out where blob came from… and look into further automating this (potentially with a cron job?)… and maybe making it a page on the website instead of just a .md file…\n",
   "wordCount" : "329",
@@ -233,6 +233,10 @@ Thursday, April 27, 2023&amp;nbsp;·&amp;nbsp;Rachel J. Kwon
 
 </div>
   <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://kwon.nyc/tags/site-updates/">Site Updates</a></li>
+      <li><a href="https://kwon.nyc/tags/hugo/">Hugo</a></li>
+    </ul>
   </footer>
 </article>
     </main><footer class="footer">

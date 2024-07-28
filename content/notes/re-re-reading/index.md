@@ -1,8 +1,11 @@
 ---
-title: "Re: Re-reading"
+title: "Re: re-reading"
 date: 2022-12-13T08:21:08-05:00
 draft: false
-tag: books, reading, aging
+tags: 
+- books
+- internet
+- past selves
 ---
 
 Lately I feel that more often I'd rather re-read a book I've already read before (and enjoyed) than pick up a new one. Maybe it's a form of risk aversion (I don't know if I'm going to like a new book, so I'd rather read an old one). Maybe it's something that comes with aging. I've always loved reading books, since I was a kid and my parents would take me to the library and every single time I would check out the maximum number of books (thirty)[^1], read them all, return them within the two-week checkout period, and check out another 30.

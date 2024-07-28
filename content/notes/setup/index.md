@@ -2,6 +2,11 @@
 title: "Setup"
 date: 2022-02-13T09:07:52-05:00
 draft: false
+tags: 
+- home
+- photos
+- pandemic
+- hobbies
 ---
 
 One of the top priorities when moving to Brooklyn was to have more space, particularly to have dedicated workspace. In our previous apartment, my office was a corner of the bedroom, which I was grateful to have, but also over time resentful. I love my work and my job (probably a litle too much), but seeing my workspace as the  first thing upon waking and the last before sleep made it hard for my brain to rest. (It wasn't nearly as draining as sleeping on a twin bed in a call room in the corner of a patient ward with my pager on my chest, though, like I used to have to do during my surgery training, which is always helpful to recall for perspective.)

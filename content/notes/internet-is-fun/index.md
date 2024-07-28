@@ -1,8 +1,12 @@
 ---
-title: "Internet is Fun"
+title: "Internet is fun"
 date: 2023-09-17T21:02:50-04:00
 draft: false
-tag: internet, project
+tags: 
+- internet
+- site updates
+- old web
+- nostalgia
 ---
 
 I made this:

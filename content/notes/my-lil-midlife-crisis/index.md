@@ -2,7 +2,11 @@
 title: "My lil' midlife crisis"
 date: 2023-12-02T13:49:35-05:00
 draft: false
-tag: personal
+tags: 
+- personal reflection
+- health
+- mental health
+- midlife
 ---
 
 For the last several months I have been experiencing something, first in the background and now very much in the foreground, and that thing is what many people would describe as a midlife crisis, although it doesn't feel so much like a crisis mode and is in fact both exciting and exhausting, and fun and terrifying, and lots of other things. 

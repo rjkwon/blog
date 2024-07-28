@@ -2,7 +2,11 @@
 title: "unpolished"
 date: 2023-03-18T10:36:58-04:00
 draft: false
-tag: writing, personal websites
+tags: 
+- writing
+- personal websites
+- internet
+- medicine
 ---
 
 when visiting my parents a few weeks ago, i picked up one of the books on my mom’s bookshelf, the first of barack obama’s presidential memoirs. i started reading it, but it was kind of hefty and i was only going to be there for a week and didn’t want to start a book i couldn’t finish, so i put it down and picked up another one instead (which, turns out i couldn’t finish that one, either, so maybe i didn’t have to abandon the obama book). anyway, i made it through the intro before deciding to put it down, and one point he shared really stuck with me which i have been reflecting on since: president obama says he prefers to draft his writing by hand, on paper, not by typing on a computer or word processor, because it gives a false sense of completeness or polish. (i’m paraphrasing.) 

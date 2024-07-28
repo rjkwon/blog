@@ -2,7 +2,12 @@
 title: "2022 in review, part 2"
 date: 2022-12-31T09:40:41-05:00
 draft: false
-tag: end-of-year
+tags: 
+- end of year
+- lists
+- personal reflection
+- money
+- charts
 ---
 
 As [promised](https://kwon.nyc/notes/2022/), here's the second part of my year in review. 

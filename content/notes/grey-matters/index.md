@@ -1,8 +1,11 @@
 ---
-title: "Grey Matters"
+title: "Grey matters"
 date: 2022-07-22T07:55:22-04:00
 draft: false
-tag: blogs, internet
+tags: 
+- blogs
+- internet
+- old web
 ---
 
 I read that Noah Grey, the creator of the blogging software Greymatter, recently resurfaced on the internet because he was losing his home to foreclosure and had set up a GoFundMe. 

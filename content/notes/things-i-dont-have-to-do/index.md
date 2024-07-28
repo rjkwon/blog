@@ -2,7 +2,10 @@
 title: "Things I don't have to do"
 date: 2023-12-11T22:14:03-05:00
 draft: false
-tag: midlife, personal
+tags: 
+- midlife
+- personal reflection
+- lists
 ---
 
 I spent a lot of time and energy in my life worrying about things I felt like I _had_ to do for one reason or another. Either everyone else was doing the thing, or specific people were pressuring me to do the thing, or I never saw real examples or models of people who _didn't_ do the thing, etc. 
