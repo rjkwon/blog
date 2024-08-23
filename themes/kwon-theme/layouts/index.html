@@ -21,11 +21,12 @@
       <header>
           <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
           <div class="post-meta">
-          {{ .Date.Format "Monday, Jan 2, 2006" }}</div>
+            {{- partial "post_meta.html" . -}}
+          </div>
       </header>
         <div class="post-summary">{{ .Summary }}{{ if .Truncated }}...
           <p><a href="{{ .RelPermalink }}">Keep reading</a></p>
-        {{ end }}
+        {{ end }} 
         </div>
     </article>
 {{ end }}

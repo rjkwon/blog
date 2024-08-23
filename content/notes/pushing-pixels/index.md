@@ -14,7 +14,7 @@ _(Sidenote: how did we ever design/build websites without Inspect Element??)_
 
 Anyway, the things that bothered me were (1) spacing was a little too tight between the top of the page and the header/navigation, (2) emoji to toggle light/dark mode were not properly vertically aligned, (3) superscript footnote links were pushing the lines out of whack, (4) superscript footnote links were inheriting the dotted bottom border which looked messy when the text itself was also linked, (5) on mobile, the  note title, date, and body were uncomfortably crowded.
 
-{{< figure src="css tweaks - desktop.png" link="css tweaks - desktop.png" caption="Desktop (may click to embiggen)" alt="Side by side view of this webpage before and after minor CSS tweaks" class="full" >}}
+{{< responsive-image src="css tweaks - desktop.png" link="css tweaks - desktop.png" caption="Desktop (may click to embiggen)" alt="Side by side view of this webpage before and after minor CSS tweaks" class="full" >}}
 
 {{< figure src="css tweaks - mobile.png" link="css tweaks - mobile.png" caption="Mobile" alt="Side by side view of this webpage before and after minor CSS tweaks" class="full" >}}
 

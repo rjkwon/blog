@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Kwon.nyc"
 theme = "kwon-theme"
 publishDir = "public"
+enableRobotsTXT = false
 
 [[menu.main]]
 identifier = "about"
@@ -16,12 +17,6 @@ name = "Notes"
 url = "/notes/"
 weight = 20
 
-[[menu.main]]
-identifier = "stuff"
-name = "Stuff"
-url = "/stuff/"
-weight = 30
-
 [params]
   mainSections = ['notes']
   assetDir = "assets"
@@ -29,3 +24,5 @@ weight = 30
 
 [minification]
   enable = true
+
+

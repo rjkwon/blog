@@ -7,7 +7,7 @@
     {{- partial "breadcrumbs.html" . }}
     <h1 class="post-title">
       {{ .Title }}
-      {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
+      {{- if .Draft }}<div class="entry-isdraft"><sup>[draft]</sup></div>{{- end }}
     </h1>
     {{- if .Description }}
     <div class="post-description">
@@ -38,15 +38,16 @@
   {{- end }}
   <div class="post-content">
     {{- partial "anchored_headings.html" .Content -}}
-  </div>
-  <footer class="post-footer">
+
     {{- if .Params.tags }}
-    <ul class="post-tags">
+    <ul class="post-tags" style="display: none">
       {{- range ($.GetTerms "tags") }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
     {{- end }}
+  </div>
+  <footer class="post-footer">
     {{- if (.Param "ShowPostNavLinks") }}
     {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{- if and (gt (len $pages) 1) (in $pages . ) }}
