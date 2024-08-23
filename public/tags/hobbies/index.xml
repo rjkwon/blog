@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hobbies on Kwon.nyc</title>
-    <link>http://localhost:1313/tags/hobbies/</link>
+    <link>https://kwon.nyc/tags/hobbies/</link>
     <description>Recent content in Hobbies on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Feb 2022 09:07:52 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/hobbies/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Feb 2022 09:07:52 -0500</lastBuildDate><atom:link href="https://kwon.nyc/tags/hobbies/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup</title>
-      <link>http://localhost:1313/notes/setup/</link>
+      <link>https://kwon.nyc/notes/setup/</link>
       <pubDate>Sun, 13 Feb 2022 09:07:52 -0500</pubDate>
       
-      <guid>http://localhost:1313/notes/setup/</guid>
+      <guid>https://kwon.nyc/notes/setup/</guid>
       <description>One of the top priorities when moving to Brooklyn was to have more space, particularly to have dedicated workspace. In our previous apartment, my office was a corner of the bedroom, which I was grateful to have, but also over time resentful. I love my work and my job (probably a litle too much), but seeing my workspace as the first thing upon waking and the last before sleep made it hard for my brain to rest.</description>
     </item>
     
     <item>
       <title>Bicycle storycle (bike story)</title>
-      <link>http://localhost:1313/notes/bike-story/</link>
+      <link>https://kwon.nyc/notes/bike-story/</link>
       <pubDate>Mon, 11 Oct 2021 09:23:09 -0400</pubDate>
       
-      <guid>http://localhost:1313/notes/bike-story/</guid>
+      <guid>https://kwon.nyc/notes/bike-story/</guid>
       <description>TL;DR I made a new page: kwon.nyc/bike
 In January 2010 I was in my final year of medical school and had some rare free time for several weeks on a light rotation. My Local Bike Shop™ was offering classes on how to build a bike, so I enrolled and learned a lot about bike parts and bike maintenance. (Oddly enough, we didn&amp;rsquo;t actually build bikes.) Over the next few years I started building up a track bike, slowly amassing parts from my travels, getting the naked frame painted and framesaved, et cetera.</description>
     </item>
