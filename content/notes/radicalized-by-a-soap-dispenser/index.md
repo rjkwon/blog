@@ -46,7 +46,8 @@ Besides finding this incredibly concerning and disappointing from a societal sta
 
 In other words (I'm telling you, I ruminated on this for long enough to generate a 2x2 matrix):
 
-{{< rawhtml >}} <table border="1" cellspacing="0" cellpadding="10">
+{{< rawhtml >}}
+ <table border="0" cellspacing="0" cellpadding="10">
   <tr>
     <th></th>
     <th>Not fancy</th>
@@ -63,7 +64,9 @@ In other words (I'm telling you, I ruminated on this for long enough to generate
     <td>useless, infuriating 😡</td>
   </tr>
 </table>
- {{< /rawhtml >}}
+  {{< /rawhtml >}}
+
+
 
 I think I have gotten to the point in my life where I equally value the functional and the beautiful. It's rare to find truly beautiful (by the definition above) things, but functional is the next best and in many cases it's not even worth the lift to make something fancy if it works. 
 
