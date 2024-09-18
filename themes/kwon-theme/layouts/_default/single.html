@@ -1,10 +1,7 @@
 {{- define "main" }}
 
-
-
 <article class="post-single">
   <header class="post-header">
-    {{- partial "breadcrumbs.html" . }}
     <h1 class="post-title">
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>[draft]</sup></div>{{- end }}

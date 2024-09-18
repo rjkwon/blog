@@ -2,6 +2,7 @@
 title: "Spring tune-up + ride"
 date: 2024-05-18T08:51:55-04:00
 draft: false
+mapbox: true
 tags: 
 - bike
 - photos
@@ -19,8 +20,6 @@ Today I took the bike out for a spin—a lot of spins, actually, about 26 miles'
 
 {{< rawhtml >}}
 <div id="map" style="width: 100%; height: 500px; border: none; border-radius: 20px;"></div>
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag';
     var map = new mapboxgl.Map({
