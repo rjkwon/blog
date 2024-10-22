@@ -1,12 +1,13 @@
 ---
 title: "Eyeballs"
-date: 2024-10-22T11:01:53-04:00
+date: 2024-10-22T09:01:53-04:00
 draft: false
 tags:
 - health
 - midlife
 - slice of life
 ---
+
 I recently got contact lenses, for the first time in 34 years, as someone who has required corrective eyewear since the age of 6. 
 
 I have attributed the decision mostly to my ongoing midlife/existential crisis — as a way to prove to myself that I'm NOT set in my ways and I CAN do new things — and for whatever reason I had increasingly been thinking that my eyeglasses are my whole personality and I was interested in experimenting with a different look. 
@@ -30,7 +31,7 @@ The associate at the eye shop[^2] was very encouraging and kept saying "You got 
 
 So, I now have the option of wearing contact lenses. I wear them about once or twice a week, for less than a full day at a time and usually only when doing the aforementioned activities including bike riding and hot noodle eating. Honestly, it's... fine. Not earth shattering or anything, but it is nice to have the choice, even if I don't use it very often. 
 
-(I wore my contacts to a New York Liberty basketball game a couple months ago, and on one particular play the referee declined to call a foul on one of the visiting players despite what the crowd felt was an obvious hit, and somebody yelled out "1-800-CONTACTS!!!" which made me laugh. The hecklers at women's basketball games are extremely nontoxic.)
+(I wore my contacts to a New York Liberty basketball game a couple months ago, and on one particular play the referee declined to call a foul on one of the visiting players despite what the crowd felt was an obvious hit, and somebody yelled out "1-800-CONTACTS!!!" which made me laugh. The hecklers at women's basketball games are refreshingly nontoxic.)
 
 [^1]: I have to say there was a moment as the K-poptometrist and I stared deeply into each others' eyes (him to assess my astigmatism, me because my head was in a cage) where I momentarily forgot that I am quite happily partnered with my girlfriend and in my head was like, wait, Dr Lee... what are we? Then he told me that I should be on the lookout for impending presbyopia due to my age, which brought me back to earth.
-[^2]: That is definitely not what the establishment is called... what is it called? Glasses store? 
+[^2]: That is definitely not what the establishment is called... what is it called? Glasses store? Eyewear market? Vision place? Oh dear.
