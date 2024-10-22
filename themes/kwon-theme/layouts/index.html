@@ -33,17 +33,34 @@
 
 <div class="sidebar">
 
-  <div class="movies">
+<!--   <div class="movies">
     <h2>📺 Recently viewed</h2>
 
-  <script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fletterboxd.com%2Fkwon%2Frss%2F&num=5&desc=1&utf=y" charset="UTF-8" type="text/javascript"></script>
+ <script>
+    fetch('https://letterboxd.com/kwon/rss/')
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+            const items = data.querySelectorAll("item");
+            let html = `<ul>`;
+            items.forEach(el => {
+                let title = el.querySelector("title").textContent;
+                let link = el.querySelector("link").textContent;
+                html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
+            });
+            html += `</ul>`;
+            document.getElementById("letterboxd-feed").innerHTML = html;
+        });
+</script> 
+
+<script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fletterboxd.com%2Fkwon%2Frss%2F&num=5&desc=1&utf=y" charset="UTF-8" type="text/javascript"></script>
 
 <noscript>
 <a href="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Fletterboxd.com%2Fkwon%2Frss%2F&num=5&desc=1&utf=y&html=y">View RSS feed</a>
-</noscript>
+</noscript> 
 
     <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
-  </div>
+  </div> -->
 
   <div class="books">
     <h2>📖 Currently reading </h2>
@@ -57,13 +74,15 @@
 
   <div class="pinboard">
     <h2>Meanwhile, on the internet...</h2>
+
+<ul><li><em>Oops, something broke here :( I tried but I can't fix it easily, so please go get a cup of coffee (or other beverage of your choice, obviously — I'm not going to police your fluid intake!!) and read this placeholder message until I can.</em></li></ul>
     <!-- <ul> -->
   <!-- <script language="javascript" src="http://pinboard.in//widgets/v1/linkroll/?user=kwon&count=10&tag=post"></script> -->
-<script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Ffeeds.pinboard.in%2Frss%2Fsecret%3A8f8879b58e42e2e1539e%2Fu%3Akwon%2F&chan=y&num=7&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
+<!-- <script language="JavaScript" src="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Ffeeds.pinboard.in%2Frss%2Fsecret%3A8f8879b58e42e2e1539e%2Fu%3Akwon%2F&chan=y&num=7&desc=1&utf=y"  charset="UTF-8" type="text/javascript"></script>
 
 <noscript>
 <a href="https://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Ffeeds.pinboard.in%2Frss%2Fsecret%3A8f8879b58e42e2e1539e%2Fu%3Akwon%2F&chan=y&num=7&desc=1&utf=y&html=y">View RSS feed</a>
-</noscript>
+</noscript> -->
     <!-- </ul> -->
      <div class="more"><a href="https://pinboard.in/u:kwon/">More at Pinboard</a></div>
   </div>   
