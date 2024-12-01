@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <small>🚧 <em>Pardon the mess — I'm renovating!</em> 🚧</small>
+  <ul>
+    {{ $links := site.Data.links.links }}
+    {{ range $links }}
+      <li class="link">
+        <a href="{{ .url }}">{{ .title }}</a>
+        <div class="link-description">{{ .description }}</div>
+        <!-- <small>{{ .date }} | Tags: {{ delimit .tags ", " }}</small> -->
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

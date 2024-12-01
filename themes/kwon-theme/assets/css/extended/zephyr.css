@@ -21,7 +21,7 @@ iframe.youtube-player {
 }
 
 /* map - mobile */
-@media (max-width: 415px) {
+@media (max-width: 480px) {
     body.zephyr div#map { 
     	height: 200px;
     }

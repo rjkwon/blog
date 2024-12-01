@@ -4,7 +4,7 @@ GRID AND POSITIONING
 ----------------------------------- */
 .main {
     position: relative;
-    /*min-height: calc(100vh - var(--header-height) - var(--footer-height));*/
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 20);
     margin: auto;
     padding: var(--gap);
@@ -68,7 +68,8 @@ main div.sidebar a:link {
 main a:hover {
 }
 
-main article a {
+main article a,
+body.links main a {
     padding: 2px;
     margin: -2px;
     text-decoration: none;
@@ -134,12 +135,12 @@ MOVIES, BOOKS, PINBOARD
     -webkit-box-shadow: -2px 0px 3px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -3px 3px 3px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-/*    columns: 2;
+    columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
     column-gap: 1em;
     -webkit-column-gap: 1em; 
-    -moz-column-gap: 1em;*/
+    -moz-column-gap: 1em;
 }
 
 p.rss-title {
@@ -192,7 +193,7 @@ div.headline {
 }
 
 /* mobile view */
-@media (max-width: 415px) {
+@media (max-width: 480px) {
     div.headline {
         font-size: 1.2em;
     }
@@ -238,7 +239,7 @@ div.headline {
 }
 
 /* mobile view */
-@media (max-width: 415px) {
+@media (max-width: 480px) {
     .about section,
     .colophon article,
     article.post-single,
@@ -306,9 +307,19 @@ PAGES: COLOPHON
 }
 
 /* -----------------------------------
-PAGES: NOW
+PAGES: LINKS
 ----------------------------------- */
+body.links li div {
+    display: block;
+}
 
+body.links main li a {
+    font-weight: bold;
+}
+
+body.links li.link {
+    padding-bottom: 10px;
+}
 
 
 /* -----------------------------------
@@ -367,7 +378,7 @@ body.list section.notes article span a {
 }
 
 /* notes list - mobile */
-@media (max-width: 415px) {
+@media (max-width: 480px) {
     body.list section.notes article span a { 
         font-size: 1.8em;
         line-height: 1.4;

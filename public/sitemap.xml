@@ -88,6 +88,9 @@
     <loc>https://kwon.nyc/tags/personal-reflection/</loc>
     <lastmod>2024-04-10T22:03:43-04:00</lastmod>
   </url><url>
+    <loc>https://kwon.nyc/zephyr/</loc>
+    <lastmod>2024-03-23T12:37:40-04:00</lastmod>
+  </url><url>
     <loc>https://kwon.nyc/tags/internet/</loc>
     <lastmod>2024-01-30T09:20:16-05:00</lastmod>
   </url><url>
@@ -320,5 +323,7 @@
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/categories/</loc>
+  </url><url>
+    <loc>https://kwon.nyc/links/</loc>
   </url>
 </urlset>

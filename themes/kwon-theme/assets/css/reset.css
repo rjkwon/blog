@@ -1,5 +1,5 @@
 /* mobile view --------------------- */
-@media (max-width: 415px) {
+@media (max-width: 480px) {
     .sidebar,
     section.notes article,
     section.notes article span,

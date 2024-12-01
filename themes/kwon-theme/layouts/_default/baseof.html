@@ -4,15 +4,7 @@
     {{- partial "head.html" . }}
 </head>
 
-<body class="
-{{- with .Type -}}
-    {{- . -}}
-{{- end -}}
-
-{{- if ne .Kind "page" }}
-     list
-{{- end -}}
-" id="top">
+<body class="{{ .Type }}{{ if ne .Kind "page" }} list{{ end }}" id="top">
 
     {{- partialCached "header.html" . .Page}}
     <main class="main">

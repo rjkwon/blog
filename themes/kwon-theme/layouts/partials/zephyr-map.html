@@ -1,0 +1,7 @@
+
+{{ if .IsPage }}
+  {{ if and (eq .Type "zephyr") (eq .Layout "single") }}
+{{ $js := resources.Get "js/zephyr-map.js" | minify | fingerprint }}
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>    
+  {{ end }}
+{{ end }}
