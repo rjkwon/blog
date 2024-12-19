@@ -2,8 +2,7 @@
   <h1>{{ .Title }}</h1>
   <small>🚧 <em>Pardon the mess — I'm renovating!</em> 🚧</small>
   <ul>
-    {{ $links := site.Data.links.links }}
-    {{ range $links }}
+    {{ range .Site.Data.links.links }}
       <li class="link">
         <a href="{{ .url }}">{{ .title }}</a>
         <div class="link-description">{{ .description }}</div>
