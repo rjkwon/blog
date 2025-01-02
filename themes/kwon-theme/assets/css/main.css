@@ -119,13 +119,7 @@ MOVIES, BOOKS, PINBOARD
     padding-right: 1em;
 }
 
-.books .gr_custom_title_1620425797,
-.books .gr_custom_author_1620425797 {
-    /*float: right;*/
-}
-
-.pinboard ul, 
-.pinboard ul.rss-items {
+.pinboard ul {
     background-color: var(--highlight);
     padding: 1.5em;
     margin: 0 -0.5em;
@@ -143,25 +137,19 @@ MOVIES, BOOKS, PINBOARD
     -moz-column-gap: 1em;
 }
 
-p.rss-title {
-    display: none;
-}
-
-.pinboard li,
-.pinboard li.rss-item {
+.pinboard li {
     list-style-type: none;
     margin-bottom: 1.5em;
     line-height: 160%;
     padding-right: 2em;
 }
 
-.pinboard li.rss-item br {
+.pinboard li br {
     display: none;
 }
 
-.pinboard li a,
-.pinboard li.rss-item a {
-    display: block;
+.pinboard li a {
+/*    display: block;*/
     margin-bottom: 0.5em;
     font-weight: bold;
 }

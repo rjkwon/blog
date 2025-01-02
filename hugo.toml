@@ -27,6 +27,7 @@ weight = 30
   mainSections = ['notes']
   assetDir = "assets"
   author = "Rachel J. Kwon"
+  feed_token = "x5DA7Gxf8FnCFnDe"
 
 [minification]
   enable = true
