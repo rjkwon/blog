@@ -71,17 +71,6 @@
 {{ $js := resources.Get "js/links.js" | minify | fingerprint }}
 <script src="{{ $js.Permalink }}"></script>
 <ul id="linkroll"></ul>
-<!--     {{ $links := site.Data.links.links }}
-    <ul id="linkroll">
-        {{ range first 9 $links }}
-        <li class="pinboard_link">
-            <a href="{{ .url }}" target="_blank">{{ .title }}</a>
-            {{ if .description }}
-            <span class="pinboard_desc">{{ .description }}</span>
-            {{ end }}
-        </li>
-        {{ end }}
-    </ul> -->
     <div class="more"><a href="/links">More links</a></div>
 </div>
 

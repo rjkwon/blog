@@ -69,11 +69,13 @@ main a:hover {
 }
 
 main article a,
-body.links main a {
+body.links main a,
+.pinboard_desc a {
     padding: 2px;
     margin: -2px;
     text-decoration: none;
     border-bottom: 1px dotted var(--orange);
+    font-weight: normal !important;
 }
 
 main article p a:hover {
@@ -137,21 +139,11 @@ MOVIES, BOOKS, PINBOARD
     -moz-column-gap: 1em;
 }
 
-.pinboard li {
+li.pinboard_link {
     list-style-type: none;
-    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
     line-height: 160%;
     padding-right: 2em;
-}
-
-.pinboard li br {
-    display: none;
-}
-
-.pinboard li a {
-/*    display: block;*/
-    margin-bottom: 0.5em;
-    font-weight: bold;
 }
 
 /* add arrow to external links */
