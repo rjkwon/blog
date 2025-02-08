@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Kwon.nyc</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://kwon.nyc/tags/hugo/</link>
     <description>Recent content in Hugo on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2023 07:38:45 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Apr 2023 07:38:45 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lo-fi changelog</title>
-      <link>http://localhost:1313/notes/lo-fi-changelog/</link>
+      <link>https://kwon.nyc/notes/lo-fi-changelog/</link>
       <pubDate>Thu, 27 Apr 2023 07:38:45 -0400</pubDate>
       
-      <guid>http://localhost:1313/notes/lo-fi-changelog/</guid>
+      <guid>https://kwon.nyc/notes/lo-fi-changelog/</guid>
       <description>&lt;p&gt;I made a &lt;a href=&#34;https://github.com/rjkwon/personal/blob/main/CHANGELOG.md&#34;&gt;changelog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This was a fun little morning project for me. I&amp;rsquo;ve seen others do a thing where the changelog is simply a list of all commit messages in reverse chronological order, so I decided to try it. With any &amp;ldquo;small&amp;rdquo; coding project, I find that I generally grossly underestimate the time it will take to accomplish a seemingly simple thing, but I learn a lot and also have fun with all the side quests.&lt;/p&gt;</description>
     </item>
