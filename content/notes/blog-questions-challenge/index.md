@@ -7,7 +7,7 @@ tags:
 
 Two of my favorite people on the internet, [Naz](https://nazhamid.com/) and [Katherine](https://kayserifserif.place/), tagged me in this challenge, so here I am filling it in. 
 
-(By the way, *[hikes up grandpa pants]*, we used to call these "blog memes," and because we didn't I didn't have many IRL friends who were also internet culture, at least not that I knew of, I'd never heard the word out loud and definitely thought it was pronounced "meh-mehs." And then memes became something slightly different which is what the common parlance refers to today, not this type of "blog challenge.")
+(By the way, *[hikes up grandpa pants]*, we used to call these "blog memes," and because we didn't I didn't have many IRL friends who were also internet culture, at least not that I knew of, I'd never heard the word out loud and definitely thought it was pronounced "meh-mehs." And then memes evolved into something different — what we now commonly think of as internet jokes and viral trends, rather than these early “blog challenges.”)
 # Why did you start blogging in the first place?
 To be honest, I don't remember. I was very enamored by computers and the internet as a teenager in the late '90s and early '00s, and I saw personal homepages that real people were making and putting out there, so I made one, too. The concept of weblogs/blogs didn't become popularized until a little later. For a short glorious while, a blog was synonymous with a personal blog. I have kept a paper journal since my teenage years, so my blog was like my online journal.
 # What platform are you using to manage your blog and why did you choose it?

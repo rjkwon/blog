@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Old Web on Kwon.nyc</title>
-    <link>https://kwon.nyc/tags/old-web/</link>
+    <link>http://localhost:1313/tags/old-web/</link>
     <description>Recent content in Old Web on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Sep 2023 21:02:50 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/old-web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 21:02:50 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/old-web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Internet is fun</title>
-      <link>https://kwon.nyc/notes/internet-is-fun/</link>
+      <link>http://localhost:1313/notes/internet-is-fun/</link>
       <pubDate>Sun, 17 Sep 2023 21:02:50 -0400</pubDate>
       
-      <guid>https://kwon.nyc/notes/internet-is-fun/</guid>
+      <guid>http://localhost:1313/notes/internet-is-fun/</guid>
       <description>&lt;p&gt;I made this:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://projects.kwon.nyc/internet-is-fun&#34;&gt;The internet used to be fun&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I feel like more people these days are starting to reject the notion that the internet is made up of Big Websites that represent Big Companies that are trying to take either the attention or the money of their visitors while adding minimal value to the lives and well-being of those visitors.&lt;/p&gt;
@@ -21,10 +21,10 @@
     
     <item>
       <title>Grey matters</title>
-      <link>https://kwon.nyc/notes/grey-matters/</link>
+      <link>http://localhost:1313/notes/grey-matters/</link>
       <pubDate>Fri, 22 Jul 2022 07:55:22 -0400</pubDate>
       
-      <guid>https://kwon.nyc/notes/grey-matters/</guid>
+      <guid>http://localhost:1313/notes/grey-matters/</guid>
       <description>&lt;p&gt;I read that Noah Grey, the creator of the blogging software Greymatter, recently resurfaced on the internet because he was losing his home to foreclosure and had set up a GoFundMe.&lt;/p&gt;
 &lt;p&gt;I went into a little bit of a rabbit hole reading about Noah and what he had been up to, and it made me quite nostalgic. My first blog, circa 2001, was built with Greymatter. The internet was different back then (she says, rocking gently in her rocking chair on the porch, occasionally pausing to yell at children to get off her lawn). Blogs were very pure and people-centric. They were organic, artisanal, handmade. Nobody was trying to make money off of them. (Dooce.com was the first personal blog I was aware of that got big enough to monetize.)&lt;/p&gt;</description>
     </item>

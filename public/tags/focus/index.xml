@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Focus on Kwon.nyc</title>
-    <link>https://kwon.nyc/tags/focus/</link>
+    <link>http://localhost:1313/tags/focus/</link>
     <description>Recent content in Focus on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Mar 2022 09:30:24 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/focus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Mar 2022 09:30:24 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/focus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distracted</title>
-      <link>https://kwon.nyc/notes/distracted/</link>
+      <link>http://localhost:1313/notes/distracted/</link>
       <pubDate>Sat, 19 Mar 2022 09:30:24 -0400</pubDate>
       
-      <guid>https://kwon.nyc/notes/distracted/</guid>
+      <guid>http://localhost:1313/notes/distracted/</guid>
       <description>&lt;p&gt;RIP to my attention span.&lt;/p&gt;
 &lt;p&gt;The world seems to be opening back up now that we are no longer surging (or are just between surges?), but I wouldn&amp;rsquo;t say that I feel normal again.&lt;/p&gt;
 &lt;p&gt;Lack of focus has been one of the most pronounced negative effects. For example, I sat down with a cup of coffee and opened up a text editor to write this note about an hour ago and have since abandoned the window no fewer than seven times (see &lt;a href=&#34;#appendix&#34;&gt;Appendix&lt;/a&gt;).&lt;/p&gt;</description>
