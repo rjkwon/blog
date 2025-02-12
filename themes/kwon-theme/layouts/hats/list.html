@@ -25,9 +25,9 @@
   }
 </style>
 
-<h1>Hat Gallery 🧢</h1>
+<h1>Dad hats 🧢</h1>
 <div class="hat-grid">
-  {{ range site.Data.hats }}
+  {{ range .Site.Data.hats }}
   <div class="hat-item" style="background-color: {{ .bg_color }};">
     <img src="/hats/{{ .image }}" alt="{{ .alt }}">
     <p class="hat-caption" style="color: {{ .text_color }};">{{ .caption }}</p>

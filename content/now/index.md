@@ -1,15 +1,14 @@
 ---
 title: "Now"
-date: 2024-12-19
+date: 2025-02-12
 type: now
 draft: false
 ---
 
-Since my last update to this page in January 2024, I
+Since my last update to this page in December 2024, I
 
-- left my old job and started a new one
-- turned 40
-- have tried to weather the turbulence of the American news cycles
-- am spending another winter month in the Catskills, which is now becoming a yearly thing and is helping me look forward to this previously wretched season rather than dreading it
+- started taking an ASL class (the whole first session was about Deaf culture and etiquette)
+- customized a new mechanical keyboard, bringing my total to 3 (not counting my numpad and macropad) — I think it's officially a hobby now)
+- have been increasingly worried about my country and our world
 
 _This page is my contribution to the [/now page movement](https://nownownow.com/) by [Derek Sivers](https://sive.rs/nowff)._

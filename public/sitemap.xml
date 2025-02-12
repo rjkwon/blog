@@ -4,8 +4,14 @@
   <url>
     <loc>https://kwon.nyc/stuff/beer/</loc>
   </url><url>
+    <loc>https://kwon.nyc/notes/blog-questions-challenge/</loc>
+    <lastmod>2025-02-12T09:38:21-05:00</lastmod>
+  </url><url>
     <loc>https://kwon.nyc/</loc>
-    <lastmod>2024-12-27T16:55:06-05:00</lastmod>
+    <lastmod>2025-02-12T09:38:21-05:00</lastmod>
+  </url><url>
+    <loc>https://kwon.nyc/now/</loc>
+    <lastmod>2025-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/tags/midlife/</loc>
     <lastmod>2024-12-27T16:55:06-05:00</lastmod>
@@ -21,9 +27,6 @@
   </url><url>
     <loc>https://kwon.nyc/notes/wintering-better/</loc>
     <lastmod>2024-12-27T16:55:06-05:00</lastmod>
-  </url><url>
-    <loc>https://kwon.nyc/now/</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/notes/eyeballs/</loc>
     <lastmod>2024-10-22T09:01:53-04:00</lastmod>
@@ -326,6 +329,8 @@
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
     <loc>https://kwon.nyc/categories/</loc>
+  </url><url>
+    <loc>https://kwon.nyc/dad-hats/</loc>
   </url><url>
     <loc>https://kwon.nyc/links/</loc>
   </url>
