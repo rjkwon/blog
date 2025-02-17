@@ -22,7 +22,7 @@ jobs:
         run: npm install googleapis@latest
 
       - name: Fetch TV Log from Google Sheets
-        run: node scripts/fetch_tv_log.js
+        run: node $(pwd)/scripts/fetch_tv_log.js
         env:
           TV_SHEET_ID: ${{ secrets.TV_SHEET_ID }}
 
