@@ -1,9 +1,8 @@
 const { google } = require("googleapis");
 const fs = require("fs");
-require("dotenv").config();
 
-const SHEET_ID = process.env.GOOGLE_SHEET_ID;
-const API_KEY = process.env.GOOGLE_API_KEY; // Store this as a GitHub Secret
+const SHEET_ID = process.env.TV_SHEET_ID;
+const API_KEY = process.env.GOOGLE_API_KEY; 
 
 async function fetchTVLog() {
     const sheets = google.sheets({ version: "v4", auth: API_KEY });
