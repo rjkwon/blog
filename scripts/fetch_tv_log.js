@@ -23,7 +23,7 @@ async function fetchTVLog() {
         markdown += `## ${row[0]} - ${row[1]}\n\n`;
     });
 
-    fs.writeFileSync("content/tv.md", markdown);
+    fs.writeFileSync("content/tv/_index.md", markdown);
     console.log("✅ TV Log updated!");
 }
 
