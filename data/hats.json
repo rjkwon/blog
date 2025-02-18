@@ -1,17 +1,17 @@
 [
   {
     "image": "agrivisor.png",
-    "caption": "Farm Bureau AgriVisor",
+    "caption": "Farm Bureau AgriVisor - perhaps a nod to our time in the Midwest",
     "alt": "",
-    "bg_color": "",
-    "text_color": ""
+    "bg_color": "#07644A",
+    "text_color": "#fff"
   },
   {
     "image": "airforce.png",
     "caption": "U.S. Air Force Museum",
     "alt": "",
-    "bg_color": "",
-    "text_color": ""
+    "bg_color": "#A22D5F",
+    "text_color": "#fff"
   },
   {
     "image": "alondra.png",
@@ -50,7 +50,7 @@
   },
   {
     "image": "blue.png",
-    "caption": "Blue cap (unknown origin)",
+    "caption": "Grand Canyon",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -352,6 +352,62 @@
   {
     "image": "zion.png",
     "caption": "Zion National Park",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "cactus.png",
+    "caption": "not a hugger",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "petrified.png",
+    "caption": "Petrified Forest National Park",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "pikes2.png",
+    "caption": "Pikes Peak",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "pelican.png",
+    "caption": "Pelican Golf",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "sequoia.png",
+    "caption": "Sequoia and Kings Canyon National Parks",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "oxford.png",
+    "caption": "University of Oxford",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "sedona.png",
+    "caption": "Original Red Dirt Sedona Arizona",
+    "alt": "",
+    "bg_color": "",
+    "text_color": ""
+  },
+  {
+    "image": "standrews.png",
+    "caption": "The Old Course St Andrews Links",
     "alt": "",
     "bg_color": "",
     "text_color": ""

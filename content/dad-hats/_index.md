@@ -1,6 +1,5 @@
 ---
 title: "Dad Hats"
 type: "hats"
+aliases: ["/🧢/"]
 ---
-
-My dad has many hats.
