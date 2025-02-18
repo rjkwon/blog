@@ -5,11 +5,12 @@ const SHEET_ID = process.env.TV_SHEET_ID;
 const API_KEY = process.env.GOOGLE_API_KEY; 
 
 async function fetchTVLog() {
-    const sheets = google.sheets({ version: "v4", auth: API_KEY });
+    const sheets = google.sheets({ version: "v4" });
 
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: SHEET_ID,
         range: "Shows!A:B",
+        key: API_KEY, // ✅ Fix: Pass API key explicitly
     });
 
     const rows = res.data.values;
