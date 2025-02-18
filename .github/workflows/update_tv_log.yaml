@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions@github.com"
-          git add content/tv.md
+          git add content/tv/_index.md
           git commit -m "Auto-update TV log from Google Sheets" || exit 0
           git push
