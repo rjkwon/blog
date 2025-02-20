@@ -7,6 +7,8 @@ const API_KEY = process.env.GOOGLE_API_KEY;
 async function fetchTVLog() {
     const sheets = google.sheets({ version: "v4" });
 
+    console.log("✅ GOOGLE_API_KEY:", API_KEY ? "Exists" : "Missing");
+    
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: SHEET_ID,
         range: "Shows!A:B",
