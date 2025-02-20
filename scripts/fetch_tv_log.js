@@ -2,12 +2,12 @@ const { google } = require("googleapis");
 const fs = require("fs");
 
 const SHEET_ID = process.env.TV_SHEET_ID;
-const API_KEY = process.env.GOOGLE_API_KEY; 
+const API_KEY = process.env.SHEETS_API_KEY; 
 
 async function fetchTVLog() {
     const sheets = google.sheets({ version: "v4" });
 
-    console.log("✅ GOOGLE_API_KEY:", API_KEY ? "Exists" : "Missing");
+    console.log("✅ SHEETS_API_KEY:", API_KEY ? "Exists" : "Missing");
     
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: SHEET_ID,
