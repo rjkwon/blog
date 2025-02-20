@@ -27,6 +27,7 @@ jobs:
       - name: Fetch TV Log from Google Sheets
         run: node $(pwd)/scripts/fetch_tv_log.js
         env:
+          SHEETS_API_KEY: ${{ secrets.SHEETS_API_KEY }}
           TV_SHEET_ID: ${{ secrets.TV_SHEET_ID }}
 
       - name: Commit and push changes
