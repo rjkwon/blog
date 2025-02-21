@@ -13,7 +13,7 @@ async function fetchTVLog() {
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: SHEET_ID,
         range: "Shows!A:B",
-        key: API_KEY, // ✅ Fix: Pass API key explicitly
+        key: API_KEY,
     });
 
     const rows = res.data.values;
