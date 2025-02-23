@@ -1,6 +1,6 @@
 # TV Log
 
-## ❤️ - showName
+## Fav - showName
 
 ##  - High Potential
 
