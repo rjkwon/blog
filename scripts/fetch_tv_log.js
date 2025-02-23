@@ -6,13 +6,10 @@ const API_KEY = process.env.SHEETS_API_KEY;
 
 async function fetchTVLog() {
     const sheets = google.sheets({ version: "v4" });
-
-// console.log("✅ Environment Variables:", process.env);
-// console.log("✅ SHEETS_API_KEY:", process.env.SHEETS_API_KEY ? "Exists" : "Missing");
     
     const res = await sheets.spreadsheets.values.get({
         spreadsheetId: SHEET_ID,
-        range: "Shows!A:B",
+        range: "Shows!A1:H10",
         key: API_KEY,
     });
 
@@ -24,11 +21,11 @@ async function fetchTVLog() {
 
     let markdown = "# TV Log\n\n";
     rows.forEach(row => {
-        markdown += `## ${row[0]} - ${row[1]}\n\n`;
+        markdown += `${row[0]} - ${row[1]}\n\n`;
     });
 
     fs.writeFileSync("content/tv/_index.md", markdown);
-    console.log("✅ TV Log updated!");
+    console.log("TV Log updated!");
 }
 
 fetchTVLog().catch(console.error);
