@@ -1,3 +1,8 @@
+---
+title: "TV log"
+description: "Television I've consumed recently"
+---
+
 # TV Log
 
 showName (season) - last watched dateLastWatched
