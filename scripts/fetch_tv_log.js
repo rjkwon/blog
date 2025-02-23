@@ -21,7 +21,7 @@ async function fetchTVLog() {
 
     let markdown = "# TV Log\n\n";
     rows.forEach(row => {
-        markdown += `${row[0]} - ${row[1]}\n\n`;
+        markdown += `${row[1]} (${row[3]}) - last watched ${row[6]}\n\n`;
     });
 
     fs.writeFileSync("content/tv/_index.md", markdown);
