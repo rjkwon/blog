@@ -50,7 +50,7 @@ jobs:
           sudo apt-get install hugo -y
       
       - name: Build Hugo Site
-        run: hugo --minify
+        run: hugo --minify --destination public
       
       - name: Deploy Hugo Site
         env:
