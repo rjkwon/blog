@@ -1,4 +1,4 @@
 ---
 title: "Dad Hats"
-type: "hats"
+type: hats
 ---

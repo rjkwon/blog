@@ -1,6 +1,8 @@
 ---
 title: "TV log"
 description: "Television I've consumed recently"
+type: media
+draft: true
 ---
 
 # TV Log
