@@ -1,10 +1,12 @@
+
 ---
 title: "TV Log"
 description: "Television I've consumed recently"
+type: media
+draft: true
 ---
 
-# TV Log
-showName (season) - last watched dateLastWatched
+# TV LogshowName (season) - last watched dateLastWatched
 
 Gossip Girl (Season 6) - last watched 2025-02-22
 
