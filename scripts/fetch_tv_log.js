@@ -19,8 +19,7 @@ async function fetchTVLog() {
         return;
     }
 
-    let markdown = `
----
+    let markdown = `---
 title: "TV Log"
 description: "Television I've consumed recently"
 type: media
