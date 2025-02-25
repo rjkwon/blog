@@ -1,4 +1,3 @@
-
 ---
 title: "TV Log"
 description: "Television I've consumed recently"
