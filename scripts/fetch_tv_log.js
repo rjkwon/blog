@@ -20,13 +20,13 @@ async function fetchTVLog() {
     }
 
     let markdown = `
-        ---
-        title: "TV Log"
-        description: "Television I've consumed recently"
-        ---
+    ---
+    title: "TV Log"
+    description: "Television I've consumed recently"
+    ---
 
-        # TV Log
-        `;
+    # TV Log
+    `;
 
     rows.forEach(row => {
         markdown += `${row[1]} (${row[3]}) - last watched ${row[6]}\n\n`;
