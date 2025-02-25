@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 ---
 title: "TV log"
 description: "Television I've consumed recently"
 type: media
 draft: true
 ---
+=======
+>>>>>>> c41dc9ec38f67bb016de7ed3e7a194fdd7fdda6b
 
-# TV Log
+        ---
+        title: "TV Log"
+        description: "Television I've consumed recently"
+        ---
 
-showName (season) - last watched dateLastWatched
+        # TV Log
+        showName (season) - last watched dateLastWatched
 
 Gossip Girl (Season 6) - last watched 2025-02-22
 
