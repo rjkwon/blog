@@ -1,11 +1,11 @@
 
-        ---
-        title: "TV Log"
-        description: "Television I've consumed recently"
-        ---
+    ---
+    title: "TV Log"
+    description: "Television I've consumed recently"
+    ---
 
-        # TV Log
-        showName (season) - last watched dateLastWatched
+    # TV Log
+    showName (season) - last watched dateLastWatched
 
 Gossip Girl (Season 6) - last watched 2025-02-22
 
