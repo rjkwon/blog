@@ -1,56 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Bike on Kwon.nyc</title>
-    <link>https://kwon.nyc/tags/bike/</link>
-    <description>Recent content in Bike on Kwon.nyc</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 18 May 2024 08:51:55 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/bike/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spring tune-up &#43; ride</title>
-      <link>https://kwon.nyc/notes/spring-ride/</link>
-      <pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate>
-      
-      <guid>https://kwon.nyc/notes/spring-ride/</guid>
-      <description>&lt;p&gt;Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Summer ride</title>
-      <link>https://kwon.nyc/notes/summer-ride/</link>
-      <pubDate>Mon, 06 Jun 2022 08:51:55 -0400</pubDate>
-      
-      <guid>https://kwon.nyc/notes/summer-ride/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s the good part of summer right now, the part where it&amp;rsquo;s warm and sunny and the days are long but it hasn&amp;rsquo;t gotten too humid out. I went on a nice bike ride yesterday morning along a route I used to take years ago when I first moved to Brooklyn that I haven&amp;rsquo;t done since. Truthfully I have not been riding my bike as much as I used to (and I used to ride it EVERYWHERE). I am constantly amazed by how quickly this city evolves. The thing that was once another thing is now a new thing. I also forget how different it is on foot versus cycling versus in a car versus a bus versus the subway.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tuesday</title>
-      <link>https://kwon.nyc/notes/tuesday/</link>
-      <pubDate>Wed, 11 May 2022 07:40:55 -0400</pubDate>
-      
-      <guid>https://kwon.nyc/notes/tuesday/</guid>
-      <description>&lt;p&gt;The cadence of life is a little different now that I live in Brooklyn and work from home. In my 12 years in New York City, I have:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;lived in Brooklyn and worked in Brooklyn&lt;/li&gt;
-&lt;li&gt;lived in Brooklyn and worked in Manhattan (the worst overall)&lt;/li&gt;
-&lt;li&gt;lived in Manhattan and worked in Manhattan&lt;/li&gt;
-&lt;li&gt;lived in Manhattan and worked from home&lt;/li&gt;
-&lt;li&gt;lived in Brooklyn and worked from home&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;and the one that feels most like not working at all is living in Brooklyn and working from home. The only thing is that, as always, the psychological barrier to completing inter-borough travel on a weekday evening feels insurmountable, even though it&amp;rsquo;s a subway ride that&amp;rsquo;s all of 15 minutes.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bicycle storycle (bike story)</title>
-      <link>https://kwon.nyc/notes/bike-story/</link>
-      <pubDate>Mon, 11 Oct 2021 09:23:09 -0400</pubDate>
-      
-      <guid>https://kwon.nyc/notes/bike-story/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; I made a new page: &lt;a href=&#34;https://kwon.nyc/bike/&#34;&gt;kwon.nyc/bike&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In January 2010 I was in my final year of medical school and had some rare free time for several weeks on a light rotation. My Local Bike Shop™ was offering classes on how to build a bike, so I enrolled and learned a lot about bike parts and bike maintenance. (Oddly enough, we didn&amp;rsquo;t actually build bikes.) Over the next few years I started building up a track bike, slowly amassing parts from my travels, getting the naked frame painted and framesaved, et cetera.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bike on Kwon.nyc</title><link>https://kwon.nyc/tags/bike/</link><description>Recent content in Bike on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2024 08:51:55 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/bike/index.xml" rel="self" type="application/rss+xml"/><item><title>Spring tune-up + ride</title><link>https://kwon.nyc/notes/spring-ride/</link><pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate><guid>https://kwon.nyc/notes/spring-ride/</guid><description>&lt;p>Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour.&lt;/p></description></item><item><title>Summer ride</title><link>https://kwon.nyc/notes/summer-ride/</link><pubDate>Mon, 06 Jun 2022 08:51:55 -0400</pubDate><guid>https://kwon.nyc/notes/summer-ride/</guid><description>&lt;p>It&amp;rsquo;s the good part of summer right now, the part where it&amp;rsquo;s warm and sunny and the days are long but it hasn&amp;rsquo;t gotten too humid out. I went on a nice bike ride yesterday morning along a route I used to take years ago when I first moved to Brooklyn that I haven&amp;rsquo;t done since. Truthfully I have not been riding my bike as much as I used to (and I used to ride it EVERYWHERE). I am constantly amazed by how quickly this city evolves. The thing that was once another thing is now a new thing. I also forget how different it is on foot versus cycling versus in a car versus a bus versus the subway.&lt;/p></description></item><item><title>Tuesday</title><link>https://kwon.nyc/notes/tuesday/</link><pubDate>Wed, 11 May 2022 07:40:55 -0400</pubDate><guid>https://kwon.nyc/notes/tuesday/</guid><description>&lt;p>The cadence of life is a little different now that I live in Brooklyn and work from home. In my 12 years in New York City, I have:&lt;/p>
+&lt;ul>
+&lt;li>lived in Brooklyn and worked in Brooklyn&lt;/li>
+&lt;li>lived in Brooklyn and worked in Manhattan (the worst overall)&lt;/li>
+&lt;li>lived in Manhattan and worked in Manhattan&lt;/li>
+&lt;li>lived in Manhattan and worked from home&lt;/li>
+&lt;li>lived in Brooklyn and worked from home&lt;/li>
+&lt;/ul>
+&lt;p>and the one that feels most like not working at all is living in Brooklyn and working from home. The only thing is that, as always, the psychological barrier to completing inter-borough travel on a weekday evening feels insurmountable, even though it&amp;rsquo;s a subway ride that&amp;rsquo;s all of 15 minutes.&lt;/p></description></item><item><title>Bicycle storycle (bike story)</title><link>https://kwon.nyc/notes/bike-story/</link><pubDate>Mon, 11 Oct 2021 09:23:09 -0400</pubDate><guid>https://kwon.nyc/notes/bike-story/</guid><description>&lt;p>&lt;strong>TL;DR&lt;/strong> I made a new page: &lt;a href="https://kwon.nyc/bike/">kwon.nyc/bike&lt;/a>&lt;/p>
+&lt;p>In January 2010 I was in my final year of medical school and had some rare free time for several weeks on a light rotation. My Local Bike Shop™ was offering classes on how to build a bike, so I enrolled and learned a lot about bike parts and bike maintenance. (Oddly enough, we didn&amp;rsquo;t actually build bikes.) Over the next few years I started building up a track bike, slowly amassing parts from my travels, getting the naked frame painted and framesaved, et cetera.&lt;/p></description></item></channel></rss>
