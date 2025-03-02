@@ -1,4 +1,3 @@
-
 ---
 title: "TV Log"
 description: "Television I've consumed recently"
@@ -7,6 +6,8 @@ draft: true
 ---
 
 # TV LogshowName (season) - last watched dateLastWatched
+
+Yellowjackets (Season 2) - last watched 2025-03-01
 
 Gossip Girl (Season 6) - last watched 2025-02-22
 
@@ -23,6 +24,4 @@ Squid Game (Season 2) - last watched 2024-12-27
 Owning Manhattan (Season 1) - last watched 2024-12-07
 
 Selling Sunset (Season 8) - last watched 2024-12-06
-
-From (Season 2) - last watched 2024-11-21
 
