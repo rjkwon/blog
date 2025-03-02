@@ -1,5 +1,5 @@
 ---
-title: Wintering Better
+title: Wintering better
 date: 2024-12-27T16:55:06-05:00
 draft: false
 tags:

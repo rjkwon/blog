@@ -53,12 +53,16 @@ article.snippet div.post-meta { /* post date */
     padding: 0.5em 0 1em;
 }
 
-article.snippet h1 {
+article.snippet header h1 {
     margin: 0;
 }
 
-article.snippet h1 a {
+article.snippet header h1 a {
     text-decoration: none;
+}
+
+article.snippet div.post-summary h1 {
+    font-size: 18px;
 }
 
 main div.sidebar a:link {
@@ -241,7 +245,8 @@ body div.post-content figure {
 
 body.about section#main figure img,
 body div.post-content figure img {
-    width: 100% !important;
+    width: auto;
+    max-width: 100%;
 }
 
 body.about section#main figcaption,
@@ -344,7 +349,15 @@ section.footnotes hr {
 }
 
 figure.full img {
-    width: 20%;
+    width: 20% !important;
+}
+
+figure.actual-size img {
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
 }
 
 /* -----------------------------------

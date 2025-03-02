@@ -26,7 +26,8 @@ type: media
 draft: true
 ---
 
-# TV Log`;
+# TV Log
+`;
 
     rows.forEach(row => {
         markdown += `${row[1]} (${row[3]}) - last watched ${row[6]}\n\n`;

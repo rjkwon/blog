@@ -8,7 +8,6 @@ tags:
 - mental health
 - midlife
 ---
-
 For the last several months I have been experiencing something, first in the background and now very much in the foreground, and that thing is what many people would describe as a midlife crisis, although it doesn't feel so much like a crisis mode and is in fact both exciting and exhausting, and fun and terrifying, and lots of other things. 
 
 I have a lot of mixed feelings about it, because I sort of thought I had already had my midlife crisis when I dramatically quit my career in my early 30s to TAKE A PRINCIPLED STAND and CHANGE THE WORLD and that from then on I would be sailing off into the sunset. 

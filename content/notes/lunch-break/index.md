@@ -8,7 +8,6 @@ tags:
 - health
 - food
 ---
-
 I never had a regular "lunch break" until recently. Early in my career it was not by choice — in surgery training there's really no such thing as a break, only a stolen minute or two here and there to pee or wolf down whatever food you can scrounge or nap in a chair if it's the middle of the night and you're on call. We did get a $5 meal coupon for the hospital cafeteria which could get you a cup of terrible coffee and a bagel drier than a bag of silica gel in the Sahara desert. 
 
 In my first job after residency, at Small HealthTech Company, I did get to eat lunch most days, which felt like a luxury compared to my previous life, but the team norms were to grab something quick and eat while continuing to work. That was the first time I experienced workday lunches in Manhattan (that could be a whole essay in itself, but let's just say if I never wait in line to pick up an overpriced salad in a hexagon-shaped cardboard bowl, it will still be too soon). I probably could have set a boundary that I would take a true 30-minute lunch break, but I didn't have that muscle back then. 
