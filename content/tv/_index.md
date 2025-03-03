@@ -5,7 +5,8 @@ type: media
 draft: true
 ---
 
-# TV LogshowName (season) - last watched dateLastWatched
+# TV Log
+showName (season) - last watched dateLastWatched
 
 Yellowjackets (Season 2) - last watched 2025-03-01
 
