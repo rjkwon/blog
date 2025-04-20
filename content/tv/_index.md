@@ -5,7 +5,10 @@ type: media
 draft: true
 ---
 
-# TV LogshowName (season) - last watched dateLastWatched
+# TV Log
+showName (season) - last watched dateLastWatched
+
+Fisk (Season 1) - last watched 2025-03-26
 
 Yellowjackets (Season 2) - last watched 2025-03-01
 
@@ -17,11 +20,9 @@ High Potential (Season 1) - last watched 2025-02-20
 
 Mo (Season 2) - last watched 2025-02-08
 
-Severance (Season 2) - last watched 2025-02-06
+Severance (Season 2) - last watched 2025-03-26
 
 Squid Game (Season 2) - last watched 2024-12-27
 
 Owning Manhattan (Season 1) - last watched 2024-12-07
-
-Selling Sunset (Season 8) - last watched 2024-12-06
 
