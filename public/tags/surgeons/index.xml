@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Surgeons on Kwon.nyc</title><link>https://kwon.nyc/tags/surgeons/</link><description>Recent content in Surgeons on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Mar 2022 08:58:02 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/surgeons/index.xml" rel="self" type="application/rss+xml"/><item><title>Hon. Ketanji Brown Jackson's husband's socks</title><link>https://kwon.nyc/notes/socks/</link><pubDate>Thu, 24 Mar 2022 08:58:02 -0400</pubDate><guid>https://kwon.nyc/notes/socks/</guid><description>&lt;p>I keep an eye on the news through peripheral vision mostly but I noticed something about the confirmation hearings of the honorable Ketanji Brown Jackson that required my focus:&lt;/p>
-&lt;figure class="full">
-&lt;img loading="lazy" src="socks-full.png"
-alt="Screenshot of a news image of a courtroom photo showing Hon. Ketanji Brown Jackson&amp;#39;s husband sitting with one leg crossed over the other. He is wearing a suit and a bright blue sock is visible under his pant leg."/> &lt;figcaption>
-&lt;p>Hon. Ketanji Brown Jackson&amp;rsquo;s husband&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Surgeons on Kwon.nyc</title>
+    <link>http://localhost:1313/tags/surgeons/</link>
+    <description>Recent content in Surgeons on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Mar 2022 08:58:02 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/surgeons/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hon. Ketanji Brown Jackson&#39;s husband&#39;s socks</title>
+      <link>http://localhost:1313/notes/socks/</link>
+      <pubDate>Thu, 24 Mar 2022 08:58:02 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/socks/</guid>
+      <description>&lt;p&gt;I keep an eye on the news through peripheral vision mostly but I noticed something about the confirmation hearings of the honorable Ketanji Brown Jackson that required my focus:&lt;/p&gt;
+&lt;figure class=&#34;full&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;socks-full.png&#34;
+         alt=&#34;Screenshot of a news image of a courtroom photo showing Hon. Ketanji Brown Jackson&amp;#39;s husband sitting with one leg crossed over the other. He is wearing a suit and a bright blue sock is visible under his pant leg.&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Hon. Ketanji Brown Jackson&amp;rsquo;s husband&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

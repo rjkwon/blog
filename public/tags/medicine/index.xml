@@ -1,2 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Medicine on Kwon.nyc</title><link>https://kwon.nyc/tags/medicine/</link><description>Recent content in Medicine on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 30 Jun 2023 23:06:33 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/medicine/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimize</title><link>https://kwon.nyc/notes/optimize/</link><pubDate>Fri, 30 Jun 2023 23:06:33 -0400</pubDate><guid>https://kwon.nyc/notes/optimize/</guid><description>&lt;p>After I quit medicine and went corporate (as corporate as tech startups can be, which I guess depends on your vantage point; for me it was and is extremely corporate coming from doctoring), I got really into it and became particularly fascinated to learn how business leaders operate and spend their time (at work and in life) in order to be the most efficient and effective they can be. I guess a lot of people who came up in corporate work (and maybe the culture at large which is often dictated by creatives who may pooh-pooh the corporate life) think MASSIVE EYEROLL when they hear what the latest tech bro thinkboi has to say about optimizing their life and their time, but I actually found it pretty refreshing that in business a spade is called a spade and that spade is a dollar and nobody pretends that we aren&amp;rsquo;t trying to make money. Whereas when I was a doctor it was like someone was telling me out of one side of their mouth that I should take care of patients and money isn&amp;rsquo;t important but out of the other side they were whispering (but really shouting) that the patient doesn&amp;rsquo;t matter, just make money for the hospital.&lt;/p></description></item><item><title>unpolished</title><link>https://kwon.nyc/notes/unpolished/</link><pubDate>Sat, 18 Mar 2023 10:36:58 -0400</pubDate><guid>https://kwon.nyc/notes/unpolished/</guid><description>&lt;p>when visiting my parents a few weeks ago, i picked up one of the books on my mom’s bookshelf, the first of barack obama’s presidential memoirs. i started reading it, but it was kind of hefty and i was only going to be there for a week and didn’t want to start a book i couldn’t finish, so i put it down and picked up another one instead (which, turns out i couldn’t finish that one, either, so maybe i didn’t have to abandon the obama book). anyway, i made it through the intro before deciding to put it down, and one point he shared really stuck with me which i have been reflecting on since: president obama says he prefers to draft his writing by hand, on paper, not by typing on a computer or word processor, because it gives a false sense of completeness or polish. (i’m paraphrasing.)&lt;/p></description></item><item><title>Goodbye and hello</title><link>https://kwon.nyc/notes/why-i-quit-medicine/</link><pubDate>Tue, 26 Apr 2016 22:02:56 -0400</pubDate><guid>https://kwon.nyc/notes/why-i-quit-medicine/</guid><description>&lt;p>As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine.&lt;/p>
-&lt;p>Ten years ago, I decided to be a doctor. It was a decision that made perfect sense at the time: I wanted to help people who were suffering, and I was fortunate to have the ability and resources to gain entry into medical school. I wasn&amp;rsquo;t sure which specialty would be my calling, but shortly after starting my clinical rotations I fell in love with surgery. I loved seeing and evaluating patients who had a very clear and usually dramatic surgical problem that I knew could be solved by an operation, by putting hands on the patient and potentially curing them of whatever it was that was ailing them.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Medicine on Kwon.nyc</title>
+    <link>http://localhost:1313/tags/medicine/</link>
+    <description>Recent content in Medicine on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2023 23:06:33 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/medicine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimize</title>
+      <link>http://localhost:1313/notes/optimize/</link>
+      <pubDate>Fri, 30 Jun 2023 23:06:33 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/optimize/</guid>
+      <description>&lt;p&gt;After I quit medicine and went corporate (as corporate as tech startups can be, which I guess depends on your vantage point; for me it was and is extremely corporate coming from doctoring), I got really into it and became particularly fascinated to learn how business leaders operate and spend their time (at work and in life) in order to be the most efficient and effective they can be. I guess a lot of people who came up in corporate work (and maybe the culture at large which is often dictated by creatives who may pooh-pooh the corporate life) think MASSIVE EYEROLL when they hear what the latest tech bro thinkboi has to say about optimizing their life and their time, but I actually found it pretty refreshing that in business a spade is called a spade and that spade is a dollar and nobody pretends that we aren&amp;rsquo;t trying to make money. Whereas when I was a doctor it was like someone was telling me out of one side of their mouth that I should take care of patients and money isn&amp;rsquo;t important but out of the other side they were whispering (but really shouting) that the patient doesn&amp;rsquo;t matter, just make money for the hospital.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>unpolished</title>
+      <link>http://localhost:1313/notes/unpolished/</link>
+      <pubDate>Sat, 18 Mar 2023 10:36:58 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/unpolished/</guid>
+      <description>&lt;p&gt;when visiting my parents a few weeks ago, i picked up one of the books on my mom’s bookshelf, the first of barack obama’s presidential memoirs. i started reading it, but it was kind of hefty and i was only going to be there for a week and didn’t want to start a book i couldn’t finish, so i put it down and picked up another one instead (which, turns out i couldn’t finish that one, either, so maybe i didn’t have to abandon the obama book). anyway, i made it through the intro before deciding to put it down, and one point he shared really stuck with me which i have been reflecting on since: president obama says he prefers to draft his writing by hand, on paper, not by typing on a computer or word processor, because it gives a false sense of completeness or polish. (i’m paraphrasing.)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Goodbye and hello</title>
+      <link>http://localhost:1313/notes/why-i-quit-medicine/</link>
+      <pubDate>Tue, 26 Apr 2016 22:02:56 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/why-i-quit-medicine/</guid>
+      <description>&lt;p&gt;As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine.&lt;/p&gt;
+&lt;p&gt;Ten years ago, I decided to be a doctor. It was a decision that made perfect sense at the time: I wanted to help people who were suffering, and I was fortunate to have the ability and resources to gain entry into medical school. I wasn&amp;rsquo;t sure which specialty would be my calling, but shortly after starting my clinical rotations I fell in love with surgery. I loved seeing and evaluating patients who had a very clear and usually dramatic surgical problem that I knew could be solved by an operation, by putting hands on the patient and potentially curing them of whatever it was that was ailing them.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
