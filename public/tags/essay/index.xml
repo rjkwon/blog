@@ -1,26 +1,21 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Essay on Kwon.nyc</title>
-    <link>http://localhost:1313/tags/essay/</link>
+    <link>https://kwon.nyc/tags/essay/</link>
     <description>Recent content in Essay on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Apr 2016 22:02:56 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/essay/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Apr 2016 22:02:56 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/essay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Goodbye and hello</title>
-      <link>http://localhost:1313/notes/why-i-quit-medicine/</link>
+      <link>https://kwon.nyc/notes/why-i-quit-medicine/</link>
       <pubDate>Tue, 26 Apr 2016 22:02:56 -0400</pubDate>
       
-      <guid>http://localhost:1313/notes/why-i-quit-medicine/</guid>
+      <guid>https://kwon.nyc/notes/why-i-quit-medicine/</guid>
       <description>&lt;p&gt;As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine.&lt;/p&gt;
 &lt;p&gt;Ten years ago, I decided to be a doctor. It was a decision that made perfect sense at the time: I wanted to help people who were suffering, and I was fortunate to have the ability and resources to gain entry into medical school. I wasn&amp;rsquo;t sure which specialty would be my calling, but shortly after starting my clinical rotations I fell in love with surgery. I loved seeing and evaluating patients who had a very clear and usually dramatic surgical problem that I knew could be solved by an operation, by putting hands on the patient and potentially curing them of whatever it was that was ailing them.&lt;/p&gt;</description>
     </item>
     
   </channel>
 </rss>
-=======
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Essay on Kwon.nyc</title><link>https://kwon.nyc/tags/essay/</link><description>Recent content in Essay on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 26 Apr 2016 22:02:56 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/essay/index.xml" rel="self" type="application/rss+xml"/><item><title>Goodbye and hello</title><link>https://kwon.nyc/notes/why-i-quit-medicine/</link><pubDate>Tue, 26 Apr 2016 22:02:56 -0400</pubDate><guid>https://kwon.nyc/notes/why-i-quit-medicine/</guid><description>As some of you have heard, I recently resigned from surgical residency, and am leaving clinical medicine.
-Ten years ago, I decided to be a doctor. It was a decision that made perfect sense at the time: I wanted to help people who were suffering, and I was fortunate to have the ability and resources to gain entry into medical school. I wasn&amp;rsquo;t sure which specialty would be my calling, but shortly after starting my clinical rotations I fell in love with surgery.</description></item></channel></rss>
->>>>>>> 46dcfd1cdc1df10fed7d8605d82acfa2cac0f115
