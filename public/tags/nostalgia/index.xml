@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -31,3 +32,10 @@
     
   </channel>
 </rss>
+=======
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nostalgia on Kwon.nyc</title><link>https://kwon.nyc/tags/nostalgia/</link><description>Recent content in Nostalgia on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 Apr 2024 11:02:10 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/nostalgia/index.xml" rel="self" type="application/rss+xml"/><item><title>Net positive, maybe</title><link>https://kwon.nyc/notes/net-positive-maybe/</link><pubDate>Sat, 20 Apr 2024 11:02:10 -0400</pubDate><guid>https://kwon.nyc/notes/net-positive-maybe/</guid><description>This is a half-baked thought I&amp;rsquo;ve been preheating for a bit.
+Technology has changed the way we consume and create media, and considering all the benefits against the drawbacks, sometimes it doesn&amp;rsquo;t feel like a net improvement to me. Or maybe it&amp;rsquo;s just that things evolved too quickly, we got excited about all the upside and didn&amp;rsquo;t think enough about second and third order effects, and now we&amp;rsquo;re still figuring out a way to catch up.</description></item><item><title>Internet is fun</title><link>https://kwon.nyc/notes/internet-is-fun/</link><pubDate>Sun, 17 Sep 2023 21:02:50 -0400</pubDate><guid>https://kwon.nyc/notes/internet-is-fun/</guid><description>I made this:
+The internet used to be fun
+I feel like more people these days are starting to reject the notion that the internet is made up of Big Websites that represent Big Companies that are trying to take either the attention or the money of their visitors while adding minimal value to the lives and well-being of those visitors.
+Because a lot of us remember when the internet was mostly just fun, and the good parts of the old internet were by and large created by real individual humans who had no motives other than to explore the internet and just put stuff out there that was interesting and fun and random.</description></item></channel></rss>
+>>>>>>> 46dcfd1cdc1df10fed7d8605d82acfa2cac0f115
