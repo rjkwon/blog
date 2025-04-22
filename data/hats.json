@@ -1,7 +1,8 @@
 [
   {
     "image": "agrivisor.png",
-    "caption": "Farm Bureau AgriVisor - perhaps a nod to our time in the Midwest",
+    "caption": "Farm Bureau AgriVisor",
+    "description": "Not sure what Dad's connection is to this one, but perhaps it's a nod to our family's time in the Midwest. I looked up this entity and according to FarmWeekNow.com it appears to be some sort of consulting service for farmers.",
     "alt": "",
     "bg_color": "#07644A",
     "text_color": "#fff"

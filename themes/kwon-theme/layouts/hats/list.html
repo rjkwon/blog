@@ -26,13 +26,27 @@
 </style>
 
 <h1>Dad hats 🧢</h1>
+{{ .Content }}
 
 <div class="hat-grid">
   {{ range .Site.Data.hats }}
-  <div class="hat-item" style="background-color: {{ .bg_color }};">
+  <div class="hat-item">
+  <!-- <div class="hat-item" style="background-color: {{ .bg_color }};"> -->
     <img src="/hats/{{ .image }}" alt="{{ .alt }}">
-    <p class="hat-caption" style="color: {{ .text_color }};">{{ .caption }}</p>
+    <p class="hat-caption">{{ .caption }}</p>
+    <!-- <p class="hat-caption" style="color: {{ .text_color }}; font-weight: bold">{{ .caption }}</p> -->
+    <!-- <p class="hat-description">{{ .description }}</p> -->
   </div>
+
   {{ end }}
 </div>
+
+
+<div class="addendum">
+<h2>Something interesting I noticed</h2>
+<p>This page is generated in Hugo using a flat file that loops through each hat and its caption. This process is not dissimilar to how I IRL looped through each hat and thought about what it meant. I thought that was funny (funny "huh", not funny "haha").</p>
+</div>
+
+<small>Last updated: 2025-04-22</small>
+
 {{ end }}
