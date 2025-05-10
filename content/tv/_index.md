@@ -8,7 +8,7 @@ draft: true
 # TV Log
 showName (season) - last watched dateLastWatched
 
-The Last of Us (Season 2) - last watched 2025-04-23
+The Last of Us (Season 2) - last watched 2025-05-08
 
 Fisk (Season 1) - last watched 2025-03-26
 
