@@ -8,6 +8,8 @@ draft: true
 # TV Log
 showName (season) - last watched dateLastWatched
 
+North of North (Season 1) - last watched 2025-05-12
+
 The Last of Us (Season 2) - last watched 2025-05-08
 
 Fisk (Season 1) - last watched 2025-03-26
@@ -23,6 +25,4 @@ St. Denis Medical (Season 1) - last watched 2025-02-22
 High Potential (Season 1) - last watched 2025-02-20
 
 Mo (Season 2) - last watched 2025-02-08
-
-Squid Game (Season 2) - last watched 2024-12-27
 
