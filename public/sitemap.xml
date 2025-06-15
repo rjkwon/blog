@@ -2,349 +2,349 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kwon.nyc/stuff/beer/</loc>
+    <loc>http://localhost:1313/stuff/beer/</loc>
   </url><url>
-    <loc>https://kwon.nyc/dad-hats/</loc>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/dad-hats/</loc>
     <lastmod>2025-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/</loc>
+    <loc>http://localhost:1313/tags/site-update/</loc>
     <lastmod>2025-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/site-update/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/</loc>
+    <loc>http://localhost:1313/notes/unfinished-but-shareable/</loc>
     <lastmod>2025-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/unfinished-but-shareable/</loc>
-    <lastmod>2025-04-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kwon.nyc/notes/past-selves/</loc>
+    <loc>http://localhost:1313/notes/past-selves/</loc>
     <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/past-selves/</loc>
+    <loc>http://localhost:1313/tags/past-selves/</loc>
     <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/personal-reflection/</loc>
+    <loc>http://localhost:1313/tags/personal-reflection/</loc>
     <lastmod>2025-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/my-name-is/</loc>
+    <loc>http://localhost:1313/notes/my-name-is/</loc>
     <lastmod>2025-03-01T18:30:00-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/thoughts/</loc>
+    <loc>http://localhost:1313/tags/thoughts/</loc>
     <lastmod>2025-03-01T18:30:00-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/blog-questions-challenge/</loc>
+    <loc>http://localhost:1313/notes/blog-questions-challenge/</loc>
     <lastmod>2025-02-12T09:38:21-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/now/</loc>
+    <loc>http://localhost:1313/now/</loc>
     <lastmod>2025-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/midlife/</loc>
+    <loc>http://localhost:1313/tags/midlife/</loc>
     <lastmod>2024-12-27T16:55:06-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/nature/</loc>
+    <loc>http://localhost:1313/tags/nature/</loc>
     <lastmod>2024-12-27T16:55:06-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/wintering-better/</loc>
+    <loc>http://localhost:1313/notes/wintering-better/</loc>
     <lastmod>2024-12-27T16:55:06-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/eyeballs/</loc>
+    <loc>http://localhost:1313/notes/eyeballs/</loc>
     <lastmod>2024-10-22T09:01:53-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/health/</loc>
+    <loc>http://localhost:1313/tags/health/</loc>
     <lastmod>2024-10-22T09:01:53-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/slice-of-life/</loc>
+    <loc>http://localhost:1313/tags/slice-of-life/</loc>
     <lastmod>2024-10-22T09:01:53-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/capitalism/</loc>
+    <loc>http://localhost:1313/tags/capitalism/</loc>
     <lastmod>2024-08-23T09:01:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/new-york/</loc>
+    <loc>http://localhost:1313/tags/new-york/</loc>
     <lastmod>2024-08-23T09:01:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/radicalized-by-a-soap-dispenser/</loc>
+    <loc>http://localhost:1313/notes/radicalized-by-a-soap-dispenser/</loc>
     <lastmod>2024-08-23T09:01:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/society/</loc>
+    <loc>http://localhost:1313/tags/society/</loc>
     <lastmod>2024-08-23T09:01:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/food/</loc>
+    <loc>http://localhost:1313/tags/food/</loc>
     <lastmod>2024-07-17T08:08:42-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/lunch-break/</loc>
+    <loc>http://localhost:1313/notes/lunch-break/</loc>
     <lastmod>2024-07-17T08:08:42-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/mental-health/</loc>
+    <loc>http://localhost:1313/tags/mental-health/</loc>
     <lastmod>2024-07-17T08:08:42-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/work-life/</loc>
+    <loc>http://localhost:1313/tags/work-life/</loc>
     <lastmod>2024-07-17T08:08:42-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/lists/</loc>
+    <loc>http://localhost:1313/tags/lists/</loc>
     <lastmod>2024-07-03T08:51:52-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/neither-here-nor-there/</loc>
+    <loc>http://localhost:1313/tags/neither-here-nor-there/</loc>
     <lastmod>2024-07-03T08:51:52-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/stubs/</loc>
+    <loc>http://localhost:1313/notes/stubs/</loc>
     <lastmod>2024-07-03T08:51:52-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/bike/</loc>
+    <loc>http://localhost:1313/tags/bike/</loc>
     <lastmod>2024-05-18T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/map/</loc>
+    <loc>http://localhost:1313/tags/map/</loc>
     <lastmod>2024-05-18T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/new-york-city/</loc>
+    <loc>http://localhost:1313/tags/new-york-city/</loc>
     <lastmod>2024-05-18T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/photos/</loc>
+    <loc>http://localhost:1313/tags/photos/</loc>
     <lastmod>2024-05-18T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/spring-ride/</loc>
+    <loc>http://localhost:1313/notes/spring-ride/</loc>
     <lastmod>2024-05-18T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/net-positive-maybe/</loc>
+    <loc>http://localhost:1313/notes/net-positive-maybe/</loc>
     <lastmod>2024-04-20T11:02:10-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/nostalgia/</loc>
+    <loc>http://localhost:1313/tags/nostalgia/</loc>
     <lastmod>2024-04-20T11:02:10-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/technology/</loc>
+    <loc>http://localhost:1313/tags/technology/</loc>
     <lastmod>2024-04-20T11:02:10-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/lately/</loc>
+    <loc>http://localhost:1313/notes/lately/</loc>
     <lastmod>2024-04-10T22:03:43-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/zephyr/</loc>
+    <loc>http://localhost:1313/zephyr/</loc>
     <lastmod>2024-03-23T12:37:40-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/internet/</loc>
+    <loc>http://localhost:1313/tags/internet/</loc>
     <lastmod>2024-01-30T09:20:16-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/personal-websites/</loc>
+    <loc>http://localhost:1313/tags/personal-websites/</loc>
     <lastmod>2024-01-30T09:20:16-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/which-self-is-this/</loc>
+    <loc>http://localhost:1313/notes/which-self-is-this/</loc>
     <lastmod>2024-01-30T09:20:16-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/things-i-dont-have-to-do/</loc>
+    <loc>http://localhost:1313/notes/things-i-dont-have-to-do/</loc>
     <lastmod>2023-12-11T22:14:03-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/my-lil-midlife-crisis/</loc>
+    <loc>http://localhost:1313/notes/my-lil-midlife-crisis/</loc>
     <lastmod>2023-12-02T13:49:35-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/seven-sandwiches/</loc>
+    <loc>http://localhost:1313/notes/seven-sandwiches/</loc>
     <lastmod>2023-10-28T09:52:57-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/internet-is-fun/</loc>
+    <loc>http://localhost:1313/notes/internet-is-fun/</loc>
     <lastmod>2023-09-17T21:02:50-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/old-web/</loc>
+    <loc>http://localhost:1313/tags/old-web/</loc>
     <lastmod>2023-09-17T21:02:50-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/site-updates/</loc>
+    <loc>http://localhost:1313/tags/site-updates/</loc>
     <lastmod>2023-09-17T21:02:50-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/comfort-food/</loc>
+    <loc>http://localhost:1313/notes/comfort-food/</loc>
     <lastmod>2023-09-01T17:05:25-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/pushing-pixels/</loc>
+    <loc>http://localhost:1313/notes/pushing-pixels/</loc>
     <lastmod>2023-07-21T07:46:59-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/artificially-intelligent-thoughts/</loc>
+    <loc>http://localhost:1313/notes/artificially-intelligent-thoughts/</loc>
     <lastmod>2023-07-17T20:07:23-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/generative-ai/</loc>
+    <loc>http://localhost:1313/tags/generative-ai/</loc>
     <lastmod>2023-07-17T20:07:23-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/medicine/</loc>
+    <loc>http://localhost:1313/tags/medicine/</loc>
     <lastmod>2023-06-30T23:06:33-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/money/</loc>
+    <loc>http://localhost:1313/tags/money/</loc>
     <lastmod>2023-06-30T23:06:33-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/optimize/</loc>
+    <loc>http://localhost:1313/notes/optimize/</loc>
     <lastmod>2023-06-30T23:06:33-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/pandemic/</loc>
+    <loc>http://localhost:1313/tags/pandemic/</loc>
     <lastmod>2023-06-30T23:06:33-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/in-between-moments/</loc>
+    <loc>http://localhost:1313/notes/in-between-moments/</loc>
     <lastmod>2023-05-23T08:35:29-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/chinatown/</loc>
+    <loc>http://localhost:1313/tags/chinatown/</loc>
     <lastmod>2023-05-16T07:50:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/chinatown-breakfast/</loc>
+    <loc>http://localhost:1313/notes/chinatown-breakfast/</loc>
     <lastmod>2023-05-16T07:50:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2023-04-27T07:38:45-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/lo-fi-changelog/</loc>
+    <loc>http://localhost:1313/notes/lo-fi-changelog/</loc>
     <lastmod>2023-04-27T07:38:45-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/data/</loc>
+    <loc>http://localhost:1313/tags/data/</loc>
     <lastmod>2023-04-22T07:54:17-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/logging-tv/</loc>
+    <loc>http://localhost:1313/notes/logging-tv/</loc>
     <lastmod>2023-04-22T07:54:17-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/tv/</loc>
+    <loc>http://localhost:1313/tags/tv/</loc>
     <lastmod>2023-04-22T07:54:17-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/unpolished/</loc>
+    <loc>http://localhost:1313/notes/unpolished/</loc>
     <lastmod>2023-03-18T10:36:58-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/writing/</loc>
+    <loc>http://localhost:1313/tags/writing/</loc>
     <lastmod>2023-03-18T10:36:58-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/home/</loc>
+    <loc>http://localhost:1313/tags/home/</loc>
     <lastmod>2023-03-14T21:14:39-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/liminal/</loc>
+    <loc>http://localhost:1313/notes/liminal/</loc>
     <lastmod>2023-03-14T21:14:39-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/chili-oil/</loc>
+    <loc>http://localhost:1313/notes/chili-oil/</loc>
     <lastmod>2023-02-09T08:25:29-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/recipe/</loc>
+    <loc>http://localhost:1313/tags/recipe/</loc>
     <lastmod>2023-02-09T08:25:29-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/2022-part-2/</loc>
+    <loc>http://localhost:1313/notes/2022-part-2/</loc>
     <lastmod>2022-12-31T09:40:41-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/charts/</loc>
+    <loc>http://localhost:1313/tags/charts/</loc>
     <lastmod>2022-12-31T09:40:41-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/end-of-year/</loc>
+    <loc>http://localhost:1313/tags/end-of-year/</loc>
     <lastmod>2022-12-31T09:40:41-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/2022/</loc>
+    <loc>http://localhost:1313/notes/2022/</loc>
     <lastmod>2022-12-30T14:55:39-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/habits/</loc>
+    <loc>http://localhost:1313/tags/habits/</loc>
     <lastmod>2022-12-30T14:55:39-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/movies/</loc>
+    <loc>http://localhost:1313/tags/movies/</loc>
     <lastmod>2022-12-30T14:55:39-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/books/</loc>
+    <loc>http://localhost:1313/tags/books/</loc>
     <lastmod>2022-12-13T08:21:08-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/re-re-reading/</loc>
+    <loc>http://localhost:1313/notes/re-re-reading/</loc>
     <lastmod>2022-12-13T08:21:08-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/outdoors/</loc>
+    <loc>http://localhost:1313/notes/outdoors/</loc>
     <lastmod>2022-11-27T22:31:46-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/covid/</loc>
+    <loc>http://localhost:1313/tags/covid/</loc>
     <lastmod>2022-10-30T12:21:13-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/covid-the-sequel/</loc>
+    <loc>http://localhost:1313/notes/covid-the-sequel/</loc>
     <lastmod>2022-10-30T12:21:13-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/noise/</loc>
+    <loc>http://localhost:1313/notes/noise/</loc>
     <lastmod>2022-09-04T09:30:41-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/language/</loc>
+    <loc>http://localhost:1313/tags/language/</loc>
     <lastmod>2022-08-15T08:30:29-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/language/</loc>
+    <loc>http://localhost:1313/notes/language/</loc>
     <lastmod>2022-08-15T08:30:29-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/blogs/</loc>
+    <loc>http://localhost:1313/tags/blogs/</loc>
     <lastmod>2022-07-22T07:55:22-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/grey-matters/</loc>
+    <loc>http://localhost:1313/notes/grey-matters/</loc>
     <lastmod>2022-07-22T07:55:22-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/fun/</loc>
+    <loc>http://localhost:1313/tags/fun/</loc>
     <lastmod>2022-07-10T10:33:34-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/intelligent-art/</loc>
+    <loc>http://localhost:1313/notes/intelligent-art/</loc>
     <lastmod>2022-07-10T10:33:34-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/brooklyn/</loc>
+    <loc>http://localhost:1313/tags/brooklyn/</loc>
     <lastmod>2022-07-07T09:19:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/cooperate/</loc>
+    <loc>http://localhost:1313/notes/cooperate/</loc>
     <lastmod>2022-07-07T09:19:00-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/coffee/</loc>
+    <loc>http://localhost:1313/tags/coffee/</loc>
     <lastmod>2022-06-15T08:20:35-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/coffee/</loc>
+    <loc>http://localhost:1313/notes/coffee/</loc>
     <lastmod>2022-06-15T08:20:35-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/summer-ride/</loc>
+    <loc>http://localhost:1313/notes/summer-ride/</loc>
     <lastmod>2022-06-06T08:51:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/early-bird/</loc>
+    <loc>http://localhost:1313/notes/early-bird/</loc>
     <lastmod>2022-06-01T07:01:53-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/brussels-sprouts/</loc>
+    <loc>http://localhost:1313/notes/brussels-sprouts/</loc>
     <lastmod>2022-05-20T08:09:03-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/flashback/</loc>
+    <loc>http://localhost:1313/notes/flashback/</loc>
     <lastmod>2022-05-18T06:51:54-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/residency/</loc>
+    <loc>http://localhost:1313/tags/residency/</loc>
     <lastmod>2022-05-18T06:51:54-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/tuesday/</loc>
+    <loc>http://localhost:1313/notes/tuesday/</loc>
     <lastmod>2022-05-11T07:40:55-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/socks/</loc>
+    <loc>http://localhost:1313/notes/socks/</loc>
     <lastmod>2022-03-24T08:58:02-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/surgeons/</loc>
+    <loc>http://localhost:1313/tags/surgeons/</loc>
     <lastmod>2022-03-24T08:58:02-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/distracted/</loc>
+    <loc>http://localhost:1313/notes/distracted/</loc>
     <lastmod>2022-03-19T09:30:24-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/focus/</loc>
+    <loc>http://localhost:1313/tags/focus/</loc>
     <lastmod>2022-03-19T09:30:24-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/hobbies/</loc>
+    <loc>http://localhost:1313/tags/hobbies/</loc>
     <lastmod>2022-02-13T09:07:52-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/setup/</loc>
+    <loc>http://localhost:1313/notes/setup/</loc>
     <lastmod>2022-02-13T09:07:52-05:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/bike-story/</loc>
+    <loc>http://localhost:1313/notes/bike-story/</loc>
     <lastmod>2021-10-11T09:23:09-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/</loc>
+    <loc>http://localhost:1313/notes/</loc>
     <lastmod>2021-09-24T08:46:45-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/power-moves/</loc>
+    <loc>http://localhost:1313/notes/power-moves/</loc>
     <lastmod>2021-07-13T11:28:34-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/newyorkiversary/</loc>
+    <loc>http://localhost:1313/notes/newyorkiversary/</loc>
     <lastmod>2021-06-23T17:06:37-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/about/</loc>
+    <loc>http://localhost:1313/colophon/</loc>
     <lastmod>2021-03-27T18:07:40-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/colophon/</loc>
-    <lastmod>2021-03-27T18:07:40-04:00</lastmod>
-  </url><url>
-    <loc>https://kwon.nyc/tags/essay/</loc>
+    <loc>http://localhost:1313/tags/essay/</loc>
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/notes/why-i-quit-medicine/</loc>
+    <loc>http://localhost:1313/notes/why-i-quit-medicine/</loc>
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/tags/surgery/</loc>
+    <loc>http://localhost:1313/tags/surgery/</loc>
     <lastmod>2016-04-26T22:02:56-04:00</lastmod>
   </url><url>
-    <loc>https://kwon.nyc/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://kwon.nyc/links/</loc>
+    <loc>http://localhost:1313/links/</loc>
   </url>
 </urlset>

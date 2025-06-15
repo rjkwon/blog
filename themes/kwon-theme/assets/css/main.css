@@ -349,7 +349,7 @@ section.footnotes hr {
 }
 
 figure.full img {
-    width: 20% !important;
+    /*width: 20% !important;*/
 }
 
 figure.actual-size img {

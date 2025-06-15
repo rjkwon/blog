@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2021-03-27T18:07:40-04:00
+date: 2025-05-21
 type: about
 draft: false
 ---

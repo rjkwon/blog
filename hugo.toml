@@ -4,7 +4,6 @@ title = "Kwon.nyc"
 theme = "kwon-theme"
 publishDir = "public"
 enableRobotsTXT = false
-ignoreLogs = ['warning-goldmark-raw-html']
 
 [[menu.main]]
 identifier = "about"
@@ -33,4 +32,5 @@ weight = 30
 [minification]
   enable = true
 
-
+[markup.goldmark.renderer]
+  unsafe = true
