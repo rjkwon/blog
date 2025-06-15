@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dad Hats on Kwon.nyc</title>
-    <link>http://localhost:1313/dad-hats/</link>
+    <link>https://kwon.nyc/dad-hats/</link>
     <description>Recent content in Dad Hats on Kwon.nyc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/dad-hats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://kwon.nyc/dad-hats/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
