@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nature on Kwon.nyc</title><link>https://kwon.nyc/tags/nature/</link><description>Recent content in Nature on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 Dec 2024 16:55:06 -0500</lastBuildDate><atom:link href="https://kwon.nyc/tags/nature/index.xml" rel="self" type="application/rss+xml"/><item><title>Wintering better</title><link>https://kwon.nyc/notes/wintering-better/</link><pubDate>Fri, 27 Dec 2024 16:55:06 -0500</pubDate><guid>https://kwon.nyc/notes/wintering-better/</guid><description>Everyone loves summer. If you have to name a favorite season (which you absolutely don&amp;rsquo;t!! Who says you do?), summer is a non-controversial option. Bright sun, long days, beach time, et cetera. And spring is a close runner-up, with its warmer weather, greenery and flowers, and of course the anticipation of summer. If you want to be alternative and edgy (i.e., me in early adulthood lol), you&amp;rsquo;d cite fall (or 🍂autumn🍂, to put some extra sauce on it) as your favorite season, for its foliage, cider, pumpkin patches, sweater weather.</description></item><item><title>Outdoors</title><link>https://kwon.nyc/notes/outdoors/</link><pubDate>Sun, 27 Nov 2022 22:31:46 -0500</pubDate><guid>https://kwon.nyc/notes/outdoors/</guid><description>I spent some time in the Bay Area this past week and did a vigorous hike (among other things). I was made to believe it would be more of a &amp;ldquo;nature walk&amp;rdquo; but this one, Mission Peak, had a steep grade and full exposure to the elements, and ended up being about 3.5 hours and close to 30,000 steps. I haven&amp;rsquo;t challenged myself physically like that in a long time so I was pleasantly surprised that I survived.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nature on Kwon.nyc</title>
+    <link>http://localhost:49985/tags/nature/</link>
+    <description>Recent content in Nature on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Dec 2024 16:55:06 -0500</lastBuildDate><atom:link href="http://localhost:49985/tags/nature/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wintering better</title>
+      <link>http://localhost:49985/notes/wintering-better/</link>
+      <pubDate>Fri, 27 Dec 2024 16:55:06 -0500</pubDate>
+      
+      <guid>http://localhost:49985/notes/wintering-better/</guid>
+      <description>&lt;p&gt;Everyone loves summer. If you have to name a favorite season (which you absolutely don&amp;rsquo;t!! Who says you do?), summer is a non-controversial option. Bright sun, long days, beach time, et cetera. And spring is a close runner-up, with its warmer weather, greenery and flowers, and of course the anticipation of summer. If you want to be alternative and edgy (i.e., me in early adulthood lol), you&amp;rsquo;d cite fall (or 🍂&lt;em&gt;autumn&lt;/em&gt;🍂, to put some extra sauce on it) as your favorite season, for its foliage, cider, pumpkin patches, sweater weather.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Outdoors</title>
+      <link>http://localhost:49985/notes/outdoors/</link>
+      <pubDate>Sun, 27 Nov 2022 22:31:46 -0500</pubDate>
+      
+      <guid>http://localhost:49985/notes/outdoors/</guid>
+      <description>&lt;p&gt;I spent some time in the Bay Area this past week and did a vigorous hike (among other things). I was made to believe it would be more of a &amp;ldquo;nature walk&amp;rdquo; but this one, Mission Peak, had a steep grade and full exposure to the elements, and ended up being about 3.5 hours and close to 30,000 steps. I haven&amp;rsquo;t challenged myself physically like that in a long time so I was pleasantly surprised that I survived.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

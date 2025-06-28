@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Craft beer cans on Kwon.nyc</title><link>https://kwon.nyc/stuff/beer/</link><description>Recent content in Craft beer cans on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://kwon.nyc/stuff/beer/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Craft beer cans on Kwon.nyc</title>
+    <link>http://localhost:49985/stuff/beer/</link>
+    <description>Recent content in Craft beer cans on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://localhost:49985/stuff/beer/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
