@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Residency on Kwon.nyc</title>
-    <link>http://localhost:49985/tags/residency/</link>
-    <description>Recent content in Residency on Kwon.nyc</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 18 May 2022 06:51:54 -0400</lastBuildDate><atom:link href="http://localhost:49985/tags/residency/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Flashback</title>
-      <link>http://localhost:49985/notes/flashback/</link>
-      <pubDate>Wed, 18 May 2022 06:51:54 -0400</pubDate>
-      
-      <guid>http://localhost:49985/notes/flashback/</guid>
-      <description>&lt;p&gt;This past weekend I met up with a few of my former colleagues from residency for dinner and drinks. It felt a little bit like a meetup with high school friends might feel, if you spent high school removing gallbladders and incising and draining abscesses. (Maybe you did. I don&amp;rsquo;t know your life.)&lt;/p&gt;
-&lt;p&gt;Having a chance to confront and reflect on my former self in a controlled environment—in this case, a contemporary Mexican restaurant—was not a bad exercise.  Part of me was hesitant, as my general feeling towards that time in my life is &amp;ldquo;thank you, universe, for the opportunity to learn about the world and myself, but also, don&amp;rsquo;t ever put me there again.&amp;rdquo;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Residency on Kwon.nyc</title><link>https://kwon.nyc/tags/residency/</link><description>Recent content in Residency on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 18 May 2022 06:51:54 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/residency/index.xml" rel="self" type="application/rss+xml"/><item><title>Flashback</title><link>https://kwon.nyc/notes/flashback/</link><pubDate>Wed, 18 May 2022 06:51:54 -0400</pubDate><guid>https://kwon.nyc/notes/flashback/</guid><description>This past weekend I met up with a few of my former colleagues from residency for dinner and drinks. It felt a little bit like a meetup with high school friends might feel, if you spent high school removing gallbladders and incising and draining abscesses. (Maybe you did. I don&amp;rsquo;t know your life.)
+Having a chance to confront and reflect on my former self in a controlled environment—in this case, a contemporary Mexican restaurant—was not a bad exercise.</description></item></channel></rss>

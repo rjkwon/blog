@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Charts on Kwon.nyc</title>
-    <link>http://localhost:49985/tags/charts/</link>
-    <description>Recent content in Charts on Kwon.nyc</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2022 09:40:41 -0500</lastBuildDate><atom:link href="http://localhost:49985/tags/charts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2022 in review, part 2</title>
-      <link>http://localhost:49985/notes/2022-part-2/</link>
-      <pubDate>Sat, 31 Dec 2022 09:40:41 -0500</pubDate>
-      
-      <guid>http://localhost:49985/notes/2022-part-2/</guid>
-      <description>&lt;p&gt;As &lt;a href=&#34;https://kwon.nyc/notes/2022/&#34;&gt;promised&lt;/a&gt;, here&amp;rsquo;s the second part of my year in review.&lt;/p&gt;
-&lt;p&gt;To recap: I audited where I spent my time (loosely) and where I spent my money (incredibly precisely) this past year, in an effort to understand what I really value and to be more mindful and aware of where I&amp;rsquo;m spending these limited resources.&lt;/p&gt;
-&lt;p&gt;First, the nondiscretionary chunks of my income go towards taxes, student loan payments, and rent (in descending order of relative amounts). &lt;em&gt;C&amp;rsquo;est la vie&lt;/em&gt;, insert grumbling here, etc etc. It is what it is. As an unmarried and child-free person, the rest I am more or less free to do with what I like, which is a lucky position to be in. Here is the breakdown of that discretionary spending in 2022&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Charts on Kwon.nyc</title><link>https://kwon.nyc/tags/charts/</link><description>Recent content in Charts on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 31 Dec 2022 09:40:41 -0500</lastBuildDate><atom:link href="https://kwon.nyc/tags/charts/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 in review, part 2</title><link>https://kwon.nyc/notes/2022-part-2/</link><pubDate>Sat, 31 Dec 2022 09:40:41 -0500</pubDate><guid>https://kwon.nyc/notes/2022-part-2/</guid><description>As promised, here&amp;rsquo;s the second part of my year in review.
+To recap: I audited where I spent my time (loosely) and where I spent my money (incredibly precisely) this past year, in an effort to understand what I really value and to be more mindful and aware of where I&amp;rsquo;m spending these limited resources.
+First, the nondiscretionary chunks of my income go towards taxes, student loan payments, and rent (in descending order of relative amounts).</description></item></channel></rss>
