@@ -1,0 +1,22 @@
+{{ $json := resources.Get "letterboxd.json" }}
+{{ $reviews := $json | transform.Unmarshal }}
+
+{{ if $reviews }}
+  <ul>
+    {{ range first 5 $reviews }}
+      <li>
+          <a href="{{ .link }}">
+            {{ .title }}
+          </a>
+        {{ if .rating }} – {{ .rating }}<br />{{ end }}
+          {{ if .review }}
+            {{ .review }} <br />
+          {{ else }}
+            <em>Watched on {{ .pubDate | time.Format "Jan 2, 2006" }}</em>
+          {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <p>Could not load reviews.</p>
+{{ end }}

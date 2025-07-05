@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+
+{{ $json := resources.Get "letterboxd.json" }}
+{{ $reviews := $json | transform.Unmarshal }}
+
+<h1>{{ .Title }}</h1>
+<article>{{ .Content }}</article>
+
+<hr />
+
+  <ul>
+    {{ range $reviews }}
+      <li>
+          <a href="{{ .link }}">
+            <strong>{{ .title }}</strong>
+          </a>
+        {{ if .rating }} – {{ .rating }}<br />{{ end }}
+          {{ if .review }}
+            {{ .review }} <br />
+          {{ else }}
+            <em>Watched on {{ .pubDate | time.Format "Jan 2, 2006" }}</em>
+          {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+
+{{ end }}
