@@ -36,22 +36,7 @@
   <div class="movies">
     <h2>📺 Recently viewed</h2>
 
- <script>
-    fetch('https://letterboxd.com/kwon/rss/')
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-            const items = data.querySelectorAll("item");
-            let html = `<ul>`;
-            items.forEach(el => {
-                let title = el.querySelector("title").textContent;
-                let link = el.querySelector("link").textContent;
-                html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-            });
-            html += `</ul>`;
-            document.getElementById("letterboxd-feed").innerHTML = html;
-        });
-</script> 
+{{ partial "letterboxd.html" }}
 
     <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
   </div>

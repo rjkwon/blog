@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Map on Kwon.nyc</title><link>https://kwon.nyc/tags/map/</link><description>Recent content in Map on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 18 May 2024 08:51:55 -0400</lastBuildDate><atom:link href="https://kwon.nyc/tags/map/index.xml" rel="self" type="application/rss+xml"/><item><title>Spring tune-up + ride</title><link>https://kwon.nyc/notes/spring-ride/</link><pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate><guid>https://kwon.nyc/notes/spring-ride/</guid><description>Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour.</description></item><item><title>Summer ride</title><link>https://kwon.nyc/notes/summer-ride/</link><pubDate>Mon, 06 Jun 2022 08:51:55 -0400</pubDate><guid>https://kwon.nyc/notes/summer-ride/</guid><description>It&amp;rsquo;s the good part of summer right now, the part where it&amp;rsquo;s warm and sunny and the days are long but it hasn&amp;rsquo;t gotten too humid out. I went on a nice bike ride yesterday morning along a route I used to take years ago when I first moved to Brooklyn that I haven&amp;rsquo;t done since. Truthfully I have not been riding my bike as much as I used to (and I used to ride it EVERYWHERE).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map on Kwon.nyc</title>
+    <link>http://localhost:1313/tags/map/</link>
+    <description>Recent content in Map on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 May 2024 08:51:55 -0400</lastBuildDate><atom:link href="http://localhost:1313/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring tune-up &#43; ride</title>
+      <link>http://localhost:1313/notes/spring-ride/</link>
+      <pubDate>Sat, 18 May 2024 08:51:55 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/spring-ride/</guid>
+      <description>&lt;p&gt;Since transitioning to a more or less Monday-thru-Friday, 9-to-5 work week, I often feel my brain is pretty fried on Fridays (fried-days?), as well as a general depletion of energy for socializing, so for the last several years I have kept Friday evenings open for myself. I try to spend that time doing something chill, by myself, and mostly screen-free, and then I go to bed at a reasonable hour.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Summer ride</title>
+      <link>http://localhost:1313/notes/summer-ride/</link>
+      <pubDate>Mon, 06 Jun 2022 08:51:55 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/summer-ride/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s the good part of summer right now, the part where it&amp;rsquo;s warm and sunny and the days are long but it hasn&amp;rsquo;t gotten too humid out. I went on a nice bike ride yesterday morning along a route I used to take years ago when I first moved to Brooklyn that I haven&amp;rsquo;t done since. Truthfully I have not been riding my bike as much as I used to (and I used to ride it EVERYWHERE). I am constantly amazed by how quickly this city evolves. The thing that was once another thing is now a new thing. I also forget how different it is on foot versus cycling versus in a car versus a bus versus the subway.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

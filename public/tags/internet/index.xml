@@ -1,6 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Internet on Kwon.nyc</title><link>https://kwon.nyc/tags/internet/</link><description>Recent content in Internet on Kwon.nyc</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 30 Jan 2024 09:20:16 -0500</lastBuildDate><atom:link href="https://kwon.nyc/tags/internet/index.xml" rel="self" type="application/rss+xml"/><item><title>Which self is this?</title><link>https://kwon.nyc/notes/which-self-is-this/</link><pubDate>Tue, 30 Jan 2024 09:20:16 -0500</pubDate><guid>https://kwon.nyc/notes/which-self-is-this/</guid><description>Last month Katherine called out the tension inherent in a &amp;ldquo;personal&amp;rdquo; website which is that it is both public and personal, and one&amp;rsquo;s public (or professional) persona is often different from that of their personal life. Robin Rendle riffed on the concept and said that it&amp;rsquo;s totally fine for personal websites to be messy or imperfect or weird (i.e., not necessarily how you&amp;rsquo;d want to present a &amp;ldquo;professional&amp;rdquo; front) and declared, in a pretty great and punchy/pithy statement, &amp;ldquo;You’re a poem and not software&amp;rdquo;.</description></item><item><title>Internet is fun</title><link>https://kwon.nyc/notes/internet-is-fun/</link><pubDate>Sun, 17 Sep 2023 21:02:50 -0400</pubDate><guid>https://kwon.nyc/notes/internet-is-fun/</guid><description>I made this:
-The internet used to be fun
-I feel like more people these days are starting to reject the notion that the internet is made up of Big Websites that represent Big Companies that are trying to take either the attention or the money of their visitors while adding minimal value to the lives and well-being of those visitors.
-Because a lot of us remember when the internet was mostly just fun, and the good parts of the old internet were by and large created by real individual humans who had no motives other than to explore the internet and just put stuff out there that was interesting and fun and random.</description></item><item><title>unpolished</title><link>https://kwon.nyc/notes/unpolished/</link><pubDate>Sat, 18 Mar 2023 10:36:58 -0400</pubDate><guid>https://kwon.nyc/notes/unpolished/</guid><description>when visiting my parents a few weeks ago, i picked up one of the books on my mom’s bookshelf, the first of barack obama’s presidential memoirs. i started reading it, but it was kind of hefty and i was only going to be there for a week and didn’t want to start a book i couldn’t finish, so i put it down and picked up another one instead (which, turns out i couldn’t finish that one, either, so maybe i didn’t have to abandon the obama book).</description></item><item><title>Re: re-reading</title><link>https://kwon.nyc/notes/re-re-reading/</link><pubDate>Tue, 13 Dec 2022 08:21:08 -0500</pubDate><guid>https://kwon.nyc/notes/re-re-reading/</guid><description>Lately I feel that more often I&amp;rsquo;d rather re-read a book I&amp;rsquo;ve already read before (and enjoyed) than pick up a new one. Maybe it&amp;rsquo;s a form of risk aversion (I don&amp;rsquo;t know if I&amp;rsquo;m going to like a new book, so I&amp;rsquo;d rather read an old one). Maybe it&amp;rsquo;s something that comes with aging. I&amp;rsquo;ve always loved reading books, since I was a kid and my parents would take me to the library and every single time I would check out the maximum number of books (thirty)1, read them all, return them within the two-week checkout period, and check out another 30.</description></item><item><title>Digital noise</title><link>https://kwon.nyc/notes/noise/</link><pubDate>Sun, 04 Sep 2022 09:30:41 -0400</pubDate><guid>https://kwon.nyc/notes/noise/</guid><description>I&amp;rsquo;m getting worn down by all the digital noise. By digital noise I mean the constant barrage of alerts, notifications, pings, email subscriptions I didn&amp;rsquo;t sign up for, email subscriptions I DID sign up for but regret doing so, all the inputs that come through my connected devices.
-Sometimes I secretly wish I could be one of those people who moves off the grid, abandons the smartphone, deletes all social media, and lives a quiet minimalist life in the woods.</description></item><item><title>Grey matters</title><link>https://kwon.nyc/notes/grey-matters/</link><pubDate>Fri, 22 Jul 2022 07:55:22 -0400</pubDate><guid>https://kwon.nyc/notes/grey-matters/</guid><description>I read that Noah Grey, the creator of the blogging software Greymatter, recently resurfaced on the internet because he was losing his home to foreclosure and had set up a GoFundMe.
-I went into a little bit of a rabbit hole reading about Noah and what he had been up to, and it made me quite nostalgic. My first blog, circa 2001, was built with Greymatter. The internet was different back then (she says, rocking gently in her rocking chair on the porch, occasionally pausing to yell at children to get off her lawn).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internet on Kwon.nyc</title>
+    <link>http://localhost:1313/tags/internet/</link>
+    <description>Recent content in Internet on Kwon.nyc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jan 2024 09:20:16 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Which self is this?</title>
+      <link>http://localhost:1313/notes/which-self-is-this/</link>
+      <pubDate>Tue, 30 Jan 2024 09:20:16 -0500</pubDate>
+      
+      <guid>http://localhost:1313/notes/which-self-is-this/</guid>
+      <description>&lt;p&gt;Last month &lt;a href=&#34;https://kayserifserif.place/&#34;&gt;Katherine&lt;/a&gt; &lt;a href=&#34;https://sunny.garden/@kayserifserif/111523195687578771&#34;&gt;called out&lt;/a&gt; the tension inherent in a &amp;ldquo;personal&amp;rdquo; website which is that it is both public and personal, and one&amp;rsquo;s public (or professional) persona is often different from that of their personal life. &lt;a href=&#34;https://robinrendle.com/notes/i-am-a-poem-i-am-not-software/&#34;&gt;Robin Rendle&lt;/a&gt; riffed on the concept and said that it&amp;rsquo;s totally fine for personal websites to be messy or imperfect or weird (i.e., not necessarily how you&amp;rsquo;d want to present a &amp;ldquo;professional&amp;rdquo; front) and declared, in a pretty great and punchy/pithy statement, &amp;ldquo;You’re a poem and not software&amp;rdquo;. &lt;a href=&#34;https://manuelmoreale.com/the-personality-of-a-personal-website&#34;&gt;Manu&lt;/a&gt; also picked up the thread and brought up a good point which is that people are complex and are allowed to have multiple selves that they present in different ways (and one great thing about your website is that it&amp;rsquo;s yours and you can choose which self or selves to present, and how).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Internet is fun</title>
+      <link>http://localhost:1313/notes/internet-is-fun/</link>
+      <pubDate>Sun, 17 Sep 2023 21:02:50 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/internet-is-fun/</guid>
+      <description>&lt;p&gt;I made this:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://projects.kwon.nyc/internet-is-fun&#34;&gt;The internet used to be fun&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I feel like more people these days are starting to reject the notion that the internet is made up of Big Websites that represent Big Companies that are trying to take either the attention or the money of their visitors while adding minimal value to the lives and well-being of those visitors.&lt;/p&gt;
+&lt;p&gt;Because a lot of us remember when the internet was mostly just fun, and the good parts of the old internet were by and large created by real individual humans who had no motives other than to explore the internet and just put stuff out there that was interesting and fun and random. We were just being curious about technology and the web.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>unpolished</title>
+      <link>http://localhost:1313/notes/unpolished/</link>
+      <pubDate>Sat, 18 Mar 2023 10:36:58 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/unpolished/</guid>
+      <description>&lt;p&gt;when visiting my parents a few weeks ago, i picked up one of the books on my mom’s bookshelf, the first of barack obama’s presidential memoirs. i started reading it, but it was kind of hefty and i was only going to be there for a week and didn’t want to start a book i couldn’t finish, so i put it down and picked up another one instead (which, turns out i couldn’t finish that one, either, so maybe i didn’t have to abandon the obama book). anyway, i made it through the intro before deciding to put it down, and one point he shared really stuck with me which i have been reflecting on since: president obama says he prefers to draft his writing by hand, on paper, not by typing on a computer or word processor, because it gives a false sense of completeness or polish. (i’m paraphrasing.)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Re: re-reading</title>
+      <link>http://localhost:1313/notes/re-re-reading/</link>
+      <pubDate>Tue, 13 Dec 2022 08:21:08 -0500</pubDate>
+      
+      <guid>http://localhost:1313/notes/re-re-reading/</guid>
+      <description>&lt;p&gt;Lately I feel that more often I&amp;rsquo;d rather re-read a book I&amp;rsquo;ve already read before (and enjoyed) than pick up a new one. Maybe it&amp;rsquo;s a form of risk aversion (I don&amp;rsquo;t know if I&amp;rsquo;m going to like a new book, so I&amp;rsquo;d rather read an old one). Maybe it&amp;rsquo;s something that comes with aging. I&amp;rsquo;ve always loved reading books, since I was a kid and my parents would take me to the library and every single time I would check out the maximum number of books (thirty)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, read them all, return them within the two-week checkout period, and check out another 30.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Digital noise</title>
+      <link>http://localhost:1313/notes/noise/</link>
+      <pubDate>Sun, 04 Sep 2022 09:30:41 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/noise/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m getting worn down by all the digital noise. By digital noise I mean the constant barrage of alerts, notifications, pings, email subscriptions I didn&amp;rsquo;t sign up for, email subscriptions I DID sign up for but regret doing so, all the inputs that come through my connected devices.&lt;/p&gt;
+&lt;p&gt;Sometimes I secretly wish I could be one of those people who moves off the grid, abandons the smartphone, deletes all social media, and lives a quiet minimalist life in the woods. I think that&amp;rsquo;s too extreme for me, though.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grey matters</title>
+      <link>http://localhost:1313/notes/grey-matters/</link>
+      <pubDate>Fri, 22 Jul 2022 07:55:22 -0400</pubDate>
+      
+      <guid>http://localhost:1313/notes/grey-matters/</guid>
+      <description>&lt;p&gt;I read that Noah Grey, the creator of the blogging software Greymatter, recently resurfaced on the internet because he was losing his home to foreclosure and had set up a GoFundMe.&lt;/p&gt;
+&lt;p&gt;I went into a little bit of a rabbit hole reading about Noah and what he had been up to, and it made me quite nostalgic. My first blog, circa 2001, was built with Greymatter. The internet was different back then (she says, rocking gently in her rocking chair on the porch, occasionally pausing to yell at children to get off her lawn). Blogs were very pure and people-centric. They were organic, artisanal, handmade. Nobody was trying to make money off of them. (Dooce.com was the first personal blog I was aware of that got big enough to monetize.)&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

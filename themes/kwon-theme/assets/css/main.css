@@ -103,10 +103,6 @@ MOVIES, BOOKS, PINBOARD
     padding: 0.5em 0;
 }
 
-.movies a {
-    font-weight: bold;
-}
-
 .books center, .books .gr_custom_header_1620425797 {
     display: none;
 }

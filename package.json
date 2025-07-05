@@ -1,4 +1,6 @@
 {
+  "name": "kwon.nyc",
+  "type": "module",
   "dependencies": {
     "googleapis": "^150.0.1"
   }

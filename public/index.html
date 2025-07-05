@@ -10,7 +10,7 @@
     <meta name="description" content="A page on Kwon.nyc">
 
     <link rel="stylesheet" href="https://use.typekit.net/pyn4wgi.css">
-    <link rel="canonical" href="http://localhost:1313/"><link href="/assets/css/stylesheet.min.68e44e2545ff57e36807d633eb6664e7fc0be6092f5dba5303d36751377aba28.css" integrity="sha256-aOROJUX/V&#43;NoB9Yz62Zk5/wL5gkvXbpTA9NnUTd6uig=" rel="preload stylesheet"
+    <link rel="canonical" href="http://localhost:1313/"><link href="/assets/css/stylesheet.min.fd939fe951d90b303ab3aa2324bea895163c885d5b3b4986a342721829841ac0.css" integrity="sha256-/ZOf6VHZCzA6s6ojJL6olRY8iF1bO0mGo0JyGCmEGsA=" rel="preload stylesheet"
         as="style">
 
     
@@ -142,22 +142,64 @@
   <div class="movies">
     <h2>📺 Recently viewed</h2>
 
- <script>
-    fetch('https://letterboxd.com/kwon/rss/')
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-            const items = data.querySelectorAll("item");
-            let html = `<ul>`;
-            items.forEach(el => {
-                let title = el.querySelector("title").textContent;
-                let link = el.querySelector("link").textContent;
-                html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-            });
-            html += `</ul>`;
-            document.getElementById("letterboxd-feed").innerHTML = html;
-        });
-</script> 
+
+
+
+
+  <ul>
+    
+      <li>
+          <a href="https://letterboxd.com/kwon/film/the-mummy-1999/">
+            The Mummy, 1999
+          </a>
+         – ★★★<br />
+          
+            Some aspects don&#39;t age well (like the Islamophobia) but otherwise entertaining <br />
+          
+      </li>
+    
+      <li>
+          <a href="https://letterboxd.com/kwon/film/still-alice/">
+            Still Alice, 2014
+          </a>
+         – ★★★½<br />
+          
+            Watched on Friday June 27, 2025. <br />
+          
+      </li>
+    
+      <li>
+          <a href="https://letterboxd.com/kwon/film/black-mirror-common-people/">
+            Black Mirror: Common People, 2025
+          </a>
+         – ★★★★<br />
+          
+            Extremely depressing <br />
+          
+      </li>
+    
+      <li>
+          <a href="https://letterboxd.com/kwon/film/freaky-tales/">
+            Freaky Tales, 2024
+          </a>
+         – ★★★★<br />
+          
+            Watched on Saturday May 10, 2025. <br />
+          
+      </li>
+    
+      <li>
+          <a href="https://letterboxd.com/kwon/film/black-mirror-hotel-reverie/">
+            Black Mirror: Hotel Reverie, 2025
+          </a>
+         – ★★★½<br />
+          
+            I liked the story, but it was hard not to see Issa Rae as Issa Rae <br />
+          
+      </li>
+    
+  </ul>
+
 
     <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
   </div>
