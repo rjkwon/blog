@@ -1,10 +1,13 @@
-# Ignore node_modules (in remote repo for Github actions)
+# ignore node_modules (in remote repo for github actions)
 node_modules/
 
-# Ignore .obsidian folder
+# ignore .obsidian folder
 /content/notes/.obsidian/
 
-# Ignore system files
+# ignore /public, since Netlify generates a fresh build each time
+/public
+
+# ignore system files
 .DS_Store
 Thumbs.db
 Icon
