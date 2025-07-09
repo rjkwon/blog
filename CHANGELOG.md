@@ -24,7 +24,7 @@
 * 2025-03-03 Auto-update TV log from Google Sheets
 * 2025-03-02 fix localhost error
 * 2025-03-01 remove node modules from local
-* 2025-03-01 Merge branch 'ma in' of https://github.com/rjkwon/blog
+* 2025-03-01 Merge branch 'main' of https://github.com/rjkwon/blog
 * 2025-03-01 add new note
 * 2025-03-02 Auto-update TV log from Google Sheets
 * 2025-03-01 Rebuild Hugo site with latest TV log
