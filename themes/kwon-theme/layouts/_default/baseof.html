@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
-<!--
+{{-  `<!--
 hi there you source-viewer you!
  _                                            
 | |                                           
@@ -11,7 +11,7 @@ hi there you source-viewer you!
  __________________________________ __/ | ____    
                                    |___/ 
 https://github.com/rjkwon/blog
--->
+-->` | safeHTML }}
 <head>
     {{- partial "head.html" . }}
 </head>
