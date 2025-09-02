@@ -17,12 +17,6 @@ name = "Notes"
 url = "/notes/"
 weight = 20
 
-[[menu.main]]
-identifier = "links"
-name = "Links"
-url = "/links/"
-weight = 30
-
 [params]
   mainSections = ['notes']
   assetDir = "assets"
