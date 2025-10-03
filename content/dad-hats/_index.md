@@ -3,7 +3,6 @@ title: "Dad Hats"
 date: 2025-04-22
 type: hats
 ---
-🚧 <small style="font-size: 9px !important">_Pardon the mess — I'm renovating!_</small> 🚧
 
 My dad has a pretty extensive collection of hats. A couple years ago he had an acute health event where he had to be hospitalized for weeks, so I went to visit home and help my mom. It was scary and sad. One afternoon at the house I was alone between hospital visits and looking for something to occupy time and brainspace and found many of his hats scattered in various places around the house, mostly closets.
 
