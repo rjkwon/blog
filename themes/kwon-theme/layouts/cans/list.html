@@ -1,8 +1,34 @@
 {{ define "main" }}
 <div class="cans-grid">
-    {{ $sorted := sort .Site.Data.cans "takenAt" "desc" }}
-    {{ range $sorted }}
-    <img src="/cans/{{ .filename }}" alt="{{ .alt }}" title="{{ .takenAt }}" loading="lazy">
+
+  <div class="cans-explainer">
+  	    <p>
+      👈 <a href="/">Home</a>
+    </p>
+    <p>
+      Ever notice how cute craft beer cans are these days? Me too. When I see an especially cute one, I snap a photo and add it here. Photo stream concept and design inspired by:
+      <a href="https://coffee.youngjo.com/">coffee.youngjo.com</a>,
+      <a href="https://spencer.place/fits">Spencer Chang's fits</a>,
+      <a href="https://katieshootsfilm.wordpress.com/tag/as-seen-in-an-alleyway/">Katie Shoots Film</a>
+    </p>
+
+  </div>
+
+  {{ $sortedAsc := sort .Site.Data.cans "takenAt" "asc" }}
+  {{ $sorted := sort .Site.Data.cans "takenAt" "desc" }}
+
+  {{ range $photo := $sorted }}
+    {{ $index := 0 }}
+    {{ range $i, $x := $sortedAsc }}
+      {{ if eq $x.filename $photo.filename }}{{ $index = $i }}{{ end }}
     {{ end }}
+    {{ $num := printf "%03d" (add $index 1) }}
+
+    <div class="can-item">
+      <img src="/cans/{{ $photo.filename }}" alt="{{ $photo.alt }}" title="{{ $photo.takenAt }}" loading="lazy">
+      <span>{{ $num }}</span>
+    </div>
+  {{ end }}
+
 </div>
 {{ end }}

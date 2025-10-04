@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background-color: #eee;
+    text-align: left;
+    font-family: Inter, sans-serif;
+}
+
+.cans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .cans-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cans-explainer {
+        grid-column: 1 / -1;
+    }
+}
+
+.can-item {
+    position: relative;
+}
+
+.can-item img {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.cans-explainer {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cans-explainer p {
+    font-size: 0.85em;
+    line-height: 1.5;
+}
+
+.can-item span { /* ID number */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0.2;
+    transition: opacity 0.2s ease;
+}
+
+.can-item:hover span {
+    opacity: 0.9;
+}
