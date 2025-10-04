@@ -1,0 +1,25 @@
+{{ define "main" }}
+<style>
+body {
+    background-color: #eee;
+}
+
+.cans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.cans-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+</style>
+<div class="cans-grid">
+    {{ $sorted := sort .Site.Data.cans "takenAt" "desc" }}
+    {{ range $sorted }}
+    <img src="/cans/{{ .filename }}" alt="{{ .alt }}" title="{{ .takenAt }}">
+    {{ end }}
+</div>
+{{ end }}
