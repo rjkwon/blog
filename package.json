@@ -3,5 +3,11 @@
   "type": "module",
   "dependencies": {
     "googleapis": "^150.0.1"
+  },
+  "scripts": {
+    "generate:cans": "node scripts/generate-cans-json.js",
+    "generate:letterboxd": "node scripts/fetch-letterboxd.js",
+    "prebuild": "npm run generate:cans && npm run generate:letterboxd",
+    "build": "npm run prebuild && hugo --gc --minify"
   }
 }
