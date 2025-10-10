@@ -6,8 +6,7 @@
   },
   "scripts": {
     "generate:cans": "node scripts/generate_cans_json.js",
-    "generate:letterboxd": "node scripts/fetch_letterboxd.js",
-    "prebuild": "npm run generate:cans && npm run generate:letterboxd",
+    "prebuild": "npm run generate:cans",
     "build": "npm run prebuild && hugo --gc --minify"
   }
 }
