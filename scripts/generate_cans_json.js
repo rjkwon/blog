@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const PHOTO_DIR = path.resolve("assets/img/cans");
+const PHOTO_DIR = path.resolve("static/cans");
 const OUTPUT = path.resolve("data/cans.json");
 
 function parseDateFromFilename(filename) {
