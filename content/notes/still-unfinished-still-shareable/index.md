@@ -1,0 +1,25 @@
+---
+title: "Still unfinished, still shareable"
+date: 2025-10-26T16:28:46-04:00
+draft: false
+tags:
+---
+
+A little while back (six months ago) I [wrote](https://kwon.nyc/notes/unfinished-but-shareable/) about how I made a random page featuring my [dad's hats](https://kwon.nyc/dad-hats/) and how I want to make more evergreen content and share more photos and visual things here.
+
+For some things in my life I have become very decisive but this website is not one of them. Lol. Maybe it's because it's one of my few creative practices that I do purely for fun and so I feel a lot of pressure to make it amazing.
+
+In my work life, I have gotten fairly reliable at managing my own projects, and collaborating with other people who are managing their own. I have also taken a similar approach to life admin and organization; I am at the point in my life where managing my own health and finances are also projects that need to be managed and tracked; not because I am particularly un/healthy or un/wealthy, but more because when you've been around for a few decades there's just more STUFF that you generate with regard to taking care of yourself. 
+
+Anyway, all that is fine, but I just... don't necessarily want to feel like I'm project-managing a thing in my personal life something that's supposed purely for fun, i.e., this website. And unfortunately that has translated to many ideas that seem exciting at first but then as soon as I've documented one and decided to try and execute on it, it languishes. I have also incurred quite a bit of technical debt on this website based on fleeting decisions I made years ago, which also makes me hesitate to just build something even if it's not perfect.
+
+The "personal website as digital garden" metaphor is one that many people have resonated with, and for good reason. "Working with the garage door open" is another one I like, especially because it unlocks some core memories of my suburban midwestern upbringing. And remember those "Under Construction" signs (gifs) we used to put on pages on our websites, before reverse-chronological blogging was a thing? I like that metaphor, too. At some point you just have to describe the thing and not use the metaphor as an entire allegory, though. 
+
+Well, the whole point of this was to share some things I have been gingerly working on lately -- think of it as me working on the garden in my garage with the door open and a construction sign in the driveway :) 
+
+So anyway... I made these (*throws them on the ground in front of you and runs away*):
+1. **[index.kwon.nyc](https://index.kwon.nyc/)**: An index page, as a way to track updates and show the delta between what this site is today and all my grand plans for it -- maybe they will materialize faster if I create some accountability for myself by publishing them there. Or maybe I'll continue to think of fun ideas and then stare at my own belly button for months. It also puts all the random orphaned pages I've created, like [The internet used to be fun](https://projects.kwon.nyc/internet-is-fun), in some context / information architecture. ("Orphan" is probably not very inclusive; if you have a better way to refer to them let me know. Although I supposed they're no longer orphaned now that they're on an index page.)
+2. **[kwon.photos](https://kwon.photos/)**: The beginnings of a photo site, at a domain I bought a while ago and sat on because (inner dialogue incoming) I'm not a photographer but still want to share things in the world around me that I notice and think are worth capturing but there are already too many photos online and nobody will care about mine and I don't even know how I would start to build a photo site these days, what is a WebP and an AVIF and what do you mean `<picture>`, don't you mean `<img>` (end inner dialogue). Anywho, I also actually [wrote documentation](https://github.com/rjkwon/photos/blob/main/README.md) for the first time ever (tryna look out for future me) since I am trying out a new stack including a totally different static site generator, Astro (on a tip from [Robin](https://www.iamrob.in/) who used it to build his [cool photo site](https://robins.photos/)), and a Node-based image processor, Sharp. (Back in my day, we had to manually make thumbnail images in Photoshop...)
+3. **[kwon.nyc/cans](https://kwon.nyc/cans/)**: A sub-site with some neat-looking cans of craft beer I have had over the years. This one is an idea I had so long ago, that took me so long to execute on, that I don't even really drink beer that much anymore 😂 I still appreciate a cute can though.
+
+Disclosure: I did (and do) use an AI chatbot to help me build websites, although I have pretty specific guidelines for how I use them and don't use them. I'll write more about my thoughts later but tl;dr I'm not anti-chatbot, obviously, but I do think they are very specific tools that have very specific use cases (**ASK:** can you send me any AI disclosures you've seen on personal sites, or if you have one on your own? I've seen some good ones lately but of course forgotten to bookmark them). 
