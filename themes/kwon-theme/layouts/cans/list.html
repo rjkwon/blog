@@ -12,6 +12,10 @@
       <a href="https://katieshootsfilm.wordpress.com/tag/as-seen-in-an-alleyway/">Katie Shoots Film</a>
     </p>
 
+    <p>
+      <small>Last updated: {{ now.Format "2 Jan 2006" }}</small>
+    </p>
+
   </div>
 
   {{ $sortedAsc := sort .Site.Data.cans "takenAt" "asc" }}
