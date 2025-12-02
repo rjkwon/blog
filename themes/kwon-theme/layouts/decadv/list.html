@@ -1,0 +1,70 @@
+{{ define "main" }}
+<main>
+    <div class="inner">
+        <header>
+            <div class="title-block">
+                <h1>{{ .Title }}</h1>
+                <hr />
+                <p class="intro">
+                    This is a log of my December Adventure, a thing <a href="https://eli.li/december-adventure">started by eli_oat</a> online, to pick a personal project (with a tilt towards code, but doesn't have to be), and work on it a little every day in December. I'm giving it a whirl because (1) it sounds fun, (2) I am hoping it will help me lower the activation energy for creative projects in 2026, and (3) it might be nice to connect with other people doing the same thing at the same time.
+                </p>
+            </div>
+            <figure class="hero-figure">
+                <img src="{{ "images/kwon-hi.png" | relURL }}" alt="me bundled up for the adventure" class="hero-image">
+            </figure>
+        </header>
+        <hr class="rule" />
+        <section class="calendar">
+            <div class="calendar-month">
+                Dec 2025
+            </div>
+            <div class="calendar-grid">
+                <div class="day-label">Mo</div>
+                <div class="day-label">Tu</div>
+                <div class="day-label">We</div>
+                <div class="day-label">Th</div>
+                <div class="day-label">Fr</div>
+                <div class="day-label">Sa</div>
+                <div class="day-label">Su</div>
+                <button class="day day--active">1</button>
+                <button class="day">2</button>
+                <button class="day">3</button>
+                <button class="day">4</button>
+                <button class="day">5</button>
+                <button class="day">6</button>
+                <button class="day">7</button>
+                <button class="day">8</button>
+                <button class="day">9</button>
+                <button class="day">10</button>
+                <button class="day">11</button>
+                <button class="day">12</button>
+                <button class="day">13</button>
+                <button class="day">14</button>
+                <button class="day">15</button>
+                <button class="day">16</button>
+                <button class="day">17</button>
+                <button class="day">18</button>
+                <button class="day">19</button>
+                <button class="day">20</button>
+                <button class="day">21</button>
+                <button class="day">22</button>
+                <button class="day">23</button>
+                <button class="day">24</button>
+                <button class="day">25</button>
+                <button class="day">26</button>
+                <button class="day">27</button>
+                <button class="day">28</button>
+                <button class="day">29</button>
+                <button class="day">30</button>
+                <button class="day">31</button>
+            </div>
+        </section>
+        <hr />
+        <section class="goals">
+            <ol reversed>
+                {{ .Content }}
+            </ol>
+        </section>
+    </div>
+</main>
+{{ end }}
