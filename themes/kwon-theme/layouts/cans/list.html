@@ -12,9 +12,18 @@
       <a href="https://katieshootsfilm.wordpress.com/tag/as-seen-in-an-alleyway/">Katie Shoots Film</a>
     </p>
 
-    <p>
-      <small>Last updated: {{ now | time.Format "02 Jan 2006" }}</small>
-    </p>
+    
+{{ $cans := .Site.Data.cans }}
+{{ if gt (len $cans) 0 }}
+  {{ $last := index $cans (sub (len $cans) 1) }}
+  <p>
+    <small>
+      Last updated:
+      {{ $last.takenAt | time.AsTime | time.Format "02 Jan 2006" }}
+    </small>
+  </p>
+{{ end }}
+    
 
   </div>
 

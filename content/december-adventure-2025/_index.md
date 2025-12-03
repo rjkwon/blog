@@ -6,7 +6,7 @@ type: "decadv"
 # 03
 
 # 02
-I have this micro-site, [kwon.nyc/cans](https://kwon.nyc/cans/), that I 
+I have this micro-site, [kwon.nyc/cans](https://kwon.nyc/cans/), that I put together somewhat shoddily several weeks ago. Today I went back in and did the unglamorous work of cleaning up some of the code. 
 
 # 01
 **Goal for day 1 is to build this log.** I stumbled upon this December Adventure thing on Mastodon, and it feels like a nice way to make some progress on things with minimal pressure, which is the level I'm on these days. 
