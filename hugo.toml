@@ -4,6 +4,7 @@ title = "Kwon.nyc"
 theme = "kwon-theme"
 publishDir = "public"
 enableRobotsTXT = false
+timeZone = "America/New_York"
 
 [[menu.main]]
 identifier = "about"
