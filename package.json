@@ -6,7 +6,11 @@
   },
   "scripts": {
     "generate:cans": "node scripts/generate_cans_json.js",
-    "prebuild": "npm run generate:cans",
+    "generate:letterboxd": "node scripts/fetch_letterboxd.js",
+    "prebuild": "npm run generate:cans && npm run generate:letterboxd",
     "build": "npm run prebuild && hugo --gc --minify"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "^5.3.2"
   }
 }
