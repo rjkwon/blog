@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #e7f5f0;
@@ -19,13 +25,11 @@ body {
 }
 
 main {
-    min-height: 100vh;
-    padding: 3rem 0;
+    padding: 3em;
 }
 
 .inner {
     max-width: 700px;
-    padding-left: 3rem;
     position: relative;
 }
 
@@ -36,10 +40,6 @@ header {
     gap: 2rem;
 }
 
-.title-block {
-    max-width: 650px;
-}
-
 h1 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -48,9 +48,9 @@ h1 {
 }
 
 code {
-  background-color: #D7DFDD;
-  font-size: 0.8rem;
-  padding: 5px;
+    background-color: #D7DFDD;
+    font-size: 0.8rem;
+    padding: 5px;
 }
 
 .intro {
@@ -118,28 +118,21 @@ hr {
 
 .day--active {
     background: #f39a4b;
-    /* highlight for active day */
     color: #fff;
 }
 
-section.goals {
+section.goals, footer {
     font-size: 0.8em;
 }
 
-footer {
-  font-size: 0.8em;
-}
-
-/* Responsiveness */
+/* mobile */
 @media (max-width: 800px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
+    main, .inner, header {
+      width: 100%;
     }
 
     .hero-figure {
-        align-self: flex-end;
-        top: 0;
+        display: none;
     }
 
     .calendar {
