@@ -3,6 +3,12 @@ title: "December Adventure"
 type: "decadv"
 ---
 
+# 06
+
+# 05
+
+# 04
+
 # 03
 I had a long workday and then went to a late (for me) dinner, so I didn't have as much time as I hoped for to work on Dec Adventure. Today, I fixed the mobile view for this page. Also, randomly, while waiting for my seat at the restaurant, I saw the actor Wallace Shawn come in, talk to the host (checking wait time?), and then leave. Inconceivable.
 
