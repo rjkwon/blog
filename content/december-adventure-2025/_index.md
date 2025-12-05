@@ -8,6 +8,11 @@ type: "decadv"
 # 05
 
 # 04
+Today I figured out how to automate the process I use to pull movie data from my Letterboxd into a JSON file that I can then use to display recent movies I've watched on my homepage ([kwon.nyc](https://kwon.nyc)). I 
+* [added a line](https://github.com/rjkwon/blog/commit/421dcfb98a0385760103c30acd840b8534ccc80c) to my Netlify configuration to run a script at build time that fetches the data and dumps it into a JSON, which I'd previously been running manually, then
+* created a [Github Action](https://github.com/rjkwon/blog/actions/runs/19931196947/workflow) to automatically trigger a Hugo build every morning at 8 am New York time. 
+
+I also realized from days 1-3 that waiting until the end of the workday to do decadv stuff meant I was using my tired brain (my evening brain), so this morning I spent some of my good brain (my morning brain) on it, which was a really nice start to the day. I'll try it again tomorrow morning.
 
 # 03
 I had a long workday and then went to a late (for me) dinner, so I didn't have as much time as I hoped for to work on Dec Adventure. Today, I fixed the mobile view for this page. Also, randomly, while waiting for my seat at the restaurant, I saw the actor Wallace Shawn come in, talk to the host (checking wait time?), and then leave. Inconceivable.
