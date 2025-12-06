@@ -6,6 +6,7 @@ type: "decadv"
 # 07
 
 # 06
+Wasn't feeling like doing too much today so I just did some more cleanup and deleted some old files. 
 
 # 05
 I made a [blank page](https://kwon.nyc/blank/).
