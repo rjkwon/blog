@@ -3,9 +3,12 @@ title: "December Adventure"
 type: "decadv"
 ---
 
+# 07
+
 # 06
 
 # 05
+I made a [blank page](https://kwon.nyc/blank/).
 
 # 04
 Today I figured out how to automate the process I use to pull movie data from my Letterboxd into a JSON file that I can then use to display recent movies I've watched on my homepage ([kwon.nyc](https://kwon.nyc)). I 
