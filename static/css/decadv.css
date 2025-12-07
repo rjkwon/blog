@@ -77,43 +77,29 @@ hr {
     margin: 2.5rem 0;
 }
 
-/* calendar */
-.calendar {
+section.calendar {
     display: flex;
     align-items: flex-start;
     gap: 2.5rem;
+    font-size: 0.9rem;
 }
 
 .calendar-month {
-    font-size: 0.9rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 500;
-    margin-top: 0.2rem;
+    padding-top: 0.4em;
 }
 
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(1.75rem, 2rem));
-    grid-auto-rows: 1.8rem;
-    gap: 0.2rem;
-    font-size: 0.75rem;
+th, td {
+  padding: 0.3em 0.5em;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .day-label {
     font-weight: 500;
     text-align: center;
-}
-
-.day {
-    border: none;
-    background: transparent;
-    padding: 0;
-    font: inherit;
-    text-align: center;
-    cursor: default;
-    border-radius: 4px;
-    line-height: 1.8rem;
 }
 
 .day--active {
