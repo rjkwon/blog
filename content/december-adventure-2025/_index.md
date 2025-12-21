@@ -3,9 +3,67 @@ title: "December Adventure"
 type: "decadv"
 ---
 
-# 09
+<h1 id="19">19</h1>
 
-# 08
+Took my daily winter walk, at least. It rained so most of the snow on the trail melted. No creative brain.
+
+<h1 id="18">18</h1>
+
+Busy work day. No creative brain. Watched the first episode of the new season of Fallout.
+
+<h1 id="17">17</h1>
+
+Made hot pot at home. Finished jigsaw puzzle.
+
+<img src="/decadv/puzzle.png" alt="dithered image of a completed jigsaw puzzle on a coffee table with other knick-knacks strewn about">
+
+<h1 id="16">16</h1>
+
+Made an open face kimchi tuna melt for lunch. This rental home also has a slow cooker and a jar of dried lentils, so I made a slow cooker lentil soup. Verdict: lentil soup doesn't need to be made in a slow cooker. Lol.
+
+<img src="/decadv/sandwich.png" alt="dithered image of an open face cheesy sandwich on tuna with kimchi, on a plate that looks like a bulls-eye, and a bowl of lentil soup">
+
+<h1 id="15">15</h1>
+
+Busy work day. Took a winter walk on the rail trail. Shoveled snow. Felt good to see all the snow cleared when I was done.
+
+<img src="/decadv/shovel.png" alt="dithered image of a woman shoveling snow set on a backdrop of trees">
+
+<h1 id="14">14</h1>
+
+Snow. Winter walk. Saw a porcupine. Made an Irish hot chocolate. Started a jigsaw puzzle.
+
+<img src="/decadv/cocoa.png" alt="dithered image of Irish hot chocolate ingredients: cocoa, bourbon, and a chocolate truffle treat from the No Chewing Allowed at the Union Square xmas market">
+
+<h1 id="13">13</h1>
+
+Drove upstate. Quick winter walk in mid-afternoon before it got dark. 
+
+<h1 id="12">12</h1>
+
+Work from home, quick trip to office, packing for a month upstate. No creative brain today.
+
+<h1 id="11">11</h1>
+
+Travel day, inbound flight home. SFO Terminal 1 has a Vietnamese spot so I had a sidecar of pho broth for breakfast, and now I want a sidecar of pho broth for breakfast every day.
+
+<img src="/decadv/pho.png" alt="dithered image of an adorable 6 oz paper cup filled with blazing hot pho broth">
+
+<h1 id="10">10</h1>
+
+Work trip day 2. Made a bakery with modeling clay baked goods with my niece, called the Feed Me Bakery. "Expensive stuff" in the back (niece's idea).
+
+<img src="/decadv/bakery.png" alt="dithered image of a DIY bakery with various baked goods made of modeling clay -- doughnuts, cinnamon rolls, a pepperoni pizza (hey, it's baked and it's a good), croissants, baguette">
+
+<h1 id="09">09</h1>
+
+Work trip day 1. Took a morning walk at the coastal wetlands on the way to the office and pondered this interesting bush-looking plant.
+
+<img src="/decadv/tree.png" alt="dithered image of a spiky bush at the coastal wetlands">
+
+<h1 id="08">08</h1>
+
+Travel day, sat on a plane for 6 hours on an outbound flight for a work trip. No creative brain today.
 
 <h1 id="07">07</h1>
 
