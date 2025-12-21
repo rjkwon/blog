@@ -3,6 +3,12 @@ title: "December Adventure"
 type: "decadv"
 ---
 
+<h1 id="20">20</h1>
+
+Had a houseguest so spent most of the day entertaining. After dropping them off at the train station, I came back, broke down a chicken into parts, and used the bones to make a 4-hour stock.
+
+<img src="/decadv/stock.png" alt="dithered image of multiple containers of chicken stock in a fridge">
+
 <h1 id="19">19</h1>
 
 Took my daily winter walk, at least. It rained so most of the snow on the trail melted. No creative brain.
