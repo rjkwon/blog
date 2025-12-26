@@ -18,6 +18,12 @@ name = "Notes"
 url = "/notes/"
 weight = 20
 
+[[menu.main]]
+identifier = "photos"
+name = "Photos ↗"
+url = "https://kwon.photos/"
+weight = 30
+
 [params]
   mainSections = ['notes']
   assetDir = "assets"
