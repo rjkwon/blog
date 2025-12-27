@@ -3,6 +3,38 @@ title: "December Adventure"
 type: "decadv"
 ---
 
+<h1 id="26">26</h1>
+
+Decided to break up the Alaska photos (from my <a href="#23">12/23 update</a>) into smaller galleries since I couldn't make enough decisions about which ones to cut. <a href="https://kwon.photos/alaska-2025-mendenhall-glacier/">Here's one</a> from Mendenhall glacier.
+
+<h1 id="25">25</h1>
+
+Took a long-ish Christmas walk around the lake. I made lions head meatballs for dinner.
+
+<img src="/decadv/selfie.png" alt="dithered image selfie of a woman wearing a beanie in front of a big lake">
+
+<h1 id="24">24</h1>
+
+I made a decaf coffee in the afternoon with a spoonful of hot cocoa mix and whipped cream. Decadent!
+
+<img src="/decadv/mocha.png" alt="dithered image of a mocha with whipped cream">
+
+<h1 id="23">23</h1>
+
+I've been culling a set of 566 photos from an Alaska trip to make into a gallery. I got it down to around 200, which is still too big for a gallery.
+
+<h1 id="22">22</h1>
+
+I made chicken and vegetable soup with the stock from yesterday. The plumber came by to fix a leak in the bathroom and kept saying how good the soup smelled so I gave him some to take home in a pint container.
+
+<img src="/decadv/veggies.png" alt="dithered image of vegetables on a chopping board">
+
+<h1 id="21">21</h1>
+
+Found a local grocery that sold handmade spaghetti in nests and guanciale, which is hard to find in stores, so I called my friend Steve who is in Bologna and asked for his carbonara recipe. We caught up for an hour and he shared the recipe. 
+
+<img src="/decadv/carbonara.png" alt="dithered image of spaghetti carbonara in a bowl">
+
 <h1 id="20">20</h1>
 
 Had a houseguest so spent most of the day entertaining. After dropping them off at the train station, I came back, broke down a chicken into parts, and used the bones to make a 4-hour stock.
