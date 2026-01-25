@@ -2,6 +2,34 @@ export default async (request, context) => {
   const userAgent = request.headers.get('user-agent') || '';
   
   if (userAgent.toLowerCase().includes('curl')) {
+    const countryCode = context.geo?.country?.code || 'US';
+    const city = context.geo?.city || '';
+    const country = context.geo?.country?.name || 'somewhere on Earth';
+    
+    const greetings = {
+      'US': 'Hello',
+      'CA': 'Hello',
+      'IT': 'Ciao',
+      'GB': 'Hello',
+      'BE': 'Bonjour',
+      'DE': 'Hallo',
+      'EG': 'مرحبا',
+      'ES': 'Hola',
+      'RS': 'Zdravo',
+      'AU': 'G\'day',
+      'CH': 'Grüezi',
+      'CZ': 'Ahoj',
+      'DO': 'Hola',
+      'FI': 'Hei',
+      'KR': '안녕하세요',
+      'NP': 'नमस्ते',
+      'PK': 'السلام علیکم',
+      'SE': 'Hej'
+    };
+    
+    const greeting = greetings[countryCode] || 'Hello';
+    const location = city ? `${city}, ${country}` : country;
+    
     const asciiContent = `
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
@@ -9,9 +37,7 @@ export default async (request, context) => {
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
-Hello command line friends!
-
-It's me, Rachel (kwon.nyc). 
+${greeting} command line visitor! It's me, Rachel (kwon.nyc). 
 
 SITES
 -----
@@ -24,6 +50,10 @@ CONTACT
 -------
 kwon@fastmail.com  
 mastodon.social/@rjkwon
+
+BYE
+-------
+Hope you are having a great day or night! Thanks for visiting <3
 
 `;
     
