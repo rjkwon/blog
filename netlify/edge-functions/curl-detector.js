@@ -37,7 +37,7 @@ export default async (request, context) => {
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
 
-${greeting} command line visitor! It's me, Rachel (kwon.nyc).
+     ${greeting} command line visitor! It's me, Rachel (kwon.nyc).
 ____________________________________________________________________________
 |                                                                          |
 |                                                                          |
