@@ -21,7 +21,7 @@ export default async (request, context) => {
       'CZ': 'Ahoj',
       'DO': 'Hola',
       'FI': 'Hei',
-      'KR': '안녕하세요',
+      'KR': '안녕',
       'NP': 'नमस्ते',
       'PK': 'السلام علیکم',
       'SE': 'Hej'
