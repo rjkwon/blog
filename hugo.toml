@@ -31,7 +31,7 @@ weight = 30
   feed_token = "x5DA7Gxf8FnCFnDe"
 
 [minification]
-  enable = true
+  enable = false
 
 [markup.goldmark.renderer]
   unsafe = true
