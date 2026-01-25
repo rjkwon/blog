@@ -31,29 +31,34 @@ export default async (request, context) => {
     const location = city ? `${city}, ${country}` : country;
     
     const asciiContent = `
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║    k w o n . n y c                                ( °◡° )    ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║    k w o n . n y c                                          ( °◡° )      ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
 
-${greeting} command line visitor! It's me, Rachel (kwon.nyc). 
-
-SITES
------
-→ kwon.nyc         - main site
-→ kwon.nyc/notes   - blog
-→ kwon.photos      - photo site
-→ index.kwon.nyc   - directory
-
-CONTACT
--------
-kwon@fastmail.com  
-mastodon.social/@rjkwon
-
-BYE
--------
-Hope you are having a great day or night! Thanks for visiting <3
+____________________________________________________________________________
+|                                                                          |
+|                                                                          |
+|    ${greeting} command line visitor! It's me, Rachel (kwon.nyc).         |
+|                                                                          |
+|    SITES                                                                 |
+|    -----                                                                 |
+|    → kwon.nyc         - main site                                        |
+|    → kwon.nyc/notes   - blog                                             |
+|    → kwon.photos      - photo site                                       |
+|    → index.kwon.nyc   - directory                                        |
+|                                                                          |
+|    CONTACT                                                               |
+|    -------                                                               |
+|    kwon@fastmail.com                                                     |
+|    mastodon.social/@rjkwon                                               |
+|                                                                          |
+|    BYE                                                                   |
+|    -------                                                               |
+|    Hope you are having a great day or night! Thanks for visiting <3      |
+|                                                                          |
+|__________________________________________________________________________|
 
 `;
     
