@@ -13,4 +13,6 @@ I don't really use design software to design websites, but I probably should. It
 
 Typefaces I'm using are [New Spirit](https://fonts.adobe.com/fonts/new-spirit) for headlines and the [Apple system font](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/typography/) (currently San Francisco, I guess) for everything else.
 
+<small>Hint: if you're on the command line, try `curl -L kwon.nyc`</small>
+
 

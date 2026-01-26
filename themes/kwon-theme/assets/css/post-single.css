@@ -193,17 +193,16 @@
     background: 0 0 !important
 }
 
-.post-content code {
+code {
     margin: auto 4px;
     padding: 4px 6px;
     font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
-    font-size: .78em;
     line-height: 1.5;
     background: var(--code-bg);
     border-radius: 2px
 }
 
-.post-content pre code {
+pre code {
     display: block;
     margin: auto 0;
     padding: 10px;
@@ -214,13 +213,13 @@
     word-break: break-all;
 }
 
-.post-content blockquote {
+blockquote {
     margin: 20px 0;
     padding: 0 14px;
     border-inline-start: 3px solid var(--primary)
 }
 
-.post-content hr { 
+hr { 
     margin: 4rem 25%;
     height: 0;
     width: 50%;
