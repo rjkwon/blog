@@ -44,8 +44,7 @@
   <div class="books">
     <h2>📖 Currently reading </h2>
     <div id="literal-widget">
-{{ $js := resources.Get "js/literal.js" | minify | fingerprint }}
-<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+      {{ partial "literal.html" . }}
     </div>
    <div class="more"><a href="https://literal.club/kwon">More at Literal</a></div>
   <br style="clear: all;" />

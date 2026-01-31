@@ -103,22 +103,20 @@ MOVIES, BOOKS, PINBOARD
     padding: 0.5em 0;
 }
 
-.books center, .books .gr_custom_header_1620425797 {
-    display: none;
-}
-
 .sidebar h2 {
     font-size: 1.3em;
 }
 
-.books .gr_custom_title_1620425797 {
-    font-weight: bold;
-    padding-top: 2.8em;
+.literal-book {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em 0;
 }
 
-.books img {
-    float: left;
-    padding-right: 1em;
+.literal-book img {
+    width: 100px;
+    flex-shrink: 0;
 }
 
 .pinboard ul {

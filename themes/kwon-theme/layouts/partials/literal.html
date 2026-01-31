@@ -1,0 +1,30 @@
+{{- $query := `{"query":"query booksByReadingStateAndHandle($limit: Int!, $offset: Int!, $readingStatus: ReadingStatus!, $handle: String!) { booksByReadingStateAndHandle(limit: $limit, offset: $offset, readingStatus: $readingStatus, handle: $handle) { slug title cover authors { name } } }","variables":{"handle":"kwon","readingStatus":"IS_READING","limit":1,"offset":0}}` -}}
+
+{{- $opts := dict
+  "method" "POST"
+  "headers" (dict "Content-Type" "application/json")
+  "body" $query
+-}}
+
+{{- $result := try (resources.GetRemote "https://api.literal.club" $opts) -}}
+
+{{- if $result.Err -}}
+  <p>Could not load books.</p>
+{{- else -}}
+  {{- with $result.Value -}}
+    {{- $data := . | transform.Unmarshal -}}
+    {{- range $data.data.booksByReadingStateAndHandle -}}
+      <div class="literal-book">
+        <a href="https://literal.club/kwon/book/{{ .slug }}"><img src="{{ .cover }}" alt="{{ .title }}" /></a>
+        <div>
+          <strong>{{ .title }}</strong><br />
+          {{- $names := slice -}}
+          {{- range .authors -}}
+            {{- $names = $names | append .name -}}
+          {{- end -}}
+          {{- delimit $names ", " -}}
+        </div>
+      </div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

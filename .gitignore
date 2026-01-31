@@ -14,3 +14,6 @@ Icon
 ._*
 localhost.crt
 localhost.key
+
+# Local Netlify folder
+.netlify
