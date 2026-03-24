@@ -35,3 +35,7 @@ weight = 30
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[caches]
+  [caches.getresource]
+    maxAge = "1h"
