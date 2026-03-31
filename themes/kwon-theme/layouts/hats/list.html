@@ -52,14 +52,12 @@
     z-index: 1001;
     max-width: 50ch;
     text-align: left;
-    line-height: 1.6;
   }
 
   .content-wrapper summary {
     list-style: none;
     cursor: pointer;
     display: inline;
-    font-size: 1rem;
     background-color: #fff;
     padding: 0.5em;
   }
@@ -70,9 +68,13 @@
 
   .content-body {
     margin-top: 0.75rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
     background: rgba(255, 255, 255, 0.85);
     padding: 0.75rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sr-only {
@@ -158,6 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<small>Last updated: 2025-04-22</small>
+<!-- <small>Last updated: 2025-04-22</small> -->
 
 {{ end }}
