@@ -31,20 +31,6 @@
     display: block;
   }
 
-/*  .hat-caption {
-    display: none;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2px 4px;
-    pointer-events: none;
-  }
-
-  .single-hat.show-caption .hat-caption {
-    display: block;
-  }*/
-
   .content-wrapper {
     position: absolute;
     top: 2rem;
@@ -103,7 +89,6 @@
   {{ range .Site.Data.hats }}
   <div class="single-hat draggable-hat">
     <img src="/hats/{{ .image }}" alt="{{ .alt }}" draggable="false">
-    <!-- <p class="hat-caption">{{ .caption }}</p> -->
   </div>
   {{ end }}
 </div>
@@ -159,7 +144,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
-<!-- <small>Last updated: 2025-04-22</small> -->
 
 {{ end }}
