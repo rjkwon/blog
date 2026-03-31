@@ -1,51 +1,162 @@
 {{ define "main" }}
 <style>
-  .hat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    padding: 20px;
+  .sandbox {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #EAEBD5;
+    overflow: hidden; 
+    padding: 0;
+    margin-bottom: 2rem;
+    touch-action: none; 
   }
-  .hat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    border-radius: 8px;
+
+  .single-hat {
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    width: 170px;
   }
-  .hat-item img {
-    max-width: 100%;
+
+  .single-hat:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+  }
+
+  .single-hat img {
+    width: 100%;
     height: auto;
-    border-radius: 4px;
+    pointer-events: none; 
+    display: block;
   }
-  .hat-caption {
-    margin-top: 10px;
-    font-size: 1rem;
+
+/*  .hat-caption {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.8rem;
     text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 4px;
+    pointer-events: none;
+  }
+
+  .single-hat.show-caption .hat-caption {
+    display: block;
+  }*/
+
+  .content-wrapper {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    z-index: 1001;
+    max-width: 50ch;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .content-wrapper summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 0.5em;
+  }
+
+  .content-wrapper summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .content-body {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.75rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
 
-<h1>Dad hats 🧢</h1>
+<h1 class="sr-only">Dad Hats</h1>
 
-<div class="hat-grid">
+<div class="sandbox" id="sandbox" role="region" aria-label="Draggable hat collection" aria-details="hat-story">
+  <details class="content-wrapper" id="hat-story">
+    <summary>wHat</summary>
+    <div class="content-body">
+      {{ .Content }}
+    </div>
+  </details>
+
   {{ range .Site.Data.hats }}
-  <div class="hat-item">
-  <!-- <div class="hat-item" style="background-color: {{ .bg_color }};"> -->
-    <img src="/hats/{{ .image }}" alt="{{ .alt }}">
-    <p class="hat-caption">{{ .caption }}</p>
-    <!-- <p class="hat-caption" style="color: {{ .text_color }}; font-weight: bold">{{ .caption }}</p> -->
-    <!-- <p class="hat-description">{{ .description }}</p> -->
+  <div class="single-hat draggable-hat">
+    <img src="/hats/{{ .image }}" alt="{{ .alt }}" draggable="false">
+    <!-- <p class="hat-caption">{{ .caption }}</p> -->
   </div>
-
   {{ end }}
 </div>
 
-{{ .Content }}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sandbox = document.getElementById('sandbox');
+  const hats = document.querySelectorAll('.draggable-hat');
 
-<div class="addendum">
-<h2>Something interesting I noticed</h2>
-<p>This page is generated in Hugo using a flat file that loops through each hat and its caption. This process is not dissimilar to how I IRL physically "looped" through each hat and thought about what it meant. I thought that was funny (funny "huh", not funny "haha").</p>
-</div>
+  hats.forEach(hat => {
+    const randomX = Math.random() * (sandbox.clientWidth - 150);
+    const randomY = Math.random() * (sandbox.clientHeight - 150);
+    
+    hat.style.left = `${randomX}px`;
+    hat.style.top = `${randomY}px`;
+
+    let isDragging = false;
+    let hasMoved = false;
+    let startX, startY, initialLeft, initialTop;
+
+    hat.onpointerdown = (e) => {
+      isDragging = true;
+      hasMoved = false;
+
+      hats.forEach(h => h.style.zIndex = 1);
+      hat.style.zIndex = 1000;
+
+      startX = e.clientX;
+      startY = e.clientY;
+      initialLeft = hat.offsetLeft;
+      initialTop = hat.offsetTop;
+
+      hat.setPointerCapture(e.pointerId);
+    };
+
+    hat.onpointermove = (e) => {
+      if (!isDragging) return;
+
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) hasMoved = true;
+
+      hat.style.left = `${initialLeft + dx}px`;
+      hat.style.top = `${initialTop + dy}px`;
+    };
+
+    hat.onpointerup = (e) => {
+      isDragging = false;
+      hat.releasePointerCapture(e.pointerId);
+      if (!hasMoved) hat.classList.toggle('show-caption');
+    };
+  });
+});
+</script>
 
 <small>Last updated: 2025-04-22</small>
 

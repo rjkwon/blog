@@ -4,15 +4,15 @@
     "caption": "Farm Bureau AgriVisor",
     "description": "Not sure what Dad's connection is to this one, but perhaps it's a nod to our family's time in the Midwest. I looked up this entity and according to FarmWeekNow.com it appears to be some sort of consulting service for farmers.",
     "alt": "",
-    "bg_color": "#07644A",
-    "text_color": "#fff"
+    "bg_color": "",
+    "text_color": ""
   },
   {
     "image": "airforce.png",
     "caption": "U.S. Air Force Museum",
     "alt": "",
-    "bg_color": "#A22D5F",
-    "text_color": "#fff"
+    "bg_color": "",
+    "text_color": ""
   },
   {
     "image": "alondra.png",
