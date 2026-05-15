@@ -2,7 +2,7 @@
   {
     "image": "agrivisor.webp",
     "caption": "Farm Bureau AgriVisor",
-    "description": "Not sure what Dad's connection is to this one, but perhaps it's a nod to our family's time in the Midwest. I looked up this entity and according to FarmWeekNow.com it appears to be some sort of consulting service for farmers.",
+    "description": "Not sure what Dad's connection is to this one, but perhaps it's a nod to our family's time in the Midwest. I looked up this entity, and according to FarmWeekNow.com it appears to be some sort of consulting service for farmers.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -10,6 +10,7 @@
   {
     "image": "airforce.webp",
     "caption": "U.S. Air Force Museum",
+    "description": "Looks like this is a museum in Dayton, Ohio. Dad must have visited at some point.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -17,6 +18,7 @@
   {
     "image": "alondra.webp",
     "caption": "Alondra Golf Course",
+    "description": "A golf course in Los Angeles. Dad loves golf.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -24,6 +26,7 @@
   {
     "image": "altagenetics.webp",
     "caption": "Alta Genetics USA",
+    "description": "I had to look this one up — it's an agricultural genetics/genomics company. 🤷",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -31,6 +34,7 @@
   {
     "image": "aotearoa.webp",
     "caption": "New Zealand",
+    "description": "I remember my parents were planning a trip to New Zealand but I can't remember if they ever went...",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -38,6 +42,7 @@
   {
     "image": "arizona.webp",
     "caption": "Arizona",
+    "description": "My parents used to spend winters in Arizona to escape Midwest winters before they moved to California, where they now enjoy summer weather year round.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -45,6 +50,7 @@
   {
     "image": "bears.webp",
     "caption": "Chicago Bears",
+    "description": "*George Wendt voice* Da Bearss",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -52,6 +58,7 @@
   {
     "image": "blue.webp",
     "caption": "Grand Canyon",
+    "description": "He's been to the Grand Canyon multiple times.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -59,6 +66,7 @@
   {
     "image": "brighton.webp",
     "caption": "Brighton, England",
+    "description": "I think my dad went on a work trip to Brighton once.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -66,6 +74,7 @@
   {
     "image": "brynmawr.webp",
     "caption": "Bryn Mawr College",
+    "description": "My sister's alma mater.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -73,6 +82,7 @@
   {
     "image": "cabrillo.webp",
     "caption": "Cabrillo National Monument",
+    "description": "My parents must have visited this national monument in San Diego at some point in their travels.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -80,6 +90,7 @@
   {
     "image": "cadillac.webp",
     "caption": "Cadillac Mountain",
+    "description": "Must have been one of the sights my dad saw when he and my mom went to Acadia National Park in Maine.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -87,6 +98,7 @@
   {
     "image": "deathvalley.webp",
     "caption": "Death Valley National Park",
+    "description": "Another national park visited!",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -94,6 +106,7 @@
   {
     "image": "devils.webp",
     "caption": "Devils Tower National Monument",
+    "description": "Another national monument visited!",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -101,6 +114,7 @@
   {
     "image": "florida.webp",
     "caption": "Florida Gators",
+    "description": "I didn't think my dad was a big college football fan and I don't know of any connection he has to the Gators, but maybe he got this from a friend or something?",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -108,6 +122,7 @@
   {
     "image": "grandcanyon.webp",
     "caption": "Grand Canyon National Park",
+    "description": "Multiple Grand Canyon hats in this set — I bet my mom told him he already has a Grand Canyon hat but he insisted on having two 😂",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -115,6 +130,7 @@
   {
     "image": "gwforest.webp",
     "caption": "George Washington National Forest",
+    "description": "Another national forest",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -122,6 +138,7 @@
   {
     "image": "ifb.webp",
     "caption": "Illinois Farm Bureau",
+    "description": "No idea why my dad has multiple farm bureau hats. Maybe they just give them out in the Midwest.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -129,6 +146,7 @@
   {
     "image": "israel.webp",
     "caption": "Israel National Parks Authority",
+    "description": "From a trip my dad made to the Holy Land",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -136,6 +154,7 @@
   {
     "image": "madrid.webp",
     "caption": "Madrid",
+    "description": "I guess my dad went to Spain at some point.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -143,6 +162,7 @@
   {
     "image": "masada.webp",
     "caption": "Masada",
+    "description": "From a trip my dad made to the Holy Land",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -150,6 +170,7 @@
   {
     "image": "morton.webp",
     "caption": "The Morton Arboretum",
+    "description": "One of my dad's favorite places. He and my mom were members for years.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -157,6 +178,7 @@
   {
     "image": "newmexico.webp",
     "caption": "New Mexico",
+    "description": "My parents love the southwest, especially in winter.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -164,6 +186,7 @@
   {
     "image": "nike-logo.webp",
     "caption": "Nike (swoosh only)",
+    "description": "I think this one was actually my hat when I was a kid — I got it at the mall when the Bulls were on a tear and wore it with my Jordan jersey. I guess my dad wanted to keep it even though he didn't wear it.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -171,6 +194,7 @@
   {
     "image": "nike.webp",
     "caption": "Nike",
+    "description": "Nike",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -178,6 +202,7 @@
   {
     "image": "northwestern.webp",
     "caption": "Northwestern Medicine",
+    "description": "The community hospital my mom worked at was acquired by Northwestern at some point.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -185,6 +210,7 @@
   {
     "image": "paris.webp",
     "caption": "Paris, France",
+    "description": "I've been to Paris twice with my parents, once on a family trip where we accidentally stayed in the red light district (it was perfectly fine and made for a good story), and once when I was living in London and they came to visit. I don't know which trip this hat is from (or if my dad ever went outside of those times).",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -192,6 +218,7 @@
   {
     "image": "passionplay.webp",
     "caption": "The Great Passion Play",
+    "description": "I forget what a passion play is but it's something with religious significance to Christians so my dad would have cared about it.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -199,6 +226,7 @@
   {
     "image": "pebble.webp",
     "caption": "Pebble Beach",
+    "description": "My dad loves California beaches.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -206,6 +234,7 @@
   {
     "image": "penn.webp",
     "caption": "Penn",
+    "description": "We went on a prospective college tour for my sister and this was one of our stops. I guess my dad wanted to keep this hat from Penn even though she didn't end up going here lol. This would have been in the late '90s.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -213,6 +242,7 @@
   {
     "image": "phoenix.webp",
     "caption": "Phoenix",
+    "description": "One of my parents' favorite cities in America",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -220,6 +250,7 @@
   {
     "image": "pikes.webp",
     "caption": "Pikes Peak",
+    "description": "Another nature-themed hat. My dad loves mountains, although I'm not sure he would have actually summitted the peak.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -227,6 +258,7 @@
   {
     "image": "plumtree.webp",
     "caption": "Plum Tree",
+    "description": "Unsure of the siginficance of this one (my dad does love fruit).",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -234,6 +266,7 @@
   {
     "image": "pointreyes.webp",
     "caption": "Point Reyes National Seashore",
+    "description": "Another California beach.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -241,6 +274,7 @@
   {
     "image": "route66.webp",
     "caption": "Route 66",
+    "description": "My dad loves Americana.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -248,6 +282,7 @@
   {
     "image": "salzburg.webp",
     "caption": "Salzburg",
+    "description": "Part of our family lives in Germany so we went a few times when I was a kid. One on occasion we went to Austria, including Salzburg. The only thing I remember from that day is that we went to Mozart's birthplace.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -255,6 +290,7 @@
   {
     "image": "scotland-blue.webp",
     "caption": "Scotland (blue)",
+    "description": "I studied abroad in Scotland as an undergraduate and my parents came to visit me.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -262,6 +298,7 @@
   {
     "image": "scotland.webp",
     "caption": "Scotland (white)",
+    "description": "Multiple Scotland hats in this set. One of them might actually be mine (I studied abroad there).",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -269,6 +306,7 @@
   {
     "image": "seneca.webp",
     "caption": "Seneca Golf Course",
+    "description": "There are multiple Seneca Golf Courses - I don't know which one this is",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -276,6 +314,7 @@
   {
     "image": "sf.webp",
     "caption": "San Francisco",
+    "description": "My sister lived in SF for a while so my dad must have gotten this when visiting her.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -283,6 +322,7 @@
   {
     "image": "slone.webp",
     "caption": "Slone Construction Company",
+    "description": "Another random one whose significance I don't know",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -290,6 +330,7 @@
   {
     "image": "ssbadger.webp",
     "caption": "S.S. Badger",
+    "description": "Looked this one up and it's a carferry service for Lake Michigan, which I guess my dad must have used at some point when we were in the Chicago area",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -297,6 +338,7 @@
   {
     "image": "superstition.webp",
     "caption": "Superstition Mountains",
+    "description": "Another mountain.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -304,6 +346,7 @@
   {
     "image": "titleist.webp",
     "caption": "Titleist",
+    "description": "Another golf-themed one.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -311,6 +354,7 @@
   {
     "image": "tuzigoot.webp",
     "caption": "Tuzigoot National Monument",
+    "description": "Another national monument.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -318,6 +362,7 @@
   {
     "image": "universal.webp",
     "caption": "Universal Studios",
+    "description": "I don't know if I was on this trip to Universal Studios but of course my dad got a hat from here.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -325,6 +370,7 @@
   {
     "image": "usa.webp",
     "caption": "Illinois Beach USA",
+    "description": "Must have been from one of the beaches on Lake Michigan.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
@@ -332,6 +378,7 @@
   {
     "image": "vancouver.webp",
     "caption": "Vancouver 2010",
+    "description": "My dad didn't go to the Olympics but we did go to Vancouver, presumably after the Olympics.",
     "alt": "",
     "bg_color": "",
     "text_color": ""
