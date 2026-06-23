@@ -20,8 +20,16 @@ const fetchAndSave = async () => {
     const data = parser.parse(xml);
     const items = data.rss.channel.item;
 
+    const decodeEntities = str =>
+      str
+        .replace(/&#0*39;/g, "'")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
+
     const reviews = items.map(item => {
-      const fullTitle = item.title || "Untitled";
+      const fullTitle = decodeEntities(item.title || "Untitled");
       const [title, rating] = fullTitle.split(" - ");
       const pubDate = item.pubDate;
       const rawDescription = item.description || "";
@@ -30,7 +38,7 @@ const fetchAndSave = async () => {
       const reviewMatch = rawDescription
         .replace(/<p><img[^>]*><\/p>/i, "")
         .match(/<p>(.*?)<\/p>/i);
-      const review = reviewMatch ? reviewMatch[1].trim() : "";
+      const review = reviewMatch ? decodeEntities(reviewMatch[1].trim()) : "";
 
       return {
         title: title?.trim(),
