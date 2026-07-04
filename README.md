@@ -89,8 +89,8 @@ Microsite about my bike. I "manually" traced each bike part from a photo to crea
 An ongoing stream of photos of craft beer cans with neat designs. Images are processed locally using ImageMagick and ImageOptim, then a script generates per-can info into a JSON file that Hugo uses to create the page. 
 
 TODO 
-[ ] Add alt text and captions
-[ ] Update pipeline to generate smaller, webp images
+* [ ] Add alt text and captions
+* [ ] Update pipeline to generate smaller, webp images
 
 - **Content:** `content/cans/`
 - **Data:** 
@@ -106,9 +106,9 @@ TODO
 My dad's hats.
 
 TODO
-[ ] Add alt text
-[ ] Consider displaying captions
-[ ] Finish writing descriptions and consider displaying them
+* [ ] Add alt text
+* [ ] Consider displaying captions
+* [ ] Finish writing descriptions and consider displaying them
 
   - **Content:** `content/dad-hats/` (just a blurb about why I made this)
   - **Data:** `data/hats.json`, with the following keys per hat:
