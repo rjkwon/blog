@@ -74,6 +74,7 @@
             margin: 0 auto 4rem;
             color: var(--text-color);
             font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         .parts-table table {
@@ -127,8 +128,9 @@
 
         @media (max-width: 600px) {
             .parts-table {
-                width: 85%;
+                width: 90%;
                 font-size: 0.8rem;
+                line-height: 1.4;
             }
 
             .parts-table thead {
