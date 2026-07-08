@@ -1,0 +1,17 @@
+{{ $json := resources.Get "mastodon.json" }}
+{{ $posts := $json | transform.Unmarshal }}
+
+{{ if $posts }}
+  <ul>
+    {{ range $posts }}
+      <li class="mastodon-post thread-{{ .thread }}">
+        <a href="{{ .url }}" class="mastodon-link">{{ .content }}</a>
+        {{ if or (eq .thread "none") (eq .thread "end") }}
+        <span class="mastodon-date">{{ .created_at | time.Format "Jan 2" }}</span>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <p>Nothing to see here.</p>
+{{ end }}

@@ -7,7 +7,8 @@
   "scripts": {
     "generate:cans": "node scripts/generate_cans_json.js",
     "generate:letterboxd": "node scripts/fetch_letterboxd.js",
-    "prebuild": "npm run generate:cans && npm run generate:letterboxd",
+    "generate:mastodon": "node scripts/fetch_mastodon.js",
+    "prebuild": "npm run generate:cans && npm run generate:letterboxd && npm run generate:mastodon",
     "build": "npm run prebuild && hugo --gc"
   },
   "devDependencies": {

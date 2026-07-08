@@ -12,26 +12,33 @@ GRID AND POSITIONING
 
 .sidebar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5em;
 }
 
 .pinboard {
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
     grid-row: 2;
     padding-top: 3em;
 }
 
-.movies {
-    grid-column: 3 / 5;
-    grid-row: 1; 
+.mastodon {
+    grid-column: 2 / 3;
+    grid-row: 1;
     padding-bottom: 2em;
 }
 
 .books {
-    grid-column: 1 / 3;
-    grid-row: 1; 
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding-bottom: 2em;
 }
+
+.movies {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
 
 /* -----------------------------------
 PAGES: HOMEPAGE
@@ -91,8 +98,70 @@ main article p a:hover {
 }
 
 /* -----------------------------------
-MOVIES, BOOKS, PINBOARD
+MOVIES, BOOKS, PINBOARD, MASTODON
 ----------------------------------- */
+.mastodon ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mastodon-post {
+    padding: 0.6em 0;
+    break-inside: avoid;
+    line-height: 1.5;
+    position: relative;
+}
+
+.mastodon-post.thread-start,
+.mastodon-post.thread-middle,
+.mastodon-post.thread-end {
+    padding-left: 1em;
+    margin-left: 0.25em;
+}
+
+.mastodon-post.thread-middle,
+.mastodon-post.thread-end {
+    break-before: avoid;
+}
+
+.mastodon-post.thread-start::before,
+.mastodon-post.thread-middle::before,
+.mastodon-post.thread-end::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    background-color: var(--orange);
+    opacity: 0.4;
+}
+
+.mastodon-post.thread-start::before {
+    top: 50%;
+    bottom: 0;
+}
+
+.mastodon-post.thread-middle::before {
+    top: 0;
+    bottom: 0;
+}
+
+.mastodon-post.thread-end::before {
+    top: 0;
+    bottom: 50%;
+}
+
+.mastodon-link {
+    display: block;
+    font-weight: normal !important;
+}
+
+.mastodon-date {
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+
 .movies ul {
     list-style-type: none;
     margin: 0;

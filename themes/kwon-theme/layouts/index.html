@@ -33,21 +33,26 @@
 
 <div class="sidebar">
 
-  <div class="movies">
-    <h2>📺 Recently viewed</h2>
-
-{{ partial "letterboxd.html" }}
-
-    <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
-  </div>
-
+<div>
   <div class="books">
     <h2>📖 Currently reading </h2>
     <div id="literal-widget">
       {{ partial "literal.html" . }}
     </div>
    <div class="more"><a href="https://literal.club/kwon">More at Literal</a></div>
-  <br style="clear: all;" />
+  </div>
+
+  <div class="movies">
+    <h2>📺 Recently viewed</h2>
+      {{ partial "letterboxd.html" }}
+    <div class="more"><a href="https://letterboxd.com/kwon/">More at Letterboxd</a></div>
+  </div>
+</div>
+
+<div class="mastodon">
+    <h2>🧠 Stream of consciousness</h2>
+      {{ partial "mastodon.html" }}
+    <div class="more"><a href="https://mastodon.social/@rjkwon">More at Mastodon</a></div>
   </div>
 
 <div class="pinboard">
@@ -55,7 +60,7 @@
 {{ $js := resources.Get "js/links.js" | minify | fingerprint }}
 <script src="{{ $js.Permalink }}"></script>
 <ul id="linkroll"></ul>
-    <div class="more"><a href="/links">More links</a></div>
+    <div class="more"><a href="https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178">More links</a></div>
 </div>
 
 

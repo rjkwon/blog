@@ -1,4 +1,9 @@
 {{ define "main" }}
+
+    <div class="scrolly-note">
+        <p>scroll &darr;</p>
+    </div>
+
     <div class="bike-viewport">
         <svg xmlns="http://www.w3.org/2000/svg" width="639" height="556" fill="none" viewBox="0 0 639 556">
             <path d="M0 0h639v556H0z"/>
@@ -24,28 +29,28 @@
                     <path id="fork-far-leg-accent" stroke-width=".2" d="m437.719 200.6 46 131.5"/>
                 </g>
                 <g id="front-wheel" stroke="var(--stroke-color)">
-                    <path id="front-wheel-tire" fill="#373737" fill-rule="evenodd" d="M409.763 202.835c-122.607 24.364-113.39 323.719 107.146 339.439 180.742 12.883 136.21-387.798-107.146-339.439Zm6.824 10.299C332.352 230.102 316.44 364.06 379.389 454.55c65.429 81.031 142.502 85.433 185.718 61.906 29.966-16.314 60.768-71.985 39.876-166.242-25.762-89.307-91.769-156.543-188.396-137.08Z" class="bike-part" clip-rule="evenodd" data-x="200" data-y="100"/>
+                    <path id="front-wheel-tire" fill="var(--stroke-color)" fill-rule="evenodd" d="M409.763 202.835c-122.607 24.364-113.39 323.719 107.146 339.439 180.742 12.883 136.21-387.798-107.146-339.439Zm6.824 10.299C332.352 230.102 316.44 364.06 379.389 454.55c65.429 81.031 142.502 85.433 185.718 61.906 29.966-16.314 60.768-71.985 39.876-166.242-25.762-89.307-91.769-156.543-188.396-137.08Z" class="bike-part" clip-rule="evenodd" data-x="200" data-y="100"/>
                     <g id="front-wheel-rim" class="bike-part" data-x="120" data-y="160">
                         <path id="front-wheel-rim-outline" fill="var(--fill-color)" fill-rule="evenodd" d="M412.472 214.931c-116.314 28.206-94.479 297.159 95.35 313.311 176.325 15.003 119.359-365.378-95.35-313.311Zm7.183 18.924c-100.544 24.221-77.042 257.919 80.16 273.217 154.722 15.057 95.565-315.549-80.16-273.217Z" clip-rule="evenodd"/>
                         <path id="front-wheel-accent-spoke-holes" stroke-width=".5" d="M401.418 240.921c-61.238 29.868-69.122 234.626 100.494 266.499M412.64 220.446c-108.773 25.743-91.077 281.093 91.928 303.037 170.835 20.485 120.965-353.422-91.928-303.037Zm-49.18 82.514c-.685-.146-.254-.98.189-.886.563.12.254.981-.189.886Zm-3.051 28.825c-.685-.146-.254-.98.189-.886.563.12.254.98-.189.886Zm1.034 27.576c-.686-.146-.254-.981.189-.886.563.12.254.98-.189.886Zm14.581 53.432c-.685-.146-.254-.98.189-.886.563.12.254.981-.189.886Zm13.345 24.945c-.685-.146-.254-.98.189-.886.563.12.254.981-.189.886Zm19.603 24.607c-.685-.146-.254-.98.189-.886.563.12.254.981-.189.886Zm23.744 20.155c-.686-.146-.255-.981.188-.886.563.12.255.98-.188.886Zm26.327 13.868c-.685-.146-.254-.981.189-.886.563.12.254.98-.189.886Zm23.042 7.788c-.686-.147-.255-.981.188-.887.563.12.255.981-.188.887ZM366.521 385.578c-.686-.146-.254-.98.189-.886.563.12.254.981-.189.886Zm3.545-105.186c-.688-.13-.277-.974.168-.891.566.107.278.974-.168.891Z"/>
                     </g>
                 </g>
                 <g id="front-hub" class="bike-part" data-x="-100" data-y="200">
-                    <path id="front-hub-far-disc" fill="var(--fill-color)" stroke="#373737" stroke-width=".6" d="M476.254 376.811c5.011 5.617 13.161 9.45 21.23 4.59s10.367-17.203 3.232-27.523c-8.274-9.437-26.541-11.862-31.47 3.822-2.803 8.919 2.507 14.067 7.008 19.111Z"/>
-                    <path id="front-hub-far-disc-accent" stroke="#373737" stroke-width=".3" d="M477.775 362.837s1.015.752 2.12-1.55m9.18 10.467c-1.341.747-1.812 2.094-1.965 2.326m-8.02-11.706c-1.535-3.264.936-9.489 7.573-8.248 7.745 1.448 11.02 9.208 11.015 12.428-.209 5.195-3.516 9.705-9.811 6.488"/>
+                    <path id="front-hub-far-disc" fill="var(--fill-color)" stroke="var(--stroke-color)" stroke-width=".6" d="M476.254 376.811c5.011 5.617 13.161 9.45 21.23 4.59s10.367-17.203 3.232-27.523c-8.274-9.437-26.541-11.862-31.47 3.822-2.803 8.919 2.507 14.067 7.008 19.111Z"/>
+                    <path id="front-hub-far-disc-accent" stroke="var(--stroke-color)" stroke-width=".3" d="M477.775 362.837s1.015.752 2.12-1.55m9.18 10.467c-1.341.747-1.812 2.094-1.965 2.326m-8.02-11.706c-1.535-3.264.936-9.489 7.573-8.248 7.745 1.448 11.02 9.208 11.015 12.428-.209 5.195-3.516 9.705-9.811 6.488"/>
                     <g id="front-hub-near-disc">
                         <path fill="var(--fill-color)" d="M452.451 363.244c18.389-18.758 50.019 16.733 30.927 33.177-18.656 16.069-45.179-15.616-30.927-33.177"/>
                         <path fill="var(--fill-color)" d="M461.174 374.501c5.625-7.218 20.835 3.914 12.656 12.281-5.384 5.509-17.343-5.156-12.656-12.281"/>
-                        <path stroke="#373737" stroke-width=".5" d="M452.451 363.244c18.389-18.758 50.019 16.733 30.927 33.177-18.656 16.069-45.179-15.616-30.927-33.177Z"/>
-                        <path stroke="#373737" stroke-width=".5" d="M461.174 374.501c5.625-7.218 20.835 3.914 12.656 12.281-5.384 5.509-17.343-5.156-12.656-12.281Z"/>
+                        <path stroke="var(--stroke-color)" stroke-width=".5" d="M452.451 363.244c18.389-18.758 50.019 16.733 30.927 33.177-18.656 16.069-45.179-15.616-30.927-33.177Z"/>
+                        <path stroke="var(--stroke-color)" stroke-width=".5" d="M461.174 374.501c5.625-7.218 20.835 3.914 12.656 12.281-5.384 5.509-17.343-5.156-12.656-12.281Z"/>
                     </g>
                     <g id="front-hub-axle">
                         <path fill="var(--fill-color)" fill-rule="evenodd" d="m464.174 389.126.421-.408c1.44-2.012-1.061-7.596-5.109-5.686-3.503 3.398 2.017 8.098 4.688 6.094m-1.533-3.986-1.674-.581-.87 1.216.562 1.381 1.641.616.751-1.026z" clip-rule="evenodd"/>
                         <path fill="var(--fill-color)" d="m464.595 388.718 2.579-2.498c0-3.15-2.688-4.813-4.031-5.25l-3.657 2.062c4.048-1.91 6.549 3.674 5.109 5.686"/>
                         <path fill="var(--fill-color)" d="m466.424 377.407-3.281 2.344v1.219c1.343.437 4.031 2.1 4.031 5.25h1.406l3.062-2.922c-.6-5.399-3.843-6.047-5.218-5.891"/>
-                        <path stroke="#373737" stroke-width=".5" d="M467.174 386.22h1.406l3.062-2.922c-.6-5.399-3.843-6.047-5.218-5.891l-3.281 2.344v1.219m4.031 5.25-2.579 2.498m2.579-2.498c0-3.15-2.688-4.813-4.031-5.25m1.452 7.748-.421.408m.421-.408a1.6 1.6 0 0 1-.421.408m.421-.408c1.44-2.012-1.061-7.596-5.109-5.686m4.688 6.094c-2.671 2.004-8.191-2.696-4.688-6.094m0 0 3.657-2.062m-2.176 3.589 1.674.581.41 1.606-.751 1.026-1.641-.616-.562-1.381z"/>
+                        <path stroke="var(--stroke-color)" stroke-width=".5" d="M467.174 386.22h1.406l3.062-2.922c-.6-5.399-3.843-6.047-5.218-5.891l-3.281 2.344v1.219m4.031 5.25-2.579 2.498m2.579-2.498c0-3.15-2.688-4.813-4.031-5.25m1.452 7.748-.421.408m.421-.408a1.6 1.6 0 0 1-.421.408m.421-.408c1.44-2.012-1.061-7.596-5.109-5.686m4.688 6.094c-2.671 2.004-8.191-2.696-4.688-6.094m0 0 3.657-2.062m-2.176 3.589 1.674.581.41 1.606-.751 1.026-1.641-.616-.562-1.381z"/>
                     </g>
-                    <g id="front-hub-spoke-holes" stroke="#373737" stroke-width=".3">
+                    <g id="front-hub-spoke-holes" stroke="var(--stroke-color)" stroke-width=".3">
                         <path d="M450.137 376.119c.901-.556 1.301.903.613 1.209s-1.514-.652-.613-1.209ZM452.791 384.342c.901-.556 1.3.903.613 1.209-.688.305-1.514-.653-.613-1.209ZM457.717 391.447c.901-.556 1.3.903.613 1.209s-1.514-.653-.613-1.209ZM464.717 396.321c.901-.557 1.3.903.613 1.208-.688.306-1.514-.652-.613-1.208ZM473.494 398.191c.901-.556 1.301.903.613 1.209-.687.305-1.514-.653-.613-1.209ZM480.631 394.927c.901-.556 1.301.903.613 1.209s-1.514-.652-.613-1.209ZM485.258 389.115c.901-.556 1.301.903.613 1.208-.688.306-1.514-.652-.613-1.208ZM487.122 381.588c.901-.557 1.301.903.613 1.208-.687.306-1.514-.652-.613-1.208ZM484.58 373.827c.901-.557 1.3.903.613 1.208-.688.306-1.514-.652-.613-1.208ZM479.953 367.365c.901-.556 1.301.903.613 1.209-.688.305-1.514-.653-.613-1.209ZM472.037 354.952c.901-.556 1.301.903.613 1.209s-1.514-.652-.613-1.209ZM476.642 349.729c.901-.556 1.301.903.613 1.209s-1.514-.653-.613-1.209ZM484.221 347.415c.901-.556 1.301.903.613 1.209s-1.514-.653-.613-1.209ZM491.766 349.259c.901-.556 1.3.904.613 1.209s-1.514-.652-.613-1.209ZM498.103 353.559c.901-.556 1.301.903.613 1.209s-1.514-.653-.613-1.209ZM501.71 359.952c.901-.556 1.301.903.613 1.209s-1.514-.652-.613-1.209ZM503.066 367.365c.901-.556 1.301.903.613 1.209-.687.305-1.513-.653-.613-1.209ZM501.032 374.726c.901-.556 1.301.903.613 1.209s-1.514-.653-.613-1.209ZM495.229 379.669c.901-.556 1.301.903.613 1.209s-1.514-.653-.613-1.209ZM473.494 361.794c.901-.557 1.301.903.613 1.208-.687.306-1.514-.652-.613-1.208ZM464.717 359.255c.901-.556 1.3.903.613 1.209s-1.514-.652-.613-1.209ZM451.434 367.365c.901-.556 1.301.903.613 1.209-.687.305-1.514-.653-.613-1.209ZM457.162 361.634c-.339.226-.297 1.788.936 1.181.88-.433.03-1.866-.936-1.181Z"/>
                     </g>
                 </g>
@@ -81,12 +86,12 @@
             </g>
             <path id="frame-rear-inside-leg" fill="var(--fill-color)" stroke="var(--stroke-color)" stroke-width=".8" d="m227.116 298.024-93.404-53.446c-.664-1.334.557-2.78-2.281-5.334l67.5-121.5-3.06-5.298-13.639 22.583c.447 2.236-.224 7.378-6.484 10.061l-49.414 91.896c-2.683.074-9.119.456-8.1 2.865 2.966 1.576 9.487 2.501 8.771 5.184s-2.186 1.552-7.378.223-4.544 1.637-2.412 2.101c2.822 1.58 8.254 3.153 15.478 5.022 2.834.324 11.133 1.397 32.962 16.59 21.829 15.194 47.726 30.561 58.204 36.455l3.553-5.626z"/>
             <g id="rear-wheel">
-                <path id="rear-wheel-tire" fill="#373737" fill-rule="evenodd" stroke="var(--stroke-color)" d="M70.434 119.033c38.72-6.486 69.573 7.738 91.962 32.615 22.373 24.861 36.296 60.353 41.25 96.461 4.953 36.106.946 72.898-12.617 100.368-13.574 27.492-36.743 45.67-70.043 44.385-31.712-1.225-57.05-17.933-75.627-42.511-18.571-24.572-30.404-57.029-35.133-89.838s-2.364-66.018 7.51-92.104c9.876-26.089 27.297-45.121 52.698-49.376Zm2.681 8.431c35.295-5.953 62.917 7.239 82.654 30.28 19.721 23.021 31.571 55.866 35.425 89.277 3.854 33.409-.28 67.456-12.604 92.897-12.332 25.457-32.903 42.348-61.875 41.236-28.907-1.109-51.849-16.594-68.545-39.373-16.692-22.772-27.164-52.857-31.166-83.264-4.001-30.405-1.539-61.183 7.69-85.349 9.227-24.167 25.258-41.798 48.421-45.704Z" class="bike-part" clip-rule="evenodd" data-x="-120" data-y="50"/>
+                <path id="rear-wheel-tire" fill="var(--stroke-color)" fill-rule="evenodd" stroke="var(--stroke-color)" d="M70.434 119.033c38.72-6.486 69.573 7.738 91.962 32.615 22.373 24.861 36.296 60.353 41.25 96.461 4.953 36.106.946 72.898-12.617 100.368-13.574 27.492-36.743 45.67-70.043 44.385-31.712-1.225-57.05-17.933-75.627-42.511-18.571-24.572-30.404-57.029-35.133-89.838s-2.364-66.018 7.51-92.104c9.876-26.089 27.297-45.121 52.698-49.376Zm2.681 8.431c35.295-5.953 62.917 7.239 82.654 30.28 19.721 23.021 31.571 55.866 35.425 89.277 3.854 33.409-.28 67.456-12.604 92.897-12.332 25.457-32.903 42.348-61.875 41.236-28.907-1.109-51.849-16.594-68.545-39.373-16.692-22.772-27.164-52.857-31.166-83.264-4.001-30.405-1.539-61.183 7.69-85.349 9.227-24.167 25.258-41.798 48.421-45.704Z" class="bike-part" clip-rule="evenodd" data-x="-120" data-y="50"/>
                 <g id="rear-wheel-rim" class="bike-part" data-x="-160" data-y="80">
                     <path id="rear-wheel-rim-accent" stroke="var(--stroke-color)" stroke-width=".5" d="M57.632 155.667c-34.146 28.611-39.944 179.686 52.755 209.948M50.231 138.256c7.151-5.846 15.503-9.83 25.077-11.445 120.116-20.259 150.652 182.308 85.047 238.52M50.231 138.256c-59.934 51.456-32.574 236.42 69.698 240.345 16.064.616 29.53-4.345 40.426-13.27M50.231 138.256c7.387-6.342 16.1-10.656 26.161-12.353 120.772-20.37 150.983 184.528 83.963 239.428M50.231 138.256c-61.343 50.147-34.269 237.305 68.614 241.253 16.601.637 30.428-4.682 41.51-14.178"/>
                     <path id="rear-wheel-rim_2" fill="var(--fill-color)" fill-rule="evenodd" stroke="var(--stroke-color)" d="M73.683 128.174c-91.702 15.467-71.34 248.289 43.536 252.697s96.871-276.379-43.536-252.697Zm4.439 17.959c-74.023 14.124-57.141 215.312 35.441 218.46 97.085 3.3 77.897-240.084-35.441-218.46Z" clip-rule="evenodd"/>
                     <g id="rear-wheel-rim-spoke-holes">
-                        <path fill="#373737" d="M41.012 181.651c-.092.61.91.685.996.088s-.905-.697-.996-.088M36.001 199.401c-.091.609.91.685.996.088.087-.597-.905-.697-.996-.088M33.458 216.823c-.09.609.91.685.997.088s-.905-.697-.997-.088M32.76 239.035c-.092.609.91.684.996.087s-.905-.697-.996-.087M34.29 260.98c-.092.609.909.685.995.088.087-.597-.905-.698-.996-.088M38.406 281.696c-.09.609.91.685.997.088s-.905-.698-.997-.088M45.54 304.135c-.09.61.91.685.997.088s-.905-.697-.997-.088M54.916 323.032c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088M69.762 342.608c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088M88.44 357.149c-.092.61.909.685.996.088s-.905-.697-.997-.088"/>
+                        <path fill="var(--fill-color)" d="M41.012 181.651c-.092.61.91.685.996.088s-.905-.697-.996-.088M36.001 199.401c-.091.609.91.685.996.088.087-.597-.905-.697-.996-.088M33.458 216.823c-.09.609.91.685.997.088s-.905-.697-.997-.088M32.76 239.035c-.092.609.91.684.996.087s-.905-.697-.996-.087M34.29 260.98c-.092.609.909.685.995.088.087-.597-.905-.698-.996-.088M38.406 281.696c-.09.609.91.685.997.088s-.905-.698-.997-.088M45.54 304.135c-.09.61.91.685.997.088s-.905-.697-.997-.088M54.916 323.032c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088M69.762 342.608c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088M88.44 357.149c-.092.61.909.685.996.088s-.905-.697-.997-.088"/>
                         <path stroke="var(--stroke-color)" stroke-width=".1" d="M41.012 181.651c-.092.61.91.685.996.088s-.905-.697-.996-.088ZM36.001 199.401c-.091.609.91.685.996.088.087-.597-.905-.697-.996-.088ZM33.458 216.823c-.09.609.91.685.997.088s-.905-.697-.997-.088ZM32.76 239.035c-.092.609.91.684.996.087s-.905-.697-.996-.087ZM34.29 260.98c-.092.609.909.685.995.088.087-.597-.905-.698-.996-.088ZM38.406 281.696c-.09.609.91.685.997.088s-.905-.698-.997-.088ZM45.54 304.135c-.09.61.91.685.997.088s-.905-.697-.997-.088ZM54.916 323.032c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088ZM69.762 342.608c-.091.61.91.685.996.088.087-.597-.904-.697-.996-.088ZM88.44 357.149c-.092.61.909.685.996.088s-.905-.697-.997-.088Z"/>
                     </g>
                 </g>
@@ -289,8 +294,8 @@
     </section>
 
     <section class="parts-table">
-        <h2>Parts list</h2>
-        I put this bike together over the course of about 3-4 years, accumulating parts from different places (mostly in the US). I was building it up slowly until my everyday ride was stolen (RIP) and probably sold at the Brick Lane 
+        <h2>Body parts</h2>
+        <p>I mean bike parts. Here are (most of) the components. Not listed here but definitely on my actual bike: chain (whatever the local bike shop stocks), brake, spokes, tires, pedal straps.</p>
         <table>
             <thead>
                 <tr>
@@ -304,20 +309,18 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="60">
                         <img src="saddle.png" alt="Saddle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Saddle</td>
                     <td data-label="Make &amp; model">Cinelli Unicanitor</td>
                     <td data-label="Weight">296 g</td>
-                    <td data-label="Key specs">Reissue of the classic, 7 mm rails</td>
-                    <td data-label="Kwon notes">This is a hard plastic saddle although some of the marketing materials call it &quot;calibrated technopolymer&quot; lol. It is quite rigid but much better for leaving outside in NYC weather (I usually bring it inside but sometimes I'm lazy and lock it up outside overnight), and not terrible comfort-wise if i wear padded shorts (and these days I don&#x27;t really go for extended rides anyway).</td>
+                    <td data-label="Key specs">Plastic reissue of the classic, 7 mm rails</td>
+                    <td data-label="Kwon notes">This is a hard plastic saddle although some of the marketing materials call it &quot;calibrated technopolymer&quot; lol. It <em>is</em> quite rigid, but on the flip side it's very robust when left outside in NYC weather (I usually bring it inside but sometimes I'm lazy and lock it up outside overnight), and not as terrible comfort-wise as you would think. If i go for an extended ride, which is infrequent nowadays, I'll wear padded shorts.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="20">
                         <img src="seatpost-collar.png" alt="Seatpost collar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Seatpost collar</td>
                     <td data-label="Make &amp; model">Salsa Lip Lock</td>
@@ -326,31 +329,28 @@
                     <td data-label="Kwon notes">Isn&#x27;t the name &quot;lip lock&quot; cute?</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="45">
                         <img src="seatpost.png" alt="Seatpost" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Seatpost</td>
                     <td data-label="Make &amp; model">Civia Microadjust</td>
                     <td data-label="Weight">330 g</td>
                     <td data-label="Key specs">27.2 mm, aluminum, silver</td>
-                    <td data-label="Kwon notes">No complaints about this seatpost</td>
+                    <td data-label="Kwon notes">No complaints about this seatpost, although I don't think they make this model anymore</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="90">
                         <img src="velocity-b43.png" alt="Rear wheel rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Rear wheel rim</td>
                     <td data-label="Make &amp; model">Velocity B43</td>
                     <td data-label="Weight">722 g</td>
                     <td data-label="Key specs">700c, 43 mm, nonmachined sidewall</td>
-                    <td data-label="Kwon notes">Rear wheel was originally supposed to be an Aerospoke but I was riding it on my everyday bike while building this one up, and the bike was stolen :(</td>
+                    <td data-label="Kwon notes">Rear wheel was originally an Aerospoke, but I liked it so much that I put it on my everyday bike (the one I was using while building this one up), and that bike ended up getting stolen :(</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="28">
                         <img src="velocity-hub.png" alt="Rear hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Rear hub</td>
                     <td data-label="Make &amp; model">Velocity track hub</td>
@@ -359,31 +359,28 @@
                     <td data-label="Kwon notes">Durable, never gave me any issues.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="90">
                         <img src="velocity-deepv.png" alt="Front wheel rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Front wheel rim</td>
                     <td data-label="Make &amp; model">Velocity Deep V</td>
                     <td data-label="Weight">580 g</td>
                     <td data-label="Key specs">700c, machined sidewall</td>
-                    <td data-label="Kwon notes">These were super trendy in Brooklyn around 2010</td>
+                    <td data-label="Kwon notes">These were super trendy in Brooklyn around 2010. People would leave the stickers on the rims, like how people would leave the stickers on their New Era caps in the '90s.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="28">
                         <img src="phil-wood.png" alt="Front hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Front hub</td>
                     <td data-label="Make &amp; model">Phil Wood front high flange hub</td>
                     <td data-label="Weight">262 g</td>
                     <td data-label="Key specs">32h, silver</td>
-                    <td data-label="Kwon notes">I always wanted a Phil Wood hub because they seemed super high end (read: expensive)</td>
+                    <td data-label="Kwon notes">I always wanted a Phil Wood hub because they seemed super high end (read: expensive). To be honest, I can't really tell the difference between this one and the Velocity track hub which was half the price. Marketing!</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="24">
                         <img src="track-cog.png" alt="Cog" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Cog</td>
                     <td data-label="Make &amp; model">All-City Track Cog</td>
@@ -392,31 +389,28 @@
                     <td data-label="Kwon notes">With the 46T chainring my gear ratio is 2.88 (=46T/16T), which works well for (mostly) flat city streets without killing me on the bridges</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="55">
                         <img src="crankset.png" alt="Cranks" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Cranks</td>
                     <td data-label="Make &amp; model">All-City 612 Track Cranks + Chainring</td>
                     <td data-label="Weight">726 g</td>
                     <td data-label="Key specs">165 mm, white</td>
-                    <td data-label="Kwon notes">Solid crankset</td>
+                    <td data-label="Kwon notes">Pretty solid crankset. I remember I initially got it in silver but then exchanged for the white because I liked the look better.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="45">
                         <img src="pedals.png" alt="Pedals" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Pedals</td>
                     <td data-label="Make &amp; model">Gusset Slim Jim</td>
                     <td data-label="Weight">640 g</td>
                     <td data-label="Key specs">White, sealed bearing</td>
-                    <td data-label="Kwon notes">I love these bmx pedals</td>
+                    <td data-label="Kwon notes">I love these flat bmx pedals. </td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="32">
                         <img src="bottom-bracket.png" alt="Bottom bracket" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Bottom bracket</td>
                     <td data-label="Make &amp; model">Shimano UN55  </td>
@@ -425,9 +419,8 @@
                     <td data-label="Kwon notes">Never gives me a problem. I&#x27;ve switched it out exactly once in 16 years.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="100">
                         <img src="frame.png" alt="Frame " loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Frame </td>
                     <td data-label="Make &amp; model">nadabike</td>
@@ -436,20 +429,18 @@
                     <td data-label="Kwon notes">Nada Bike was a project where you could get a simple single speed steel bike frame for $150 and build up your own bicycle.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="22">
                         <img src="headset.png" alt="Headset" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Headset</td>
                     <td data-label="Make &amp; model">FSA Orbit X</td>
                     <td data-label="Weight">95 g</td>
                     <td data-label="Key specs">1&quot; threadless, silver</td>
-                    <td data-label="Kwon notes">I think I bought this on a trip to Austin, Texas, or in Logan Square in Chicago</td>
+                    <td data-label="Kwon notes">I think I bought this on a trip to Austin, Texas. Either that or a bike shop in Chicago's Logan Square neighborhood where I stayed for my last couple months in Chicago.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="70">
                         <img src="handlebars.png" alt="Handlebars" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Handlebars</td>
                     <td data-label="Make &amp; model">Origin8 Bullhorn Handlebar</td>
@@ -458,38 +449,38 @@
                     <td data-label="Kwon notes">Rode with flat bars chopped down to be comically narrow for a while but I find the bullhorns a lot more comfortable (and let&#x27;s be real, I&#x27;m not squeezing between cars in rush hour traffic in my 40s anymore)</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="38">
                         <img src="stem.png" alt="Stem" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Stem</td>
                     <td data-label="Make &amp; model">Thomson Elite X2</td>
                     <td data-label="Weight">150 g</td>
-                    <td data-label="Key specs">31.8 mm, silver, +-10 degree x 110 mm</td>
+                    <td data-label="Key specs">31.8 mm, silver, +-10 degree x 70 mm</td>
                     <td data-label="Kwon notes">I love this stem. I also felt like this was super high end when I bought it.</td>
                 </tr>
                 <tr>
-                    <td class="part-image">
+                    <td class="part-image" data-size="75">
                         <img src="fork.png" alt="Fork" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <span class="no-image" style="display:none;">no image yet</span>
                     </td>
                     <td data-label="Component">Fork</td>
                     <td data-label="Make &amp; model">Soma Straight Blade</td>
                     <td data-label="Weight">890 g</td>
-                    <td data-label="Key specs">1 1/8&quot; Threadless, 300mm Steerer </td>
-                    <td data-label="Kwon notes">I like the look of straight blade forks even though it&#x27;s probably more practical to have some offset. I&#x27;m just not too serious about it tho.</td>
+                    <td data-label="Key specs">1 1/8&quot; threadless, 300 mm steerer </td>
+                    <td data-label="Kwon notes">I like the look of a straight blade fork. It's probably more practical to have some offset but I'm not too serious about it tho.</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <section class="">
-        <img src="kwon-on-bike.jpg" width="300">
+        <img src="kwon-on-bike.jpg" alt="me on mint green track bike wearing a helmet and face mask" width="300">
+        <p>Kwon on bike, April 2021</p>
     </section>
 
     {{ with .Site.Taxonomies.tags.bike }}
     <section class="related-notes">
-        <h2>Notes about this bike</h2>
+        <h2>Bike notes</h2>
+        Notes tagged "bike"
         <ul>
             {{ range . }}
             <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
@@ -527,6 +518,14 @@
                 duration: 1,
                 ease: "power2.out"
             }, 0);
+        });
+
+        document.querySelectorAll('td.part-image[data-size]').forEach(td => {
+            const size = parseInt(td.dataset.size) * 2;
+            const img = td.querySelector('img');
+            const noImg = td.querySelector('.no-image');
+            if (img) { img.style.width = size + 'px'; img.style.height = size + 'px'; }
+            if (noImg) { noImg.style.width = size + 'px'; noImg.style.height = size + 'px'; }
         });
     </script>
 {{ end }}

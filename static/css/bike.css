@@ -7,7 +7,7 @@
 
         html, body {
             margin: 0;
-            overflow-x: hidden;
+            overflow-x: clip;
         }
 
         body {
@@ -15,6 +15,17 @@
             font-family: serif, "univers-next-pro", sans-serif;
             font-weight: 400;
             font-style: normal;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .scrolly-note {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 0.8em;
+
         }
 
         .bike-viewport {
@@ -31,9 +42,6 @@
             min-height: 50vh;
             width: 90%;
             margin: 0 auto;
-            font-size: 0.9rem;
-            color: var(--text-color);
-            line-height: 1.4;
             column-count: 3;
             column-gap: 40px;
         }
@@ -82,44 +90,38 @@
             border-collapse: collapse;
         }
 
+        .parts-table table tr td:first-child {
+            border: none !important;
+        }  
+
         .parts-table th,
         .parts-table td {
             text-align: left;
             vertical-align: top;
             padding: 10px 12px;
-            border-bottom: 1px solid var(--stroke-color);
+            border-bottom: 0.5px solid var(--stroke-color);
         }
 
         .parts-table th {
             font-weight: 600;
-            border-bottom: 1px solid var(--stroke-color);
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            box-shadow: 0 2px 0 var(--stroke-color);
         }
 
         .parts-table td.part-image {
-            width: 72px;
+            width: 180px;
+            text-align: right;
         }
 
         .parts-table td.part-image img {
-            display: block;
-            width: 60px;
-            height: 60px;
+            display: inline-block;
             object-fit: contain;
-            background: transparent;
+            background: #fdfaf5;
+            padding: 2em;
             border: none;
-        }
-
-        .parts-table td.part-image .no-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--fill-color);
-            border: 1px dashed var(--stroke-color);
-            border-radius: 4px;
-            color: var(--text-color);
-            font-size: 0.7rem;
-            text-align: center;
+            border-radius: 1em;
         }
 
         footer {
@@ -146,8 +148,8 @@
             }
 
             .parts-table tr {
-                padding: 10px 0;
-                border-bottom: 1px solid var(--stroke-color);
+                padding: 30px 0;
+                border-bottom: none;
             }
 
             .parts-table td {
@@ -167,5 +169,6 @@
             .parts-table td.part-image,
             .parts-table td.part-image img {
                 width: 100%;
+                text-align: left;
             }
         }
