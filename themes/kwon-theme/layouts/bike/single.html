@@ -1,8 +1,20 @@
 {{ define "main" }}
 
-    <div class="scrolly-note">
-        <p>scroll &darr;</p>
-    </div>
+<header>
+    <fieldset>
+        <legend>start</legend>
+        <label>
+            <input type="radio" name="mode" value="explode" checked>
+            <span>assembled</span>
+        </label>
+        <label>
+            <input type="radio" name="mode" value="assemble">
+            <span>exploded</span>
+        </label>
+    </fieldset>
+
+    <p>made by me, <a href="/">kwon.nyc</a><br />last updated 2026-07-17 &bull; <a href="https://github.com/rjkwon/blog/blob/main/README.md#bike">source</a></p>
+</header>
 
     <div class="bike-viewport">
         <svg xmlns="http://www.w3.org/2000/svg" width="639" height="556" fill="none" viewBox="0 0 639 556">
@@ -288,18 +300,21 @@
                 <path id="stem-top-screw-inner" stroke="var(--stroke-color)" stroke-width=".1" d="M447.392 102.337c.754-.753.5 2 0 2s-.753-1.246 0-2Z"/>
             </g>
         </svg>
-    </div>
-    <section class="spacer">
+    </div><!-- /.bike-viewport -->
+
+    <div class="content">
+    <section class="preamble">
+        <h1>Hi, this is my bike</h1>
         {{ .Content }}
     </section>
 
     <section class="parts-table">
-        <h2>Body parts</h2>
-        <p>I mean bike parts. Here are (most of) the components. Not listed here but definitely on my actual bike: chain (whatever the local bike shop stocks), brake, spokes, tires, pedal straps.</p>
+        <h1>Body parts</h1>
+        <p>Whoops, I mean bike parts. Here's a list of current components. Not listed below, but definitely on my actual bike: chain (whatever the local bike shop stocks), brake (Shimano caliper brake, front wheel only), spokes (whatever the local bike shop stocks, in a radial lacing pattern), tires (Continental Gatorskins), pedal straps (Hold Fast).</p>
+
         <table>
             <thead>
                 <tr>
-                    <th></th>
                     <th>Component</th>
                     <th>Make &amp; model</th>
                     <th>Weight</th>
@@ -309,223 +324,270 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="part-image" data-size="60">
-                        <img src="saddle.png" alt="Saddle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Saddle</td>
                     <td data-label="Make &amp; model">Cinelli Unicanitor</td>
                     <td data-label="Weight">296 g</td>
-                    <td data-label="Key specs">Plastic reissue of the classic, 7 mm rails</td>
-                    <td data-label="Kwon notes">This is a hard plastic saddle although some of the marketing materials call it &quot;calibrated technopolymer&quot; lol. It <em>is</em> quite rigid, but on the flip side it's very robust when left outside in NYC weather (I usually bring it inside but sometimes I'm lazy and lock it up outside overnight), and not as terrible comfort-wise as you would think. If i go for an extended ride, which is infrequent nowadays, I'll wear padded shorts.</td>
+                    <td data-label="Key specs">Plastic, 7 mm rails</td>
+                    <td data-label="Kwon notes">This saddle is made of hard plastic (although some of the marketing materials call it &quot;calibrated technopolymer&quot; lol). It <em>is</em> quite rigid, but on the flip side it's very robust when left outside in NYC weather, and it's not as uncomfortable as one might assume.</td>
+                    <td class="part-image" data-size="60">
+                        <img src="saddle.png" alt="line drawing of a bicycle saddle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="20">
-                        <img src="seatpost-collar.png" alt="Seatpost collar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Seatpost collar</td>
                     <td data-label="Make &amp; model">Salsa Lip Lock</td>
                     <td data-label="Weight">34 g</td>
                     <td data-label="Key specs">31.8mm, aluminum, orange</td>
                     <td data-label="Kwon notes">Isn&#x27;t the name &quot;lip lock&quot; cute?</td>
+                    <td class="part-image" data-size="30">
+                        <img src="seatpost-collar.png" alt="line drawing of a seatpost collar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="45">
-                        <img src="seatpost.png" alt="Seatpost" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Seatpost</td>
                     <td data-label="Make &amp; model">Civia Microadjust</td>
                     <td data-label="Weight">330 g</td>
                     <td data-label="Key specs">27.2 mm, aluminum, silver</td>
                     <td data-label="Kwon notes">No complaints about this seatpost, although I don't think they make this model anymore</td>
+                    <td class="part-image" data-size="45">
+                        <img src="seatpost.png" alt="line drawing of a seatpost and accompanying screw" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="90">
-                        <img src="velocity-b43.png" alt="Rear wheel rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Rear wheel rim</td>
                     <td data-label="Make &amp; model">Velocity B43</td>
                     <td data-label="Weight">722 g</td>
                     <td data-label="Key specs">700c, 43 mm, nonmachined sidewall</td>
                     <td data-label="Kwon notes">Rear wheel was originally an Aerospoke, but I liked it so much that I put it on my everyday bike (the one I was using while building this one up), and that bike ended up getting stolen :(</td>
+                    <td class="part-image" data-size="90">
+                        <img src="velocity-b43.png" alt="line drawing of a bicycle rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="28">
-                        <img src="velocity-hub.png" alt="Rear hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Rear hub</td>
                     <td data-label="Make &amp; model">Velocity track hub</td>
                     <td data-label="Weight">337 g</td>
                     <td data-label="Key specs">32h, silver</td>
                     <td data-label="Kwon notes">Durable, never gave me any issues.</td>
+                    <td class="part-image" data-size="35">
+                        <img src="velocity-hub.png" alt="line drawing of a track hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="90">
-                        <img src="velocity-deepv.png" alt="Front wheel rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
-                    <td data-label="Component">Front wheel rim</td>
-                    <td data-label="Make &amp; model">Velocity Deep V</td>
-                    <td data-label="Weight">580 g</td>
-                    <td data-label="Key specs">700c, machined sidewall</td>
-                    <td data-label="Kwon notes">These were super trendy in Brooklyn around 2010. People would leave the stickers on the rims, like how people would leave the stickers on their New Era caps in the '90s.</td>
-                </tr>
-                <tr>
-                    <td class="part-image" data-size="28">
-                        <img src="phil-wood.png" alt="Front hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
-                    <td data-label="Component">Front hub</td>
-                    <td data-label="Make &amp; model">Phil Wood front high flange hub</td>
-                    <td data-label="Weight">262 g</td>
-                    <td data-label="Key specs">32h, silver</td>
-                    <td data-label="Kwon notes">I always wanted a Phil Wood hub because they seemed super high end (read: expensive). To be honest, I can't really tell the difference between this one and the Velocity track hub which was half the price. Marketing!</td>
-                </tr>
-                <tr>
-                    <td class="part-image" data-size="24">
-                        <img src="track-cog.png" alt="Cog" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Cog</td>
                     <td data-label="Make &amp; model">All-City Track Cog</td>
                     <td data-label="Weight">262 g</td>
                     <td data-label="Key specs">16T x 1/8&quot;, stainless steel</td>
                     <td data-label="Kwon notes">With the 46T chainring my gear ratio is 2.88 (=46T/16T), which works well for (mostly) flat city streets without killing me on the bridges</td>
+                    <td class="part-image" data-size="35">
+                        <img src="track-cog.png" alt="line drawing of a track cog" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="55">
-                        <img src="crankset.png" alt="Cranks" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <td data-label="Component">Front wheel rim</td>
+                    <td data-label="Make &amp; model">Velocity Deep V</td>
+                    <td data-label="Weight">580 g</td>
+                    <td data-label="Key specs">700c, machined sidewall</td>
+                    <td data-label="Kwon notes">These were super trendy in Brooklyn around 2010. People would leave the stickers on the rims, like how people would leave the stickers on their New Era caps in the '90s.</td>
+                    <td class="part-image" data-size="90">
+                        <img src="velocity-deepv.png" alt="line drawing of a bicycle rim" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     </td>
+                </tr>
+                <tr>
+                    <td data-label="Component">Front hub</td>
+                    <td data-label="Make &amp; model">Phil Wood front high flange hub</td>
+                    <td data-label="Weight">262 g</td>
+                    <td data-label="Key specs">32h, silver</td>
+                    <td data-label="Kwon notes">I always wanted a Phil Wood hub because they seemed super high end (read: expensive). To be honest, I can't really tell the difference between this one and the Velocity track hub which was half the price. Marketing!</td>
+                    <td class="part-image" data-size="35">
+                        <img src="phil-wood.png" alt="line drawing of a bicycle hub" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
+                </tr>
+                <tr>
                     <td data-label="Component">Cranks</td>
                     <td data-label="Make &amp; model">All-City 612 Track Cranks + Chainring</td>
                     <td data-label="Weight">726 g</td>
                     <td data-label="Key specs">165 mm, white</td>
                     <td data-label="Kwon notes">Pretty solid crankset. I remember I initially got it in silver but then exchanged for the white because I liked the look better.</td>
+                    <td class="part-image" data-size="55">
+                        <img src="crankset.png" alt="line drawing of a set of bicycle cranks and chainring" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="45">
-                        <img src="pedals.png" alt="Pedals" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Pedals</td>
                     <td data-label="Make &amp; model">Gusset Slim Jim</td>
                     <td data-label="Weight">640 g</td>
                     <td data-label="Key specs">White, sealed bearing</td>
-                    <td data-label="Kwon notes">I love these flat bmx pedals. </td>
+                    <td data-label="Kwon notes">I love these platform pedals. I used to have them in mint green on my old bike that was stolen, and the manufacturer no longer makes them in that color.</td>
+                    <td class="part-image" data-size="45">
+                        <img src="pedals.png" alt="line drawing of bmx platform pedals" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="32">
-                        <img src="bottom-bracket.png" alt="Bottom bracket" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Bottom bracket</td>
                     <td data-label="Make &amp; model">Shimano UN55  </td>
                     <td data-label="Weight">286 g</td>
                     <td data-label="Key specs">English, 68 x 113 mm, square taper</td>
-                    <td data-label="Kwon notes">Never gives me a problem. I&#x27;ve switched it out exactly once in 16 years.</td>
+                    <td data-label="Kwon notes">Never gives me a problem. I&#x27;ve switched it out exactly once in 13 years.</td>
+                    <td class="part-image" data-size="32">
+                        <img src="bottom-bracket.png" alt="line drawing of a bottom bracket" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="100">
-                        <img src="frame.png" alt="Frame " loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Frame </td>
-                    <td data-label="Make &amp; model">nadabike</td>
+                    <td data-label="Make &amp; model">Nada Bike</td>
                     <td data-label="Weight">1,900 g</td>
                     <td data-label="Key specs">52 cm steel (chromoly) frame, horizontal dropouts</td>
                     <td data-label="Kwon notes">Nada Bike was a project where you could get a simple single speed steel bike frame for $150 and build up your own bicycle.</td>
+                    <td class="part-image" data-size="100">
+                        <img src="frame.png" alt="line drawing of a track bike frame" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="22">
-                        <img src="headset.png" alt="Headset" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Headset</td>
                     <td data-label="Make &amp; model">FSA Orbit X</td>
                     <td data-label="Weight">95 g</td>
                     <td data-label="Key specs">1&quot; threadless, silver</td>
-                    <td data-label="Kwon notes">I think I bought this on a trip to Austin, Texas. Either that or a bike shop in Chicago's Logan Square neighborhood where I stayed for my last couple months in Chicago.</td>
+                    <td data-label="Kwon notes">I never knew what a headset was (or that it even existed) until I was building this bike.</td>
+                    <td class="part-image" data-size="25">
+                        <img src="headset.png" alt="line drawing of an exploded bicycle headset" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="70">
-                        <img src="handlebars.png" alt="Handlebars" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Handlebars</td>
                     <td data-label="Make &amp; model">Origin8 Bullhorn Handlebar</td>
                     <td data-label="Weight">320 g</td>
                     <td data-label="Key specs">31.8 x 400mm, silver</td>
-                    <td data-label="Kwon notes">Rode with flat bars chopped down to be comically narrow for a while but I find the bullhorns a lot more comfortable (and let&#x27;s be real, I&#x27;m not squeezing between cars in rush hour traffic in my 40s anymore)</td>
+                    <td data-label="Kwon notes">Rode with flat bars chopped down to be comically narrow for a while, which is what is depicted in this image, but I currently ride with the bullhorns which I find lot more comfortable for switching hand positions (and let&#x27;s be real, I&#x27;m not squeezing between cars in rush hour traffic in my 40s anymore)</td>
+                    <td class="part-image" data-size="50">
+                        <img src="handlebars.png" alt="line drawing of a flat handlebar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="38">
-                        <img src="stem.png" alt="Stem" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Stem</td>
                     <td data-label="Make &amp; model">Thomson Elite X2</td>
                     <td data-label="Weight">150 g</td>
                     <td data-label="Key specs">31.8 mm, silver, +-10 degree x 70 mm</td>
-                    <td data-label="Kwon notes">I love this stem. I also felt like this was super high end when I bought it.</td>
+                    <td data-label="Kwon notes">I love this stem. I also felt like this was super high end when I bought it. (The drawing is not to scale; my actual stem is shorter.)</td>
+                    <td class="part-image" data-size="38">
+                        <img src="stem.png" alt="line drawing of a bicycle stem" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
                 <tr>
-                    <td class="part-image" data-size="75">
-                        <img src="fork.png" alt="Fork" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    </td>
                     <td data-label="Component">Fork</td>
                     <td data-label="Make &amp; model">Soma Straight Blade</td>
                     <td data-label="Weight">890 g</td>
                     <td data-label="Key specs">1 1/8&quot; threadless, 300 mm steerer </td>
                     <td data-label="Kwon notes">I like the look of a straight blade fork. It's probably more practical to have some offset but I'm not too serious about it tho.</td>
+                    <td class="part-image" data-size="75">
+                        <img src="fork.png" alt="line drawing of a bicycle fork" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </td>
                 </tr>
             </tbody>
         </table>
+
     </section>
 
-    <section class="">
-        <img src="kwon-on-bike.jpg" alt="me on mint green track bike wearing a helmet and face mask" width="300">
-        <p>Kwon on bike, April 2021</p>
+    <section class="kwon-on-bike">
+        <figure>
+            <img src="kwon-on-bike.jpg" alt="Me on my bike, 2021. I'm wearing a helmet and a surgical mask, a pink bike jersey, and stretchy pants.">
+        </figure>
+        <figcaption>Me on my bike on Leonard Street in 2021. Here's <a href="https://kwon.photos/street-nyc/20250525_50/">another photo of my bike</a>, near Coney Island.</figcaption>
     </section>
 
-    {{ with .Site.Taxonomies.tags.bike }}
-    <section class="related-notes">
+    <section class="bike-notes">
         <h2>Bike notes</h2>
-        Notes tagged "bike"
+        <p>These are some notes about my bike and/or rides I've done (all posts in the web log tagged with "bike").</p>
+        {{ $bikePages := where site.RegularPages "Params.tags" "intersect" (slice "bike") }}
         <ul>
-            {{ range . }}
-            <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
-            {{ end }}
+        {{ range $bikePages.ByDate.Reverse }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
         </ul>
     </section>
-    {{ end }}
 
-    <footer>
-        this is the footer
-    </footer>   
+
+
+    </div><!-- /.content -->
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".bike-viewport",
-                start: "top top",
-                end: "+=3000",
-                scrub: 1,
-                pin: true,
-                anticipatePin: 1
+        let tl;
+
+        const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+        function buildTimeline(mode) {
+            if (tl) {
+                tl.scrollTrigger?.kill();
+                tl.kill();
+                gsap.set(".bike-part", { clearProps: "all" });
             }
-        });
 
-        gsap.utils.toArray(".bike-part").forEach(part => {
-            const xVal = parseFloat(part.getAttribute("data-x")) || 0;
-            const yVal = parseFloat(part.getAttribute("data-y")) || 0;
+            if (isMobile()) {
+                gsap.utils.toArray(".bike-part").forEach(part => {
+                    const xVal = parseFloat(part.getAttribute("data-x")) || 0;
+                    const yVal = parseFloat(part.getAttribute("data-y")) || 0;
+                    if (mode === "assemble") {
+                        gsap.to(part, { x: xVal, y: yVal, scale: 0.9, duration: 0.6, ease: "power2.out" });
+                    } else {
+                        gsap.to(part, { x: 0, y: 0, scale: 1, duration: 0.6, ease: "power2.out" });
+                    }
+                });
+                return;
+            }
 
-            tl.from(part, {
-                x: xVal,
-                y: yVal,
-                scale: 0.9,
-                duration: 1,
-                ease: "power2.out"
-            }, 0);
+            tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                }
+            });
+
+            gsap.utils.toArray(".bike-part").forEach(part => {
+                const xVal = parseFloat(part.getAttribute("data-x")) || 0;
+                const yVal = parseFloat(part.getAttribute("data-y")) || 0;
+
+                if (mode === "explode") {
+                    tl.to(part, { x: xVal, y: yVal, scale: 0.9, duration: 1, ease: "power2.in" }, 0);
+                } else {
+                    tl.from(part, { x: xVal, y: yVal, scale: 0.9, duration: 1, ease: "power2.out" }, 0);
+                }
+            });
+        }
+
+        buildTimeline(document.querySelector('input[name="mode"]:checked').value);
+
+        document.querySelectorAll('input[name="mode"]').forEach(radio => {
+            radio.addEventListener("change", e => {
+                if (!isMobile()) window.scrollTo(0, 0);
+                buildTimeline(e.target.value);
+            });
         });
 
         document.querySelectorAll('td.part-image[data-size]').forEach(td => {
-            const size = parseInt(td.dataset.size) * 2;
             const img = td.querySelector('img');
-            const noImg = td.querySelector('.no-image');
-            if (img) { img.style.width = size + 'px'; img.style.height = size + 'px'; }
-            if (noImg) { noImg.style.width = size + 'px'; noImg.style.height = size + 'px'; }
+            if (!img) return;
+            const row = td.closest('tr');
+            const size = parseInt(td.dataset.size);
+
+            // Desktop: small thumbnail cloned into Component td
+            const thumb = img.cloneNode(true);
+            thumb.classList.add('part-thumbnail');
+            thumb.style.width = size + 'px';
+            thumb.style.height = size + 'px';
+            row.querySelector('td').appendChild(thumb);
+
+            // Mobile: original image as first td in row, scaled up proportionally
+            const mobileSize = Math.round(size * 1.5);
+            img.style.width = mobileSize + 'px';
+            img.style.height = mobileSize + 'px';
+            const mobileTd = document.createElement('td');
+            mobileTd.className = 'part-image-top';
+            mobileTd.appendChild(img);
+            row.prepend(mobileTd);
         });
     </script>
 {{ end }}

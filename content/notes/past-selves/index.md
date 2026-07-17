@@ -5,6 +5,7 @@ draft: false
 tags: 
 - past selves
 - personal reflection
+- bike
 ---
 
 Last month I had the chance to travel to two places I previously lived. In early March, I went to London for a work trip, and a couple of weekends ago I went to Chicago for a friend's milestone birthday. It was a strange feeling to revisit these two cities where I'd lived and existed before but in the distant past, long enough ago that it felt like I was a different person.

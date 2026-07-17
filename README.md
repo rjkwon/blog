@@ -37,12 +37,12 @@ Displays recent movie watches, tracked at Letterboxd. Letterboxd doesn't give ac
 - **Template:** `layouts/partials/letterboxd.html`
 - **Updates:** Runs automatically at build time
 
-### Linkroll
+### Links of interest ("Meanwhile, on the internet...")
 
 Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178). Uses a Google Apps Script endpoint 
 
 - **Script:** `assets/js/links.js`
-- **Data:** [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)) 
+- **Data:** [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)
 - **Updates:** Google Apps Script endpoint, fetches at page load
 
 ## Content sections
