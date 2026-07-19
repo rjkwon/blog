@@ -79,7 +79,7 @@ Microsite about my bike. I "manually" traced each bike part from a photo to crea
 - **CSS:** `static/css/bike.css` 
 - **Animation:** GSAP + ScrollTrigger (loaded via CDN in `layouts/bike/baseof.html`)
 - **Related notes:** auto-lists any post from /notes tagged `bike` via `{{ range .Site.Taxonomies.tags.bike }}` in `single.html` 
-- **SVG:** created in Figma and optimized with [svgo](https://svgo.dev/). If I edit the source SVG, re-run the following:
+- **SVG:** created in Figma ([source](https://www.figma.com/design/pXAhY02o72wq79gKN6JS3M/Kwon-s-Bike?node-id=3012-366)) and optimized with [svgo](https://svgo.dev/). If I edit the source SVG, re-run the following:
   ```
   npx svgo@3 bike.svg -o bike.svg --config svgo.config.js --pretty --indent 4 --final-newline
   ```
