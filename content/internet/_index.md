@@ -1,0 +1,17 @@
+---
+title: "The internet used to be* fun"
+date: 2023-09-03T12:13:12-04:00
+type: internet
+draft: false
+cascade:
+  - _target:
+      kind: page
+    _build:
+      render: never
+---
+
+I've been meaning to write some kind of Important Thinkpiece&trade; on the glory days of the early internet, but every time I sit down to do it, I find another, better piece that someone else has already written. So for now, here's a collection of articles that to some degree answer the question “Why have a personal website?” with "Because it's fun, and the internet used to be fun."
+
+If you've written something that feels like it belongs here—especially if your voice is one that's frequently underrepresented—I'd be interested to read it! Holler at me via email (kwon at fastmail.com), Mastodon ([mastodon.social/@rjkwon](https://mastodon.social/@rjkwon)), [Bluesky](https://bsky.app/profile/rjkwon.bsky.social), or carrier pigeon.
+
+<strong>*</strong>_(It still is, but it used to be, too)_

@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+{{ .Content }}
+
+<table class="link-table">
+  <thead>
+    <tr>
+      <th class="article">Article</th>
+      <th class="author">Author</th>
+      <th class="date published">Date published</th>
+      <th class="date added">Date added &darr;</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range .Pages.ByDate.Reverse }}
+    <tr>
+      <td class="title"><a href="{{ .Params.link }}">{{ .Title }}</a></td>
+      <td class="author">
+        {{ range .Params.authors }}
+          {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}<br />
+        {{ end }}
+      </td>
+      <td class="date published">{{ with .Params.datePublished }}{{ dateFormat "2 Jan 2006" . }}{{ end }}</td>
+      <td class="date added">{{ .Date.Format "2 Jan 2006" }}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+
+<footer class="internet-page-footer">
+  <img src="/internet/internet-is-fun.svg"
+    alt="Line drawing of an old-school desktop computer with various whimsical items emanating from the screen including an ice cream cone, rainbow, puppy, happy sheep, and sparkles"
+    width="180" />
+
+  <p>I still love the internet (it's still fun)<br />
+    Made with <a href="https://gohugo.io/">Hugo</a> and 💕 by <a href="https://kwon.nyc/">Rachel J. Kwon</a><br />
+  </p>
+</footer>
+
+{{ end }}

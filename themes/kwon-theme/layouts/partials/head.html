@@ -8,6 +8,9 @@
     <meta name="description" content="A page on Kwon.nyc">
 
     <link rel="stylesheet" href="https://use.typekit.net/pyn4wgi.css">
+    {{- if eq .Type "internet" }}
+    <link rel="stylesheet" href="https://use.typekit.net/gql5ntq.css">
+    {{- end }}
     <link rel="canonical" href="
     {{- if .Params.canonicalURL -}} 
         {{ trim .Params.canonicalURL " " }} 
