@@ -8,7 +8,7 @@ body.internet h3 {
     font-family: "dico-mono", mono;
     font-weight: 400;
     font-style: normal;
-    line-height: 140%;
+    line-height: 1.4em;
     color: #f118b4;
 }
 
@@ -17,75 +17,78 @@ body.internet .main p {
     color: #333;
 }
 
-.link-table {
+table {
     margin: 3em 0;
     font-family: "dico-mono", mono;
     width: 100%;
     border-collapse: collapse;
 }
 
-.link-table th,
-.link-table td {
+th,
+td {
     vertical-align: top;
     border-top: 0.5px dashed #333;
     padding: 0.6em 0.2em;
     font-size: 1.4em;
     margin-right: 1em;
     text-align: left;
+    line-height: 1.3em;
 }
 
-.link-table th {
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: left;
+th {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-top: none;
 }
 
-.link-table th.article,
-.link-table td.title {
+th.article,
+td.title {
     width: 40%;
 }
 
-.link-table th.author,
-.link-table td.author {
+th.author,
+td.author {
     width: 25%;
 }
 
-.link-table th.date,
-.link-table td.date {
+th.date,
+td.date {
     width: 17%;
 }
 
-.link-table td.title {
+td.title {
     padding-right: 0.6em;
 }
 
-.link-table td.title a,
-.link-table td.author a {
+td.title a,
+td.author a {
     color: #333;
     text-decoration: none;
 }
 
-.link-table a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-.internet-page-footer {
-    padding-bottom: 3em;
+div.puppy-sparkles {
     font-size: 0.8em;
     text-align: right;
     color: #333;
 }
 
-.internet-page-footer img {
+div.puppy-sparkles img {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
-.internet-page-footer a {
+div.puppy-sparkles a {
     color: #333;
+}
+
+div.puppy-sparkles img,
+div.puppy-sparkles p {
+    margin-left: auto;
 }
 
 /* mobile view --------------------- */
@@ -98,18 +101,18 @@ body.internet .main p {
         width: 100%;
     }
 
-    .link-table,
-    .link-table tbody,
-    .link-table tr {
+    table,
+    tbody,
+    tr {
         display: block;
         width: 100%;
     }
 
-    .link-table thead {
+    thead {
         display: none;
     }
 
-    .link-table td {
+    td {
         display: block;
         padding: 0;
         margin: 0;
@@ -117,25 +120,25 @@ body.internet .main p {
         line-height: 140%;
     }
 
-    .link-table td.title,
-    .link-table td.author,
-    .link-table td.date {
+    td.title,
+    td.author,
+    td.date {
         width: 100%;
     }
 
-    .link-table td.title {
+    td.title {
         border-top: 0.5px dashed #333;
         margin: 0.8em 0 0.1em;
         padding-top: 0.6em;
     }
 
-    .link-table td.author,
-    .link-table td.date {
+    td.author,
+    td.date {
         font-size: 1em;
         padding-top: 0.3em;
     }
 
-    .link-table td.date.added {
+    td.date.added {
         display: none !important;
     }
 }
