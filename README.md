@@ -128,6 +128,15 @@ Microsite for December Adventure, a challenge stewarded by [eli_oat](https://eli
 - **Content:** `content/december-adventure-2025/`
 - **Layout:** `layouts/decadv/`
 
+### /internet
+
+A collection of articles centered around how personal websites can reclaim the web. Each entry has a Markdown file with front matter (used to be stored in a single JSON file but switched to individual .md files in Aug 2026). 
+
+- **Content:** `content/internet/`
+- **Template:** `layouts/internet/list.html`
+- **CSS:** `themes/kwon-theme/assets/css/extended/internet.css`
+- **RSS feed:** `themes/kwon-theme/layouts/internet/rss.xml`
+
 ### curl detector
 
 Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. Inspired by [elle](https://ellesho.me/page/).

@@ -17,6 +17,10 @@ body.internet .main p {
     color: #333;
 }
 
+body.internet main a:hover {
+    text-decoration: underline;
+}
+
 table {
     margin: 3em 0;
     font-family: "dico-mono", mono;
