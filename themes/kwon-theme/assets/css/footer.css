@@ -62,7 +62,7 @@ FOOTER - MOBILE
 }
 
 .footer a:hover {
-    /*border-bottom: 1px solid var(--primary)*/
+    text-decoration: none;
 }
 
 
