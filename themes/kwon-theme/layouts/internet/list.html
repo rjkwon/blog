@@ -24,7 +24,7 @@
           {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}<br />
         {{ end }}
       </td>
-      <td class="date published">{{ with .Params.datePublished }}{{ dateFormat "2 Jan 2006" . }}{{ end }}</td>
+      <td class="date published">{{ if .Params.datePublished }}{{ dateFormat "2 Jan 2006" .Params.datePublished }}{{ else }}--{{ end }}</td>
       <td class="date added">{{ .Date.Format "2 Jan 2006" }}</td>
     </tr>
     {{ end }}

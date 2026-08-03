@@ -26,6 +26,7 @@ table {
     font-family: "dico-mono", mono;
     width: 100%;
     border-collapse: collapse;
+    overflow-x: visible;
 }
 
 th,
@@ -44,6 +45,9 @@ th {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-top: none;
+    position: sticky;
+    top: 0;
+    background-color: #ddf8f3;
 }
 
 th.article,
