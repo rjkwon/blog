@@ -99,6 +99,41 @@ div.puppy-sparkles p {
     margin-left: auto;
 }
 
+/* dark mode --------------------- */
+body.dark.internet {
+    background-color: #0e2420;
+}
+
+body.dark.internet .main p {
+    color: #ccc;
+}
+
+body.dark.internet th,
+body.dark.internet td {
+    border-top-color: #2a4a45;
+    color: #ccc;
+}
+
+body.dark.internet th {
+    background-color: #0e2420;
+}
+
+body.dark.internet td.title a,
+body.dark.internet td.author a {
+    color: #ccc;
+}
+
+body.dark.internet div.puppy-sparkles,
+body.dark.internet div.puppy-sparkles a {
+    color: #ccc;
+}
+
+@media (max-width: 415px) {
+    body.dark.internet td.title {
+        border-top-color: #2a4a45;
+    }
+}
+
 /* mobile view --------------------- */
 @media (max-width: 415px) {
     body.internet .main h1 {
