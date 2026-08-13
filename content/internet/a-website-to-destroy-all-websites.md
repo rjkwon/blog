@@ -5,4 +5,5 @@ date: 2026-01-19
 authors:
   - name: "Henry Desroches"
     url: https://henry.codes/
+isFeatured: true    
 ---

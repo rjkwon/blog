@@ -6,5 +6,8 @@ datePublished:
 authors:
   - name: "Bell Kiosk (Elliott Cost)"
     url: https://bellkiosk.website/
+tags:
+- list form
+- getting started  
 ---
 

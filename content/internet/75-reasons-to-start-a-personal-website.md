@@ -6,5 +6,8 @@ datePublished: 2026-07-09
 authors:
   - name: "James"
     url: https://jamesg.blog/
+tags:
+- list form
+- getting started  
 ---
 
