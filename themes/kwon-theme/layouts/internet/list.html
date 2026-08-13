@@ -9,7 +9,7 @@
 <table>
   <thead>
     <tr>
-      <th class="featured">⭐️</th>
+      <!-- <th class="featured">⭐️</th> -->
       <th class="article">Article</th>
       <th class="author">Author</th>
       <th class="date published">Date published</th>
@@ -19,9 +19,9 @@
   <tbody>
     {{ range .Pages.ByDate.Reverse }}
     <tr>
-      <td class="featured">{{ if .Params.isFeatured }}
+      <!-- <td class="featured">{{ if .Params.isFeatured }}
   ⭐️
-{{ end }}</td>
+{{ end }}</td> -->
       <td class="title"><a href="{{ .Params.link }}">{{ .Title }}</a></td>
       <td class="author">
         {{ range .Params.authors }}
