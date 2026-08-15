@@ -6,7 +6,7 @@
 # 3. Renaming based on the original capture date in format: YYYY-MM-DD_HH-MM-SS.jpg
 # 4. Removing GPS/location data
 #
-# Output goes to static/cans/ relative to this script's repo root.
+# Output goes to content/cans/ relative to this script's repo root.
 
 set -e
 
@@ -35,9 +35,9 @@ fi
 INPUT_DIR="${INPUT_DIR%/}"
 echo "Selected folder: $INPUT_DIR"
 
-# Output directory is always static/cans relative to the repo root
+# Output directory is always content/cans relative to the repo root
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-OUTPUT_DIR="${SCRIPT_DIR}/../static/cans"
+OUTPUT_DIR="${SCRIPT_DIR}/../content/cans"
 mkdir -p "$OUTPUT_DIR"
 echo "Output folder:  $OUTPUT_DIR"
 echo ""

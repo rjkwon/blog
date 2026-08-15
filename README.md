@@ -86,19 +86,16 @@ Microsite about my bike. I "manually" traced each bike part from a photo to crea
 
 ### /cans
 
-An ongoing stream of photos of craft beer cans with neat designs. Images are processed locally using ImageMagick and ImageOptim, then a script generates per-can info into a JSON file that Hugo uses to create the page. 
+An ongoing stream of photos of craft beer cans with neat designs. Originals are processed locally with ImageMagick (resized to 1500px, GPS stripped), then a script generates per-can info into a JSON file that Hugo uses to create the page. At build time, Hugo resizes each photo again (640x853, WebP, q75) for display and caches the result in `resources/_gen/images/cans/` — commit those generated files along with new photos so Netlify doesn't have to reprocess the whole set on every deploy.
 
 TODO 
 * [ ] Add alt text and captions
-* [ ] Update pipeline to generate smaller, webp images
 
-- **Content:** `content/cans/`
-- **Data:** 
-  - `data/cans.json` 
-  - `static/cans` 
+- **Content/images:** `content/cans/` (JPEGs live alongside `_index.md` as page resources)
+- **Data:** `data/cans.json`
 - **Scripts:** 
-  - `scripts/process_can_photos.sh` - processes original photos (run locally)
-  - `scripts/generate_cans_json.js` - generates JSON from photos (runs as part of `npm run build`)
+  - `scripts/process_can_photos.sh` - processes original photos, outputs into `content/cans/` (run locally)
+  - `scripts/generate_cans_json.js` - generates JSON from photos in `content/cans/` (runs as part of `npm run build`)
 - **Template:** `layouts/cans/list.html`
 
 ### /dad-hats
@@ -169,7 +166,6 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 │   ├── fetch_letterboxd.js
 │   └── generate_cans_json.js
 ├── static/
-│   ├── cans/                # craft beer can image files
 │   ├── decadv/              # December Adventure image files
 │   ├── hats/                # dad-hats image files
 │   └── images/

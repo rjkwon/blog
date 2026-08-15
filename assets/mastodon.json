@@ -1,5 +1,52 @@
 [
   {
+    "id": "117083000718394203",
+    "content": "who has experience/advice/opinions with building a second brain? doesn&#39;t necessarily have to be the exact branding but I’m interesting in implementing the underlying concept (e.g. zettelkasten / commonplace / GTD / johnny decimal)... i&#39;ve generally felt like creating a whole system would be overkill (even though the organizing nerd in me thinks it would be a fun project) but my brain fog is kinda getting out of hand",
+    "url": "https://mastodon.social/@rjkwon/117083000718394203",
+    "created_at": "2026-08-12T14:26:50.769Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "117043211219624597",
+    "content": "Peoples pants are too big these days",
+    "url": "https://mastodon.social/@rjkwon/117043211219624597",
+    "created_at": "2026-08-05T13:47:51.197Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "116943777491621233",
+    "content": "https://kwon.nyc/bike/ i made a little web page about my bike and its components. i had the vision for the animation over 5 years ago which means it took me longer to make this page than it did to build the bike itself 😅 why did it take so long? because i&#39;m insane and insisted on hand-tracing the parts individually in figma including EVERY SINGLE LINK IN THE CHAIN (see attached) 😭 and also manually placing all the x and y coordinates for the exploded view",
+    "url": "https://mastodon.social/@rjkwon/116943777491621233",
+    "created_at": "2026-07-19T00:20:32.917Z",
+    "thread": "none",
+    "media_attachments": [
+      {
+        "type": "image",
+        "url": "https://files.mastodon.social/media_attachments/files/116/943/740/641/014/979/original/63b707b8f32fdf51.png",
+        "preview_url": "https://files.mastodon.social/media_attachments/files/116/943/740/641/014/979/small/63b707b8f32fdf51.png",
+        "description": "screenshot of a figma file with a million (okay not quite) vector paths comprising a line drawing of a bicycle chain"
+      }
+    ]
+  },
+  {
+    "id": "116930815866540234",
+    "content": "Between the air quality alerts due to wildfires, the heat dome causing 90+°F temps, the legionnella outbreak from the HVAC needed to cool the office buildings due to the extreme heat, and the cyclospora outbreak of unknown origin, I think I am just going to stay home today",
+    "url": "https://mastodon.social/@rjkwon/116930815866540234",
+    "created_at": "2026-07-16T17:24:14.213Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "116879592466627594",
+    "content": "https://web-weaving.jamesg.blog/9 I got to talk to James about the personal web for his podcast!! I don’t think I’ve ever talked about websites out loud for this long to anyone so this was a real treat ☺️",
+    "url": "https://mastodon.social/@rjkwon/116879592466627594",
+    "created_at": "2026-07-07T16:17:27.160Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
     "id": "116818231340087917",
     "content": "Idk what Mister Softee did to get enough haters to necessitate a sign on an ice cream truck… but it’s also not my business.",
     "url": "https://mastodon.social/@rjkwon/116818231340087917",
@@ -13,45 +60,5 @@
         "description": "Mister Softee ice cream truck with a giant decal / painting on the back that says “I heart my haters”"
       }
     ]
-  },
-  {
-    "id": "116806712828856938",
-    "content": "Wrote a note about an unglamorous encounter with a sheep https://kwon.nyc/notes/sheep/ and also curated some photos from the trip on which said encounter happened that are somewhat discordant with the bizarreness of the sheep encounter lol (no sheep pics) https://kwon.photos/banff-2026/",
-    "url": "https://mastodon.social/@rjkwon/116806712828856938",
-    "created_at": "2026-06-24T19:23:12.145Z",
-    "thread": "none",
-    "media_attachments": []
-  },
-  {
-    "id": "116783173511685314",
-    "content": "Unproven theory: the fewer seats a bánh mì shop has, the better the sandwich. If you walk in and there’s zero seating, get ready to (take away and) have the best bánh mì of your life.",
-    "url": "https://mastodon.social/@rjkwon/116783173511685314",
-    "created_at": "2026-06-20T15:36:50.667Z",
-    "thread": "start",
-    "media_attachments": []
-  },
-  {
-    "id": "116783188978748328",
-    "content": "One known exception is Ba Xuyên on 8th Av (Brooklyn Chinatown). I think they have 2 tables, but I’ve never been able to sit and eat there bc they are (rightfully) always occupied. But you can bring your bánh mì to Sunset Park which is one avenue away and eat it there.",
-    "url": "https://mastodon.social/@rjkwon/116783188978748328",
-    "created_at": "2026-06-20T15:40:46.669Z",
-    "thread": "middle",
-    "media_attachments": []
-  },
-  {
-    "id": "116783216059888398",
-    "content": "Also, be very suspicious if they are NOT cash only!!",
-    "url": "https://mastodon.social/@rjkwon/116783216059888398",
-    "created_at": "2026-06-20T15:47:39.896Z",
-    "thread": "end",
-    "media_attachments": []
-  },
-  {
-    "id": "116682931170204372",
-    "content": "(Looking at my fellow immigrants and children of immigrants)",
-    "url": "https://mastodon.social/@rjkwon/116682931170204372",
-    "created_at": "2026-06-02T22:43:53.919Z",
-    "thread": "none",
-    "media_attachments": []
   }
 ]
