@@ -14,25 +14,9 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" .  -}}
-      {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
     </div>
     {{- end}}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default .Site.Params.cover.hiddenInSingle | default .Site.Params.cover.hidden}}
-  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
-  {{- if (.Param "ShowToc") }}
-  <div class="toc">
-    <details {{if (.Param "TocOpen") }} open{{ end }}>
-      <summary accesskey="c" title="(Alt + C)">
-        <div class="details">{{- i18n "toc" | default "Table of Contents" }}</div>
-      </summary>
-      <div class="inner">
-        {{- partial "toc.html" . }}
-      </div>
-    </details>
-  </div>
-  {{- end }}
   <div class="post-content">
     {{- partial "anchored_headings.html" .Content -}}
 
@@ -66,14 +50,7 @@
     </nav>
     {{- end }}
     {{- end }}
-    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
-    {{- partial "share_icons.html" . }}
-    {{- end }}
   </footer>
-
-  {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
-  {{- end }}
 </article>
 
 {{- end  }}{{/* end main */}}

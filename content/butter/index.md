@@ -6,3 +6,5 @@ draft: false
 ---
 
 Butter
+<br/>
+<small>Net wt 4 oz</small>

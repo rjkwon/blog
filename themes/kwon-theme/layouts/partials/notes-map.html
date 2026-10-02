@@ -1,0 +1,118 @@
+{{ $notes := where site.RegularPages "Section" "notes" }}
+{{ with $notes }}
+
+  {{ $counts := dict }}
+  {{ $yearCounts := dict }}
+  {{ $links := dict }}
+  {{ range . }}
+    {{ $k := .Date.Format "2006-01" }}
+    {{ $yk := .Date.Format "2006" }}
+    {{ $counts = merge $counts (dict $k (add (index $counts $k | default 0) 1)) }}
+    {{ $yearCounts = merge $yearCounts (dict $yk 1) }}
+    {{ if not (index $links $k) }}
+      {{ $links = merge $links (dict $k .RelPermalink) }}
+    {{ end }}
+  {{ end }}
+
+  {{ $first := (index .ByDate 0).Date.Year }}
+  {{ $years := sort (seq $first now.Year) "value" "desc" }}
+  {{ $nowKey := now.Format "2006-01" }}
+
+  <figure class="notes-heat">
+    <div class="notes-heat__grid" aria-label="Notes written per month since {{ $first }}">
+      <span></span>
+      {{ range slice "J" "F" "M" "A" "M" "J" }}
+        <span class="notes-heat__month" aria-hidden="true">{{ . }}</span>
+      {{ end }}
+      {{/* JASON D */}}
+      <a class="notes-heat__jasond" href="https://www.youtube.com/watch?v=967WmA-OXKM" target="_blank" rel="noopener" aria-label="Jason Derulo calendar vine (YouTube)">
+        {{ range slice "J" "A" "S" "O" "N" "D" }}
+          <span class="notes-heat__month">{{ . }}</span>
+        {{ end }}
+      </a>
+
+      {{ range $y := $years }}
+        {{/* Skip years with no notes (but always show the current year) */}}
+        {{ if or (index $yearCounts (string $y)) (eq $y now.Year) }}
+          <span class="notes-heat__year">{{ $y }}</span>
+          {{ range $m := seq 12 }}
+            {{ $k := printf "%d-%02d" $y $m }}
+            {{ $c := index $counts $k | default 0 }}
+            {{ $label := printf "%s: %d note%s" ((time (printf "%s-01" $k)).Format "January 2006") $c (cond (eq $c 1) "" "s") }}
+            {{ if gt $k $nowKey }}
+              <span class="cell is-future"></span>
+            {{ else if $c }}
+              <a class="cell" data-level="{{ cond (gt $c 3) 4 $c }}" href="{{ index $links $k }}" title="{{ $label }}" aria-label="{{ $label }}"></a>
+            {{ else }}
+              <span class="cell" title="{{ $label }}"></span>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+    <figcaption>{{ len $notes }} notes since {{ $first }}</figcaption>
+  </figure>
+
+  <style>
+    .notes-heat {
+      --heat: #ec8a34;           /* swap for your link-underline orange */
+      margin: 2rem 0;
+      max-width: 30rem;
+    }
+    .notes-heat__grid {
+      display: grid;
+      grid-template-columns: auto repeat(12, 1fr);
+      gap: 4px;
+      align-items: center;
+    }
+    .notes-heat__month {
+      font-size: 0.7rem;
+      text-align: center;
+      opacity: 0.55;
+    }
+    .notes-heat__jasond {
+      grid-column: span 6;
+      display: grid;
+      grid-template-columns: subgrid;
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+    }
+    .notes-heat__jasond:hover,
+    .notes-heat__jasond:focus-visible {
+      border-bottom-color: var(--heat);
+    }
+    .notes-heat__jasond:hover .notes-heat__month,
+    .notes-heat__jasond:focus-visible .notes-heat__month {
+      color: var(--heat);
+      opacity: 1;
+    }
+    .notes-heat__year {
+      font-size: 0.8rem;
+      font-variant-numeric: tabular-nums;
+      opacity: 0.7;
+      padding-right: 0.6rem;
+    }
+    .notes-heat .cell {
+      display: block;
+      aspect-ratio: 1;
+      border-radius: 3px;
+      background: color-mix(in srgb, currentColor 7%, transparent);
+    }
+    .notes-heat .cell[data-level="1"] { background: color-mix(in srgb, var(--heat) 35%, transparent); }
+    .notes-heat .cell[data-level="2"] { background: color-mix(in srgb, var(--heat) 60%, transparent); }
+    .notes-heat .cell[data-level="3"] { background: color-mix(in srgb, var(--heat) 80%, transparent); }
+    .notes-heat .cell[data-level="4"] { background: var(--heat); }
+    .notes-heat .cell.is-future { background: none; }
+    .notes-heat a.cell:hover,
+    .notes-heat a.cell:focus-visible {
+      outline: 2px solid var(--heat);
+      outline-offset: 1px;
+    }
+    .notes-heat figcaption {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-top: 0.75rem;
+    }
+  </style>
+{{ end }}

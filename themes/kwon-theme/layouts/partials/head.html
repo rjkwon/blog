@@ -63,7 +63,6 @@
     {{- range .AllTranslations -}}
     <link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
     {{ end }}
-    {{- partial "extend_head.html" . -}}
     <!-- Misc -->
     {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
     {{- template "partials/templates/opengraph.html" . }}

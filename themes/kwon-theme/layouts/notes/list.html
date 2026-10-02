@@ -22,10 +22,6 @@
 
 {{ $paginator := .Paginate $pages }}
 
-{{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
 {{ $term := .Data.Term}}
 {{- range $index, $page := $paginator.Pages }}
 
@@ -42,6 +38,9 @@
   {{- end }}
 
 <section class="notes">
+
+{{ partial "notes-map.html" . }}
+
     {{ range .Pages }}
         <article>
         	<span><a href="{{.Permalink}}">{{.Title}}</a></span><span>{{.Date.Format "02 Jan 2006"}}</span>

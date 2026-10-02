@@ -5,39 +5,161 @@
   <title>BUTTER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script async src="https://plausible.io/js/pa-rwnnT7tfiViXqMx3EG58n.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
-    <style>
-      body {
-        text-align: center;
-        margin: 0 auto; 
-        height: 100vh;
-        background-color: #ffedb4;
-      }
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <style>
+    :root {
+      --butter-yellow: #fff3bd;
+      --butter-shade: #ede0a6;
+      --butter-dark: #ded095;
+      --butter-blue: #090dcb;
+      --stick-width: 420px;
+      --stick-height: 110px;
+      --stick-depth: 110px; 
+    }
 
-      main {
-        /*min-height: calc(100vh - var(--header-height, 80px)); */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: "Arial", sans-serif;
-        color: #060bff;
-        font-size: 3em;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-      }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: #d8d4c7;
+      font-family: "Arial Black", "Arial", sans-serif;
+      overflow: hidden;
+    }
 
-      a {
-        text-decoration: none;
-        color: #060bff;
-      }
-    </style>
+    .scene {
+      perspective: 10000px;
+      perspective-origin: 50% 50%;
+    }
+
+    .butter {
+      position: relative;
+      width: var(--stick-width);
+      height: var(--stick-height);
+      transform-style: preserve-3d;
+      transform: rotateX(-20deg) rotateY(-32deg) rotateZ(0deg);
+    }
+
+    .butter-face {
+      position: absolute;
+      box-sizing: border-box;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--butter-blue);
+      border-radius: 2px;
+    }
+
+    /* Long Front Face */
+    .face-front {
+      width: var(--stick-width);
+      height: var(--stick-height);
+      background: linear-gradient(180deg, var(--butter-yellow) 0%, var(--butter-shade) 100%);
+      transform: translateZ(calc(var(--stick-depth) / 2));
+      box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.6);
+      padding: 10px 24px;
+      align-items: flex-start;
+    }
+
+    /* Top Face */
+    .face-top {
+      width: var(--stick-width);
+      height: var(--stick-depth);
+      background: linear-gradient(90deg, #fffbf0 0%, var(--butter-yellow) 100%);
+      transform: rotateX(90deg) translateZ(calc(var(--stick-depth) / 2));
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8);
+      top: 0;
+      left: 0;
+    }
+
+    /* Left End Face */
+    .face-left {
+      width: var(--stick-depth);
+      height: var(--stick-height);
+      background: linear-gradient(135deg, var(--butter-shade) 0%, var(--butter-dark) 100%);
+      transform: rotateY(-90deg) translateZ(calc(var(--stick-depth) / 2));
+      top: 0;
+      left: 0;
+      /* Simulates the folded wrapper ends */
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8% 50%);
+    }
+
+    /* Typography & Wrapper Details */
+    .subhead {
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .brand {
+      font-size: 46px;
+      line-height: 0.95;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin: 2px 0;
+    }
+
+    .meta {
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    .ticks {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-image: repeating-linear-gradient(
+        to right,
+        var(--butter-blue) 0px,
+        var(--butter-blue) 2px,
+        transparent 2px,
+        transparent 50px
+      );
+      opacity: 0.7;
+    }
+
+    /* Soft ground drop shadow */
+    .shadow {
+      position: absolute;
+      width: 440px;
+      height: 120px;
+      background: radial-gradient(ellipse at center, rgba(40, 30, 20, 0.35) 0%, transparent 70%);
+      transform: rotateX(85deg) translateZ(-110px) translateY(-20px) translateX(-20px);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-  {{ block "main" . }}{{ end }}
+  <div class="scene">
+    <div class="butter">
+      <div class="shadow"></div>
+
+      <div class="butter-face face-top">
+        <p class="subhead">SALTED</p>
+        <h2 class="brand" style="font-size: 36px;">BUTTER</h2>
+      </div>
+
+      <div class="butter-face face-left"></div>
+
+      <div class="butter-face face-front">
+        <p class="subhead">SALTED</p>
+        <h1 class="brand">BUTTER</h1>
+        <p class="meta">Net wt 4 oz (113g)</p>
+        <div class="ticks"></div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

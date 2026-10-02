@@ -1,9 +1,5 @@
 {{- define "main" }}
 
-{{- if (and .Site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-{{- else }} {{/* if not profileMode */}}
-
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   <h1>{{ .Title }}</h1>
@@ -23,10 +19,6 @@
 
 {{ $paginator := .Paginate $pages }}
 
-{{- if and .IsHome .Site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
 {{ $term := .Data.Term}}
 {{- range $index, $page := $paginator.Pages }}
 
@@ -41,8 +33,6 @@
 
 <div class="articles">
   <article class="{{ $class }}">
-    {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList)}}
-    {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
     <header class="entry-header">
       <h2>
         {{ .Title }}
@@ -78,5 +68,4 @@
   </nav>
 </footer>
 {{- end }}
-{{end}}{{/* end profileMode */}}
 {{- end }}{{- /* end main */ -}}
