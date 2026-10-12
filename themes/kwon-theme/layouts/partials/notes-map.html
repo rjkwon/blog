@@ -1,54 +1,54 @@
-{{ $notes := where site.RegularPages "Section" "notes" }}
-{{ with $notes }}
+{{- $notes := where site.RegularPages "Section" "notes" }}
+{{- with $notes }}
 
-  {{ $counts := dict }}
-  {{ $yearCounts := dict }}
-  {{ $links := dict }}
-  {{ range . }}
-    {{ $k := .Date.Format "2006-01" }}
-    {{ $yk := .Date.Format "2006" }}
-    {{ $counts = merge $counts (dict $k (add (index $counts $k | default 0) 1)) }}
-    {{ $yearCounts = merge $yearCounts (dict $yk 1) }}
-    {{ if not (index $links $k) }}
-      {{ $links = merge $links (dict $k .RelPermalink) }}
-    {{ end }}
-  {{ end }}
+  {{- $counts := dict }}
+  {{- $yearCounts := dict }}
+  {{- $links := dict }}
+  {{- range . }}
+    {{- $k := .Date.Format "2006-01" }}
+    {{- $yk := .Date.Format "2006" }}
+    {{- $counts = merge $counts (dict $k (add (index $counts $k | default 0) 1)) }}
+    {{- $yearCounts = merge $yearCounts (dict $yk 1) }}
+    {{- if not (index $links $k) }}
+      {{- $links = merge $links (dict $k .RelPermalink) }}
+    {{- end }}
+  {{- end }}
 
-  {{ $first := (index .ByDate 0).Date.Year }}
-  {{ $years := sort (seq $first now.Year) "value" "desc" }}
-  {{ $nowKey := now.Format "2006-01" }}
+  {{- $first := (index .ByDate 0).Date.Year }}
+  {{- $years := sort (seq $first now.Year) "value" "desc" }}
+  {{- $nowKey := now.Format "2006-01" }}
 
   <figure class="notes-heat">
     <div class="notes-heat__grid" aria-label="Notes written per month since {{ $first }}">
       <span></span>
-      {{ range slice "J" "F" "M" "A" "M" "J" }}
+      {{- range slice "J" "F" "M" "A" "M" "J" }}
         <span class="notes-heat__month" aria-hidden="true">{{ . }}</span>
-      {{ end }}
-      {{/* JASON D */}}
+      {{- end }}
+      {{- /* JASON D */}}
       <a class="notes-heat__jasond" href="https://www.youtube.com/watch?v=967WmA-OXKM" target="_blank" rel="noopener" aria-label="Jason Derulo calendar vine (YouTube)">
-        {{ range slice "J" "A" "S" "O" "N" "D" }}
+        {{- range slice "J" "A" "S" "O" "N" "D" }}
           <span class="notes-heat__month">{{ . }}</span>
-        {{ end }}
+        {{- end }}
       </a>
 
-      {{ range $y := $years }}
-        {{/* Skip years with no notes (but always show the current year) */}}
-        {{ if or (index $yearCounts (string $y)) (eq $y now.Year) }}
+      {{- range $y := $years }}
+        {{- /* Skip years with no notes (but always show the current year) */}}
+        {{- if or (index $yearCounts (string $y)) (eq $y now.Year) }}
           <span class="notes-heat__year">{{ $y }}</span>
-          {{ range $m := seq 12 }}
-            {{ $k := printf "%d-%02d" $y $m }}
-            {{ $c := index $counts $k | default 0 }}
-            {{ $label := printf "%s: %d note%s" ((time (printf "%s-01" $k)).Format "January 2006") $c (cond (eq $c 1) "" "s") }}
-            {{ if gt $k $nowKey }}
+          {{- range $m := seq 12 }}
+            {{- $k := printf "%d-%02d" $y $m }}
+            {{- $c := index $counts $k | default 0 }}
+            {{- $label := printf "%s: %d note%s" ((time (printf "%s-01" $k)).Format "January 2006") $c (cond (eq $c 1) "" "s") }}
+            {{- if gt $k $nowKey }}
               <span class="cell is-future"></span>
-            {{ else if $c }}
+            {{- else if $c }}
               <a class="cell" data-level="{{ cond (gt $c 3) 4 $c }}" href="{{ index $links $k }}" title="{{ $label }}" aria-label="{{ $label }}"></a>
-            {{ else }}
+            {{- else }}
               <span class="cell" title="{{ $label }}"></span>
-            {{ end }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
+            {{- end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
     </div>
     <figcaption>{{ len $notes }} notes since {{ $first }}</figcaption>
   </figure>
@@ -115,4 +115,4 @@
       margin-top: 0.75rem;
     }
   </style>
-{{ end }}
+{{- end }}

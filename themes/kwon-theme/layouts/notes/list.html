@@ -13,39 +13,15 @@
 
 <br />
 
-
-{{- $pages := union .RegularPages .Sections }}
-
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- end}}
-
-{{ $paginator := .Paginate $pages }}
-
-{{ $term := .Data.Term}}
-{{- range $index, $page := $paginator.Pages }}
-
-{{- $class := "post-entry" }}
-
-{{- $user_preferred := or .Site.Params.disableSpecial1stPost .Site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
-{{- $class = "post-entry tag-entry" }}
-{{- end }}
-
-
-  {{- end }}
-
 <section class="notes">
 
 {{ partial "notes-map.html" . }}
 
-    {{ range .Pages }}
+    {{- range .Pages }}
         <article>
         	<span><a href="{{.Permalink}}">{{.Title}}</a></span><span>{{.Date.Format "02 Jan 2006"}}</span>
         </article>
-    {{ end }}
+    {{- end }}
 </section>
 
 {{- end }}{{- /* end main */ -}}
