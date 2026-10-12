@@ -5,10 +5,13 @@
     "googleapis": "^150.0.1"
   },
   "scripts": {
-    "generate:cans": "node scripts/generate_cans_json.js",
-    "generate:letterboxd": "node scripts/fetch_letterboxd.js",
-    "generate:mastodon": "node scripts/fetch_mastodon.js",
-    "prebuild": "npm run generate:cans && npm run generate:letterboxd && npm run generate:mastodon",
+    "cans:process": "bash scripts/process_can_photos.sh",
+    "cans:generate": "node scripts/generate_cans_json.js",
+    "letterboxd:fetch": "node scripts/fetch_letterboxd.js",
+    "mastodon:fetch": "node scripts/fetch_mastodon.js",
+    "notes:new": "node scripts/notes_new.js",
+    "notes:finalize": "node scripts/notes_finalize.js",
+    "prebuild": "npm run cans:generate && npm run letterboxd:fetch && npm run mastodon:fetch",
     "build": "npm run prebuild && hugo --gc"
   },
   "devDependencies": {

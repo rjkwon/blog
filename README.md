@@ -1,4 +1,4 @@
-This is my personal website, built with Hugo. It's a static site that lives at [kwon.nyc](https://kwon.nyc/).
+This is my personal website. It's a static site generated with Hugo and lives at [kwon.nyc](https://kwon.nyc/).
 
 ## Stack
 
@@ -49,14 +49,18 @@ Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs
 
 ### /notes
 
-Notes (blog posts) written in Markdown.
+I guess this is my "blog" although I've never really liked that word. For this section only, I have it set up as an Obsidian vault + sync. To create a new note, I run `npm run notes:new` which creates a draft file from an Obsidian template that I can then edit and write in.
 
-- **Content:** `content/notes/`
+- **Content:** `content/notes/` (Obsidian vault)
 - **Template:** `layouts/_default/single.html`
+- **New note template:** `content/notes/_templates/note.md` (Obsidian's Templates folder; ignored by Hugo via `ignoreFiles`)
+- **Scripts:**
+  - `npm run notes:new` (`scripts/notes_new.js`) - creates `content/notes/draft-<timestamp>/index.md` from the template
+  - `npm run notes:finalize` (`scripts/notes_finalize.js`) - renames a draft to `<slug-of-title>/index.md`, sets `draft: false` and `date` to now, and moves referenced images for loose Obsidian drafts. Pass a path (`npm run notes:finalize -- <path>`) or let it find drafts.
 
 ### /about
 
-My bio and other stuff about me
+My bio and other stuff about me.
 
 - **Content:** `content/about/`
 - **Template:** `layouts/about/single.html`
@@ -94,8 +98,8 @@ TODO
 - **Content/images:** `content/cans/` (JPEGs live alongside `_index.md` as page resources)
 - **Data:** `data/cans.json`
 - **Scripts:** 
-  - `scripts/process_can_photos.sh` - processes original photos, outputs into `content/cans/` (run locally)
-  - `scripts/generate_cans_json.js` - generates JSON from photos in `content/cans/` (runs as part of `npm run build`)
+  - `scripts/process_can_photos.sh` (`npm run cans:process`) - processes original photos, outputs into `content/cans/` (run locally)
+  - `scripts/generate_cans_json.js` (`npm run cans:generate`) - generates JSON from photos in `content/cans/` (runs as part of `npm run build`)
 - **Template:** `layouts/cans/list.html`
 
 ### /dad-hats
@@ -163,8 +167,13 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 ├── netlify/
 │   └── edge-functions/      # curl-detector.js
 ├── scripts/
+│   ├── lib/notes.js         # shared helpers for notes scripts
 │   ├── fetch_letterboxd.js
-│   └── generate_cans_json.js
+│   ├── fetch_mastodon.js
+│   ├── generate_cans_json.js
+│   ├── notes_finalize.js
+│   ├── notes_new.js
+│   └── process_can_photos.sh
 ├── static/
 │   ├── decadv/              # December Adventure image files
 │   ├── hats/                # dad-hats image files
@@ -184,8 +193,10 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 npm run build
 ```
 
+npm scripts are named `<section>:<action>` (e.g. `cans:generate`, `notes:new`).
+
 This runs:
-1. `npm run prebuild` - Fetches Letterboxd and generates cans JSON
+1. `npm run prebuild` - Runs `cans:generate`, `letterboxd:fetch` and `mastodon:fetch`
 2. `hugo --gc` - Builds the static site
 
 Pushes to `main` trigger a Netlify build automatically. Hugo version and build settings are in `netlify.toml`.

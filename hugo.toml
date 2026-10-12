@@ -5,6 +5,8 @@ theme = "kwon-theme"
 publishDir = "public"
 enableRobotsTXT = false
 timeZone = "America/New_York"
+# Obsidian templates for new notes (see npm run notes:new)
+ignoreFiles = ['content/notes/_templates/']
 
 [[menu.main]]
 identifier = "about"
