@@ -444,36 +444,6 @@ body.list section.notes article span a {
     }
 }
 
-.pagination {
-    display: flex
-}
-
-.pagination a {
-    color: var(--theme);
-    font-size: 13px;
-    line-height: 36px;
-    background: var(--primary);
-    border-radius: calc(36px / 2);
-    padding: 0 16px
-}
-
-.pagination .next {
-    margin-inline-start: auto
-}
-
-.social-icons {
-    padding: 12px 0
-}
-
-.social-icons a:not(:last-of-type) {
-    margin-inline-end: 12px
-}
-
-.social-icons a svg {
-    height: 26px;
-    width: 26px
-}
-
 code {
     direction: ltr
 }

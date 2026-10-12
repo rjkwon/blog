@@ -3,15 +3,11 @@
 
   {{- $counts := dict }}
   {{- $yearCounts := dict }}
-  {{- $links := dict }}
   {{- range . }}
     {{- $k := .Date.Format "2006-01" }}
     {{- $yk := .Date.Format "2006" }}
     {{- $counts = merge $counts (dict $k (add (index $counts $k | default 0) 1)) }}
     {{- $yearCounts = merge $yearCounts (dict $yk 1) }}
-    {{- if not (index $links $k) }}
-      {{- $links = merge $links (dict $k .RelPermalink) }}
-    {{- end }}
   {{- end }}
 
   {{- $first := (index .ByDate 0).Date.Year }}
@@ -38,11 +34,12 @@
           {{- range $m := seq 12 }}
             {{- $k := printf "%d-%02d" $y $m }}
             {{- $c := index $counts $k | default 0 }}
-            {{- $label := printf "%s: %d note%s" ((time (printf "%s-01" $k)).Format "January 2006") $c (cond (eq $c 1) "" "s") }}
+            {{- $month := (time (printf "%s-01" $k)).Format "January 2006" }}
+{{- $label := cond (eq $c 0) (printf "No notes written in %s" $month) (printf "I wrote %d note%s in %s" $c (cond (eq $c 1) "" "s") $month) }}
             {{- if gt $k $nowKey }}
               <span class="cell is-future"></span>
             {{- else if $c }}
-              <a class="cell" data-level="{{ cond (gt $c 3) 4 $c }}" href="{{ index $links $k }}" title="{{ $label }}" aria-label="{{ $label }}"></a>
+              <span class="cell" data-level="{{ cond (gt $c 3) 4 $c }}" title="{{ $label }}"></span>
             {{- else }}
               <span class="cell" title="{{ $label }}"></span>
             {{- end }}
@@ -50,19 +47,17 @@
         {{- end }}
       {{- end }}
     </div>
-    <figcaption>{{ len $notes }} notes since {{ $first }}</figcaption>
   </figure>
 
   <style>
     .notes-heat {
-      --heat: #ec8a34;           /* swap for your link-underline orange */
       margin: 2rem 0;
       max-width: 30rem;
     }
     .notes-heat__grid {
       display: grid;
       grid-template-columns: auto repeat(12, 1fr);
-      gap: 4px;
+      gap: 1px;
       align-items: center;
     }
     .notes-heat__month {
@@ -76,15 +71,15 @@
       grid-template-columns: subgrid;
       color: inherit;
       text-decoration: none;
-      border-bottom: 1px dotted transparent;
     }
+
     .notes-heat__jasond:hover,
     .notes-heat__jasond:focus-visible {
-      border-bottom-color: var(--heat);
+      border-bottom-color: var(--orange);
     }
     .notes-heat__jasond:hover .notes-heat__month,
     .notes-heat__jasond:focus-visible .notes-heat__month {
-      color: var(--heat);
+      color: var(--orange);
       opacity: 1;
     }
     .notes-heat__year {
@@ -95,24 +90,14 @@
     }
     .notes-heat .cell {
       display: block;
-      aspect-ratio: 1;
-      border-radius: 3px;
+      aspect-ratio: 3 / 1;
       background: color-mix(in srgb, currentColor 7%, transparent);
     }
-    .notes-heat .cell[data-level="1"] { background: color-mix(in srgb, var(--heat) 35%, transparent); }
-    .notes-heat .cell[data-level="2"] { background: color-mix(in srgb, var(--heat) 60%, transparent); }
-    .notes-heat .cell[data-level="3"] { background: color-mix(in srgb, var(--heat) 80%, transparent); }
-    .notes-heat .cell[data-level="4"] { background: var(--heat); }
+    .notes-heat .cell[data-level="1"] { background: color-mix(in srgb, var(--orange) 35%, transparent); }
+    .notes-heat .cell[data-level="2"] { background: color-mix(in srgb, var(--orange) 60%, transparent); }
+    .notes-heat .cell[data-level="3"] { background: color-mix(in srgb, var(--orange) 80%, transparent); }
+    .notes-heat .cell[data-level="4"] { background: var(--orange); }
     .notes-heat .cell.is-future { background: none; }
-    .notes-heat a.cell:hover,
-    .notes-heat a.cell:focus-visible {
-      outline: 2px solid var(--heat);
-      outline-offset: 1px;
-    }
-    .notes-heat figcaption {
-      font-size: 0.8rem;
-      opacity: 0.6;
-      margin-top: 0.75rem;
-    }
+
   </style>
 {{- end }}

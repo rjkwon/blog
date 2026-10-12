@@ -17,6 +17,8 @@
 
 {{ partial "notes-map.html" . }}
 
+<br />
+
     {{- range .Pages }}
         <article>
         	<span><a href="{{.Permalink}}">{{.Title}}</a></span><span>{{.Date.Format "02 Jan 2006"}}</span>
