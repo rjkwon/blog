@@ -4,9 +4,9 @@ date: 2022-05-18T06:51:54-04:00
 draft: false
 tags: 
 - residency
-- past selves
+- past-selves
 - brooklyn
-- personal reflection
+- personal-reflection
 ---
 
 This past weekend I met up with a few of my former colleagues from residency for dinner and drinks. It felt a little bit like a meetup with high school friends might feel, if you spent high school removing gallbladders and incising and draining abscesses. (Maybe you did. I don't know your life.) 

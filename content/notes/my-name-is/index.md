@@ -3,9 +3,9 @@ title: "My name is"
 date: 2025-03-01T18:30:00-05:00
 draft: false
 tags: 
-- personal reflection
+- personal-reflection
 - thoughts
-- past selves
+- past-selves
 ---
 
 What's in a name? Lots of things.

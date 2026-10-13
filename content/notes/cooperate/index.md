@@ -5,7 +5,7 @@ draft: false
 tags: 
 - brooklyn
 - food
-- slice of life
+- slice-of-life
 ---
 
 We joined the food co-op. I worked my first shift the other night (after _work_ work). You choose from available shifts and sign up for the kind of work you might want to do. I chose cleaning. I had been somewhat apprehensive about working the shift, not because it was work, or even that it was work I wasn't willing to do or anything, but moreso that it was a New Thing to do and it had been a while since I had done a New Thing.

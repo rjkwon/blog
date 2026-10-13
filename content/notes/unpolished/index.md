@@ -4,7 +4,7 @@ date: 2023-03-18T10:36:58-04:00
 draft: false
 tags: 
 - writing
-- personal websites
+- personal-websites
 - internet
 - medicine
 ---

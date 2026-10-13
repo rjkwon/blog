@@ -3,11 +3,11 @@ title: "2022 in review"
 date: 2022-12-30T14:55:39-05:00
 draft: false
 tags: 
-- end of year
+- end-of-year
 - lists
-- personal reflection
+- personal-reflection
 - habits
-- work life
+- work-life
 - health
 - tv
 - movies

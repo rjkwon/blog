@@ -4,7 +4,7 @@ date: 2022-11-27T22:31:46-05:00
 draft: false
 tags: 
 - nature
-- slice of life
+- slice-of-life
 - photos
 ---
 

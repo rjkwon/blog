@@ -2,7 +2,7 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ if eq .Kind "term" }}{{ replace .Title "-" " " }}{{ else }}{{ .Title }}{{ end }}</h1>
   {{- if .Description }}
   <div class="post-description">
     {{ .Description }}

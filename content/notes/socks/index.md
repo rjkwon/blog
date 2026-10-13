@@ -3,7 +3,7 @@ title: "Hon. Ketanji Brown Jackson's husband's socks"
 date: 2022-03-24T08:58:02-04:00
 draft: false
 tags: 
-- neither here nor there
+- neither-here-nor-there
 - surgeons
 - photos
 

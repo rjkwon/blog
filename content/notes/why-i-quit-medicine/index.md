@@ -5,8 +5,8 @@ draft: false
 tags: 
 - essay
 - medicine
-- past selves
-- personal reflection
+- past-selves
+- personal-reflection
 - surgery
 ---
 

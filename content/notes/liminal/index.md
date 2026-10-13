@@ -5,7 +5,7 @@ draft: false
 tags: 
 - home
 - photos
-- slice of life
+- slice-of-life
 
 ---
 

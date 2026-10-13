@@ -23,7 +23,7 @@
     {{- if .Params.tags }}
     <ul class="post-tags" style="display: none">
       {{- range ($.GetTerms "tags") }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      <li><a href="{{ .Permalink }}">{{ replace .LinkTitle "-" " " }}</a></li>
       {{- end }}
     </ul>
     {{- end }}

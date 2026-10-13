@@ -5,7 +5,7 @@ draft: false
 tags:
 - health
 - midlife
-- slice of life
+- slice-of-life
 ---
 
 I recently got contact lenses, for the first time in 34 years, as someone who has required corrective eyewear since the age of 6. 

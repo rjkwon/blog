@@ -3,8 +3,8 @@ title: "Lunch break"
 date: 2024-07-17T08:08:42-04:00
 draft: false
 tags: 
-- work life
-- mental health
+- work-life
+- mental-health
 - health
 - food
 ---

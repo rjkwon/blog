@@ -3,7 +3,7 @@ title: "Artificially intelligent thoughts"
 date: 2023-07-17T20:07:23-04:00
 draft: false
 tags: 
-- generative AI
+- generative-ai
 - technology
 
 ---

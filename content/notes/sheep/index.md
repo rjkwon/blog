@@ -5,7 +5,7 @@ draft: false
 tags: 
 - travel
 - animals
-- slice of life
+- slice-of-life
 - health
 - personal
 ---

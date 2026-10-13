@@ -3,7 +3,7 @@ title: "Intelligent art"
 date: 2022-07-10T10:33:34-04:00
 draft: false
 tags: 
-- generative ai
+- generative-ai
 - fun
 - technology
 ---

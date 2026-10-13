@@ -5,7 +5,7 @@ draft: false
 tags: 
 - blogs
 - internet
-- old web
+- old-web
 ---
 
 I read that Noah Grey, the creator of the blogging software Greymatter, recently resurfaced on the internet because he was losing his home to foreclosure and had set up a GoFundMe. 

@@ -3,8 +3,8 @@ title: "Past selves"
 date: 2025-04-20
 draft: false
 tags: 
-- past selves
-- personal reflection
+- past-selves
+- personal-reflection
 - bike
 ---
 

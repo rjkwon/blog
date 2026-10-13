@@ -6,7 +6,7 @@ tags:
 - internet
 - technology
 - capitalism
-- mental health
+- mental-health
 ---
 
 I'm getting worn down by all the digital noise. By digital noise I mean the constant barrage of alerts, notifications, pings, email subscriptions I didn't sign up for, email subscriptions I DID sign up for but regret doing so, all the inputs that come through my connected devices.

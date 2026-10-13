@@ -4,10 +4,10 @@ date: 2022-03-19T09:30:24-04:00
 draft: false
 tags: 
 - technology
-- personal reflection
+- personal-reflection
 - pandemic
 - focus
-- mental health
+- mental-health
 ---
 
 RIP to my attention span. 

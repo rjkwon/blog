@@ -4,9 +4,9 @@ date: 2023-10-28T09:52:57-04:00
 draft: false
 tags: 
 - food
-- new york city
+- new-york-city
 - lists
-- slice of life
+- slice-of-life
 ---
 
 I love sandwiches. Below are some of my favorites and why. 

@@ -3,7 +3,7 @@ title: "Pushing pixels"
 date: 2023-07-21T07:46:59-04:00
 draft: false
 tags: 
-- site updates
+- site-updates
 ---
 
 I made some minor CSS tweaks on mostly spacing here that have bothered me since the beginning (though not enough to get me to fix them until now, hehe). 

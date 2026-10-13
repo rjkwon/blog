@@ -4,7 +4,7 @@ date: 2022-05-11T07:40:55-04:00
 draft: false
 tags:
 - brooklyn
-- new york city
+- new-york-city
 - bike
 - lists
 - food

@@ -5,7 +5,7 @@ draft: false
 tags: 
 - tv
 - data
-- past selves
+- past-selves
 ---
 
 One of the many open tabs in the browser of my mind is to find an effective way to track the television shows I watch. Unlike tracking books read or movies watched or music listened to, for which there are several good options for products to use[^1], I haven't been able to find a good product for it. 

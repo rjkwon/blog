@@ -3,9 +3,9 @@ title: "Lately"
 date: 2024-04-10T22:03:43-04:00
 draft: false
 tags: 
-- slice of life
-- work life
-- personal reflection
+- slice-of-life
+- work-life
+- personal-reflection
 ---
 
 I've been a little less online lately, but not to worry, I have just been living my life :)

@@ -3,7 +3,7 @@ title: "Language"
 date: 2022-08-15T08:30:29-04:00
 draft: false
 tags: 
-- new york city
+- new-york-city
 - language
 - society
 

@@ -4,8 +4,8 @@ date: 2023-09-17T21:02:50-04:00
 draft: false
 tags: 
 - internet
-- site updates
-- old web
+- site-updates
+- old-web
 - nostalgia
 ---
 

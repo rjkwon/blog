@@ -3,7 +3,7 @@ title: Midlife continues
 date: 2026-08-15T09:32:35-04:00
 draft: false
 tags:
-  - personal reflection
+  - personal-reflection
   - midlife
 ---
 _Note: this is unedited copy that came straight from my brain, local organic brain-to-table writing, and likely riddled with grammar and syntax errors. Proceed at your own risk._

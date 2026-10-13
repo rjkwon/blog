@@ -5,9 +5,9 @@ draft: false
 tags: 
 - surgery
 - residency
-- personal reflection
+- personal-reflection
 - medicine
-- past selves
+- past-selves
 ---
 
 Today is July 1. Actually, it's July 2, but I was thinking about this yesterday and just couldn't make time to write it down until today. So I'm going to say it's July 1.

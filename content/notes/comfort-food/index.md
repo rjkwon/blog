@@ -4,7 +4,7 @@ date: 2023-09-01T17:05:25-04:00
 draft: false
 tags: 
 - food
-- new york city
+- new-york-city
 - lists
 ---
 

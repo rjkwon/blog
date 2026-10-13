@@ -3,7 +3,7 @@ title: "Lo-fi changelog"
 date: 2023-04-27T07:38:45-04:00
 draft: false
 tags:
-- site updates
+- site-updates
 - hugo
 ---
 

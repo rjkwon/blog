@@ -6,7 +6,7 @@ tags:
   - capitalism
   - society
   - thoughts
-  - new york
+  - new-york-city
 ---
 
 I get frustrated when things don't work. 
