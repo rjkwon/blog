@@ -1,1 +1,14 @@
+{{- /* Standalone images match the figure shortcode:
+  ![alt](file.png "caption")
+  {class="full"}
+*/ -}}
+{{- if .IsBlock -}}
+<figure{{ with .Attributes.class }} class="{{ . }}"{{ end }}>
+    <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" />
+    {{- with .Title }}
+    <figcaption><p>{{ . | markdownify }}</p></figcaption>
+    {{- end }}
+</figure>
+{{- else -}}
 <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{- end -}}

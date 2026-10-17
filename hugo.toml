@@ -47,3 +47,8 @@ weight = 40
 [caches]
   [caches.getresource]
     maxAge = "1h"
+[markup.goldmark.parser]
+  # Standalone Markdown images render as <figure> (see render-image.html)
+  wrapStandAloneImageWithinParagraph = false
+  [markup.goldmark.parser.attribute]
+    block = true

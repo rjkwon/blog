@@ -421,7 +421,16 @@ figure.actual-size img {
     width: auto;
     height: auto;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
+}
+
+/* Extra specificity to beat `body div.post-content figure img` */
+div.post-content figure.small img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* -----------------------------------
