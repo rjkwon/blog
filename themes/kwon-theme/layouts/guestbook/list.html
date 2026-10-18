@@ -1,0 +1,53 @@
+{{ define "main" }}
+
+<form id="guestbook-form">
+  <input type="text" id="name" placeholder="Name" maxlength="50">
+  <br>
+  <input type="text" id="contact" placeholder="Email or URL" maxlength="100">
+  <br>
+  <textarea id="message" placeholder="Message" required maxlength="400" rows="4"></textarea>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDPCbBJNvHR-J98iYFKvijUFSuFxEryWaI",
+  	authDomain: "kwon-space-guestbook.firebaseapp.com",
+  	projectId: "kwon-space-guestbook",
+  	storageBucket: "kwon-space-guestbook.firebasestorage.app",
+  	messagingSenderId: "1075470678054",
+  	appId: "1:1075470678054:web:8868637eb1db543b360ee7"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const form = document.getElementById("guestbook-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim() || "Anonymous";
+    const contact = document.getElementById("contact").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    try {
+      await addDoc(collection(db, "guestbook"), {
+        name: name,
+        contact: contact, 
+        message: message,
+        printed: false,
+        createdAt: serverTimestamp()
+      });
+      alert("Thank you, your note is in the print queue! It will print the next time the studio printer connects.");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert("Could not send entry: " + err.message);
+    }
+  });
+</script>
+
+{{ end }}
