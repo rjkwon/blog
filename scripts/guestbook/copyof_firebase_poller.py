@@ -15,10 +15,10 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 LOCAL_TZ = ZoneInfo('America/New_York')
-MAX_ATTEMPTS = 3          # move a note aside after this many failed prints
-MAX_PER_SESSION = 10      # backstop against spam: stop printing after this many tickets per boot
+MAX_ATTEMPTS = 3
+MAX_PER_SESSION = 10
 
-COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number, stays on the Pi
+COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number (stays locally on Pi)
 
 failures = {}             # doc id -> failed print attempts this session
 
@@ -30,7 +30,6 @@ def read_count():
         return 0
 
 def save_count(n):
-    # Write to a temp file and rename, so a power cut mid-write can't corrupt the count
     tmp = COUNTER_FILE + '.tmp'
     with open(tmp, 'w') as f:
         f.write(str(n))
@@ -65,7 +64,7 @@ def print_ticket(number, name, contact, message, timestamp):
     try:
         p.set(align='center', bold=True, double_height=True, double_width=True)
         p.text(f"GUESTBOOK #{number}\n")
-        p.set(align='center', normal_textsize=True)
+        p.set(align='center', bold=False, normal_textsize=True)
         p.text(f"{timestamp}\n")
         p.text("-" * 32 + "\n\n")
 
@@ -90,7 +89,7 @@ def format_time(created_at):
     return datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M")
 
 def set_aside(doc, data, error):
-    # Keep the note for manual review instead of retrying (and wasting paper) forever
+    # Keep note for manual review instead of retrying (and wasting paper) forever
     db.collection('guestbook_failed').document(doc.id).set({**data, 'error': str(error)})
     db.collection('guestbook').document(doc.id).delete()
     failures.pop(doc.id, None)

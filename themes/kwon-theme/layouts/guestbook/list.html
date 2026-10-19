@@ -31,8 +31,12 @@
   const db = getFirestore(app);
 
   const form = document.getElementById("guestbook-form");
+  const button = form.querySelector("button[type=submit]");
+  let sending = false;
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (sending) return; // ignore double-clicks while a note is already sending
     const name = document.getElementById("name").value.trim() || "Anonymous";
     const contact = document.getElementById("contact").value.trim();
     const message = document.getElementById("message").value.trim();
@@ -41,6 +45,10 @@
       alert("Please write a message before submitting.");
       return;
     }
+
+    sending = true;
+    button.disabled = true;
+    button.textContent = "Sending…";
 
     try {
       await addDoc(collection(db, "guestbook"), {
@@ -54,6 +62,10 @@
     } catch (err) {
       console.error(err);
       alert("Sorry, your note couldn't be sent. Please try again in a bit.");
+    } finally {
+      sending = false;
+      button.disabled = false;
+      button.textContent = "Submit";
     }
   });
 </script>

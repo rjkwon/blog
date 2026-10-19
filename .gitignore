@@ -17,3 +17,6 @@ localhost.key
 
 # Local Netlify folder
 .netlify
+
+# Python cache for guestbook
+scripts/guestbook/__pycache__/
