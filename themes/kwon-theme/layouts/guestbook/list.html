@@ -37,6 +37,11 @@
     const contact = document.getElementById("contact").value.trim();
     const message = document.getElementById("message").value.trim();
 
+    if (!message) {
+      alert("Please write a message before submitting.");
+      return;
+    }
+
     try {
       await addDoc(collection(db, "guestbook"), {
         name: name,
@@ -48,7 +53,7 @@
       form.reset();
     } catch (err) {
       console.error(err);
-      alert("Could not send entry: " + err.message);
+      alert("Sorry, your note couldn't be sent. Please try again in a bit.");
     }
   });
 </script>

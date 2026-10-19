@@ -4,12 +4,11 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function isValidEntry(d) {
-      return d.keys().hasOnly(['name', 'contact', 'message', 'printed', 'createdAt'])
-        && d.keys().hasAll(['name', 'message', 'printed', 'createdAt'])
+      return d.keys().hasOnly(['name', 'contact', 'message', 'createdAt'])
+        && d.keys().hasAll(['name', 'message', 'createdAt'])
         && d.name is string && d.name.size() > 0 && d.name.size() <= 50
         && (!('contact' in d) || (d.contact is string && d.contact.size() <= 100))
         && d.message is string && d.message.size() > 0 && d.message.size() <= 400
-        && d.printed == false
         && d.createdAt == request.time;
     }
 
