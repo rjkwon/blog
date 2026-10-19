@@ -1,5 +1,9 @@
 {{ define "main" }}
 
+<h1>Guestbook (testing)</h1>
+
+<p>Thank you so much for visiting my personal website! If you'd like, you can leave a note to let me know you were here.</p>
+
 <form id="guestbook-form">
   <input type="text" id="name" placeholder="Name" maxlength="50">
   <br>
@@ -38,7 +42,6 @@
         name: name,
         contact: contact, 
         message: message,
-        printed: false,
         createdAt: serverTimestamp()
       });
       alert("Thank you, your note is in the print queue! It will print the next time the studio printer connects.");
@@ -49,5 +52,7 @@
     }
   });
 </script>
+
+<p>*A note about data handling: When you submit a guestbook entry here, the data you enter in this guestbook (including your name, email address, and/or URL) are stored temporarily in a Google Firebase cloud database, until the printer is online and your message is printed.</p>
 
 {{ end }}
