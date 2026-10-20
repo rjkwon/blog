@@ -7,6 +7,7 @@
   "scripts": {
     "cans:process": "bash scripts/process_can_photos.sh",
     "cans:generate": "node scripts/generate_cans_json.js",
+    "guestbook:scans": "bash scripts/guestbook/process_scans.sh",
     "letterboxd:fetch": "node scripts/fetch_letterboxd.js",
     "mastodon:fetch": "node scripts/fetch_mastodon.js",
     "notes:new": "node scripts/notes_new.js",

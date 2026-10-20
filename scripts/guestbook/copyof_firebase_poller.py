@@ -1,8 +1,12 @@
 # This is a copy of my Firebase poller script that lives on a Raspberry Pi in my studio. Copy stored in my site repo for reference.
 
+import fcntl
 import os
 import re
+import sys
+import textwrap
 import time
+import unicodedata
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import firebase_admin
@@ -19,6 +23,7 @@ MAX_ATTEMPTS = 3
 MAX_PER_SESSION = 10
 
 COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number (stays locally on Pi)
+LOCK_FILE = '/home/kwon/guestbook/poller.lock'           # stops a second copy from running and double-printing
 
 failures = {}             # doc id -> failed print attempts this session
 
@@ -40,11 +45,40 @@ def save_count(n):
 class PrinterOffline(Exception):
     pass
 
+LINE_WIDTH = 32  # characters per line at normal text size
+
+# Phones swap in "smart" punctuation the printer can't show (I'm -> Ióm), so map it back to plain ASCII
+SMART_PUNCTUATION = str.maketrans({
+    '\u2018': "'", '\u2019': "'", '\u201a': "'", '\u2032': "'",
+    '\u201c': '"', '\u201d': '"', '\u201e': '"', '\u2033': '"',
+    '\u2013': '-', '\u2014': '-', '\u2212': '-',
+    '\u2026': '...', '\u00a0': ' ', '\u2022': '*',
+    # Invisible joiners/variation selectors inside emoji, so one emoji prints as one ? not several
+    '\u200b': None, '\u200c': None, '\u200d': None, '\ufe0e': None, '\ufe0f': None,
+})
+
+def to_ascii(s):
+    s = s.translate(SMART_PUNCTUATION)
+    # Split accented letters into letter + accent (é -> e + ´) and drop the accent
+    s = unicodedata.normalize('NFKD', s)
+    s = ''.join(c for c in s if not unicodedata.combining(c) and not '\U0001F3FB' <= c <= '\U0001F3FF')
+    # Anything still not ASCII (emoji, other scripts) prints as ?
+    return s.encode('ascii', 'replace').decode('ascii')
+
 def clean(s, max_len):
     # Strip control characters (ESC/POS commands) except newlines, collapse blank-line runs
     s = re.sub(r'[\x00-\x09\x0b-\x1f\x7f]', '', str(s))
+    s = to_ascii(s)
+    s = re.sub(r' {2,}', ' ', s)
     s = re.sub(r'\n{3,}', '\n\n', s)
     return s.strip()[:max_len]
+
+def wrap(s, width=LINE_WIDTH):
+    # Break lines between words instead of mid-word, keeping the writer's own line breaks
+    return '\n'.join(
+        '\n'.join(textwrap.wrap(line, width)) if line.strip() else ''
+        for line in s.split('\n')
+    )
 
 def print_ticket(number, name, contact, message, timestamp):
     try:
@@ -66,19 +100,19 @@ def print_ticket(number, name, contact, message, timestamp):
         p.text(f"GUESTBOOK #{number}\n")
         p.set(align='center', bold=False, normal_textsize=True)
         p.text(f"{timestamp}\n")
-        p.text("-" * 32 + "\n\n")
+        p.text("-" * LINE_WIDTH + "\n\n")
 
         p.set(align='left', bold=True)
-        p.text(f"From: {name}\n")
+        p.text(wrap(f"From: {name}") + "\n")
         if contact:
             p.set(bold=False)
-            p.text(f"Contact: {contact}\n")
+            p.text(wrap(f"Contact: {contact}") + "\n")
         p.text("\n")
 
         p.set(bold=False)
-        p.text(f"{message}\n\n")
+        p.text(wrap(message) + "\n\n")
 
-        p.text("-" * 32 + "\n\n\n")
+        p.text("-" * LINE_WIDTH + "\n\n\n")
         p.cut()
     finally:
         p.close()
@@ -135,7 +169,11 @@ def poll_and_purge():
                         set_aside(doc, data, e)
                     continue
 
-                save_count(number)
+                try:
+                    save_count(number)
+                except Exception as e:
+                    # Don't let a counter problem leave the note in the queue to print again
+                    print(f"Couldn't save ticket count {number}: {e}")
                 printed += 1
                 failures.pop(doc.id, None)
                 # Purge document from Firebase immediately
@@ -155,4 +193,10 @@ def poll_and_purge():
 
 
 if __name__ == "__main__":
+    lock = open(LOCK_FILE, 'w')
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        print("Another poller is already running; exiting so notes don't print twice.")
+        sys.exit(1)
     poll_and_purge()

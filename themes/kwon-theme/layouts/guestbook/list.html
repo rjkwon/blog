@@ -1,12 +1,10 @@
 {{ define "main" }}
 
-<h1>Guestbook (testing)</h1>
+<h1>Guestbook</h1>
 
-Submissions paused for a beat while I make some improvements!
+<p>Thank you so much for visiting my personal website! Guestbook submissions are paused for the moment while I make some upgrades, but you can browse these nice messages for now :)</p>
 
 <!--
-<p>Thank you so much for visiting my personal website! If you'd like, you can leave a note to let me know you were here.</p>
-
 <form id="guestbook-form">
   <input type="text" id="name" placeholder="Name" maxlength="50">
   <br>
@@ -16,6 +14,7 @@ Submissions paused for a beat while I make some improvements!
   <br>
   <button type="submit">Submit</button>
 </form>
+-->
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
@@ -73,8 +72,162 @@ Submissions paused for a beat while I make some improvements!
   });
 </script>
 
-<p>*A note about data handling: When you submit a guestbook entry here, the data you enter in this guestbook (including your name, email address, and/or URL) are stored temporarily in a Google Firebase cloud database, until the printer is online and your message is printed.</p>
+{{ with site.Data.guestbook_tickets }}
+<section class="tickets">
+  <ul class="ticket-grid">
+    {{- range . }}
+    {{- $ticket := . }}
+    {{- with $.Resources.Get (printf "tickets/%s" .image) }}
+    {{- $thumb := .Resize "450x webp q80" }}
+    {{- $label := printf "Guestbook note #%d from %s" (int $ticket.number) $ticket.name }}
+    {{- /* A link placed over the URL printed on the ticket; url_box is its position on the scan */ -}}
+    {{- $urlStyle := "" }}
+    {{- with $ticket.url_box }}
+    {{- $urlStyle = printf "left:%v%%;top:%v%%;width:%v%%;height:%v%%" .left .top .width .height }}
+    {{- end }}
+    <li class="ticket-wrap">
+      <button type="button" class="ticket" data-full="{{ .RelPermalink }}" aria-label="Enlarge {{ $label }}"
+        {{- if and $ticket.url $urlStyle }} data-url="{{ $ticket.url }}" data-link-box="{{ $urlStyle }}"{{ end }}>
+        <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+             loading="lazy" alt="{{ $label }}: {{ $ticket.message }}">
+      </button>
+      {{- if and $ticket.url $urlStyle }}
+      <a class="ticket-url" href="{{ $ticket.url }}" style="{{ $urlStyle | safeCSS }}" rel="nofollow ugc"
+         aria-label="{{ $ticket.name }}'s website: {{ $ticket.url }}"></a>
+      {{- end }}
+    </li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</section>
 
+<dialog id="ticket-viewer" aria-label="Guestbook note">
+  <div class="ticket-viewer-frame">
+    <img id="ticket-viewer-img" alt="">
+    <a class="ticket-url" id="ticket-viewer-url" rel="nofollow ugc" hidden></a>
+  </div>
+  <div class="ticket-viewer-controls">
+    <button type="button" data-step="-1" aria-label="Newer note">←</button>
+    <button type="button" data-close aria-label="Close">Close</button>
+    <button type="button" data-step="1" aria-label="Older note">→</button>
+  </div>
+</dialog>
+
+<style>
+  .ticket-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    /* As many columns as fit: about 6 on a wide screen, 2 on a phone */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 24px 16px;
+    align-items: start; /* top-aligned, so tickets hang at their natural lengths */
+  }
+  @media (max-width: 480px) {
+    .ticket-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+  }
+  .ticket {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+  }
+  .ticket img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ticket-wrap,
+  .ticket-viewer-frame { position: relative; }
+  .ticket-url {
+    position: absolute;
+    display: block;
+  }
+  .ticket-url:hover,
+  .ticket-url:focus-visible { background: rgba(255, 220, 0, 0.35); }
+  #ticket-viewer {
+    padding: 0;
+    border: 0;
+    max-width: min(600px, 100vw);
+    max-height: 100vh;
+    background: transparent;
+  }
+  #ticket-viewer::backdrop { background: rgba(0, 0, 0, 0.9); }
+
+  .ticket-viewer-frame {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #ticket-viewer img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 60px);
+    margin: 0 auto;
+  }
+  .ticket-viewer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px;
+  }
+  .ticket-viewer-controls button {
+    color: white;
+    background: none;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  (() => {
+    const tickets = [...document.querySelectorAll(".ticket")];
+    const viewer = document.getElementById("ticket-viewer");
+    const img = document.getElementById("ticket-viewer-img");
+    const url = document.getElementById("ticket-viewer-url");
+    let current = 0;
+
+    const show = (i) => {
+      current = (i + tickets.length) % tickets.length;
+      const t = tickets[current];
+      img.src = t.dataset.full;
+      img.alt = t.querySelector("img").alt;
+      
+      url.hidden = !t.dataset.url;
+      if (t.dataset.url) {
+        url.href = t.dataset.url;
+        url.style.cssText = t.dataset.linkBox;
+        url.setAttribute("aria-label", t.nextElementSibling.getAttribute("aria-label"));
+      }
+    };
+
+    tickets.forEach((t, i) => t.addEventListener("click", () => { show(i); viewer.showModal(); }));
+    viewer.querySelectorAll("[data-step]").forEach((b) =>
+      b.addEventListener("click", () => show(current + Number(b.dataset.step))));
+    viewer.querySelector("[data-close]").addEventListener("click", () => viewer.close());
+
+    viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
+
+    viewer.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+
+    let startX = null;
+    viewer.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    viewer.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+  })();
+</script>
+{{ end }}
+
+<!--
+<p>*A note about data handling: When you submit a guestbook entry here, the data you enter in this guestbook (including your name, email address, and/or URL) are stored temporarily in a Google Firebase cloud database, until the printer is online and your message is printed, at which point it gets deleted. If you enter an email as your contact, I redact it before I post it here. If you submitted a ticket here and no longer want it up for any reason, send me an email and I will remove it.</p>
 -->
 
 {{ end }}
