@@ -1,34 +1,34 @@
-/* Room above the "Sign the guestbook" heading when the jump link scrolls to it */
-#sign {
-  scroll-margin-top: 1em;
+/* guestbook page styles */
+
+p {
+  max-width: 50rem;
 }
 
-#guestbook-form {
-  padding-bottom: 2em;
-}
-
-#guestbook-form input,
-#guestbook-form textarea {
+p small {
   display: block;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 30rem; /* full width on phones, about half the column on desktop */
-  padding: 8px;
-  margin: 0 0 10px;
-  font-family: monospace;
-  font-size: 16px; /* under 16px, iPhones zoom the whole page in when you tap a field */
+  font-size: 0.8em;
+  line-height: 1.4;
+  max-width: 30rem;
 }
 
-#guestbook-form textarea {
-  resize: vertical;
+.gb-intro {
+  margin-bottom: 2em;
 }
 
-#guestbook-form button {
-  min-height: 44px; /* comfortable to tap */
-  padding: 8px 20px;
-  font-family: monospace;
+.gb-intro p:first-child { margin-top: 0; }
+
+.gb-intro a {
+  text-decoration: underline;
+}
+
+a.sign-guestbook-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid gray;
+  border-radius: 4px;
   font-size: 16px;
-  border: 1px dotted gray;
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .ticket-grid {
@@ -70,6 +70,8 @@
 .ticket-url:hover,
 .ticket-url:focus-visible { background: rgba(255, 220, 0, 0.35); }
 
+/* Enlarged ticket viewer */
+
 #ticket-viewer {
   padding: 0;
   border: 0;
@@ -105,6 +107,43 @@
   cursor: pointer;
 }
 
-p small {
-  line-height: 1.2em;
+#sign {
+  max-width: 480px;
+  margin: 5em auto;
+  padding: 24px;
+  border: 1px dotted gray;
+  background: rgba(255, 255, 255, 0.45);
+  scroll-margin-top: 1em; /* room above it when the jump link scrolls here */
+}
+
+.dark #sign {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#sign h2 {
+  margin-top: 0;
+}
+
+#guestbook-form input,
+#guestbook-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  padding: 8px;
+  margin: 0 0 10px;
+  font-family: monospace;
+  font-size: 16px; /* under 16px, iPhones zoom the whole page in when you tap a field */
+}
+
+#guestbook-form textarea {
+  resize: vertical;
+}
+
+#guestbook-form button {
+  min-height: 44px; /* comfortable to tap */
+  padding: 8px 20px;
+  font-family: monospace;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 2px;
 }

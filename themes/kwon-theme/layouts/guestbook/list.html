@@ -1,14 +1,19 @@
 {{ define "main" }}
 
-<h1>Guestbook</h1>
-
-<p>Thank you so much for visiting my personal website! If you'd like, you can leave a note for the guestbook to let people know you were here.</p>
-
-<p><a href="#sign">↓ Sign the guestbook</a></p>
-
 {{ $css := resources.Get "css/pages/guestbook.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
+<h1>Guestbook</h1>
+
+<div class="gb-intro">
+  <p>Thank you so much for visiting my personal website!</p>
+
+  <p>If you'd like, you can leave a message to let people know you were here. Every message submitted gets printed on a <a href="printer.jpg">mini receipt printer</a> that lives in my studio and is only online when I am physically there (usually once or twice a week). Then, I scan and post them below.</p>
+
+  <p><a href="#sign" class="sign-guestbook-link">Sign the guestbook ↓</a></p>
+</div>
+
+{{- /* Scanned tickets, newest first. Images and text come from scripts/guestbook/process_scans.sh */}}
 {{ with site.Data.guestbook_tickets }}
 <section class="tickets">
   <ul class="ticket-grid">
@@ -38,7 +43,7 @@
   </ul>
 </section>
 
-<dialog id="ticket-viewer" aria-label="Guestbook note">
+<dialog id="ticket-viewer" aria-label="Guestbook entry">
   <div class="ticket-viewer-frame">
     <img id="ticket-viewer-img" alt="">
     <a class="ticket-url" id="ticket-viewer-url" rel="nofollow ugc" hidden></a>
@@ -55,7 +60,10 @@
 {{ end }}
 
 <section id="sign" class="sign">
-  <h2>Sign the guestbook</h2>
+  <h2>Sign my guestbook</h2>
+
+  <p><small>*Note: data you enter here are stored temporarily in a Google Firebase cloud database, then deleted from the database when the note is printed. (It still exists on the physical paper receipt though... that's kinda the point.)</small></p>
+
   <form id="guestbook-form">
     <input type="text" id="name" placeholder="Name" aria-label="Name" maxlength="50" autocomplete="name">
     <input type="text" id="contact" placeholder="Email or URL" aria-label="Email or URL" maxlength="100" autocapitalize="off" autocorrect="off" spellcheck="false">
@@ -65,8 +73,5 @@
   {{ $formJS := resources.Get "js/guestbook-form.js" | minify | fingerprint }}
   <script type="module" src="{{ $formJS.RelPermalink }}" integrity="{{ $formJS.Data.Integrity }}"></script>
 </section>
-
-<p><small>*Note: data you enter here are stored temporarily in a Google Firebase cloud database. When the printer comes online, your message is automatically printed, and all data are deleted (from Firebase -- obviously it still exists on the physical printed receipt lol). If you enter an email as your contact, I redact it before posting it here. If you no longer want an entry that you've submitted to be listed here, send me an email and I'll remove it. I can also destroy the paper receipt in an unnecessarily dramatic way like setting it on fire and dropping it in a metal trash barrel in an industrial part of town while I stare forlornly at the flames for 3-5 minutes. Just let me know.</small></p>
-
 
 {{ end }}
