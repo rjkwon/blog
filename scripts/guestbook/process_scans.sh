@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Turns scanned guestbook ticket PDFs into one image per ticket, with contact info covered.
+# Turns scanned guestbook ticket PDFs into one image per ticket.
 # See process_scans.swift for what it does to each page.
 #
 # Input: the Guestbook folder in iCloud Drive (PDFs can hold any number of tickets)
-# Output: content/guestbook/tickets/ticket-NNN.webp, plus each ticket's text in data/guestbook_tickets.json
+# Output: content/guestbook/tickets/ticket-###.webp, plus each ticket's text in data/guestbook_tickets.json
 #
 # Usage: npm run guestbook:scans            (skips tickets that already have an image)
 #        npm run guestbook:scans -- --force (redo them all)
@@ -37,7 +37,7 @@ if [ ! -x "$BIN" ] || [ "${SCRIPT_DIR}/process_scans.swift" -nt "$BIN" ]; then
     swiftc -O "${SCRIPT_DIR}/process_scans.swift" -o "$BIN"
 fi
 
-# The Swift script writes lossless PNGs here; macOS can't write WebP itself, so ImageMagick converts them
+# Convert png to webp
 STAGING_DIR="$(mktemp -d)"
 trap 'rm -rf "$STAGING_DIR"' EXIT
 

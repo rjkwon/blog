@@ -1,26 +1,20 @@
-// Turns scanned guestbook ticket PDFs into one web image per ticket.
-// Run it via process_scans.sh, which compiles and runs this file.
+// Turns a scanned guestbook entry (PDF) into a single web image (webp).
+// Run via process_scans.sh, which compiles and runs this file.
 //
 // For every page of every PDF in the input folder:
-// 1. Renders the page to a grayscale image IMAGE_WIDTH pixels wide
-// 2. Reads the ticket with macOS's built-in text recognition (Vision)
-// 3. Names the file by its ticket number: "GUESTBOOK #28" -> ticket-028
-// 4. Covers the "Contact:" line with white if it's an email (or anything that isn't clearly a URL),
-//    so visitors' email addresses never end up on the site. Website URLs stay visible.
-// 5. Skips tickets that already have an image, so re-running is safe and
-//    overlapping scans (e.g. 24-27.pdf and 26-28.pdf) don't create duplicates
-//
-// 6. Saves each ticket's text (number, date, name, website, message) to a JSON data file, for links
-//    and alt text on the page, plus where the printed website sits on the image (url_box). New tickets are added; existing entries are left alone (unless --force),
-//    so hand-fixed OCR typos survive re-runs.
+// 1. Render page to a grayscale image, IMAGE_WIDTH pixels wide
+// 2. Read ticket with macOS's built-in text recognition (Vision)
+// 3. Name file by its ticket number: "GUEST #28" (or "GUESTBOOK #28" on older tickets) -> ticket-028
+// 4. Redact visitor email address
+// 5. Skip tickets that already have an image, so re-running is safe 
+// 6. Save each ticket's text (number, date, name, website, message) to data file (JSON),
+//    plus the day it was first added (added) and where the printed URL sits on the image (url_box)
 //
 // Writes lossless PNGs to the staging folder; process_scans.sh converts them to WebP in the output folder.
 //
 // Usage: process_scans <input folder> <output folder> <staging folder> <data file> [--force] [--show-contact 25,31]
 //
 // --show-contact: show these tickets' contact lines even though they don't look like a website
-// (e.g. a bare "remimercier.com"), after checking by eye that they really are websites. Remakes
-// those tickets' images and updates their url in the data file, leaving everything else alone.
 
 import Foundation
 import PDFKit
@@ -55,7 +49,6 @@ func recognizeLines(_ image: CGImage) -> [VNRecognizedTextObservation] {
     request.recognitionLevel = .accurate
     request.usesLanguageCorrection = false
     try? VNImageRequestHandler(cgImage: image, options: [:]).perform([request])
-    // Top of the page first (Vision's y axis points up)
     let results = (request.results as? [VNRecognizedTextObservation]) ?? []
     return results.sorted { $0.boundingBox.maxY > $1.boundingBox.maxY }
 }
@@ -64,9 +57,6 @@ func text(_ obs: VNRecognizedTextObservation) -> String {
     return obs.topCandidates(1).first?.string ?? ""
 }
 
-// The Contact line, plus lines directly under it with no blank-line gap (a long URL that wrapped).
-// Returns what it says (without "Contact:") and the area it takes up, padded but never
-// reaching into the line above or below.
 func findContact(_ lines: [VNRecognizedTextObservation]) -> (text: String, area: CGRect, lastLine: Int)? {
     guard let start = lines.firstIndex(where: {
         text($0).range(of: #"^\s*contact\s*:"#, options: [.regularExpression, .caseInsensitive]) != nil
@@ -74,8 +64,7 @@ func findContact(_ lines: [VNRecognizedTextObservation]) -> (text: String, area:
 
     var area = lines[start].boundingBox
     let lineHeight = area.height
-    // Line spacing on this scan: "From:" and "Contact:" are always on consecutive lines.
-    // A wrapped URL continues one line-spacing below; the message starts after a blank line (about two).
+    
     let spacing = start > 0 ? lines[start - 1].boundingBox.midY - area.midY : lineHeight * 1.2
     var contact = text(lines[start])
     var end = start
@@ -88,7 +77,6 @@ func findContact(_ lines: [VNRecognizedTextObservation]) -> (text: String, area:
         end = i
     }
 
-    // Pad generously sideways, but only up to the neighbouring lines vertically ("From:" sits right above)
     let pad = lineHeight * 0.3
     let top = min(area.maxY + pad, start > 0 ? lines[start - 1].boundingBox.minY : 1)
     let bottom = max(area.minY - pad, end + 1 < lines.count ? lines[end + 1].boundingBox.maxY : 0)
@@ -96,8 +84,7 @@ func findContact(_ lines: [VNRecognizedTextObservation]) -> (text: String, area:
     return (value, CGRect(x: area.minX - pad, y: bottom, width: area.width + pad * 2, height: top - bottom), end)
 }
 
-// Only show contact info that's clearly a website. Anything else (an email, or a bare "name.com"
-// that might really be an email the OCR misread the @ in) gets covered, to be safe.
+// Redact email addresses
 func isWebsite(_ contact: String) -> Bool {
     let c = contact.trimmingCharacters(in: .whitespaces).lowercased()
     let looksLikeURL = c.hasPrefix("http://") || c.hasPrefix("https://") || c.hasPrefix("www.")
@@ -106,9 +93,10 @@ func isWebsite(_ contact: String) -> Bool {
     return looksLikeURL && !atBeforePath
 }
 
-// The title reads "GUESTBOOK #28", but the OCR sometimes returns "#28" as its own piece, so accept either
+// The title reads "GUEST #28" ("GUESTBOOK #28" on tickets printed before the change), but the OCR
+// sometimes returns "#28" as its own piece, so accept any of those
 func ticketNumber(_ lines: [VNRecognizedTextObservation]) -> Int? {
-    let patterns = [#"GUESTBOOK\s*#\s*\d+"#, #"^\s*#\s*\d+\s*$"#]
+    let patterns = [#"GUEST(BOOK)?\s*#\s*\d+"#, #"^\s*#\s*\d+\s*$"#]
     for pattern in patterns {
         for obs in lines {
             let s = text(obs)
@@ -128,14 +116,13 @@ func firstMatch(_ lines: [VNRecognizedTextObservation], _ pattern: String) -> (i
     return nil
 }
 
-// Everything below the From/Contact lines. Lines the printer wrapped are joined with a space;
-// a bigger gap (a blank line on the ticket) becomes a paragraph break.
+// Transcribe message from OCR into plain text
 func messageText(_ lines: [VNRecognizedTextObservation], after index: Int, spacing: CGFloat) -> String {
     var message = ""
     var previousMid: CGFloat? = nil
     for obs in lines[(index + 1)...] {
         let s = text(obs).trimmingCharacters(in: .whitespaces)
-        // Skip the dashed separator line, if the OCR picked it up
+        
         if s.isEmpty || s.range(of: #"^[-_.~\s]+$"#, options: .regularExpression) != nil { continue }
         if let prev = previousMid {
             message += (prev - obs.boundingBox.midY > spacing * 1.5) ? "\n\n" : " "
@@ -146,7 +133,7 @@ func messageText(_ lines: [VNRecognizedTextObservation], after index: Int, spaci
     return message
 }
 
-// The OCR sometimes gets capitals wrong (paulcapewell.coM); hostnames are case-insensitive, so lowercase them
+// OCR sometimes gets capitals wrong (website.coM); hostnames are case-insensitive, so lowercase them
 func tidyURL(_ url: String) -> String {
     let trimmed = url.trimmingCharacters(in: .whitespaces)
     guard var parts = URLComponents(string: trimmed.contains("://") ? trimmed : "https://" + trimmed) else { return trimmed }
@@ -178,6 +165,11 @@ if let data = try? Data(contentsOf: dataFile),
     for e in list { if let n = e["number"] as? Int { entries[n] = e } }
 }
 var handledThisRun = Set<Int>()
+let today: String = {
+    let f = DateFormatter()
+    f.dateFormat = "yyyy-MM-dd"
+    return f.string(from: Date())
+}()
 var newEntries = 0
 
 for pdfURL in pdfs {
@@ -189,7 +181,7 @@ for pdfURL in pdfs {
         guard let page = doc.page(at: i) else { continue }
         let where_ = "\(pdfURL.lastPathComponent) page \(i + 1)"
 
-        // Render the page onto a white background, in grayscale (the tickets are black and white anyway)
+        // Render page onto white background
         let bounds = page.bounds(for: .mediaBox)
         let scale = IMAGE_WIDTH / bounds.width
         let width = Int(IMAGE_WIDTH), height = Int(bounds.height * scale)
@@ -211,12 +203,15 @@ for pdfURL in pdfs {
         let name = "\(base).\(OUTPUT_EXTENSION)"
         let outURL = outputDir.appendingPathComponent(name)
         let contact = findContact(lines)
-        let forceShow = number.map { showContact.contains($0) } ?? false
+        // Show the contact line if named in --show-contact, or if an earlier --show-contact already gave it a url
+        // (so the choice sticks, even through --force)
+        let namedInShowContact = number.map { showContact.contains($0) } ?? false
+        let forceShow = namedInShowContact || (number.map { entries[$0]?["url"] != nil } ?? false)
         let covered = contact.map { !isWebsite($0.text) && !forceShow } ?? false
 
-        // Save the ticket's text to the data file (first scan of each ticket wins, like the images)
+        // Save ticket text to data file 
         // A ticket named in --show-contact keeps its other (possibly hand-edited) fields; just add the url
-        if let n = number, forceShow, !handledThisRun.contains(n), var entry = entries[n], let c = contact {
+        if let n = number, namedInShowContact, !handledThisRun.contains(n), var entry = entries[n], let c = contact {
             entry["url"] = tidyURL(c.text)
             entries[n] = entry
         }
@@ -232,28 +227,34 @@ for pdfURL in pdfs {
                 "message": messageText(lines, after: contact?.lastLine ?? from?.index ?? 1, spacing: spacing),
             ]
             if let c = contact, !covered { entry["url"] = tidyURL(c.text) }
+            if let added = entries[n]?["added"] { entry["added"] = added } // keep it through --force
             entries[n] = entry
             newEntries += 1
         }
-        // Where the printed URL sits on the image, so the page can make it clickable. It's worked out
-        // from the scan, not typed by hand, so it's refreshed on every run (other fields are left alone).
-        // Percentages from the top-left, like CSS.
+        // When the ticket was first added to the page: the first day this script saw it
+        if let n = number, var entry = entries[n], entry["added"] == nil {
+            entry["added"] = today
+            entries[n] = entry
+        }
+        // Make url clickable. url_box is where the printed URL sits on the image, in whole percentages from
+        // the top-left (like CSS), rounded outward so the box never ends up smaller than the printed URL.
         if let n = number, !handledThisRun.contains(n), var entry = entries[n], entry["url"] != nil, let c = contact, !covered {
-            let pct = { (v: CGFloat) in (Double(v) * 1000).rounded() / 10 }
-            entry["url_box"] = ["left": pct(c.area.minX), "top": pct(1 - c.area.maxY), "width": pct(c.area.width), "height": pct(c.area.height)]
+            let left = Int((c.area.minX * 100).rounded(.down)), right = Int((c.area.maxX * 100).rounded(.up))
+            let top = Int(((1 - c.area.maxY) * 100).rounded(.down)), bottom = Int(((1 - c.area.minY) * 100).rounded(.up))
+            entry["url_box"] = ["left": left, "top": top, "width": right - left, "height": bottom - top]
             entries[n] = entry
         }
         if let n = number { handledThisRun.insert(n) }
 
         // Already posted (unless --force), or already handled earlier in this run (a duplicate scan)
         let stagedURL = stagingDir.appendingPathComponent("\(base).png")
-        if (FileManager.default.fileExists(atPath: outURL.path) && !force && !forceShow) || FileManager.default.fileExists(atPath: stagedURL.path) {
+        if (FileManager.default.fileExists(atPath: outURL.path) && !force && !namedInShowContact) || FileManager.default.fileExists(atPath: stagedURL.path) {
             print("· \(where_): already have \(name), skipping")
             skipped += 1
             continue
         }
 
-        // Cover the contact info unless it's a website. Vision boxes are 0–1 with the origin bottom-left, same as CGContext.
+        // Redact contact info if it's an email address
         if let c = contact?.area, covered {
             ctx.setFillColor(.white)
             ctx.fill(CGRect(x: c.minX * CGFloat(width), y: c.minY * CGFloat(height),
@@ -276,7 +277,7 @@ for pdfURL in pdfs {
 
 // Newest first, so the page can list them in order as-is
 let sorted = entries.values.sorted { ($0["number"] as? Int ?? 0) > ($1["number"] as? Int ?? 0) }
-if let json = try? JSONSerialization.data(withJSONObject: sorted, options: [.prettyPrinted, .sortedKeys]) {
+if let json = try? JSONSerialization.data(withJSONObject: sorted, options: [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]) {
     try? json.write(to: dataFile)
 }
 

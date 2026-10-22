@@ -2,75 +2,12 @@
 
 <h1>Guestbook</h1>
 
-<p>Thank you so much for visiting my personal website! Guestbook submissions are paused for the moment while I make some upgrades, but you can browse these nice messages for now :)</p>
+<p>Thank you so much for visiting my personal website! If you'd like, you can leave a note for the guestbook to let people know you were here.</p>
 
-<!--
-<form id="guestbook-form">
-  <input type="text" id="name" placeholder="Name" maxlength="50">
-  <br>
-  <input type="text" id="contact" placeholder="Email or URL" maxlength="100">
-  <br>
-  <textarea id="message" placeholder="Message" required maxlength="400" rows="4"></textarea>
-  <br>
-  <button type="submit">Submit</button>
-</form>
--->
+<p><a href="#sign">↓ Sign the guestbook</a></p>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDPCbBJNvHR-J98iYFKvijUFSuFxEryWaI",
-  	authDomain: "kwon-space-guestbook.firebaseapp.com",
-  	projectId: "kwon-space-guestbook",
-  	storageBucket: "kwon-space-guestbook.firebasestorage.app",
-  	messagingSenderId: "1075470678054",
-  	appId: "1:1075470678054:web:8868637eb1db543b360ee7"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  const form = document.getElementById("guestbook-form");
-  const button = form.querySelector("button[type=submit]");
-  let sending = false;
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    if (sending) return; // ignore double-clicks while a note is already sending
-    const name = document.getElementById("name").value.trim() || "Anonymous";
-    const contact = document.getElementById("contact").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (!message) {
-      alert("Please write a message before submitting.");
-      return;
-    }
-
-    sending = true;
-    button.disabled = true;
-    button.textContent = "Sending…";
-
-    try {
-      await addDoc(collection(db, "guestbook"), {
-        name: name,
-        contact: contact, 
-        message: message,
-        createdAt: serverTimestamp()
-      });
-      alert("Thank you, your note is in the print queue! It will print the next time the studio printer connects.");
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      alert("Sorry, your note couldn't be sent. Please try again in a bit.");
-    } finally {
-      sending = false;
-      button.disabled = false;
-      button.textContent = "Submit";
-    }
-  });
-</script>
+{{ $css := resources.Get "css/pages/guestbook.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 {{ with site.Data.guestbook_tickets }}
 <section class="tickets">
@@ -113,121 +50,23 @@
   </div>
 </dialog>
 
-<style>
-  .ticket-grid {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    /* As many columns as fit: about 6 on a wide screen, 2 on a phone */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 24px 16px;
-    align-items: start; /* top-aligned, so tickets hang at their natural lengths */
-  }
-  @media (max-width: 480px) {
-    .ticket-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
-  }
-  .ticket {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: zoom-in;
-  }
-  .ticket img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .ticket-wrap,
-  .ticket-viewer-frame { position: relative; }
-  .ticket-url {
-    position: absolute;
-    display: block;
-  }
-  .ticket-url:hover,
-  .ticket-url:focus-visible { background: rgba(255, 220, 0, 0.35); }
-  #ticket-viewer {
-    padding: 0;
-    border: 0;
-    max-width: min(600px, 100vw);
-    max-height: 100vh;
-    background: transparent;
-  }
-  #ticket-viewer::backdrop { background: rgba(0, 0, 0, 0.9); }
-
-  .ticket-viewer-frame {
-    width: fit-content;
-    margin: 0 auto;
-  }
-  #ticket-viewer img {
-    display: block;
-    max-width: 100%;
-    max-height: calc(100vh - 60px);
-    margin: 0 auto;
-  }
-  .ticket-viewer-controls {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    padding: 8px;
-  }
-  .ticket-viewer-controls button {
-    color: white;
-    background: none;
-    cursor: pointer;
-  }
-</style>
-
-<script>
-  (() => {
-    const tickets = [...document.querySelectorAll(".ticket")];
-    const viewer = document.getElementById("ticket-viewer");
-    const img = document.getElementById("ticket-viewer-img");
-    const url = document.getElementById("ticket-viewer-url");
-    let current = 0;
-
-    const show = (i) => {
-      current = (i + tickets.length) % tickets.length;
-      const t = tickets[current];
-      img.src = t.dataset.full;
-      img.alt = t.querySelector("img").alt;
-      
-      url.hidden = !t.dataset.url;
-      if (t.dataset.url) {
-        url.href = t.dataset.url;
-        url.style.cssText = t.dataset.linkBox;
-        url.setAttribute("aria-label", t.nextElementSibling.getAttribute("aria-label"));
-      }
-    };
-
-    tickets.forEach((t, i) => t.addEventListener("click", () => { show(i); viewer.showModal(); }));
-    viewer.querySelectorAll("[data-step]").forEach((b) =>
-      b.addEventListener("click", () => show(current + Number(b.dataset.step))));
-    viewer.querySelector("[data-close]").addEventListener("click", () => viewer.close());
-
-    viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
-
-    viewer.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") show(current - 1);
-      if (e.key === "ArrowRight") show(current + 1);
-    });
-
-    let startX = null;
-    viewer.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
-    viewer.addEventListener("touchend", (e) => {
-      if (startX === null) return;
-      const dx = e.changedTouches[0].clientX - startX;
-      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
-      startX = null;
-    });
-  })();
-</script>
+{{ $ticketsJS := resources.Get "js/guestbook-tickets.js" | minify | fingerprint }}
+<script src="{{ $ticketsJS.RelPermalink }}" integrity="{{ $ticketsJS.Data.Integrity }}" defer></script>
 {{ end }}
 
-<!--
-<p>*A note about data handling: When you submit a guestbook entry here, the data you enter in this guestbook (including your name, email address, and/or URL) are stored temporarily in a Google Firebase cloud database, until the printer is online and your message is printed, at which point it gets deleted. If you enter an email as your contact, I redact it before I post it here. If you submitted a ticket here and no longer want it up for any reason, send me an email and I will remove it.</p>
--->
+<section id="sign" class="sign">
+  <h2>Sign the guestbook</h2>
+  <form id="guestbook-form">
+    <input type="text" id="name" placeholder="Name" aria-label="Name" maxlength="50" autocomplete="name">
+    <input type="text" id="contact" placeholder="Email or URL" aria-label="Email or URL" maxlength="100" autocapitalize="off" autocorrect="off" spellcheck="false">
+    <textarea id="message" placeholder="Message" aria-label="Message" required maxlength="400" rows="5"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  {{ $formJS := resources.Get "js/guestbook-form.js" | minify | fingerprint }}
+  <script type="module" src="{{ $formJS.RelPermalink }}" integrity="{{ $formJS.Data.Integrity }}"></script>
+</section>
+
+<p><small>*Note: data you enter here are stored temporarily in a Google Firebase cloud database. When the printer comes online, your message is automatically printed, and all data are deleted (from Firebase -- obviously it still exists on the physical printed receipt lol). If you enter an email as your contact, I redact it before posting it here. If you no longer want an entry that you've submitted to be listed here, send me an email and I'll remove it. I can also destroy the paper receipt in an unnecessarily dramatic way like setting it on fire and dropping it in a metal trash barrel in an industrial part of town while I stare forlornly at the flames for 3-5 minutes. Just let me know.</small></p>
+
 
 {{ end }}

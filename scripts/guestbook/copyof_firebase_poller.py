@@ -97,7 +97,7 @@ def print_ticket(number, name, contact, message, timestamp):
 
     try:
         p.set(align='center', bold=True, double_height=True, double_width=True)
-        p.text(f"GUESTBOOK #{number}\n")
+        p.text(f"GUEST #{number}\n")
         p.set(align='center', bold=False, normal_textsize=True)
         p.text(f"{timestamp}\n")
         p.text("-" * LINE_WIDTH + "\n\n")

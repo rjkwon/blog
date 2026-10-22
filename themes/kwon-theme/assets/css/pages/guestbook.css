@@ -1,0 +1,110 @@
+/* Room above the "Sign the guestbook" heading when the jump link scrolls to it */
+#sign {
+  scroll-margin-top: 1em;
+}
+
+#guestbook-form {
+  padding-bottom: 2em;
+}
+
+#guestbook-form input,
+#guestbook-form textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 30rem; /* full width on phones, about half the column on desktop */
+  padding: 8px;
+  margin: 0 0 10px;
+  font-family: monospace;
+  font-size: 16px; /* under 16px, iPhones zoom the whole page in when you tap a field */
+}
+
+#guestbook-form textarea {
+  resize: vertical;
+}
+
+#guestbook-form button {
+  min-height: 44px; /* comfortable to tap */
+  padding: 8px 20px;
+  font-family: monospace;
+  font-size: 16px;
+  border: 1px dotted gray;
+}
+
+.ticket-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px 16px;
+  align-items: start;
+}
+
+@media (max-width: 480px) {
+  .ticket-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+}
+
+.ticket {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.ticket img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ticket-wrap,
+.ticket-viewer-frame { position: relative; }
+
+.ticket-url {
+  position: absolute;
+  display: block;
+}
+
+.ticket-url:hover,
+.ticket-url:focus-visible { background: rgba(255, 220, 0, 0.35); }
+
+#ticket-viewer {
+  padding: 0;
+  border: 0;
+  max-width: min(600px, 100vw);
+  max-height: 100vh;
+  background: transparent;
+}
+
+#ticket-viewer::backdrop { background: rgba(0, 0, 0, 0.9); }
+
+.ticket-viewer-frame {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#ticket-viewer img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 60px);
+  margin: 0 auto;
+}
+
+.ticket-viewer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px;
+}
+
+.ticket-viewer-controls button {
+  color: white;
+  background: none;
+  cursor: pointer;
+}
+
+p small {
+  line-height: 1.2em;
+}
