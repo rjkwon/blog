@@ -14,7 +14,7 @@
 </div>
 
 {{- /* Scanned tickets, newest first. Images and text come from scripts/guestbook/process_scans.sh */}}
-{{ with site.Data.guestbook_tickets }}
+{{ with site.Data.guestbook }}
 <section class="tickets">
   <ul class="ticket-grid">
     {{- range . }}
@@ -50,7 +50,7 @@
   </div>
   <div class="ticket-viewer-controls">
     <button type="button" data-step="-1" aria-label="Newer note">←</button>
-    <button type="button" data-close aria-label="Close">Close</button>
+    <button type="button" data-close aria-label="Close" autofocus>Close</button>
     <button type="button" data-step="1" aria-label="Older note">→</button>
   </div>
 </dialog>

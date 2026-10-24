@@ -1,14 +1,16 @@
-# Guestbook printer
+# Guestbook + receipt printer
 
-Visitors sign my guestbook at [kwon.nyc/guestbook](https://kwon.nyc/guestbook/), and each note prints on a thermal receipt printer that lives in my studio. The printer is connected to a Raspberry Pi 4 that's only online when I'm in the studio (about once a week), so notes wait in a queue until then.
+Would you like a receipt for your visit to kwon.nyc? Kind visitors to my website can sign the guestbook at [kwon.nyc/guestbook](https://kwon.nyc/guestbook/), and each message prints on a thermal receipt printer that lives in my [studio](https://kwon.space). The printer is connected to a Raspberry Pi 4 that's only online when I'm in the studio (about once or twice a week), so messages wait in a queue until then.
 
 ## How it works
 
 * Visitor submits message
 * Message and data are stored in Firestore (NoSQL database)
 * Kwon goes to studio and turns on Raspberry Pi
-* Poller script runs on bootup
-* Thermal receipt printer prints queued messages, and deletes data from Firestore
+* Poller script on Pi runs on bootup
+* Thermal receipt printer prints queued messages then deletes data from Firestore
+* Kwon separates tickets and scans them to pdf using iPhone
+* Processing scripts convert pdf to webp, redact email, and posts to kwon.nyc/guestbook
 
 ### Main components
 
@@ -18,20 +20,20 @@ Visitors sign my guestbook at [kwon.nyc/guestbook](https://kwon.nyc/guestbook/),
 
 ## Files
 
-I made copies of the files from Firestore and the actual Pi in this repo for reference:
+Copies of relevant files in Firestore and on my actual Pi are in this repo for reference:
 
-| What            | Where it lives                                      | Copy in this repo                                                                                                    |
-| --------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Guestbook page  | this repo                                           | [`list.html`](../../themes/kwon-theme/layouts/guestbook/list.html), [`_index.md`](../../content/guestbook/_index.md), [`guestbook-form.js`](../../themes/kwon-theme/assets/js/guestbook-form.js), [`guestbook-tickets.js`](../../themes/kwon-theme/assets/js/guestbook-tickets.js), [`guestbook.css`](../../themes/kwon-theme/assets/css/pages/guestbook.css) |
-| Firestore rules | Firebase console → Firestore → Rules                | [`copyof_firestore.rules`](copyof_firestore.rules)                                                                   |
-| Poller script   | Pi: `/home/<user>/guestbook/firebase_poller.py`     | [`copyof_firebase_poller.py`](copyof_firebase_poller.py)                                                             |
-| systemd service | Pi: `/etc/systemd/system/guestbook-printer.service` | [`copyof_guestbook-printer.service`](copyof_guestbook-printer.service)                                               |
+| Artifact                | Where it lives                                                | Copy in this repo                                                                                                                                                                                                                                                                                                                                             |
+| ----------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Guestbook page          | This repo                                                     | [`list.html`](../../themes/kwon-theme/layouts/guestbook/list.html), [`_index.md`](../../content/guestbook/_index.md), [`guestbook-form.js`](../../themes/kwon-theme/assets/js/guestbook-form.js), [`guestbook-tickets.js`](../../themes/kwon-theme/assets/js/guestbook-tickets.js), [`guestbook.css`](../../themes/kwon-theme/assets/css/pages/guestbook.css) |
+| Firestore rules         | Firebase console → Firestore → Rules                          | [`copyof_firestore.rules`](copyof_firestore.rules)                                                                                                                                                                                                                                                                                                            |
+| Poller script           | Raspberry Pi: `/home/<user>/guestbook/firebase_poller.py`     | [`copyof_firebase_poller.py`](copyof_firebase_poller.py)                                                                                                                                                                                                                                                                                                      |
+| systemd service         | Raspberry Pi: `/etc/systemd/system/guestbook-printer.service` | [`copyof_guestbook-printer.service`](copyof_guestbook-printer.service)                                                                                                                                                                                                                                                                                        |
+| Scan processing scripts | This repo                                                     | `process_scans.sh`<br>`process_scans.swift`                                                                                                                                                                                                                                                                                                                   |
+| Image files             | This repo                                                     | `content/guestbook/tickets/`                                                                                                                                                                                                                                                                                                                                  |
 
-Scanned tickets are turned into images by [`process_scans.sh`](process_scans.sh) and [`process_scans.swift`](process_scans.swift), and the images go in [`content/guestbook/tickets/`](../../content/guestbook/tickets/).
+## Workflow: print tickets from queue
 
-## Workflow: at the studio
-
-I typically go to the studio a few times a week.
+I typically go to the studio a couple times a week.
 
 1. **Turn on the printer first.** Not the end of the world but if Pi starts first, the poller just waits until the printer appears. Printer first is simpler.
 2. **Plug in the Pi.** The `guestbook-printer` service starts the poller by itself. I can also SSH in if needed but this should be infrequent.
@@ -40,7 +42,7 @@ I typically go to the studio a few times a week.
 5. **Shut down and unplug:** SSH in and run `sudo shutdown now`. Wait ~10 seconds until the green light has stopped flickering, then unplug.
 
 TODO
-* [ ] Add shutdown button
+* [ ] Add a shutdown button
 
 ### Optional: watch what it's doing
 
@@ -49,162 +51,24 @@ ssh <user>@<hostname>.local
 journalctl -u guestbook-printer -f
 ```
 
-## Workflow: posting scanned tickets
+## Workflow: posting scanned tickets to internet
 
-1. **Scan straight into the iCloud folder from the Mac.** In Finder, open **iCloud Drive → Guestbook**, right-click an empty spot, and choose **Import from iPhone → Scan Documents**. The phone opens the scanner. Scan as many tickets as you like in one go (use the **Grayscale** filter for the clean look), then tap **Save**. The PDF lands in the folder, so you never have to choose a folder on the phone. Tip: drag the Guestbook folder into Finder's sidebar to reach it in one click.
-2. **Run the script:**
-   ```bash
-   npm run guestbook:scans
-   ```
-   For every page of every PDF in that folder, it:
-   - names the image by its ticket number (`GUEST #28` → `ticket-028.webp`; older tickets say `GUESTBOOK #28`, which works too), read with macOS's built-in text recognition;
-   - leaves the **Contact** line visible if it's a website (starts with `https://`, `http://` or `www.`), and covers it with white otherwise. That covers emails, plus a bare `name.com`, in case it's really an email whose `@` the text recognition misread. The script's output says which it did for each ticket;
-   - saves it as a grayscale WebP, which is about a fifth the size of a JPEG of the same scan;
-   - skips tickets that already have an image, so re-running is safe and overlapping or repeated scans don't make duplicates.
-3. **Check what it flags.** The summary at the end lists anything to look over by hand:
-   - **"no ticket number found":** the file is saved as `unknown-<pdf>-p<page>.webp`. Rename it to `ticket-NNN.webp`.
-   - **"no Contact line found":** usually the visitor just didn't leave one, but open it and make sure nothing private shows.
-   It's still worth glancing at new images before committing: the cover-up is automatic, and visitors' emails must never reach the site.
-4. **Commit the new images** in `content/guestbook/tickets/`, plus `data/guestbook_tickets.json`.
+1. Use iPhone to scan ticket(s) directly into Files
+2. Save in iCloud Drive
+3. Run the script: ```npm run guestbook:scans```. It
+   * names the image by its ticket number 
+   * redacts email addresses for privacy
+   * saves file as webp (requires ImageMagick - `brew install imagemagick`)
+   * pdf of `GUEST #28` ticket → `ticket-028.webp`
+4. Review flags and resolve manually, e.g.
+   * *"no ticket number found":** the file is saved as `unknown-<pdf>-p<page>.webp`. Rename it to `ticket-###.webp`
+   * **"no Contact line found":** usually the visitor just didn't leave one, but open it and make sure nothing private shows
+   * inspect images for any weird redaction behavior
+5. Commit and push
+   * final webp images live in `content/guestbook/tickets/`, and data in`data/guestbook.json`.
 
-Needs ImageMagick for the WebP conversion (`brew install imagemagick`). macOS can't write WebP by itself.
-
-To redo every image (for example after changing the script): `npm run guestbook:scans -- --force`.
-
-To show a contact line that was covered because it isn't clearly a URL (like a bare `remimercier.com`), check by eye that it really is a website, then run `npm run guestbook:scans -- --show-contact 25`. You can list several: `--show-contact 25,31`. That remakes just those tickets' images and adds their links, leaving everything else (including hand edits to the data file) alone. The choice sticks: later runs, even with `--force`, keep showing those contact lines. The PDFs in iCloud are only read, never changed, so you can delete them once their tickets are posted.
-
-### The data file
-
-The script also keeps [`data/guestbook_tickets.json`](../../data/guestbook_tickets.json), one entry per ticket, newest first. The page uses it for each ticket's link and alt text.
-
-| Field | What it is | Hand-edit? |
-| --- | --- | --- |
-| `number`, `image` | Ticket number and its image file | No |
-| `date` | The time printed on the ticket (roughly when the visitor submitted it) | Only to fix OCR typos |
-| `added` | The day the ticket was first added to the page (the first day the script saw it). A record only, not shown on the page | Rarely |
-| `name`, `message` | The visitor's name and message, read by text recognition; the message becomes the image's alt text | Yes, to fix OCR typos. Re-runs keep your edits |
-| `url` | The visitor's website, only when it's shown on the ticket | Yes, if the OCR got it wrong |
-| `url_box` | Where the printed URL sits on the image, in whole percentages from the top-left, for the clickable link | No, it's recalculated every run |
-
-## Updating things
-
-### Changing the poller script
-
-1. Edit `scripts/guestbook/copyof_firebase_poller.py` in this repo.
-2. Copy it onto the Pi (at the studio, Pi online):
-   ```bash
-   scp scripts/guestbook/copyof_firebase_poller.py kwon@kwon.local:/home/kwon/guestbook/firebase_poller.py
-   ```
-3. **Restart the service.** Python only reads the script at startup, so the old code keeps running until you do:
-   ```bash
-   sudo systemctl restart guestbook-printer
-   ```
-4. Check there's exactly **one** poller running:
-   ```bash
-   ps aux | grep [f]irebase_poller
-   ```
-
-### Changing Firestore rules
-
-1. Edit `scripts/guestbook/copyof_firestore.rules`.
-2. Paste it into Firebase console → Firestore → Rules, **without the `//` comment line at the top**.
-3. Try it in **Develop & Test**, then **Publish** (takes ~1 min to go live).
-
-The rules and the form have to EXACTLY match fields: the object passed to `addDoc` in `guestbook-form.js` must match the `hasOnly`/`hasAll` lists in the rules. If you add or remove a field in one, change the other too, or every submission fails with "Missing or insufficient permissions".
-
-### Changing the UI (kwon.nyc/guestbook)
-
-Edit `list.html` (markup), `guestbook.css` (styles), or the two scripts, then commit and push. Netlify redeploys automatically.
-
-## Setup (from scratch)
-
-Use this if the Pi or SD card ever needs rebuilding.
-
-### 1. Firebase
-
-- Project: `kwon-space-guestbook`, Firestore database `(default)`, collection `guestbook`.
-- Publish the rules from `copyof_firestore.rules`.
-- Create a **service account key**: Project settings → Service accounts → Generate new private key. Save it on the Pi as `/home/kwon/guestbook/firebase-key.json`. **Never commit this file.** It has full admin access to the project.
-- The web config in `guestbook-form.js` (apiKey etc.) is meant to be public. The rules are what protect the database.
-
-### 2. Raspberry Pi
-
-```bash
-mkdir -p /home/kwon/guestbook && cd /home/kwon/guestbook
-python3 -m venv venv
-source venv/bin/activate
-pip install firebase-admin python-escpos pyserial
-```
-
-- Needs Python 3.9+ (for `zoneinfo`). Recent Raspberry Pi OS has 3.11.
-- Copy the poller to `/home/kwon/guestbook/firebase_poller.py` and the key to `/home/kwon/guestbook/firebase-key.json`.
-- Connect the Pi to my phone hotspot once so it remembers the network.
-
-### 3. Printer
-
-- Receipt printer on USB serial at `/dev/ttyUSB0`, 19200 baud, 8N1, DSR/DTR flow control (these are hard-coded in `print_ticket`).
-- Line width is 32 characters. The title prints double width, which fits about 16 characters, so even `GUEST #999999` fits on one line.
-- The user running the poller needs serial access: `groups kwon` should include `dialout`. If not: `sudo usermod -aG dialout kwon` and reboot.
-
-### 4. systemd service
-
-The service is named **`guestbook-printer`**, not `guestbook`. Its file is [`copyof_guestbook-printer.service`](copyof_guestbook-printer.service). What it does, and why:
-
-- **Starts the poller on boot, after the network is up,** so plugging in the Pi is all it takes.
-- **Runs as `kwon` using the venv's Python,** so it has the installed packages and serial access via `dialout`.
-- **Uses `python -u`** so log lines show up in `journalctl` right away instead of being held back.
-- **Has `Restart=always`,** which brings the poller back if it crashes. The lock file stops a restart from creating a second copy.
-
-To install it, copy the file to `/etc/systemd/system/guestbook-printer.service` on the Pi, then:
-
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable --now guestbook-printer
-```
-
-Whenever the service file changes, run `sudo systemctl daemon-reload`, plus `sudo systemctl restart guestbook-printer` if anything under `[Service]` changed.
-
-### 5. Files the poller creates on the Pi
-
-| File                                    | What it is                                                                                                                                                                                                                |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/home/kwon/guestbook/ticket_count.txt` | The last ticket number printed. The next ticket is this + 1. Edit it to change numbering (`echo 12 > ticket_count.txt` means the next ticket is #13). It only exists on the SD card, so back it up if you rebuild the Pi. |
-| `/home/kwon/guestbook/poller.lock`      | Lock file so only one poller can run at a time. Safe to ignore.                                                                                                                                                           |
-
-### 6. Settings in the poller
-
-At the top of `firebase_poller.py` (see the file for current values):
-
-| Setting                     | Meaning                                                                   |
-| --------------------------- | ------------------------------------------------------------------------- |
-| `MAX_PER_SESSION`           | Max tickets per boot, as a spam backstop                                  |
-| `MAX_ATTEMPTS`              | Failed prints before a note is moved to the `guestbook_failed` collection |
-| `LOCAL_TZ`                  | Timezone printed on tickets                                               |
-| `COUNTER_FILE`, `LOCK_FILE` | Paths of the files in the table above                                     |
-
-## Safety features
-
-- **Firestore rules** only allow creating notes with exactly the expected fields, strings within length limits, and a server timestamp. Nobody can read visitors' emails from the browser.
-- **The form** ignores empty or whitespace-only messages and disables the Submit button while a note is sending, so a double-click doesn't send it twice.
-- **The poller:**
-  - Strips control characters from notes, so visitors can't send raw printer commands, and collapses runs of blank lines.
-  - Converts text to plain ASCII, because the printer garbles anything else: curly quotes become straight ones (`I’m` printed as `Ióm` before), accents are dropped (`é` → `e`), and emoji print as `?`.
-  - Word-wraps at `LINE_WIDTH` (32 characters) so lines break between words instead of mid-word.
-  - Only allows one copy to run at a time (lock file).
-  - Moves a note that fails to print repeatedly (`MAX_ATTEMPTS`) to `guestbook_failed` instead of retrying forever and wasting paper.
-  - Doesn't count printer-off errors as failures.
-  - Deletes each note after printing, even if saving the ticket count fails, so notes don't reprint.
-
-## Troubleshooting
-
-| Symptom                                                 | Likely cause                                                                                         | Fix                                                                                                                                                     |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Visitors see "Sorry, your note couldn't be sent"        | Firestore rules reject the note; the console shows "Missing or insufficient permissions"             | Make sure the fields the form sends match the rules exactly (see [Changing Firestore rules](#changing-firestore-rules))                         |
-| Tickets still look like the old version after an update | Service not restarted                                                                                | `sudo systemctl restart guestbook-printer`                                                                                                              |
-| `Unit guestbook.service not found`                      | Wrong service name                                                                                   | It's `guestbook-printer`                                                                                                                                |
-| Same note prints twice, **same number**                 | Two pollers running                                                                                  | `ps aux \| grep [f]irebase_poller`, then `pkill -f firebase_poller.py && sudo systemctl restart guestbook-printer`. The lock file should now stop this. |
-| Same note prints twice, **different numbers**           | Form sent it twice                                                                                   | Fixed by disabling Submit while sending. Check that the latest `guestbook-form.js` is deployed.                                                                 |
-| Nothing prints                                          | Printer off or unplugged, Pi not on the hotspot, or the per-boot cap (`MAX_PER_SESSION`) was reached | `journalctl -u guestbook-printer -n 50` shows which                                                                                                     |
-| Log says "Another poller is already running"            | A second launcher is starting it                                                                     | Find it: `crontab -l`, `systemctl list-unit-files --type=service \| grep -iE "guest\|poll\|print"`. Keep only `guestbook-printer`.                      |
-| A note never printed                                    | It failed `MAX_ATTEMPTS` times                                                                       | Look in the `guestbook_failed` collection in the Firebase console                                                                                       |
-| Ticket numbers restarted at #1                          | `ticket_count.txt` missing (SD card rebuilt)                                                         | `echo <last number> > /home/kwon/guestbook/ticket_count.txt`                                                                                            |
+Other options:
+* `npm run guestbook:scans`
+ * `npm run guestbook:scans -- --force` --> redo every image (e.g. if you change the script)
+ * `npm run guestbook:scans -- --show-contact 25` --> show a contact line that was covered because it isn't clearly a URL
+ * `npm run guestbook:scans -- --show-contact 25,31` --> same as above but for multiple tickets

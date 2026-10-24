@@ -21,16 +21,6 @@ p small {
   text-decoration: underline;
 }
 
-a.sign-guestbook-link {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid gray;
-  border-radius: 4px;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: none;
-}
-
 .ticket-grid {
   list-style: none;
   padding: 0;
@@ -69,8 +59,6 @@ a.sign-guestbook-link {
 
 .ticket-url:hover,
 .ticket-url:focus-visible { background: rgba(255, 220, 0, 0.35); }
-
-/* Enlarged ticket viewer */
 
 #ticket-viewer {
   padding: 0;
@@ -113,7 +101,7 @@ a.sign-guestbook-link {
   padding: 24px;
   border: 1px dotted gray;
   background: rgba(255, 255, 255, 0.45);
-  scroll-margin-top: 1em; /* room above it when the jump link scrolls here */
+  scroll-margin-top: 1em; 
 }
 
 .dark #sign {
@@ -132,7 +120,7 @@ a.sign-guestbook-link {
   padding: 8px;
   margin: 0 0 10px;
   font-family: monospace;
-  font-size: 16px; /* under 16px, iPhones zoom the whole page in when you tap a field */
+  font-size: 16px; 
 }
 
 #guestbook-form textarea {
@@ -140,7 +128,7 @@ a.sign-guestbook-link {
 }
 
 #guestbook-form button {
-  min-height: 44px; /* comfortable to tap */
+  min-height: 44px; 
   padding: 8px 20px;
   font-family: monospace;
   font-size: 16px;

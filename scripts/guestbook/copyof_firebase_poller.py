@@ -1,12 +1,14 @@
 # This is a copy of my Firebase poller script that lives on a Raspberry Pi in my studio. Copy stored in my site repo for reference.
 
 import fcntl
+import json
 import os
 import re
 import sys
 import textwrap
 import time
 import unicodedata
+from contextlib import contextmanager
 from datetime import datetime
 from zoneinfo import ZoneInfo
 import firebase_admin
@@ -24,6 +26,9 @@ MAX_PER_SESSION = 10
 
 COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number (stays locally on Pi)
 LOCK_FILE = '/home/kwon/guestbook/poller.lock'           # stops a second copy from running and double-printing
+PRINT_LOCK_FILE = '/home/kwon/guestbook/printer.lock'    # lets --reprint wait its turn while the poller is printing
+PRINTED_FILE = '/home/kwon/guestbook/printed.jsonl'      # local copy of recent tickets, for --reprint
+KEEP_PRINTED = 50                                        # how many recent tickets to keep in PRINTED_FILE
 
 failures = {}             # doc id -> failed print attempts this session
 
@@ -43,6 +48,10 @@ def save_count(n):
     os.replace(tmp, COUNTER_FILE)
 
 class PrinterOffline(Exception):
+    pass
+
+class OutOfPaper(PrinterOffline):
+    # Like the printer being off: keep the note in the queue and wait, don't count it as a failure
     pass
 
 LINE_WIDTH = 32  # characters per line at normal text size
@@ -80,7 +89,80 @@ def wrap(s, width=LINE_WIDTH):
         for line in s.split('\n')
     )
 
+def paper_status(p):
+    # Asks the printer for its paper sensor (ESC/POS "DLE EOT 4"). Returns 'ok', 'low', 'out',
+    # or 'unknown' if the printer doesn't answer (then paper-outs can't be detected).
+    try:
+        if getattr(p, 'device', None) is None:  # some python-escpos versions connect lazily
+            p.open()
+        p.device.reset_input_buffer()
+        p.device.write(b'\x10\x04\x04')
+        reply = p.device.read(1)
+    except Exception:
+        return 'unknown'
+    if not reply:
+        return 'unknown'
+    if reply[0] & 0x60:
+        return 'out'
+    if reply[0] & 0x0C:
+        return 'low'
+    return 'ok'
+
+warned_unknown_paper = False
+
+def check_paper(p, when):
+    global warned_unknown_paper
+    status = paper_status(p)
+    if status == 'out':
+        raise OutOfPaper(f"printer is out of paper ({when} printing)")
+    if status == 'low':
+        print("Paper is running low.")
+    if status == 'unknown' and not warned_unknown_paper:
+        print("Printer didn't answer the paper check, so running out of paper can't be detected.")
+        warned_unknown_paper = True
+
+@contextmanager
+def printer_lock():
+    # Only one thing talks to the printer at a time (the poller, or a --reprint)
+    with open(PRINT_LOCK_FILE, 'w') as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        yield
+
+def save_printed(ticket):
+    # Keep the last KEEP_PRINTED tickets on the Pi, so any of them can be reprinted later
+    try:
+        with open(PRINTED_FILE) as f:
+            lines = f.read().splitlines()
+    except FileNotFoundError:
+        lines = []
+    lines = (lines + [json.dumps(ticket)])[-KEEP_PRINTED:]
+    tmp = PRINTED_FILE + '.tmp'
+    with open(tmp, 'w') as f:
+        f.write('\n'.join(lines) + '\n')
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, PRINTED_FILE)
+
+def reprint(number):
+    try:
+        with open(PRINTED_FILE) as f:
+            tickets = [json.loads(line) for line in f if line.strip()]
+    except FileNotFoundError:
+        tickets = []
+    matches = [t for t in tickets if t['number'] == number]
+    if not matches:
+        kept = ', '.join(str(t['number']) for t in tickets) or 'none'
+        print(f"Ticket #{number} isn't in {PRINTED_FILE}. Tickets kept: {kept}")
+        sys.exit(1)
+    t = matches[-1]
+    print_ticket(t['number'], t['name'], t['contact'], t['message'], t['date'])
+    print(f"Reprinted #{number} from {t['name']}.")
+
 def print_ticket(number, name, contact, message, timestamp):
+    with printer_lock():
+        _print_ticket(number, name, contact, message, timestamp)
+
+def _print_ticket(number, name, contact, message, timestamp):
     try:
         p = Serial(
             devfile='/dev/ttyUSB0',
@@ -96,6 +178,7 @@ def print_ticket(number, name, contact, message, timestamp):
         raise PrinterOffline(e)
 
     try:
+        check_paper(p, "before")
         p.set(align='center', bold=True, double_height=True, double_width=True)
         p.text(f"GUEST #{number}\n")
         p.set(align='center', bold=False, normal_textsize=True)
@@ -114,6 +197,11 @@ def print_ticket(number, name, contact, message, timestamp):
 
         p.text("-" * LINE_WIDTH + "\n\n\n")
         p.cut()
+
+        # If the paper ran out partway, the ticket is incomplete: don't treat it as printed.
+        # (Give the printer a moment to finish feeding what it was sent first.)
+        time.sleep(2)
+        check_paper(p, "while")
     finally:
         p.close()
 
@@ -155,10 +243,10 @@ def poll_and_purge():
                 msg = clean(data.get('message') or '', 400)
                 time_str = format_time(data.get('createdAt'))
 
-                print(f"Printing note from {name}...")
+                # Only a successful print uses up a number, so failed notes don't leave gaps
+                number = read_count() + 1
+                print(f"Printing #{number} from {name}...")
                 try:
-                    # Only a successful print uses up a number, so failed notes don't leave gaps
-                    number = read_count() + 1
                     print_ticket(number, name, contact, msg, time_str)
                 except PrinterOffline:
                     raise
@@ -174,6 +262,12 @@ def poll_and_purge():
                 except Exception as e:
                     # Don't let a counter problem leave the note in the queue to print again
                     print(f"Couldn't save ticket count {number}: {e}")
+                try:
+                    save_printed({'number': number, 'date': time_str, 'name': name, 'contact': contact,
+                                  'message': msg, 'printed_at': datetime.now(LOCAL_TZ).isoformat(timespec='seconds')})
+                except Exception as e:
+                    print(f"Couldn't save #{number} to {PRINTED_FILE}: {e}")
+                print(f"Printed #{number} from {name}.")
                 printed += 1
                 failures.pop(doc.id, None)
                 # Purge document from Firebase immediately
@@ -193,6 +287,15 @@ def poll_and_purge():
 
 
 if __name__ == "__main__":
+    # Write log lines out immediately, even if the service runs Python without -u
+    sys.stdout.reconfigure(line_buffering=True)
+
+    # python firebase_poller.py --reprint 31: reprint a recent ticket from PRINTED_FILE.
+    # Doesn't touch Firebase or the ticket counter, and can run while the poller is running.
+    if len(sys.argv) == 3 and sys.argv[1] == '--reprint':
+        reprint(int(sys.argv[2].lstrip('#')))
+        sys.exit(0)
+
     lock = open(LOCK_FILE, 'w')
     try:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
