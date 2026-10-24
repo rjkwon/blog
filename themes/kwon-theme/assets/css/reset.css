@@ -128,7 +128,8 @@ textarea:-webkit-autofill {
 
 img {
     display: block;
-    max-width: 100%
+    max-width: 100%;
+    height: auto
 }
 
 sup { /* footnotes superscript */

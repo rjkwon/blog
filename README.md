@@ -47,17 +47,6 @@ Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs
 
 ## Content sections
 
-### /notes
-
-I guess this is my "blog" although I've never really liked that word. For this section only, I have it set up as an Obsidian vault + sync. To create a new note, I run `npm run notes:new` which creates a draft file from an Obsidian template that I can then edit and write in.
-
-- **Content:** `content/notes/` (Obsidian vault)
-- **Template:** `layouts/_default/single.html`
-- **New note template:** `content/notes/_templates/note.md` (Obsidian's Templates folder; ignored by Hugo via `ignoreFiles`)
-- **Scripts:**
-  - `npm run notes:new` (`scripts/notes_new.js`) - creates `content/notes/draft-<timestamp>/index.md` from the template
-  - `npm run notes:finalize` (`scripts/notes_finalize.js`) - renames a draft to `<slug-of-title>/index.md`, sets `draft: false` and `date` to now, and moves referenced images for loose Obsidian drafts. Pass a path (`npm run notes:finalize -- <path>`) or let it find drafts.
-
 ### /about
 
 My bio and other stuff about me.
@@ -72,6 +61,17 @@ How this site is built, less technical than this README.
 - **Content:** `content/colophon/`
 - **Template:** `layouts/colophon/single.html`
 
+### /notes
+
+I guess this is my "blog" although I've never really liked that word. For this section only, I have it set up as an Obsidian vault + sync. To create a new note, I run `npm run notes:new` which creates a draft file from an Obsidian template that I can then edit and write in.
+
+- **Content:** `content/notes/` (Obsidian vault)
+- **Template:** `layouts/_default/single.html`
+- **New note template:** `content/notes/_templates/note.md` (Obsidian's Templates folder; ignored by Hugo via `ignoreFiles`)
+- **Scripts:**
+  - `npm run notes:new` (`scripts/notes_new.js`) - creates `content/notes/draft-<timestamp>/index.md` from the template
+  - `npm run notes:finalize` (`scripts/notes_finalize.js`) - renames a draft to `<slug-of-title>/index.md`, sets `draft: false` and `date` to now, and moves referenced images for loose Obsidian drafts. Pass a path (`npm run notes:finalize -- <path>`) or let it find drafts.
+  
 ## Microsites and special features
 
 ### /bike
@@ -129,6 +129,10 @@ Microsite for December Adventure, a challenge stewarded by [eli_oat](https://eli
 - **Content:** `content/december-adventure-2025/`
 - **Layout:** `layouts/decadv/`
 
+### /guestbook
+
+Guestbook for visitors to leave a message. I have mine connected to a mini thermal receipt printer that lives in my studio so the entries are printed out in the physical world as well as being posted on the web. More details on setup: [/content/guestbook/scripts/README.md](/content/guestbook/scripts/README.md)
+
 ### /internet
 
 A collection of articles centered around how personal websites can reclaim the web. Each entry has a Markdown file with front matter (used to be stored in a single JSON file but switched to individual .md files in Aug 2026). 
@@ -158,6 +162,7 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 │   ├── cans/                
 │   ├── colophon/
 │   ├── december-adventure-2025/
+│   ├── guestbook/
 │   ├── notes/               # Blog posts
 │   └── ...
 ├── data/

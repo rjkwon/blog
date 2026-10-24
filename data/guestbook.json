@@ -1,5 +1,81 @@
 [
   {
+    "added" : "2026-10-24",
+    "date" : "2026-10-23 16:59",
+    "image" : "ticket-055.webp",
+    "message" : "Hello from Las Vegas!\n\nThis is fun, and at some point you'll have enough entries printed that you'll be able to bind them and make an actual book of guests.\n\nGREAT IDEA!",
+    "name" : "Chris",
+    "number" : 55,
+    "url" : "https://driph.com",
+    "url_box" : {
+      "height" : 6,
+      "left" : 3,
+      "top" : 35,
+      "width" : 76
+    }
+  },
+  {
+    "added" : "2026-10-24",
+    "date" : "2026-10-23 16:00",
+    "image" : "ticket-054.webp",
+    "message" : "I like bananas",
+    "name" : "LunarLoony",
+    "number" : 54,
+    "url" : "https://lunarloony.co.uk",
+    "url_box" : {
+      "height" : 12,
+      "left" : 3,
+      "top" : 46,
+      "width" : 69
+    }
+  },
+  {
+    "added" : "2026-10-24",
+    "date" : "2026-10-23 15:13",
+    "image" : "ticket-053.webp",
+    "message" : "This is a test. Had this not been a test, this would not say that this was a test.",
+    "name" : "Retrosponge",
+    "number" : 53
+  },
+  {
+    "added" : "2026-10-24",
+    "date" : "2026-10-23 15:09",
+    "image" : "ticket-052.webp",
+    "message" : "A message printed from nothing but data becomes a solid thing that you can hold - why did we stop thinking of this as magical?",
+    "name" : "Johnny Blanchard",
+    "number" : 52,
+    "url" : "https://www.re-enthused.com",
+    "url_box" : {
+      "height" : 9,
+      "left" : 4,
+      "top" : 38,
+      "width" : 69
+    }
+  },
+  {
+    "added" : "2026-10-24",
+    "date" : "",
+    "image" : "ticket-051.webp",
+    "message" : "Awesome.\n\nOn your drawing, the Raspberry Pi and UART look like a robot with laser eyes.",
+    "name" : "Olbaum",
+    "number" : 51
+  },
+  {
+    "added" : "2026-10-24",
+    "date" : "2026-10-23 09:35",
+    "image" : "ticket-050.webp",
+    "message" : "This is so cool!\n\nYour website is neat too. Love your \"Meanwhile on the internet section\", feels like a low- stress way to share other people's stuff that resonate with you!\n\nHope your day is bright.\n\n\\(^0*)/",
+    "name" : "Richard",
+    "number" : 50,
+    "url" : "https://ragman.net.",
+    "url_box" : {
+      "height" : 5,
+      "left" : 6,
+      "top" : 29,
+      "width" : 75
+    }
+  },
+  {
     "added" : "2026-10-23",
     "date" : "2026-10-22 14:10",
     "image" : "ticket-045.webp",
@@ -42,8 +118,15 @@
     "date" : "2026-10-22 13:40",
     "image" : "ticket-042.webp",
     "message" : "You're older than you've ever been, and now you're even older, and now you're even older, and now you're even older.\n\nYou're older than you've ever been, and now you're even older, and now you're older still.\n\nTime! ... is marching on, And time... is still marching on. -TMBG",
-    "name" : "Jash",
-    "number" : 42
+    "name" : "Josh",
+    "number" : 42,
+    "url" : "https://duggan.omg.lol",
+    "url_box" : {
+      "height" : 6,
+      "left" : 6,
+      "top" : 31,
+      "width" : 69
+    }
   },
   {
     "added" : "2026-10-23",
