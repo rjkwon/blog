@@ -24,6 +24,13 @@ LOCAL_TZ = ZoneInfo('America/New_York')
 MAX_ATTEMPTS = 3
 MAX_PER_SESSION = 10
 
+# Notes containing any of these (as whole words, ignoring case) are moved to the "guestbook_spam"
+# collection in Firebase instead of printed, so you can check them there. Add words as spam shows up.
+SPAM_WORDS = [
+    'apk', 'casino', 'crypto', 'bitcoin', 'forex', 'betting', 'gambling',
+    'viagra', 'cialis', 'porn', 'escort', 'backlink', 'backlinks', 'seo',
+]
+
 COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number (stays locally on Pi)
 LOCK_FILE = '/home/kwon/guestbook/poller.lock'           # stops a second copy from running and double-printing
 PRINT_LOCK_FILE = '/home/kwon/guestbook/printer.lock'    # lets --reprint wait its turn while the poller is printing
@@ -210,6 +217,19 @@ def format_time(created_at):
         return created_at.astimezone(LOCAL_TZ).strftime("%Y-%m-%d %H:%M")
     return datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M")
 
+def spam_word(*texts):
+    # Returns the first SPAM_WORDS entry found in the note, or None
+    text = ' '.join(texts).lower()
+    for word in SPAM_WORDS:
+        if re.search(r'\b' + re.escape(word.lower()) + r'\b', text):
+            return word
+    return None
+
+def set_aside_spam(doc, data, word):
+    # Not printed, not deleted outright: kept in guestbook_spam to check (and delete) in the Firebase console
+    db.collection('guestbook_spam').document(doc.id).set({**data, 'matched': word})
+    db.collection('guestbook').document(doc.id).delete()
+
 def set_aside(doc, data, error):
     # Keep note for manual review instead of retrying (and wasting paper) forever
     db.collection('guestbook_failed').document(doc.id).set({**data, 'error': str(error)})
@@ -242,6 +262,12 @@ def poll_and_purge():
                 contact = clean(data.get('contact') or '', 100)
                 msg = clean(data.get('message') or '', 400)
                 time_str = format_time(data.get('createdAt'))
+
+                word = spam_word(name, contact, msg)
+                if word:
+                    set_aside_spam(doc, data, word)
+                    print(f"Skipped likely spam from {name} (matched '{word}'); moved to guestbook_spam.")
+                    continue
 
                 # Only a successful print uses up a number, so failed notes don't leave gaps
                 number = read_count() + 1

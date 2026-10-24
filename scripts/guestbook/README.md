@@ -51,6 +51,12 @@ ssh <user>@<hostname>.local
 journalctl -u guestbook-printer -f
 ```
 
+### Spam
+
+* **Honeypot** (form): a hidden field only bots fill in. If it's filled, the form quietly resets and sends nothing.
+* **Spam words** (poller): notes containing a word from `SPAM_WORDS` (whole words, e.g. `apk`, `casino`) go to the `guestbook_spam` collection in Firebase instead of the printer, without using a ticket number.
+* Check `guestbook_spam` in the Firebase console now and then: delete spam, and resubmit anything real that got caught. Add new words to `SPAM_WORDS` as spam shows up (then copy the poller to the Pi and restart it).
+
 ## Workflow: posting scanned tickets to internet
 
 1. Use iPhone to scan ticket(s) directly into Files

@@ -68,6 +68,11 @@
     <input type="text" id="name" placeholder="Name" aria-label="Name" maxlength="50" autocomplete="name">
     <input type="text" id="contact" placeholder="Email or URL" aria-label="Email or URL" maxlength="100" autocapitalize="off" autocorrect="off" spellcheck="false">
     <textarea id="message" placeholder="Message" aria-label="Message" required maxlength="400" rows="5"></textarea>
+    {{- /* Honeypot: hidden from people, but spam bots tend to fill in every field. See guestbook-form.js */}}
+    <div class="gb-hp" aria-hidden="true">
+      <label for="extra-info">Leave this field empty</label>
+      <input type="text" id="extra-info" name="extra_info" tabindex="-1" autocomplete="off">
+    </div>
     <button type="submit">Submit</button>
   </form>
   {{ $formJS := resources.Get "js/guestbook-form.js" | minify | fingerprint }}

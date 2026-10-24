@@ -33,6 +33,12 @@ if (form) {
       return;
     }
 
+    // Honeypot: a hidden field only bots fill in. Pretend it worked so they don't adapt, but send nothing.
+    if (document.getElementById("extra-info").value) {
+      form.reset();
+      return;
+    }
+
     sending = true;
     button.disabled = true;
     button.textContent = "Traveling thru the intertubes...";
