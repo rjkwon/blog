@@ -12,6 +12,7 @@
     "mastodon:fetch": "node scripts/fetch_mastodon.js",
     "notes:new": "node scripts/notes_new.js",
     "notes:finalize": "node scripts/notes_finalize.js",
+    "notes:images": "node scripts/notes_images.js",
     "prebuild": "npm run cans:generate && npm run letterboxd:fetch && npm run mastodon:fetch",
     "build": "npm run prebuild && hugo --gc"
   },

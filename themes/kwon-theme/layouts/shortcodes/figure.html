@@ -1,5 +1,4 @@
-{{- $src := .Get "src" -}}
-{{- with .Page.Resources.Get $src }}{{ $src = .Permalink }}{{ end -}}
+{{- $alt := .Get "alt" | default ((.Get "caption") | markdownify | plainify) | default nil -}}
 <figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
            {{- if eq (.Get "align") "center" }}align-center {{ end }}
            {{- with .Get "class" }}{{ . }}{{- end }}"
@@ -7,13 +6,14 @@
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
-    <img loading="lazy" src="{{ $src }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
-         {{- if or (.Get "alt") (.Get "caption") }}
-         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-         {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-    /> <!-- Closing img tag -->
+    {{ partial "responsive-image.html" (dict
+        "page" .Page
+        "src" (.Get "src")
+        "alt" $alt
+        "suffix" (cond (eq (.Get "align") "center") "#center" "")
+        "width" (.Get "width")
+        "height" (.Get "height")
+    ) }}
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>

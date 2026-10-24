@@ -2,15 +2,13 @@
   ![alt](file.png "caption")
   {class="full"}
 */ -}}
-{{- $src := .Destination -}}
-{{- with .Page.Resources.Get $src }}{{ $src = .Permalink }}{{ end -}}
 {{- if .IsBlock -}}
 <figure{{ with .Attributes.class }} class="{{ . }}"{{ end }}>
-    <img loading="lazy" src="{{ $src | safeURL }}" alt="{{ .PlainText }}" />
+    {{ partial "responsive-image.html" (dict "page" .Page "src" .Destination "alt" .PlainText) }}
     {{- with .Title }}
     <figcaption><p>{{ . | markdownify }}</p></figcaption>
     {{- end }}
 </figure>
 {{- else -}}
-<img loading="lazy" src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{ partial "responsive-image.html" (dict "page" .Page "src" .Destination "alt" .Text "title" .Title) }}
 {{- end -}}

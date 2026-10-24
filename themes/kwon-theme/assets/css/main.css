@@ -311,6 +311,7 @@ body.about section#main figure img,
 body div.post-content figure img {
     width: auto;
     max-width: 100%;
+    height: auto;
 }
 
 body.about section#main figcaption,

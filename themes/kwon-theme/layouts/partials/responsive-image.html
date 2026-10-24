@@ -1,0 +1,45 @@
+{{- /* Responsive <img> for images in a page bundle, used by the figure shortcode
+  and the image render hook. Hugo makes WebP copies 800px and 1600px wide (never
+  upscaled; smaller images get one copy at their own width), and the browser
+  picks one from srcset. GIFs, SVGs and remote images are output as-is.
+
+  Params: page, src, and optionally alt (omitted when nil), title, suffix
+  (appended to src, e.g. "#center"), width and height (override the computed ones)
+*/ -}}
+{{- $src := .src -}}
+{{- $width := .width -}}
+{{- $height := .height -}}
+{{- $srcset := "" -}}
+{{- $sizes := "" -}}
+{{- with .page.Resources.Get .src -}}
+  {{- $img := . -}}
+  {{- $src = .Permalink -}}
+  {{- if in (slice "jpeg" "png" "webp") .MediaType.SubType -}}
+    {{- /* PNGs are mostly screenshots, so keep text crisp */ -}}
+    {{- $quality := cond (eq .MediaType.SubType "png") "q90" "q80" -}}
+    {{- $widths := slice -}}
+    {{- range slice 800 1600 }}{{ if lt . $img.Width }}{{ $widths = $widths | append . }}{{ end }}{{ end -}}
+    {{- if le $img.Width 1600 }}{{ $widths = $widths | append $img.Width }}{{ end -}}
+    {{- $candidates := slice -}}
+    {{- $largest := $img -}}
+    {{- range $widths -}}
+      {{- $largest = $img.Process (printf "resize %dx webp %s" . $quality) -}}
+      {{- $candidates = $candidates | append (printf "%s %dw" $largest.Permalink $largest.Width) -}}
+    {{- end -}}
+    {{- $src = $largest.Permalink -}}
+    {{- $srcset = delimit $candidates ", " -}}
+    {{- /* Notes are at most ~1200px wide; smaller images display at their own size */ -}}
+    {{- $display := cond (gt $largest.Width 1200) 1200 $largest.Width -}}
+    {{- $sizes = printf "(max-width: %dpx) 100vw, %dpx" $display $display -}}
+    {{- if not (or $width $height) -}}
+      {{- $width = $largest.Width -}}
+      {{- $height = $largest.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<img loading="lazy" src="{{ print $src (.suffix | default "") | safeURL }}"
+  {{- with $srcset }} srcset="{{ . }}" sizes="{{ $sizes }}"{{ end -}}
+  {{- if ne .alt nil }} alt="{{ .alt }}"{{ end -}}
+  {{- with .title }} title="{{ . }}"{{ end -}}
+  {{- with $width }} width="{{ . }}"{{ end -}}
+  {{- with $height }} height="{{ . }}"{{ end }} />

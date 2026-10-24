@@ -2,7 +2,8 @@
 //   content/notes/Untitled.md          (Obsidian)       -> content/notes/<slug>/index.md
 //   content/notes/draft-<stamp>/       (notes:new)      -> content/notes/<slug>/
 // Also sets `draft: false`, updates `date` to now, and, for loose Obsidian files,
-// moves any images the note references into the new folder.
+// moves any images the note references into the new folder. Referenced images
+// are then resized and stripped of metadata (see lib/images.js).
 //
 // Usage: npm run notes:finalize [-- <path to draft>]
 // path to draft is optional
@@ -20,6 +21,7 @@ import {
   setField,
   getTags,
 } from './lib/notes.js';
+import { checkImageTools, isImage, optimizeImage } from './lib/images.js';
 
 const rel = (p) => path.relative(process.cwd(), p);
 
@@ -93,9 +95,31 @@ if (!slug) fail(`Couldn't make a folder name from the title "${title}".`);
 const targetDir = path.join(NOTES_DIR, slug);
 if (fs.existsSync(targetDir)) fail(`${rel(targetDir)} already exists. Change the title or rename that folder.`);
 
+try {
+  checkImageTools();
+} catch (err) {
+  fail(err.message);
+}
+
 setField(fm.lines, 'draft', 'false');
 setField(fm.lines, 'date', isoNow());
-const updated = joinFrontmatter(fm.lines, fm.body);
+
+// Resize and strip each referenced image in imageDir; HEIC files become .jpg,
+// so their references in the note are updated too
+function optimizeImages(imageDir) {
+  for (const img of referencedImages(fm.body)) {
+    const file = path.join(imageDir, img);
+    if (!fs.existsSync(file) || !isImage(file)) continue;
+    try {
+      const out = optimizeImage(file);
+      if (!out) continue;
+      console.log(`  optimized ${img}`);
+      if (out !== file) fm.body = fm.body.replaceAll(img, path.relative(imageDir, out));
+    } catch (err) {
+      console.warn(`! Couldn't optimize ${img}: ${err.message}`);
+    }
+  }
+}
 
 if (isLoose) {
   fs.mkdirSync(targetDir);
@@ -110,10 +134,12 @@ if (isLoose) {
     fs.renameSync(from, to);
     console.log(`  moved ${img}`);
   }
-  fs.writeFileSync(path.join(targetDir, 'index.md'), updated);
+  optimizeImages(targetDir);
+  fs.writeFileSync(path.join(targetDir, 'index.md'), joinFrontmatter(fm.lines, fm.body));
   fs.unlinkSync(draftPath);
 } else {
-  fs.writeFileSync(draftPath, updated);
+  optimizeImages(path.dirname(draftPath));
+  fs.writeFileSync(draftPath, joinFrontmatter(fm.lines, fm.body));
   fs.renameSync(path.dirname(draftPath), targetDir);
 }
 
