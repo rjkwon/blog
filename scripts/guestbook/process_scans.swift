@@ -88,13 +88,10 @@ func findContact(_ lines: [VNRecognizedTextObservation]) -> (text: String, area:
 func isWebsite(_ contact: String) -> Bool {
     let c = contact.trimmingCharacters(in: .whitespaces).lowercased()
     let looksLikeURL = c.hasPrefix("http://") || c.hasPrefix("https://") || c.hasPrefix("www.")
-    // A URL can contain @ in its path (mastodon.social/@name), but never before the domain
     let atBeforePath = c.components(separatedBy: "//").last?.split(separator: "/").first?.contains("@") ?? true
     return looksLikeURL && !atBeforePath
 }
 
-// The title reads "GUEST #28" ("GUESTBOOK #28" on tickets printed before the change), but the OCR
-// sometimes returns "#28" as its own piece, so accept any of those
 func ticketNumber(_ lines: [VNRecognizedTextObservation]) -> Int? {
     let patterns = [#"GUEST(BOOK)?\s*#\s*\d+"#, #"^\s*#\s*\d+\s*$"#]
     for pattern in patterns {
@@ -133,7 +130,7 @@ func messageText(_ lines: [VNRecognizedTextObservation], after index: Int, spaci
     return message
 }
 
-// OCR sometimes gets capitals wrong (website.coM); hostnames are case-insensitive, so lowercase them
+// lowercase hostnames if OCR inappropriately capitalized letters
 func tidyURL(_ url: String) -> String {
     let trimmed = url.trimmingCharacters(in: .whitespaces)
     guard var parts = URLComponents(string: trimmed.contains("://") ? trimmed : "https://" + trimmed) else { return trimmed }
@@ -203,14 +200,12 @@ for pdfURL in pdfs {
         let name = "\(base).\(OUTPUT_EXTENSION)"
         let outURL = outputDir.appendingPathComponent(name)
         let contact = findContact(lines)
-        // Show the contact line if named in --show-contact, or if an earlier --show-contact already gave it a url
-        // (so the choice sticks, even through --force)
+        // Show contact line if named in --show-contact, or if an earlier --show-contact already gave it a url
         let namedInShowContact = number.map { showContact.contains($0) } ?? false
         let forceShow = namedInShowContact || (number.map { entries[$0]?["url"] != nil } ?? false)
         let covered = contact.map { !isWebsite($0.text) && !forceShow } ?? false
 
         // Save ticket text to data file 
-        // A ticket named in --show-contact keeps its other (possibly hand-edited) fields; just add the url
         if let n = number, namedInShowContact, !handledThisRun.contains(n), var entry = entries[n], let c = contact {
             entry["url"] = tidyURL(c.text)
             entries[n] = entry
@@ -231,13 +226,12 @@ for pdfURL in pdfs {
             entries[n] = entry
             newEntries += 1
         }
-        // When the ticket was first added to the page: the first day this script saw it
+        // Date added (when this script is run)
         if let n = number, var entry = entries[n], entry["added"] == nil {
             entry["added"] = today
             entries[n] = entry
         }
-        // Make url clickable. url_box is where the printed URL sits on the image, in whole percentages from
-        // the top-left (like CSS), rounded outward so the box never ends up smaller than the printed URL.
+        // Make url clickable. url_box is where the printed URL sits on the image, in whole percentages
         if let n = number, !handledThisRun.contains(n), var entry = entries[n], entry["url"] != nil, let c = contact, !covered {
             let left = Int((c.area.minX * 100).rounded(.down)), right = Int((c.area.maxX * 100).rounded(.up))
             let top = Int(((1 - c.area.maxY) * 100).rounded(.down)), bottom = Int(((1 - c.area.minY) * 100).rounded(.up))
@@ -275,7 +269,7 @@ for pdfURL in pdfs {
     }
 }
 
-// Newest first, so the page can list them in order as-is
+// List in reverse chronological order
 let sorted = entries.values.sorted { ($0["number"] as? Int ?? 0) > ($1["number"] as? Int ?? 0) }
 if let json = try? JSONSerialization.data(withJSONObject: sorted, options: [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]) {
     try? json.write(to: dataFile)

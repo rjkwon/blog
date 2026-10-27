@@ -1,5 +1,43 @@
 [
   {
+    "added" : "2026-10-26",
+    "date" : "2026-10-25 15:34",
+    "image" : "ticket-058.webp",
+    "message" : "AH AH, nice. Been following you since ******fy.org which feels both yesterday and ages ago (2002/2003. Shit). My favorite layout was the one with Cillian M. and the vintage posters. Remember your old guestbook with James D? Textpattern? The people you hosted? Btw, are you still in touch with any of them? The adventures of mama kwon, that hotlinking incident #memories.Always Love from Italy. Ciao!",
+    "name" : "Barbara",
+    "number" : 58
+  },
+  {
+    "added" : "2026-10-26",
+    "date" : "2026-10-24 23:49",
+    "image" : "ticket-057.webp",
+    "message" : "Hi Rachel!! How cool is this? Now I want to order some food to get receipts too",
+    "name" : "Thu",
+    "number" : 57,
+    "url" : "https://thu-le.com",
+    "url_box" : {
+      "height" : 7,
+      "left" : 3,
+      "top" : 42,
+      "width" : 56
+    }
+  },
+  {
+    "added" : "2026-10-26",
+    "date" : "2026-10-24 17:00",
+    "image" : "ticket-056.webp",
+    "message" : "This is such a cool idea! Thank you for making this and putting it out into the world!\n\n• 1 0\n\n] I HELLO WEB!",
+    "name" : "Letterboxx Software",
+    "number" : 56,
+    "url" : "https://letterboxx.app/",
+    "url_box" : {
+      "height" : 6,
+      "left" : 3,
+      "top" : 26,
+      "width" : 92
+    }
+  },
+  {
     "added" : "2026-10-24",
     "date" : "2026-10-23 16:59",
     "image" : "ticket-055.webp",
