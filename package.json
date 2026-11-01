@@ -10,10 +10,11 @@
     "guestbook:scans": "bash scripts/guestbook/process_scans.sh",
     "letterboxd:fetch": "node scripts/fetch_letterboxd.js",
     "mastodon:fetch": "node scripts/fetch_mastodon.js",
+    "robots:fetch": "node scripts/fetch_robots.js",
     "notes:new": "node scripts/notes_new.js",
     "notes:finalize": "node scripts/notes_finalize.js",
     "notes:images": "node scripts/notes_images.js",
-    "prebuild": "npm run cans:generate && npm run letterboxd:fetch && npm run mastodon:fetch",
+    "prebuild": "npm run cans:generate && npm run letterboxd:fetch && npm run mastodon:fetch && npm run robots:fetch",
     "build": "npm run prebuild && hugo --gc"
   },
   "devDependencies": {
