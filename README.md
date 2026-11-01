@@ -39,11 +39,12 @@ Displays recent movie watches, tracked at Letterboxd. Letterboxd doesn't give ac
 
 ### Links of interest ("Meanwhile, on the internet...")
 
-Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178). Uses a Google Apps Script endpoint 
+Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178). A script fetches the sheet from a Google Apps Script endpoint and saves the latest links to JSON, then Hugo uses the data file to generate the section on my homepage.
 
-- **Script:** `assets/js/links.js`
-- **Data:** [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)
-- **Updates:** Google Apps Script endpoint, fetches at page load
+- **Script:** `scripts/fetch_links.js`
+- **Data:** `assets/linkroll.json`, from the [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)
+- **Template:** `layouts/partials/linkroll.html`
+- **Updates:** Runs automatically at build time
 
 ## Content sections
 
@@ -154,8 +155,8 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 ```
 ├── assets/
 │   ├── css/                 # Additional stylesheets
-│   ├── js/                  # JavaScript (links.js)
-│   └── *.json               # Generated data (letterboxd.json)
+│   ├── js/                  # JavaScript (zephyr-map.js)
+│   └── *.json               # Generated data (letterboxd.json, linkroll.json)
 ├── content/
 │   ├── about/
 │   ├── blank/               # A blank page, just for fun
@@ -174,6 +175,7 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 ├── scripts/
 │   ├── lib/notes.js         # shared helpers for notes scripts
 │   ├── fetch_letterboxd.js
+│   ├── fetch_links.js
 │   ├── fetch_mastodon.js
 │   ├── generate_cans_json.js
 │   ├── notes_finalize.js
@@ -201,7 +203,7 @@ npm run build
 npm scripts are named `<section>:<action>` (e.g. `cans:generate`, `notes:new`).
 
 This runs:
-1. `npm run prebuild` - Runs `cans:generate`, `letterboxd:fetch` and `mastodon:fetch`
+1. `npm run prebuild` - Runs `cans:generate`, `letterboxd:fetch`, `links:fetch`, `mastodon:fetch` and `robots:fetch`
 2. `hugo --gc` - Builds the static site
 
 Pushes to `main` trigger a Netlify build automatically. Hugo version and build settings are in `netlify.toml`.

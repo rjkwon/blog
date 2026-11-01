@@ -1,0 +1,15 @@
+{{ $json := resources.Get "linkroll.json" }}
+{{ $links := $json | transform.Unmarshal }}
+
+{{ if $links }}
+  <ul id="linkroll">
+    {{ range $links }}
+      <li class="pinboard_link">
+        <a href="{{ .url }}">{{ .title }}</a>
+        <span class="pinboard_desc">{{ .description | safeHTML }}</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ else }}
+  <p>Could not load links.</p>
+{{ end }}

@@ -57,9 +57,7 @@
 
 <div class="pinboard">
     <h2>Meanwhile, on the internet...</h2>
-{{ $js := resources.Get "js/links.js" | minify | fingerprint }}
-<script src="{{ $js.Permalink }}"></script>
-<ul id="linkroll"></ul>
+      {{ partial "linkroll.html" }}
     <div class="more"><a href="https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178">More links</a></div>
 </div>
 
