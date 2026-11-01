@@ -28,7 +28,7 @@ Here are some other guestbooks by internet neighbors:
 - https://bjhess.com/guestbook
 - https://vhbelvadi.com/guestbook
 - https://lr0.org/guestbook/
-- https://lunarloony.co.uk/guestbook/
+- https://lunarloony.co.uk/guestbook/https://bluebottles.bearblog.dev/guestbook/
 
 Other resources:
 * https://simon-says.info/2014/2014-05-28-cashinotech-csn-a2-t-thermal-printer

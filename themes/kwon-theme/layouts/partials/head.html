@@ -54,6 +54,7 @@
     <link rel="mask-icon" href="{{- .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL -}}">
     <meta name="theme-color" content="#2e2e33">
     <meta name="msapplication-TileColor" content="#2e2e33">
+    {{- partial "analytics.html" . }}
     <!-- Generator -->
     {{- hugo.Generator }}
     <!-- RSS -->
