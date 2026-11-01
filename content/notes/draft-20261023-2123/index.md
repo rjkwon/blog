@@ -22,11 +22,13 @@ I made a [guestbook](/guestbook), just like we used to have in the old days
 
 
 Here are some other guestbooks by internet neighbors:
+- https://burgeonlab.com/guestbook/
+- https://zinzy.website/guestbook/
+- https://jeddacp.me/guestbook/
 - https://bjhess.com/guestbook
 - https://vhbelvadi.com/guestbook
 - https://lr0.org/guestbook/
-- https://burgeonlab.com/guestbook/
-- https://zinzy.website/guestbook/
+- https://lunarloony.co.uk/guestbook/
 
 Other resources:
 * https://simon-says.info/2014/2014-05-28-cashinotech-csn-a2-t-thermal-printer

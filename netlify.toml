@@ -5,6 +5,11 @@
 [build.environment]
   HUGO_VERSION = "0.142.0"
 
+# Runs first so it also records the curl-detector response on /
+[[edge_functions]]
+  function = "bot-detection"
+  path = "/*"
+
 [[edge_functions]]
   function = "curl-detector"
   path = "/"
