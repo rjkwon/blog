@@ -23,8 +23,8 @@
     {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" -}}
 
     {{- if .Params.mapbox -}}
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" integrity="sha384-u+wVUwl2ZXoPOrUMU3wYTEFmS6t764q435vp50Tj0SzRboIuzorj6aGCzOsK/YyR" crossorigin="anonymous">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js" integrity="sha384-nlKbXwQrfjXJCdJHulyozYEddFGhT+1x77JC61LuwiOrl/8bNBZpy281W4myvj8g" crossorigin="anonymous"></script>
     {{- end -}}
 
     {{- $stylesheet := (slice $common $extended) | resources.Concat "assets/css/stylesheet.css" | minify -}}

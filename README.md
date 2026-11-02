@@ -152,30 +152,28 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 
 ## Directory structure
 
-```
-├── assets/
-│   └── js/                  # JavaScript (zephyr-map.js)
+```          
 ├── content/
 │   ├── about/
-│   ├── blank/               # A blank page, just for fun
+│   ├── blank/               # a blank page, just for fun
 │   ├── cans/                
 │   ├── colophon/
 │   ├── december-adventure-2025/
 │   ├── guestbook/
-│   ├── notes/               # Blog posts
+│   ├── notes/               # weblog
 │   └── ...
 ├── data/
 │   ├── cans.json
 │   ├── hats.json
-│   ├── letterboxd.json      # generated at build time
-│   ├── linkroll.json        # generated at build time
+│   ├── letterboxd.json      
+│   ├── linkroll.json        
 │   ├── links.json
-│   └── mastodon.json        # generated at build time
+│   └── mastodon.json        
 ├── netlify/
-│   └── edge-functions/      # curl-detector.js
+│   └── edge-functions/      
 ├── scripts/
-│   ├── lib/feeds.js         # shared helpers for *:fetch scripts
-│   ├── lib/notes.js         # shared helpers for notes scripts
+│   ├── lib/feeds.js         
+│   ├── lib/notes.js         
 │   ├── fetch_letterboxd.js
 │   ├── fetch_links.js
 │   ├── fetch_mastodon.js
@@ -184,8 +182,8 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 │   ├── notes_new.js
 │   └── process_can_photos.sh
 ├── static/
-│   ├── decadv/              # December Adventure image files
-│   ├── hats/                # dad-hats image files
+│   ├── decadv/              # image files for December Adventure
+│   ├── hats/                # image files for dad-hats
 │   └── images/
 ├── themes/
 │   └── kwon-theme/

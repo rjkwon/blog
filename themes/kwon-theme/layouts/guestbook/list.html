@@ -24,16 +24,18 @@
     {{- $label := printf "Guestbook note #%d from %s" (int $ticket.number) $ticket.name }}
     {{- /* A link placed over the URL printed on the ticket; url_box is its position on the scan */ -}}
     {{- $urlStyle := "" }}
+    {{- /* Only http(s) links: data-url is copied into an href by JS, which skips Hugo's own URL check */}}
+    {{- $safeURL := and $ticket.url (or (hasPrefix $ticket.url "https://") (hasPrefix $ticket.url "http://")) }}
     {{- with $ticket.url_box }}
     {{- $urlStyle = printf "left:%v%%;top:%v%%;width:%v%%;height:%v%%" .left .top .width .height }}
     {{- end }}
     <li class="ticket-wrap">
       <button type="button" class="ticket" data-full="{{ .RelPermalink }}" aria-label="Enlarge {{ $label }}"
-        {{- if and $ticket.url $urlStyle }} data-url="{{ $ticket.url }}" data-link-box="{{ $urlStyle }}"{{ end }}>
+        {{- if and $safeURL $urlStyle }} data-url="{{ $ticket.url }}" data-link-box="{{ $urlStyle }}"{{ end }}>
         <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
              loading="lazy" alt="{{ $label }}: {{ $ticket.message }}">
       </button>
-      {{- if and $ticket.url $urlStyle }}
+      {{- if and $safeURL $urlStyle }}
       <a class="ticket-url" href="{{ $ticket.url }}" style="{{ $urlStyle | safeCSS }}" rel="nofollow ugc"
          aria-label="{{ $ticket.name }}'s website: {{ $ticket.url }}"></a>
       {{- end }}
@@ -75,6 +77,15 @@
     </div>
     <button type="submit">Submit</button>
   </form>
+  {{- /* Pins the hashes of the Firebase modules guestbook-form.js imports (browsers that don't support this ignore it) */}}
+  <script type="importmap">
+  {
+    "integrity": {
+      "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js": "sha384-wY0ZJNz4V101UNldqXjHz0zuQq2LFWQg9C6MejyUaw58KxejR+Fq3MinHCx/5y77",
+      "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js": "sha384-wrbWJmwwo/g58yNujR9u0v2HlcTvuGH1Pb8q0J3RR0EyaqypirmzeoG8+qkopilb"
+    }
+  }
+  </script>
   {{ $formJS := resources.Get "js/guestbook-form.js" | minify | fingerprint }}
   <script type="module" src="{{ $formJS.RelPermalink }}" integrity="{{ $formJS.Data.Integrity }}"></script>
 </section>

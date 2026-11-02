@@ -10,13 +10,18 @@ export default async (request, context) => {
     return context.next();
   }
 
+  // Visitor cookies and credentials are never needed for bot tracking, so leave them out
+  const headers = Object.fromEntries(request.headers);
+  delete headers.cookie;
+  delete headers.authorization;
+
   const start = Date.now();
   const response = await context.next();
 
   const visit = {
     request_path: url.pathname + url.search,
     request_method: request.method,
-    request_headers: Object.fromEntries(request.headers),
+    request_headers: headers,
     response_status_code: response.status,
     response_headers: { 'content-type': response.headers.get('content-type') || '' },
     response_duration_in_milliseconds: Date.now() - start
