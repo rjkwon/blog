@@ -6,7 +6,7 @@
   "name": {{ .Site.Title }},
   "url": {{ .Site.BaseURL }},
   "description": {{ .Site.Params.description | plainify | truncate 180 | safeHTML }},
-  "thumbnailUrl": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  "thumbnailUrl": {{ "images/logo.svg" | absURL }},
   "sameAs": [
     {{- if .Site.Params.schema.sameAs }}
       {{ range $i, $e := .Site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
@@ -109,7 +109,7 @@
     "name": {{ .Site.Title }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}
+      "url": {{ "images/logo.svg" | absURL }}
     }
   }
 }

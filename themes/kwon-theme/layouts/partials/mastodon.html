@@ -1,5 +1,4 @@
-{{ $json := resources.Get "mastodon.json" }}
-{{ $posts := $json | transform.Unmarshal }}
+{{ $posts := site.Data.mastodon }}
 
 {{ if $posts }}
   <ul>

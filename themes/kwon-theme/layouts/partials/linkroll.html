@@ -1,5 +1,4 @@
-{{ $json := resources.Get "linkroll.json" }}
-{{ $links := $json | transform.Unmarshal }}
+{{ $links := site.Data.linkroll }}
 
 {{ if $links }}
   <ul id="linkroll">

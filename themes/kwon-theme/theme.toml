@@ -10,15 +10,13 @@ tags = [
   "light",
   "dark",
   "blog",
-  "minimalist",
-  "highlight.js"
+  "minimalist"
 ]
 features = [
   "responsive",
   "blog",
   "cover-image",
   "table-of-contents",
-  "highlight.js",
   "favicon",
   "archive",
   "minified-assets",

@@ -1,8 +1,7 @@
 {{ define "main" }}
 
 
-{{ $json := resources.Get "letterboxd.json" }}
-{{ $reviews := $json | transform.Unmarshal }}
+{{ $reviews := site.Data.letterboxd }}
 
 <h1>{{ .Title }}</h1>
 <article>{{ .Content }}</article>

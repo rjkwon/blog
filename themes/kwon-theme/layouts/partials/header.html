@@ -1,53 +1,16 @@
-{{- /*  theme-toggle is enabled  */}}
-{{- if (not .Site.Params.disableThemeToggle) }}
-{{- /*  theme is light  */}}
-{{- if (eq .Site.Params.defaultTheme "light") }}
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+    const prefTheme = localStorage.getItem("pref-theme");
+    if (prefTheme === "dark" || (!prefTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.body.classList.add("dark");
     }
-
 </script>
-{{- /*  theme is dark  */}}
-{{- else if (eq .Site.Params.defaultTheme "dark") }}
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    }
-
-</script>
-{{- else }}
-{{- /*  theme is auto  */}}
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-{{- end }}
-{{- /*  theme-toggle is disabled and theme is auto  */}}
-{{- else if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark"))}}
-<script>
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-{{- end }}
 <noscript>
-    <style type="text/css">
+    <style>
         #theme-toggle,
         .top-link {
             display: none;
         }
 
-    </style>
-    {{- if (and (ne .Site.Params.defaultTheme "light") (ne .Site.Params.defaultTheme "dark")) }}
-    <style>
         @media (prefers-color-scheme: dark) {
             :root {
                 --theme: #1d1e20;
@@ -64,18 +27,8 @@
             .list {
                 background: var(--theme);
             }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
         }
     </style>
-    {{- end }}
-
 </noscript>
 <header class="header">
     <nav class="nav">
@@ -86,14 +39,12 @@
             {{ end }}
         </div>
         {{- $currentPage := . }}
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             {{- range .Site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink  | absLangURL }}
-            {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
             <li>
-                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
-                {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                         {{- .Name -}}
                     </span>
@@ -102,12 +53,10 @@
             {{- end -}}
             <li>
                 <span class="logo-switches">
-                {{- if (not .Site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-<span id="moon">🕶</span>
-<span id="sun">💡</span>
+                    <span id="moon">🕶</span>
+                    <span id="sun">💡</span>
                 </button>
-                {{- end }}
                 </span>
             </li>
         </ul>

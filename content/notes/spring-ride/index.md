@@ -21,7 +21,7 @@ Today I took the bike out for a spin—a lot of spins, actually, about 26 miles'
 {{< rawhtml >}}
 <div id="map" style="width: 100%; height: 500px; border: none; border-radius: 20px;"></div>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoicmprd29uIiwiYSI6ImNrbnB5aTg2NDA2ZXgyb21uZjh0ZmQ0aDEifQ.wcihEO5lNGrSgDcgtldHag';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicmprd29uIiwiYSI6ImNtdnlsOWQ4NDFndjIyem91a2xvNmhsMW4ifQ.jOrJhrGcA_ldhsVROVFUHA';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/rjkwon/cluc39fpj005001qlhqm6cm9m',

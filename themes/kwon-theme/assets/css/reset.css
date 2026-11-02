@@ -31,6 +31,12 @@ html {
     overflow-y: scroll;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 a,
 button,
 body,

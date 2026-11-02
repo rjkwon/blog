@@ -1,8 +1,7 @@
 // Guestbook form: sends a note to the Firestore "guestbook" collection, where it's stored until studio printer picks it up.
 // See scripts/guestbook/README.md for the whole setup. Loaded as a module (for the Firebase imports).
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+const FIREBASE_URL = "https://www.gstatic.com/firebasejs/10.12.0";
 
 // Intentionally public (Firestore rules are what protect the db)
 const firebaseConfig = {
@@ -17,7 +16,17 @@ const firebaseConfig = {
 const form = document.getElementById("guestbook-form");
 
 if (form) {
-  const db = getFirestore(initializeApp(firebaseConfig));
+  // Firebase is only downloaded once someone starts writing a note, so just viewing the page loads none of it
+  let firestore;
+  const loadFirestore = () => firestore ??= Promise.all([
+    import(`${FIREBASE_URL}/firebase-app.js`),
+    import(`${FIREBASE_URL}/firebase-firestore.js`)
+  ]).then(
+    ([app, fs]) => ({ fs, db: fs.getFirestore(app.initializeApp(firebaseConfig)) }),
+    (err) => { firestore = null; throw err; } // let the next submit retry the download
+  );
+  form.addEventListener("focusin", () => loadFirestore().catch(() => {}), { once: true });
+
   const button = form.querySelector("button[type=submit]");
   let sending = false;
 
@@ -44,12 +53,13 @@ if (form) {
     button.textContent = "Traveling thru the intertubes...";
 
     try {
+      const { fs, db } = await loadFirestore();
       // These fields have to match Firestore rules exactly (see copyof_firestore.rules)
-      await addDoc(collection(db, "guestbook"), {
+      await fs.addDoc(fs.collection(db, "guestbook"), {
         name: name,
         contact: contact,
         message: message,
-        createdAt: serverTimestamp()
+        createdAt: fs.serverTimestamp()
       });
       alert("Thank you! Your submission is in the print queue and will print the next time the printer is online.");
       form.reset();

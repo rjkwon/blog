@@ -1,0 +1,76 @@
+[
+  {
+    "id": "117526624110166364",
+    "content": "Waiting in the hot dog line at Costco (pls don’t judge me, I allow myself one hotdog every 3 months, it’s my quarterly hot dog)Kid: Mama, can you spell “happy”?Me: (heart melts a little, that’s kinda sweet)Mom (tired): H-A-P-P-YKid: Hahahahaha! You said PEE PEE!!!Me: (damn that’s good… u got got… that woulda got me too)",
+    "url": "https://mastodon.social/@rjkwon/117526624110166364",
+    "created_at": "2026-10-29T22:46:06.524Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "117485319441328992",
+    "content": "K, I’m calling this launched https://kwon.nyc/guestbook/ Ready to receive transmissions!",
+    "url": "https://mastodon.social/@rjkwon/117485319441328992",
+    "created_at": "2026-10-22T15:41:47.287Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "117473802520429437",
+    "content": "https://kwon.nyc/guestbook &lt;— I posted all the tickets so far (best on desktop for now, mobile quite buggy) 🤗 Submission form still on hold and printer offline while I work out some quirks out",
+    "url": "https://mastodon.social/@rjkwon/117473802520429437",
+    "created_at": "2026-10-20T14:52:53.027Z",
+    "thread": "none",
+    "media_attachments": []
+  },
+  {
+    "id": "117468143875818816",
+    "content": "I feel rich, and a little overwhelmed, to receive such nice messages from internet friends and strangers!! I am pausing submissions for now so I can make some improvements",
+    "url": "https://mastodon.social/@rjkwon/117468143875818816",
+    "created_at": "2026-10-19T14:53:48.960Z",
+    "thread": "none",
+    "media_attachments": [
+      {
+        "type": "image",
+        "url": "https://files.mastodon.social/media_attachments/files/117/468/140/690/189/002/original/1032aa23665412de.png",
+        "preview_url": "https://files.mastodon.social/media_attachments/files/117/468/140/690/189/002/small/1032aa23665412de.png",
+        "description": "Me, holding up a long set of “receipts” (guestbook messages from visitors to my website)"
+      }
+    ]
+  },
+  {
+    "id": "117464862554410410",
+    "content": "https://kwon.nyc/guestbook I’ve been working on something all weekend lol… if you have 2 mins and wanna help me test, can you go to this URL and submit something?",
+    "url": "https://mastodon.social/@rjkwon/117464862554410410",
+    "created_at": "2026-10-19T00:59:20.000Z",
+    "thread": "start",
+    "media_attachments": [
+      {
+        "type": "image",
+        "url": "https://files.mastodon.social/media_attachments/files/117/464/847/628/726/855/original/8929332b118b2782.png",
+        "preview_url": "https://files.mastodon.social/media_attachments/files/117/464/847/628/726/855/small/8929332b118b2782.png",
+        "description": "Hand holding breadboard wires"
+      },
+      {
+        "type": "image",
+        "url": "https://files.mastodon.social/media_attachments/files/117/464/848/264/439/926/original/4272968691d61dc1.png",
+        "preview_url": "https://files.mastodon.social/media_attachments/files/117/464/848/264/439/926/small/4272968691d61dc1.png",
+        "description": "Schematic diagram of a thermal printer connected to a Raspberry Pi via a UART"
+      },
+      {
+        "type": "image",
+        "url": "https://files.mastodon.social/media_attachments/files/117/464/848/646/848/331/original/6cde10e959317121.png",
+        "preview_url": "https://files.mastodon.social/media_attachments/files/117/464/848/646/848/331/small/6cde10e959317121.png",
+        "description": "Actual photo of thermal receipt printer connected to Pi via UART with a note coming out of the printer "
+      }
+    ]
+  },
+  {
+    "id": "117465331885550378",
+    "content": "@binarydigit @nazhamid @eclecticpassions @beep thanks so much 🙏 should be fixed now",
+    "url": "https://mastodon.social/@rjkwon/117465331885550378",
+    "created_at": "2026-10-19T02:58:41.404Z",
+    "thread": "end",
+    "media_attachments": []
+  }
+]

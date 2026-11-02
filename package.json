@@ -1,9 +1,6 @@
 {
   "name": "kwon.nyc",
   "type": "module",
-  "dependencies": {
-    "googleapis": "^150.0.1"
-  },
   "scripts": {
     "cans:process": "bash scripts/process_can_photos.sh",
     "cans:generate": "node scripts/generate_cans_json.js",
@@ -15,7 +12,7 @@
     "notes:new": "node scripts/notes_new.js",
     "notes:finalize": "node scripts/notes_finalize.js",
     "notes:images": "node scripts/notes_images.js",
-    "prebuild": "npm run cans:generate && npm run letterboxd:fetch && npm run links:fetch && npm run mastodon:fetch && npm run robots:fetch",
+    "prebuild": "npm run cans:generate & npm run letterboxd:fetch & npm run links:fetch & npm run mastodon:fetch & npm run robots:fetch & wait",
     "build": "npm run prebuild && hugo --gc"
   },
   "devDependencies": {

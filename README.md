@@ -33,7 +33,7 @@ Displays one book I'm currently reading, tracked at literal.club. Uses the liter
 Displays recent movie watches, tracked at Letterboxd. Letterboxd doesn't give access to their API for personal projects, so this approach uses a script to fetch the RSS feed for my data and convert it to JSON, then Hugo uses the data file to generate the section on my homepage.
 
 - **Script:** `scripts/fetch_letterboxd.js` 
-- **Data:** `assets/letterboxd.json`
+- **Data:** `data/letterboxd.json`
 - **Template:** `layouts/partials/letterboxd.html`
 - **Updates:** Runs automatically at build time
 
@@ -42,7 +42,7 @@ Displays recent movie watches, tracked at Letterboxd. Letterboxd doesn't give ac
 Displays 9 recent links of interest, tracked in [this Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178). A script fetches the sheet from a Google Apps Script endpoint and saves the latest links to JSON, then Hugo uses the data file to generate the section on my homepage.
 
 - **Script:** `scripts/fetch_links.js`
-- **Data:** `assets/linkroll.json`, from the [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)
+- **Data:** `data/linkroll.json`, from the [Google Sheet](https://docs.google.com/spreadsheets/d/1r13l2GHJVEU4pMHouyU1q8DaAOV0UZCytaHAd3eoy5M/edit?gid=1699290178#gid=1699290178)
 - **Template:** `layouts/partials/linkroll.html`
 - **Updates:** Runs automatically at build time
 
@@ -81,7 +81,7 @@ Microsite about my bike. I "manually" traced each bike part from a photo to crea
 
 - **Content:** `content/bike/` (just the blurb)
 - **Layout:** `layouts/bike/` 
-- **CSS:** `static/css/bike.css` 
+- **CSS:** `themes/kwon-theme/assets/css/pages/bike.css` 
 - **Animation:** GSAP + ScrollTrigger (loaded via CDN in `layouts/bike/baseof.html`)
 - **Related notes:** auto-lists any post from /notes tagged `bike` via `{{ range .Site.Taxonomies.tags.bike }}` in `single.html` 
 - **SVG:** created in Figma ([source](https://www.figma.com/design/pXAhY02o72wq79gKN6JS3M/Kwon-s-Bike?node-id=3012-366)) and optimized with [svgo](https://svgo.dev/). If I edit the source SVG, re-run the following:
@@ -154,9 +154,7 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 
 ```
 ├── assets/
-│   ├── css/                 # Additional stylesheets
-│   ├── js/                  # JavaScript (zephyr-map.js)
-│   └── *.json               # Generated data (letterboxd.json, linkroll.json)
+│   └── js/                  # JavaScript (zephyr-map.js)
 ├── content/
 │   ├── about/
 │   ├── blank/               # A blank page, just for fun
@@ -169,10 +167,14 @@ Bare bones, CLI version of the site, via `curl`. Uses a Netlify edge function. I
 ├── data/
 │   ├── cans.json
 │   ├── hats.json
-│   └── links.json           
+│   ├── letterboxd.json      # generated at build time
+│   ├── linkroll.json        # generated at build time
+│   ├── links.json
+│   └── mastodon.json        # generated at build time
 ├── netlify/
 │   └── edge-functions/      # curl-detector.js
 ├── scripts/
+│   ├── lib/feeds.js         # shared helpers for *:fetch scripts
 │   ├── lib/notes.js         # shared helpers for notes scripts
 │   ├── fetch_letterboxd.js
 │   ├── fetch_links.js
@@ -203,7 +205,7 @@ npm run build
 npm scripts are named `<section>:<action>` (e.g. `cans:generate`, `notes:new`).
 
 This runs:
-1. `npm run prebuild` - Runs `cans:generate`, `letterboxd:fetch`, `links:fetch`, `mastodon:fetch` and `robots:fetch`
+1. `npm run prebuild` - Runs `cans:generate`, `letterboxd:fetch`, `links:fetch`, `mastodon:fetch` and `robots:fetch` in parallel. A fetch that fails keeps the last saved file, so the build still succeeds
 2. `hugo --gc` - Builds the static site
 
 Pushes to `main` trigger a Netlify build automatically. Hugo version and build settings are in `netlify.toml`.
