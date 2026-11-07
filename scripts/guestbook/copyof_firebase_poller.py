@@ -1,4 +1,4 @@
-# This is a copy of my Firebase poller script that lives on a Raspberry Pi in my studio. Copy stored in my site repo for reference.
+# [COPYOF] my Firebase poller script. actual script lives on Raspberry Pi.
 
 import fcntl
 import json
@@ -15,7 +15,6 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from escpos.printer import Serial
 
-# Initialize Firebase Admin
 cred = credentials.Certificate('/home/kwon/guestbook/firebase-key.json')
 firebase_admin.initialize_app(cred)
 db = firestore.client()
@@ -24,20 +23,29 @@ LOCAL_TZ = ZoneInfo('America/New_York')
 MAX_ATTEMPTS = 3
 MAX_PER_SESSION = 10
 
-# Notes containing any of these (as whole words, ignoring case) are moved to the "guestbook_spam"
-# collection in Firebase instead of printed, so you can check them there. Add words as spam shows up.
+# filter spam :(
 SPAM_WORDS = [
     'apk', 'casino', 'crypto', 'bitcoin', 'forex', 'betting', 'gambling',
     'viagra', 'cialis', 'porn', 'escort', 'backlink', 'backlinks', 'seo',
 ]
 
-COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  # running ticket number (stays locally on Pi)
-LOCK_FILE = '/home/kwon/guestbook/poller.lock'           # stops a second copy from running and double-printing
-PRINT_LOCK_FILE = '/home/kwon/guestbook/printer.lock'    # lets --reprint wait its turn while the poller is printing
-PRINTED_FILE = '/home/kwon/guestbook/printed.jsonl'      # local copy of recent tickets, for --reprint
-KEEP_PRINTED = 50                                        # how many recent tickets to keep in PRINTED_FILE
+# ticket counter
+COUNTER_FILE = '/home/kwon/guestbook/ticket_count.txt'  
 
-failures = {}             # doc id -> failed print attempts this session
+# stops a second copy from running and double-printing
+LOCK_FILE = '/home/kwon/guestbook/poller.lock'
+
+# lets --reprint wait its turn while the poller is printing
+PRINT_LOCK_FILE = '/home/kwon/guestbook/printer.lock'    
+
+# local copy of recent tickets, for --reprint
+PRINTED_FILE = '/home/kwon/guestbook/printed.jsonl'      
+
+# number of recent tickets to keep in PRINTED_FILE
+KEEP_PRINTED = 50                                        
+
+# doc id -> failed print attempts this session
+failures = {}             
 
 def read_count():
     try:
@@ -58,31 +66,28 @@ class PrinterOffline(Exception):
     pass
 
 class OutOfPaper(PrinterOffline):
-    # Like the printer being off: keep the note in the queue and wait, don't count it as a failure
     pass
 
-LINE_WIDTH = 32  # characters per line at normal text size
+LINE_WIDTH = 32
 
-# Phones swap in "smart" punctuation the printer can't show (I'm -> Ióm), so map it back to plain ASCII
+# map "smart" punctuation back to plain ASCII (e.g. Ióm --> I'm)
 SMART_PUNCTUATION = str.maketrans({
     '\u2018': "'", '\u2019': "'", '\u201a': "'", '\u2032': "'",
     '\u201c': '"', '\u201d': '"', '\u201e': '"', '\u2033': '"',
     '\u2013': '-', '\u2014': '-', '\u2212': '-',
     '\u2026': '...', '\u00a0': ' ', '\u2022': '*',
-    # Invisible joiners/variation selectors inside emoji, so one emoji prints as one ? not several
     '\u200b': None, '\u200c': None, '\u200d': None, '\ufe0e': None, '\ufe0f': None,
 })
 
 def to_ascii(s):
     s = s.translate(SMART_PUNCTUATION)
-    # Split accented letters into letter + accent (é -> e + ´) and drop the accent
     s = unicodedata.normalize('NFKD', s)
     s = ''.join(c for c in s if not unicodedata.combining(c) and not '\U0001F3FB' <= c <= '\U0001F3FF')
-    # Anything still not ASCII (emoji, other scripts) prints as ?
+    # print everything else not ASCII as ? (e.g. emoji, other script)
     return s.encode('ascii', 'replace').decode('ascii')
 
 def clean(s, max_len):
-    # Strip control characters (ESC/POS commands) except newlines, collapse blank-line runs
+    # strip control characters (ESC/POS commands) except newlines, collapse blank-line runs
     s = re.sub(r'[\x00-\x09\x0b-\x1f\x7f]', '', str(s))
     s = to_ascii(s)
     s = re.sub(r' {2,}', ' ', s)
@@ -90,17 +95,15 @@ def clean(s, max_len):
     return s.strip()[:max_len]
 
 def wrap(s, width=LINE_WIDTH):
-    # Break lines between words instead of mid-word, keeping the writer's own line breaks
+    # create line breaks between words (not mid-word) + keep user-entered line breaks
     return '\n'.join(
         '\n'.join(textwrap.wrap(line, width)) if line.strip() else ''
         for line in s.split('\n')
     )
 
 def paper_status(p):
-    # Asks the printer for its paper sensor (ESC/POS "DLE EOT 4"). Returns 'ok', 'low', 'out',
-    # or 'unknown' if the printer doesn't answer (then paper-outs can't be detected).
     try:
-        if getattr(p, 'device', None) is None:  # some python-escpos versions connect lazily
+        if getattr(p, 'device', None) is None:  
             p.open()
         p.device.reset_input_buffer()
         p.device.write(b'\x10\x04\x04')
@@ -130,13 +133,11 @@ def check_paper(p, when):
 
 @contextmanager
 def printer_lock():
-    # Only one thing talks to the printer at a time (the poller, or a --reprint)
     with open(PRINT_LOCK_FILE, 'w') as f:
         fcntl.flock(f, fcntl.LOCK_EX)
         yield
 
 def save_printed(ticket):
-    # Keep the last KEEP_PRINTED tickets on the Pi, so any of them can be reprinted later
     try:
         with open(PRINTED_FILE) as f:
             lines = f.read().splitlines()
@@ -181,7 +182,6 @@ def _print_ticket(number, name, contact, message, timestamp):
             dsrdtr=True
         )
     except Exception as e:
-        # Printer unplugged or off: not the note's fault, so don't count it as a failure
         raise PrinterOffline(e)
 
     try:
@@ -205,8 +205,6 @@ def _print_ticket(number, name, contact, message, timestamp):
         p.text("-" * LINE_WIDTH + "\n\n\n")
         p.cut()
 
-        # If the paper ran out partway, the ticket is incomplete: don't treat it as printed.
-        # (Give the printer a moment to finish feeding what it was sent first.)
         time.sleep(2)
         check_paper(p, "while")
     finally:
@@ -218,7 +216,6 @@ def format_time(created_at):
     return datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M")
 
 def spam_word(*texts):
-    # Returns the first SPAM_WORDS entry found in the note, or None
     text = ' '.join(texts).lower()
     for word in SPAM_WORDS:
         if re.search(r'\b' + re.escape(word.lower()) + r'\b', text):
@@ -226,12 +223,10 @@ def spam_word(*texts):
     return None
 
 def set_aside_spam(doc, data, word):
-    # Not printed, not deleted outright: kept in guestbook_spam to check (and delete) in the Firebase console
     db.collection('guestbook_spam').document(doc.id).set({**data, 'matched': word})
     db.collection('guestbook').document(doc.id).delete()
 
 def set_aside(doc, data, error):
-    # Keep note for manual review instead of retrying (and wasting paper) forever
     db.collection('guestbook_failed').document(doc.id).set({**data, 'error': str(error)})
     db.collection('guestbook').document(doc.id).delete()
     failures.pop(doc.id, None)
@@ -243,7 +238,6 @@ def poll_and_purge():
     last_error = None
     while True:
         try:
-            # Everything still in the collection is unprinted, since printed notes are deleted
             docs = (
                 db.collection('guestbook')
                 .order_by('createdAt')
@@ -269,7 +263,6 @@ def poll_and_purge():
                     print(f"Skipped likely spam from {name} (matched '{word}'); moved to guestbook_spam.")
                     continue
 
-                # Only a successful print uses up a number, so failed notes don't leave gaps
                 number = read_count() + 1
                 print(f"Printing #{number} from {name}...")
                 try:
@@ -286,7 +279,6 @@ def poll_and_purge():
                 try:
                     save_count(number)
                 except Exception as e:
-                    # Don't let a counter problem leave the note in the queue to print again
                     print(f"Couldn't save ticket count {number}: {e}")
                 try:
                     save_printed({'number': number, 'date': time_str, 'name': name, 'contact': contact,
@@ -296,7 +288,7 @@ def poll_and_purge():
                 print(f"Printed #{number} from {name}.")
                 printed += 1
                 failures.pop(doc.id, None)
-                # Purge document from Firebase immediately
+            
                 db.collection('guestbook').document(doc.id).delete()
                 print(f"Purged entry {doc.id} from Firebase.")
                 time.sleep(1)
@@ -304,7 +296,6 @@ def poll_and_purge():
             last_error = None
 
         except Exception as e:
-            # Network drops (hotspot disconnected) or printer offline: log once, then keep waiting
             if str(e) != last_error:
                 print(f"Waiting: {type(e).__name__}: {e}")
                 last_error = str(e)
@@ -313,11 +304,8 @@ def poll_and_purge():
 
 
 if __name__ == "__main__":
-    # Write log lines out immediately, even if the service runs Python without -u
     sys.stdout.reconfigure(line_buffering=True)
 
-    # python firebase_poller.py --reprint 31: reprint a recent ticket from PRINTED_FILE.
-    # Doesn't touch Firebase or the ticket counter, and can run while the poller is running.
     if len(sys.argv) == 3 and sys.argv[1] == '--reprint':
         reprint(int(sys.argv[2].lstrip('#')))
         sys.exit(0)

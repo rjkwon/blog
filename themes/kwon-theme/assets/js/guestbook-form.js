@@ -1,9 +1,7 @@
-// Guestbook form: sends a note to the Firestore "guestbook" collection, where it's stored until studio printer picks it up.
-// See scripts/guestbook/README.md for the whole setup. Loaded as a module (for the Firebase imports).
+// Sends guestbook submission to Firestore collection. See scripts/guestbook/README.md for full setup.
 
 const FIREBASE_URL = "https://www.gstatic.com/firebasejs/10.12.0";
 
-// Intentionally public (Firestore rules are what protect the db)
 const firebaseConfig = {
   apiKey: "AIzaSyDPCbBJNvHR-J98iYFKvijUFSuFxEryWaI",
   authDomain: "kwon-space-guestbook.firebaseapp.com",
@@ -16,14 +14,13 @@ const firebaseConfig = {
 const form = document.getElementById("guestbook-form");
 
 if (form) {
-  // Firebase is only downloaded once someone starts writing a note, so just viewing the page loads none of it
   let firestore;
   const loadFirestore = () => firestore ??= Promise.all([
     import(`${FIREBASE_URL}/firebase-app.js`),
     import(`${FIREBASE_URL}/firebase-firestore.js`)
   ]).then(
     ([app, fs]) => ({ fs, db: fs.getFirestore(app.initializeApp(firebaseConfig)) }),
-    (err) => { firestore = null; throw err; } // let the next submit retry the download
+    (err) => { firestore = null; throw err; } 
   );
   form.addEventListener("focusin", () => loadFirestore().catch(() => {}), { once: true });
 
@@ -42,7 +39,7 @@ if (form) {
       return;
     }
 
-    // Honeypot: a hidden field only bots fill in. Pretend it worked so they don't adapt, but send nothing.
+    // Honeypot for spambots
     if (document.getElementById("extra-info").value) {
       form.reset();
       return;
@@ -54,7 +51,6 @@ if (form) {
 
     try {
       const { fs, db } = await loadFirestore();
-      // These fields have to match Firestore rules exactly (see copyof_firestore.rules)
       await fs.addDoc(fs.collection(db, "guestbook"), {
         name: name,
         contact: contact,

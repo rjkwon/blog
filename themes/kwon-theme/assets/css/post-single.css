@@ -130,9 +130,11 @@
 
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
-    min-width: 80px;
+    /* No min-width: columns size to their content, so short ones (numbers, "x")
+       stay narrow and long text columns get the room */
     padding: 12px 8px;
     line-height: 1.5;
+    vertical-align: top;
     border-bottom: 1px solid var(--border)
 }
 

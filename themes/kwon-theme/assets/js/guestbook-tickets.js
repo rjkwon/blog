@@ -1,5 +1,4 @@
-// Guestbook tickets: click ticket to embiggen, navigate with arrows/swipes.
-// URL is clickable if present in both grid and enlarged view.
+// Displays guestbook tickets w/embiggen on click, clickable url, and navigation.
 
 (() => {
   const tickets = [...document.querySelectorAll(".ticket")];
@@ -17,7 +16,6 @@
     img.src = t.dataset.full;
     img.alt = t.querySelector("img").alt;
 
-    // Hiding the link while it has focus would drop focus out of the viewer, so move it to Close first
     if (!t.dataset.url && document.activeElement === url) closeButton.focus();
     url.hidden = !t.dataset.url;
     if (t.dataset.url) {
@@ -32,18 +30,14 @@
     b.addEventListener("click", () => show(current + Number(b.dataset.step))));
   closeButton.addEventListener("click", () => viewer.close());
 
-  // Click outside the ticket (on the backdrop) to close
   viewer.addEventListener("click", (e) => { if (e.target === viewer) viewer.close(); });
 
-  // navigate w/arrow keys. Listens on the whole page (while the viewer is open), so the keys
-  // keep working wherever focus ends up
   document.addEventListener("keydown", (e) => {
     if (!viewer.open) return;
     if (e.key === "ArrowLeft") show(current - 1);
     if (e.key === "ArrowRight") show(current + 1);
   });
 
-  // Swipe to navigate on mobile
   let startX = null;
   viewer.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
   viewer.addEventListener("touchend", (e) => {

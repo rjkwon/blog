@@ -21,16 +21,14 @@
     {{- $ticket := . }}
     {{- with $.Resources.Get (printf "tickets/%s" .image) }}
     {{- $thumb := .Resize "450x webp q80" }}
-    {{- $label := printf "Guestbook note #%d from %s" (int $ticket.number) $ticket.name }}
-    {{- /* A link placed over the URL printed on the ticket; url_box is its position on the scan */ -}}
+    {{- $label := printf "%s (guest #%d)" (int $ticket.number) $ticket.name }}
     {{- $urlStyle := "" }}
-    {{- /* Only http(s) links: data-url is copied into an href by JS, which skips Hugo's own URL check */}}
     {{- $safeURL := and $ticket.url (or (hasPrefix $ticket.url "https://") (hasPrefix $ticket.url "http://")) }}
     {{- with $ticket.url_box }}
     {{- $urlStyle = printf "left:%v%%;top:%v%%;width:%v%%;height:%v%%" .left .top .width .height }}
     {{- end }}
     <li class="ticket-wrap">
-      <button type="button" class="ticket" data-full="{{ .RelPermalink }}" aria-label="Enlarge {{ $label }}"
+      <button type="button" class="ticket" data-full="{{ .RelPermalink }}" aria-label="embiggen {{ $label }}"
         {{- if and $safeURL $urlStyle }} data-url="{{ $ticket.url }}" data-link-box="{{ $urlStyle }}"{{ end }}>
         <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
              loading="lazy" alt="{{ $label }}: {{ $ticket.message }}">
@@ -51,9 +49,9 @@
     <a class="ticket-url" id="ticket-viewer-url" rel="nofollow ugc" hidden></a>
   </div>
   <div class="ticket-viewer-controls">
-    <button type="button" data-step="-1" aria-label="Newer note">←</button>
-    <button type="button" data-close aria-label="Close" autofocus>Close</button>
-    <button type="button" data-step="1" aria-label="Older note">→</button>
+    <button type="button" data-step="-1" aria-label="newer note">←</button>
+    <button type="button" data-close aria-label="close" autofocus>close</button>
+    <button type="button" data-step="1" aria-label="older note">→</button>
   </div>
 </dialog>
 
@@ -70,14 +68,13 @@
     <input type="text" id="name" placeholder="Name" aria-label="Name" maxlength="50" autocomplete="name">
     <input type="text" id="contact" placeholder="Email or URL" aria-label="Email or URL" maxlength="100" autocapitalize="off" autocorrect="off" spellcheck="false">
     <textarea id="message" placeholder="Message" aria-label="Message" required maxlength="400" rows="5"></textarea>
-    {{- /* Honeypot: hidden from people, but spam bots tend to fill in every field. See guestbook-form.js */}}
+    {{- /* honeypot for spambots */}}
     <div class="gb-hp" aria-hidden="true">
       <label for="extra-info">Leave this field empty</label>
       <input type="text" id="extra-info" name="extra_info" tabindex="-1" autocomplete="off">
     </div>
     <button type="submit">Submit</button>
   </form>
-  {{- /* Pins the hashes of the Firebase modules guestbook-form.js imports (browsers that don't support this ignore it) */}}
   <script type="importmap">
   {
     "integrity": {

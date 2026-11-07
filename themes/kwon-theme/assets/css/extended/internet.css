@@ -5,7 +5,7 @@ body.internet {
 body.internet h1,
 body.internet h2,
 body.internet h3 {
-    font-family: "dico-mono", mono;
+    font-family: "dico-mono", monospace;
     font-weight: 400;
     font-style: normal;
     line-height: 1.4em;
@@ -21,16 +21,19 @@ body.internet main a:hover {
     text-decoration: underline;
 }
 
-table {
+/* Everything below is scoped to body.internet: this file is bundled into every page
+   (css/extended/), so bare table/th/td rules would restyle tables in notes too. */
+
+body.internet table {
     margin: 3em 0;
-    font-family: "dico-mono", mono;
+    font-family: "dico-mono", monospace;
     width: 100%;
     border-collapse: collapse;
     overflow-x: visible;
 }
 
-th,
-td {
+body.internet th,
+body.internet td {
     vertical-align: top;
     border-top: 0.5px dashed #333;
     padding: 0.6em 0.2em;
@@ -40,7 +43,7 @@ td {
     line-height: 1.3em;
 }
 
-th {
+body.internet th {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -50,32 +53,32 @@ th {
     background-color: #ddf8f3;
 }
 
-th.article,
-td.title {
+body.internet th.article,
+body.internet td.title {
     width: 40%;
 }
 
-th.author,
-td.author {
+body.internet th.author,
+body.internet td.author {
     width: 25%;
 }
 
-th.date,
-td.date {
+body.internet th.date,
+body.internet td.date {
     width: 17%;
 }
 
-td.title {
+body.internet td.title {
     padding-right: 0.6em;
 }
 
-td.title a,
-td.author a {
+body.internet td.title a,
+body.internet td.author a {
     color: #333;
     text-decoration: none;
 }
 
-a:hover {
+body.internet a:hover {
     text-decoration: underline;
 }
 
@@ -144,18 +147,18 @@ body.dark.internet div.puppy-sparkles a {
         width: 100%;
     }
 
-    table,
-    tbody,
-    tr {
+    body.internet table,
+    body.internet tbody,
+    body.internet tr {
         display: block;
         width: 100%;
     }
 
-    thead {
+    body.internet thead {
         display: none;
     }
 
-    td {
+    body.internet td {
         display: block;
         padding: 0;
         margin: 0;
@@ -163,25 +166,25 @@ body.dark.internet div.puppy-sparkles a {
         line-height: 140%;
     }
 
-    td.title,
-    td.author,
-    td.date {
+    body.internet td.title,
+    body.internet td.author,
+    body.internet td.date {
         width: 100%;
     }
 
-    td.title {
+    body.internet td.title {
         border-top: 0.5px dashed #333;
         margin: 0.8em 0 0.1em;
         padding-top: 0.6em;
     }
 
-    td.author,
-    td.date {
+    body.internet td.author,
+    body.internet td.date {
         font-size: 1em;
         padding-top: 0.3em;
     }
 
-    td.date.added {
+    body.internet td.date.added {
         display: none !important;
     }
 }
