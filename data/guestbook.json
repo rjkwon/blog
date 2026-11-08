@@ -1,5 +1,20 @@
 [
   {
+    "added" : "2026-11-07",
+    "date" : "2026-11-07 18:45",
+    "image" : "ticket-061.webp",
+    "message" : "I love, love, love this printed guestbook idea of yours! I'm glad I get to sign it now that it works! <3",
+    "name" : "BinaryDigit",
+    "number" : 61,
+    "url" : "https://binarydigit.net",
+    "url_box" : {
+      "height" : 6,
+      "left" : 6,
+      "top" : 43,
+      "width" : 91
+    }
+  },
+  {
     "added" : "2026-11-04",
     "date" : "2026-10-30 21:32",
     "image" : "ticket-060.webp",
