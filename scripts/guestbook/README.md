@@ -12,6 +12,27 @@ Would you like a receipt for your visit to kwon.nyc? Kind visitors to my website
 * Kwon separates tickets and scans them to pdf using iPhone
 * Processing scripts convert pdf to webp, redact email, and posts to kwon.nyc/guestbook
 
+## Physical components
+
+![Hand-drawn schematic of my guestbook printer setup, showing the thermal printer connected to wall power on one end and to a UART adapter on the other. The UART is connected to a Raspberry Pi 4.](guestbook-printer-schematic.jpg "Schematic of the printer <> Pi setup. Not pictured: Pi has a separate power supply that also goes to wall power.")
+
+
+**Printer stuff**
+* Receipt printer - Cashino CSN-A2 thermal printer
+* 58 mm thermal printer paper
+* Compatible power cord - check the printer for voltage requirements; mine says 5-9VDC so I use a 9V 2A power cord
+* Screw-terminal adapter - for connecting bare red/black wires to power
+
+**Computer + converter stuff**
+* Raspberry Pi 4, USB power cord, SD card
+* USB-to-TTL Serial Bridge (USB-C UART converter)
+* Breadboard wires
+
+**Tools**
+* Tiny philips head screwdriver (for screwing in wires to screw-terminal adapter)
+
+(I had originally bought [this starter pack](https://www.adafruit.com/product/600) in 2019 that conveniently included all of the Printer stuff, but it looks like it's not stocked anymore. The product page is still pretty useful for more detailed specs than I've listed here, though.)
+
 ## Files
 
 Copies of relevant files in Firestore and on my actual Pi are in this repo for reference:
@@ -35,7 +56,7 @@ Copies of relevant files in Firestore and on my actual Pi are in this repo for r
 
 TODO
 * [ ] Add a physical shutdown button
-* [ ] Build some housing for the setup
+* [ ] Build plywood housing for the setup
 
 ## Workflow: post scanned tickets to website
 
@@ -58,3 +79,10 @@ Other useful commands:
  * `npm run guestbook:scans -- --force` --> redo every image (e.g. if you change the script)
  * `npm run guestbook:scans -- --show-contact 25` --> show a contact line that was covered because it isn't clearly a URL
  * `npm run guestbook:scans -- --show-contact 25,31` --> same as above but for multiple tickets
+
+## Resources 
+* https://cdn-learn.adafruit.com/downloads/pdf/networked-thermal-printer-using-cups-and-raspberry-pi.pdf
+* https://www.youtube.com/watch?v=r6KvQShmRJg
+* https://simon-says.info/2014/2014-05-28-cashinotech-csn-a2-t-thermal-printer
+* https://github.com/exciting-io/printer/wiki/Making-your-own-printer-with-a-Raspberry-Pi
+* https://developer.apple.com/documentation/vision/recognizing-text-in-images
