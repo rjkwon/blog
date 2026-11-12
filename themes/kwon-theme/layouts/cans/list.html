@@ -49,7 +49,7 @@
         {{ $thumb := .Filter (slice images.AutoOrient (images.Process "fit 640x853 webp q75")) }}
         <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $photo.alt }}" title="{{ $photo.takenAt }}" loading="lazy">
       {{ end }}
-      <span>{{ $num }}</span>
+      <span>{{ $num }} | {{ $photo.location }} | {{ $photo.caption }}</span>
     </div>
   {{ end }}
 

@@ -1,5 +1,88 @@
 [
   {
+    "added" : "2026-11-11",
+    "date" : "2026-11-11 11:36",
+    "image" : "ticket-067.webp",
+    "message" : "This is such a cool idea !!!\n\nAЛ ( 0.0 ) A miaou › <",
+    "name" : "Tom Planche",
+    "number" : 67,
+    "url" : "https://tomplanche.com",
+    "url_box" : {
+      "height" : 7,
+      "left" : 5,
+      "top" : 33,
+      "width" : 66
+    }
+  },
+  {
+    "added" : "2026-11-11",
+    "date" : "2026-11-10 17:40",
+    "image" : "ticket-066.webp",
+    "message" : "Okay but what an amazing guestbook!? I literally clapped my hands with excitement. *waves* Hi from Denmark!",
+    "name" : "Flipse",
+    "number" : 66,
+    "url" : "https://flipse.town/",
+    "url_box" : {
+      "height" : 6,
+      "left" : 2,
+      "top" : 39,
+      "width" : 82
+    }
+  },
+  {
+    "added" : "2026-11-11",
+    "date" : "2026-11-10 14:51",
+    "image" : "ticket-065.webp",
+    "message" : "*** $0.53 - Marshmallows *** ***$1.34 - Graham crackers *** *** $2.35 - 17.3 oz Chocolate * *** $6.66 - Fire ? *** *** $0.00 - Compliments re: this rad website ***",
+    "name" : "Jonathan",
+    "number" : 65,
+    "url" : "https://jclahoot.com",
+    "url_box" : {
+      "height" : 6,
+      "left" : 1,
+      "top" : 34,
+      "width" : 61
+    }
+  },
+  {
+    "added" : "2026-11-11",
+    "date" : "2026-11-10 14:51",
+    "image" : "ticket-064.webp",
+    "message" : "I print, therefore I am o_0",
+    "name" : "Binh Nguyen",
+    "number" : 64,
+    "url" : "https://rbtnguyen.com/",
+    "url_box" : {
+      "height" : 9,
+      "left" : 0,
+      "top" : 42,
+      "width" : 89
+    }
+  },
+  {
+    "added" : "2026-11-11",
+    "date" : "2026-11-10 13:59",
+    "image" : "ticket-063.webp",
+    "message" : "I LOVE THIS guestbook! Inspired work. Thank you for enabling me to play Zelda\n\nB*)",
+    "name" : "Ky",
+    "number" : 63,
+    "url" : "https://ky.fyi",
+    "url_box" : {
+      "height" : 6,
+      "left" : 4,
+      "top" : 42,
+      "width" : 66
+    }
+  },
+  {
+    "added" : "2026-11-11",
+    "date" : "2026-11-08 02:35",
+    "image" : "ticket-062.webp",
+    "message" : "Quelques fleurs de Belgique\n\n{0 .=m ---<-<-1® 10 ----{@ ---<®\n\nA defaut d'un petit peu de Soleil!",
+    "name" : "scips",
+    "number" : 62
+  },
+  {
     "added" : "2026-11-07",
     "date" : "2026-11-07 18:45",
     "image" : "ticket-061.webp",

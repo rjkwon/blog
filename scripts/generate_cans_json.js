@@ -15,21 +15,27 @@ function parseDateFromFilename(filename) {
   return `${year}-${month}-${day}`; 
 }
 
+function readExisting() {
+  if (!fs.existsSync(OUTPUT)) return new Map();
+  const entries = JSON.parse(fs.readFileSync(OUTPUT, "utf-8"));
+  return new Map(entries.map(entry => [entry.filename, entry]));
+}
+
 function main() {
   const files = fs.readdirSync(PHOTO_DIR)
     .filter(f => /\.(jpe?g|png|webp)$/i.test(f))
     .sort();
 
-  const photos = files.map(filename => {
-    const takenAt = parseDateFromFilename(filename);
-    return {
-      filename,
-      caption: "",
-      description: "",
-      alt: "",
-      takenAt: takenAt
-    };
-  });
+  const existing = readExisting();
+
+  const photos = files.map(filename => ({
+    filename,
+    caption: "",
+    alt: "",
+    location: "",
+    ...existing.get(filename),
+    takenAt: parseDateFromFilename(filename)
+  }));
 
   fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(photos, null, 2), "utf-8");
