@@ -1,5 +1,28 @@
 [
   {
+    "added" : "2026-11-14",
+    "date" : "2026-11-12 13:11",
+    "image" : "ticket-069.webp",
+    "message" : "I lay uncovered all night. The cold felt piercing against my body, which radiated heat. Like tiny invisible birds taking bites out of my flesh, leaving bloody tissue exposed; nerve endings that writhe and sparkle upon contact with the air.",
+    "name" : "Sergio",
+    "number" : 69
+  },
+  {
+    "added" : "2026-11-14",
+    "date" : "2026-11-12 11:11",
+    "image" : "ticket-068.webp",
+    "message" : "this is an amazing guestbook! i love it when people bring the internet out into the real world like this. reminds me that we're all real people out there somewhere talking to each other.",
+    "name" : "Florina",
+    "number" : 68,
+    "url" : "https://florinasutanto.com/",
+    "url_box" : {
+      "height" : 11,
+      "left" : 7,
+      "top" : 30,
+      "width" : 77
+    }
+  },
+  {
     "added" : "2026-11-11",
     "date" : "2026-11-11 11:36",
     "image" : "ticket-067.webp",
