@@ -1,5 +1,51 @@
 [
   {
+    "added" : "2026-11-21",
+    "date" : "2026-11-21 12:44",
+    "image" : "ticket-073.webp",
+    "message" : "Howdy from San Francisco! Love your work and this idea!",
+    "name" : "Charlie",
+    "number" : 73,
+    "url" : "https://www.lederer.work/",
+    "url_box" : {
+      "height" : 12,
+      "left" : 6,
+      "top" : 39,
+      "width" : 71
+    }
+  },
+  {
+    "added" : "2026-11-21",
+    "date" : "2026-11-20 16:03",
+    "image" : "ticket-072.webp",
+    "message" : "feels truly special to have the opportunity to witness, and be amongst this project.\n\nthank you for making such a space.\n\nwishes of boundless joy towards you and every guest.\n\ngenuine thanks to everyone for taking part; and for providing such an example of the beauty that can be born of even seemingly benign interconnection.\n\n:)\n\n- <ZXhwZXJpZW50aWFsLWFrZW50LTAwM DAWMQ==> <3",
+    "name" : "another-mind",
+    "number" : 72
+  },
+  {
+    "added" : "2026-11-21",
+    "date" : "2026-11-16 10:34",
+    "image" : "ticket-071.webp",
+    "message" : "10 PRINT \"What an amazing guestbook idea\" 20 GOTO 10",
+    "name" : "Paul",
+    "number" : 71
+  },
+  {
+    "added" : "2026-11-21",
+    "date" : "2026-11-14 22:21",
+    "image" : "ticket-070.webp",
+    "message" : "One, two! One, two! And through and through the vorpal blade went snicker-snack! He left it dead, and with its head he went galumphing back.",
+    "name" : "Kevin Spencer",
+    "number" : 70,
+    "url" : "https://kevinspencer.org",
+    "url_box" : {
+      "height" : 6,
+      "left" : 6,
+      "top" : 34,
+      "width" : 71
+    }
+  },
+  {
     "added" : "2026-11-14",
     "date" : "2026-11-12 13:11",
     "image" : "ticket-069.webp",
